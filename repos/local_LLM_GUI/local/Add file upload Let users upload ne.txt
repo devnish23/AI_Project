@@ -1,0 +1,13 @@
+Add file upload: Let users upload new company files live.
+
+Add authentication: Secure with login.
+
+Add logging/analytics: Save questions asked for review.
+
+Help you turn this into a desktop .exe or Mac .app?
+
+Add file upload so users can drop new docs?
+
+Enable multi-user chat history?
+
+help to add the feature above

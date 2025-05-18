@@ -1,0 +1,7 @@
+streamlit
+langchain
+chromadb
+ollama
+pymupdf
+python-docx
+openpyxl
