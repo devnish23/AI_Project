@@ -2,49 +2,8 @@ import subprocess
 import ttkbootstrap as ttk  # Import ttkbootstrap for modern UI
 from ttkbootstrap.constants import *
 from tkinter import messagebox
-from tkinter import filedialog
 
-# Map keywords to model names
-PROMPT_MODEL_MAP = {
-    "ppt": "your_ppt_model_name",  # Replace with actual model name
-    "powerpoint": "your_ppt_model_name",
-    "download": "your_ppt_model_name",
-    "ppt": "pptgen",
-    "powerpoint": "pptgen",
-    "download": "pptgen",
-    "code": "codegen",
-    "generate code": "codegen",
-    "summarize": "summarizer",
-    "summary": "summarizer",
-    "translate": "translator",
-    "translation": "translator",
-    "image": "imagegen",
-    "picture": "imagegen",
-    # PowerPoint generation
-    "ppt": "pptgen",
-    "powerpoint": "pptgen",
-    "presentation": "pptgen",
-    "create ppt": "pptgen",
-    "download ppt": "pptgen",
 
-    # Code generation
-    "code": "codegen",
-    "generate code": "codegen",
-    "write code": "codegen",
-
-    # Summarization
-    "summarize": "summarizer",
-    "summary": "summarizer",
-
-    # Translation
-    "translate": "translator",
-    "translation": "translator",
-
-    # Image generation
-    "image": "imagegen",
-    "picture": "imagegen",
-    "generate image": "imagegen",
-}
 def get_models():
     try:
         result = subprocess.run(['ollama', 'list'], capture_output=True, text=True, encoding='utf-8', check=True)
@@ -54,6 +13,7 @@ def get_models():
         messagebox.showerror("Error", f"Failed to fetch models: {e}")
         return []
 
+
 def refresh_models():
     models = get_models()
     for row in tree.get_children():
@@ -61,15 +21,6 @@ def refresh_models():
     for model in models:
         tree.insert("", "end", values=model)
 
-def select_model_by_prompt(prompt, models):
-    prompt_lower = prompt.lower()
-    for keyword, model_name in PROMPT_MODEL_MAP.items():
-        if keyword in prompt_lower:
-            # Check if the mapped model exists in the available models
-            for model in models:
-                if model[0] == model_name:
-                    return model_name
-    return None
 
 def run_model():
     selected_item = tree.selection()
@@ -110,31 +61,12 @@ def run_model():
         # Display unexpected exceptions
         messagebox.showerror("Error", f"An unexpected error occurred: {str(ex)}")
 
+
 def clear_history():
     output_text.config(state="normal")  # Enable editing temporarily
     output_text.delete("1.0", END)  # Clear all text
     output_text.config(state="disabled")  # Disable editing to make it read-only
 
-def save_output():
-    # Get the current output text
-    output_text.config(state="normal")
-    content = output_text.get("1.0", "end-1c")
-    output_text.config(state="disabled")
-    if not content.strip():
-        messagebox.showinfo("Info", "There is no output to save.")
-        return
-    # Ask user for file location
-    file_path = filedialog.asksaveasfilename(
-        defaultextension=".txt",
-        filetypes=[("Text Files", "*.txt"), ("All Files", "*.*")]
-    )
-    if file_path:
-        try:
-            with open(file_path, "w", encoding="utf-8") as f:
-                f.write(content)
-            messagebox.showinfo("Success", f"Output saved to {file_path}")
-        except Exception as e:
-            messagebox.showerror("Error", f"Failed to save file: {e}")
 
 # Create a modern GUI using ttkbootstrap
 app = ttk.Window(themename="superhero")  # Choose a modern theme
@@ -179,9 +111,6 @@ run_button.pack(side=LEFT, padx=(0, 5))
 
 clear_button = ttk.Button(button_frame, text="Clear History", bootstyle=WARNING, command=clear_history)
 clear_button.pack(side=LEFT, padx=(0, 5))
-
-save_button = ttk.Button(button_frame, text="Save Output", bootstyle=SECONDARY, command=save_output)
-save_button.pack(side=LEFT, padx=(0, 5))
 
 # Output Text Area with Scrollbar
 output_frame = ttk.Labelframe(frame, text="Output", padding=10, bootstyle=DARK)

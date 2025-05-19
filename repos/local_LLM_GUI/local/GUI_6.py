@@ -45,7 +45,15 @@ PROMPT_MODEL_MAP = {
     "picture": "imagegen",
     "generate image": "imagegen",
 }
+
 def get_models():
+    """
+    Fetch the list of available Ollama models by running the 'ollama list' command.
+
+    Returns:
+        list: A list of lists, where each sublist contains model details (name, id, size, modified).
+              Returns an empty list if fetching fails.
+    """
     try:
         result = subprocess.run(['ollama', 'list'], capture_output=True, text=True, encoding='utf-8', check=True)
         models = result.stdout.strip().split('\n')[1:]  # Skip the header row
@@ -55,6 +63,10 @@ def get_models():
         return []
 
 def refresh_models():
+    """
+    Refresh the model list displayed in the treeview by fetching the latest models
+    and updating the treeview widget.
+    """
     models = get_models()
     for row in tree.get_children():
         tree.delete(row)
@@ -62,6 +74,16 @@ def refresh_models():
         tree.insert("", "end", values=model)
 
 def select_model_by_prompt(prompt, models):
+    """
+    Select a model name based on the user's prompt using keyword mapping.
+
+    Args:
+        prompt (str): The user's input prompt.
+        models (list): The list of available models.
+
+    Returns:
+        str or None: The name of the matched model, or None if no match is found.
+    """
     prompt_lower = prompt.lower()
     for keyword, model_name in PROMPT_MODEL_MAP.items():
         if keyword in prompt_lower:
@@ -72,6 +94,10 @@ def select_model_by_prompt(prompt, models):
     return None
 
 def run_model():
+    """
+    Run the selected or auto-matched model with the user's prompt.
+    Displays the output in the output text area and handles errors.
+    """
     selected_item = tree.selection()
     if not selected_item:
         messagebox.showwarning("Warning", "Please select a model to run!")
@@ -111,12 +137,18 @@ def run_model():
         messagebox.showerror("Error", f"An unexpected error occurred: {str(ex)}")
 
 def clear_history():
+    """
+    Clear all text from the output text area, making it empty and read-only.
+    """
     output_text.config(state="normal")  # Enable editing temporarily
     output_text.delete("1.0", END)  # Clear all text
     output_text.config(state="disabled")  # Disable editing to make it read-only
 
 def save_output():
-    # Get the current output text
+    """
+    Save the contents of the output text area to a file selected by the user.
+    Shows a dialog for file selection and handles file write errors.
+    """
     output_text.config(state="normal")
     content = output_text.get("1.0", "end-1c")
     output_text.config(state="disabled")

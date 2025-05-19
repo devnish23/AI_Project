@@ -4,22 +4,8 @@ from ttkbootstrap.constants import *
 from tkinter import messagebox
 from tkinter import filedialog
 
-# Map keywords to model names
+# Map keywords to model names (no duplicate keys)
 PROMPT_MODEL_MAP = {
-    "ppt": "your_ppt_model_name",  # Replace with actual model name
-    "powerpoint": "your_ppt_model_name",
-    "download": "your_ppt_model_name",
-    "ppt": "pptgen",
-    "powerpoint": "pptgen",
-    "download": "pptgen",
-    "code": "codegen",
-    "generate code": "codegen",
-    "summarize": "summarizer",
-    "summary": "summarizer",
-    "translate": "translator",
-    "translation": "translator",
-    "image": "imagegen",
-    "picture": "imagegen",
     # PowerPoint generation
     "ppt": "pptgen",
     "powerpoint": "pptgen",
@@ -45,7 +31,15 @@ PROMPT_MODEL_MAP = {
     "picture": "imagegen",
     "generate image": "imagegen",
 }
+
 def get_models():
+    """
+    Fetch the list of available Ollama models by running the 'ollama list' command.
+
+    Returns:
+        list: A list of lists, where each sublist contains model details (name, id, size, modified).
+              Returns an empty list if fetching fails.
+    """
     try:
         result = subprocess.run(['ollama', 'list'], capture_output=True, text=True, encoding='utf-8', check=True)
         models = result.stdout.strip().split('\n')[1:]  # Skip the header row
@@ -55,6 +49,10 @@ def get_models():
         return []
 
 def refresh_models():
+    """
+    Refresh the model list displayed in the treeview by fetching the latest models
+    and updating the treeview widget.
+    """
     models = get_models()
     for row in tree.get_children():
         tree.delete(row)
@@ -62,8 +60,20 @@ def refresh_models():
         tree.insert("", "end", values=model)
 
 def select_model_by_prompt(prompt, models):
+    """
+    Select a model name based on the user's prompt using keyword mapping.
+
+    Args:
+        prompt (str): The user's input prompt.
+        models (list): The list of available models.
+
+    Returns:
+        str or None: The name of the matched model, or None if no match is found.
+    """
     prompt_lower = prompt.lower()
-    for keyword, model_name in PROMPT_MODEL_MAP.items():
+    # Sort keywords by length (longest first) for more specific matches
+    for keyword in sorted(PROMPT_MODEL_MAP, key=len, reverse=True):
+        model_name = PROMPT_MODEL_MAP[keyword]
         if keyword in prompt_lower:
             # Check if the mapped model exists in the available models
             for model in models:
@@ -72,17 +82,29 @@ def select_model_by_prompt(prompt, models):
     return None
 
 def run_model():
-    selected_item = tree.selection()
-    if not selected_item:
-        messagebox.showwarning("Warning", "Please select a model to run!")
-        return
-
-    model_name = tree.item(selected_item[0], 'values')[0]
+    """
+    Run the auto-matched or selected model with the user's prompt.
+    Displays the output in the output text area and handles errors.
+    """
     user_prompt = prompt_entry.get()
-
     if not user_prompt.strip():
         messagebox.showwarning("Warning", "Please enter a prompt to run the model!")
         return
+
+    models = get_models()
+    model_name = select_model_by_prompt(user_prompt, models)
+    if model_name:
+        # Select the model in the treeview for visual feedback
+        for item in tree.get_children():
+            if tree.item(item, 'values')[0] == model_name:
+                tree.selection_set(item)
+                break
+    else:
+        selected_item = tree.selection()
+        if not selected_item:
+            messagebox.showwarning("Warning", "Please select a model to run!")
+            return
+        model_name = tree.item(selected_item[0], 'values')[0]
 
     try:
         # Run the command with the user's prompt
@@ -111,12 +133,18 @@ def run_model():
         messagebox.showerror("Error", f"An unexpected error occurred: {str(ex)}")
 
 def clear_history():
+    """
+    Clear all text from the output text area, making it empty and read-only.
+    """
     output_text.config(state="normal")  # Enable editing temporarily
     output_text.delete("1.0", END)  # Clear all text
     output_text.config(state="disabled")  # Disable editing to make it read-only
 
 def save_output():
-    # Get the current output text
+    """
+    Save the contents of the output text area to a file selected by the user.
+    Shows a dialog for file selection and handles file write errors.
+    """
     output_text.config(state="normal")
     content = output_text.get("1.0", "end-1c")
     output_text.config(state="disabled")
@@ -135,6 +163,24 @@ def save_output():
             messagebox.showinfo("Success", f"Output saved to {file_path}")
         except Exception as e:
             messagebox.showerror("Error", f"Failed to save file: {e}")
+
+def on_prompt_change(event=None):
+    """
+    Real-time model suggestion and selection as the user types a prompt.
+    """
+    user_prompt = prompt_entry.get()
+    models = get_models()
+    model_name = select_model_by_prompt(user_prompt, models)
+    # Clear previous selection
+    tree.selection_remove(tree.selection())
+    if model_name:
+        for item in tree.get_children():
+            if tree.item(item, 'values')[0] == model_name:
+                tree.selection_set(item)
+                selected_model_label.config(text=f"Auto-selected model: {model_name}")
+                break
+    else:
+        selected_model_label.config(text="No model auto-selected.")
 
 # Create a modern GUI using ttkbootstrap
 app = ttk.Window(themename="superhero")  # Choose a modern theme
@@ -167,6 +213,9 @@ prompt_label.pack(side=LEFT, padx=(0, 5))
 prompt_entry = ttk.Entry(prompt_frame, width=50)
 prompt_entry.pack(side=LEFT, fill=X, expand=True)
 
+selected_model_label = ttk.Label(frame, text="", font=("Helvetica", 9, "italic"))
+selected_model_label.pack(anchor=W, pady=(0, 5))
+
 # Buttons for actions
 button_frame = ttk.Frame(frame)
 button_frame.pack(fill=X, pady=(0, 10))
@@ -197,6 +246,9 @@ output_text["yscrollcommand"] = scrollbar.set
 
 # Initialize models
 refresh_models()
+
+# Bind real-time model suggestion to prompt entry
+prompt_entry.bind("<KeyRelease>", on_prompt_change)
 
 # Run the main loop
 app.mainloop()
