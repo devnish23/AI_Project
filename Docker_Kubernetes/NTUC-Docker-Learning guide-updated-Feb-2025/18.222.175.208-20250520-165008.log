@@ -1,0 +1,680 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.20 16:50:08 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 20 08:20:23 UTC 2025
+
+  System load:  0.24              Temperature:           -273.1 C
+  Usage of /:   5.3% of 95.82GB   Processes:             158
+  Memory usage: 27%               Users logged in:       1
+  Swap usage:   0%                IPv4 address for ens5: 172.31.19.219
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+41 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Tue May 20 08:20:25 2025 from 119.234.34.94
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ [K]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ sudo su -
+[?2004l[?2004h]0;root@ip-172-31-19-219: ~root@ip-172-31-19-219:~# ls -ltr
+[?2004ltotal 4
+drwx------ 3 root root 4096 May 20 03:40 [0m[01;34msnap[0m
+[?2004h]0;root@ip-172-31-19-219: ~root@ip-172-31-19-219:~# vi [K[K[Kexit
+[?2004llogout
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# 
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 8
+drwxr-xr-x 6 root root 4096 May 20 07:58 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root root  371 May 20 08:33 avengers.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi avengers.yaml 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"avengers.yaml" 22L, 371B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment[2;17H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;3H[36mname[m[35m:[m avengers-deployment
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+[36mspec[m[35m:[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[11;7H[36mapp[m[35m:[m avengers
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[14;7H[36mlabels[m[35m:[m[15;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[17;7H[36mcontainers[m[35m:[m[18;7H[33m- [m[36mname[m[35m:[m avengers-deployment[19;9H[36mimage[m[35m:[m anilbidari/todo[20;9H[36mports[m[35m:[m[21;9H[33m- [m[36mcontainerPort[m[35m:[m [31m80[m
+
+[1m[34m~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H22,0-1[8CAll[22;1H[?25h[?4m[?25l[44;130H~@k[22;1H[44;130H   [21;1H[44;141H1,1  [21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [20;1H[44;141H0[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [19;1H[44;140H19[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [18;1H[44;141H8[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [17;1H[44;141H7[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [16;1H[44;141H6[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [15;1H[44;141H5[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [14;1H[44;141H4[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [13;1H[44;141H3[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [12;1H[44;141H2[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [10;1H[44;141H0[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [9;1H[44;140H9,1 [9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [5;1H[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [9;1H[44;140H9[9;1H[?25h[?25l[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [12;1H[44;141H2[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [13;1H[44;141H3[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [14;1H[44;141H4[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H5[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H6[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [17;1H[44;141H7[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [18;1H[44;141H8[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H9[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;140H20[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;141H1[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;141H2,0-1[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [21;1H[44;141H1,1  [21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [20;1H[44;141H0[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [19;1H[44;140H19[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;140H20[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [20;2H[44;143H2[20;2H[?25h[?25l[44;130H~@k[20;2H[44;130H   [19;2H[44;140H19[19;2H[?25h[?25l[44;130H~@k[19;2H[44;130H   [19;3H[44;143H3[19;3H[?25h[?25l[44;130H~@k[19;3H[44;130H   [19;4H[44;143H4[19;4H[?25h[?25l[44;130H~@k[19;4H[44;130H   [19;5H[44;143H5[19;5H[?25h[?25l[44;143H6[19;6H[?25h[?25l[44;130H~@k[19;6H[44;130H   [19;7H[44;143H7[19;7H[?25h[?25l[44;130H~@k[19;7H[44;130H   [19;8H[44;143H8[19;8H[?25h[?25l[44;130H~@k[19;8H[44;130H   [19;9H[44;143H9[19;9H[?25h[?25l[44;130H~@k[19;9H[44;130H   [19;10H[44;143H10[19;10H[?25h[?25l[44;130H~@k[19;10H[44;130H   [19;11H[44;144H1[19;11H[?25h[?25l[44;130H~@k[19;11H[44;130H   [19;12H[44;144H2[19;12H[?25h[?25l[44;130H~@k[19;12H[44;130H   [19;13H[44;144H3[19;13H[?25h[?25l[44;130H~@k[19;13H[44;130H   [19;14H[44;144H4[19;14H[?25h[?25l[44;130H~@k[19;14H[44;130H   [19;15H[44;144H5[19;15H[?25h[?25l[44;130H~@k[19;15H[44;130H   [19;16H[44;144H6[19;16H[?25h[?25l[44;130H~@k[19;16H[44;130H   [19;17H[44;144H7[19;17H[?25h[?25l[44;130H~@k[19;17H[44;130H   [19;18H[44;144H8[19;18H[?25h[?25l[44;130H~@k[19;18H[44;130H   [19;19H[44;144H9[19;19H[?25h[?25l[44;130H~@k[19;19H[44;130H   [19;20H[44;143H20[19;20H[?25h[?25l[44;130H~@k[19;20H[44;130H   [19;21H[44;144H1[19;21H[?25h[?25l[44;130H~@k[19;21H[44;130H   [19;22H[44;144H2[19;22H[?25h[?25l[44;130H~@k[19;22H[44;130H   [19;23H[44;144H3[19;23H[?25h[?25l[44;130H~@k[19;23H[44;130H   [19;24H[44;144H4[19;24H[?25h[?25l[44;130H~@k[19;24H[44;130H   [19;25H[44;144H5[19;25H[?25h[?25l[44;130H~@k[19;25H[44;130H   [19;26H[44;144H6[19;26H[?25h[?25l[44;130H~@k[19;26H[44;130H   [19;27H[44;144H7[19;27H[?25h[?25l[44;130H~@k[19;27H[44;130H   [19;28H[44;144H8[19;28H[?25h[?25l[44;130H~@k[19;28H[44;130H   [19;29H[44;144H9[19;29H[?25h[?25l[44;130H~@k[19;29H[44;130H   [19;30H[44;143H30[19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H~@k[19;30H[44;130H   [19;30H[?25h[?25l[44;130H^[[19;30H[44;130H  [19;30H[44;130H^[[19;30H[44;130H  [19;30H[?25h[?25l[44;130HA[19;30H[44;130H [19;31H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H19,31[9CAll[19;31H[?25h[44;1H[K[19;30H[?25l[44;130H^[[19;30H[44;130H  [19;31H[44;140H19,30[9CAll[19;30H[?25h[?25l[44;130H:[19;30H[44;130H[K[44;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[44;1H[K[44;1H[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi avengers.yaml [10Pls -ltr[K[K[K[K[K[K[Kkubectl get deploye[K[K[K[Kloyment
+[?2004lNAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+avengers-deployment   5/5     5            5           17m
+python-deployment     3/3     3            3           52m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment [7mavengers-deployment[27mavengers-deployment[7mavengers-deployment[27mavengers-deployment
+[?2004lError from server (NotFound): deployments.apps "avengers-deploymentavengers-deployment" not found
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment avengers-deploymentavengers-deployment[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+[?2004lName:                   avengers-deployment
+Namespace:              default
+CreationTimestamp:      Tue, 20 May 2025 08:33:22 +0000
+Labels:                 app=avengers
+Annotations:            deployment.kubernetes.io/revision: 2
+Selector:               app=avengers
+Replicas:               5 desired | 5 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=avengers
+  Containers:
+   avengers-deployment:
+    Image:        anilbidari/todo
+    Port:         8080/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  avengers-deployment-656c9b8866 (0/0 replicas created)
+NewReplicaSet:   avengers-deployment-575bbcc55d (5/5 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  18m   deployment-controller  Scaled up replica set avengers-deployment-656c9b8866 to 5
+  Normal  ScalingReplicaSet  9m8s  deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 2
+  Normal  ScalingReplicaSet  9m8s  deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 4 from 5
+  Normal  ScalingReplicaSet  9m8s  deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 3 from 2
+  Normal  ScalingReplicaSet  9m6s  deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 3 from 4
+  Normal  ScalingReplicaSet  9m6s  deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 4 from 3
+  Normal  ScalingReplicaSet  9m6s  deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 2 from 3
+  Normal  ScalingReplicaSet  9m6s  deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 5 from 4
+  Normal  ScalingReplicaSet  9m6s  deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 1 from 2
+  Normal  ScalingReplicaSet  9m4s  deployment-controller  (combined from similar events): Scaled down replica set avengers-deployment-656c9b8866 to 0 from 1
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 8
+drwxr-xr-x 6 root root 4096 May 20 07:58 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root root  371 May 20 08:33 avengers.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi ap[Kvengers.yaml 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"avengers.yaml" 22L, 371B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment[2;17H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;3H[36mname[m[35m:[m avengers-deployment
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+[36mspec[m[35m:[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[11;7H[36mapp[m[35m:[m avengers
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[14;7H[36mlabels[m[35m:[m[15;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[17;7H[36mcontainers[m[35m:[m[18;7H[33m- [m[36mname[m[35m:[m avengers-deployment[19;9H[36mimage[m[35m:[m anilbidari/todo[20;9H[36mports[m[35m:[m[21;9H[33m- [m[36mcontainerPort[m[35m:[m [31m80[m
+
+[1m[34m~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H19,30[9CAll[19;30H[?25h[?4m[?25l[44;130H^[[19;30H[44;130H  [19;30H[44;130H^[[19;30H[44;130H  [19;30H[?25h[?25l[44;130HA[19;30H[44;130H [19;31H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H19,31[9CAll[19;31H[?25h[?25l.[44;144H2[19;32H[?25h[?25lv[44;144H3[19;33H[?25h[?25l1[44;144H4[19;34H[?25h[?25l[19;33H[K[44;144H3[19;33H[?25h[?25l2[44;144H4[19;34H[?25h[44;1H[K[19;33H[?25l[44;130H^[[19;33H[44;130H  [19;34H[44;140H19,33[9CAll[19;33H[?25h[?25l[44;130H:[19;33H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"avengers.yaml" 22L, 374B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi avengers.yaml [10Pls -ltrvi avengers.yaml [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kls -ltrkubectl describe deployment avengers-deploymentavengers-deployment[K
+[?2004lName:                   avengers-deployment
+Namespace:              default
+CreationTimestamp:      Tue, 20 May 2025 08:33:22 +0000
+Labels:                 app=avengers
+Annotations:            deployment.kubernetes.io/revision: 2
+Selector:               app=avengers
+Replicas:               5 desired | 5 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=avengers
+  Containers:
+   avengers-deployment:
+    Image:        anilbidari/todo
+    Port:         8080/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  avengers-deployment-656c9b8866 (0/0 replicas created)
+NewReplicaSet:   avengers-deployment-575bbcc55d (5/5 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  19m   deployment-controller  Scaled up replica set avengers-deployment-656c9b8866 to 5
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 2
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 4 from 5
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 3 from 2
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 3 from 4
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 4 from 3
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 2 from 3
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 5 from 4
+  Normal  ScalingReplicaSet  10m   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 1 from 2
+  Normal  ScalingReplicaSet  10m   deployment-controller  (combined from similar events): Scaled down replica set avengers-deployment-656c9b8866 to 0 from 1
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment avengers-deployment[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Kkubectl edit deploye[Kment [7mavengers-deployment[27mavengers-deployment
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"/tmp/kubectl-edit-2544675606.yaml" 69L, 1903B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be[m[2;91H[K[3;1H[34m# reopened with the relevant failures.[m[3;39H[K[4;1H[34m#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"2"[m
+  [36mcreationTimestamp[m[35m:[m [31m"2025-05-20T08:33:22Z"[m
+  [36mgeneration[m[35m:[m [31m2[m
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+  [36mname[m[35m:[m avengers-deployment
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"16285"[m
+  [36muid[m[35m:[m e86d5b37-5ea0-41e6-9a74-b52dedaa2c82
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[24;7H[36mapp[m[35m:[m avengers
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[27;7H[36mmaxSurge[m[35m:[m 25%[28;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[32;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[33;7H[36mlabels[m[35m:[m[34;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[36;7H[36mcontainers[m[35m:[m[37;7H[33m- [m[36mimage[m[35m:[m anilbidari/todo[38;9H[36mimagePullPolicy[m[35m:[m Always[39;9H[36mname[m[35m:[m avengers-deployment[40;9H[36mports[m[35m:[m[41;9H[33m- [m[36mcontainerPort[m[35m:[m [31m8080[m[42;11H[36mprotocol[m[35m:[m TCP[43;9H[36mresources[m[35m:[m [35m{}[m[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H~@k[1;1H[44;130H   [2;1H[44;140H2[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;1H[44;140H3[3;1H[?25h[?25l[44;130H~@k[3;1H[44;130H   [4;1H[44;140H4[4;1H[?25h[?25l[44;130H~@k[4;1H[44;130H   [5;1H[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [9;1H[44;140H9[9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [10;1H[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [12;1H[44;141H2[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [13;1H[44;141H3[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [14;1H[44;141H4[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H5[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H6[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [17;1H[44;141H7[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [18;1H[44;141H8[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H9[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;140H20[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;141H1[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;141H2[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [23;1H[44;141H3[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [24;1H[44;141H4[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [25;1H[44;141H5[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [26;1H[44;141H6[26;1H[?25h[?25l[44;130H~@k[26;1H[44;130H   [27;1H[44;141H7[27;1H[?25h[?25l[44;141H8[28;1H[?25h[?25l[44;141H9[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [30;1H[44;140H30[30;1H[?25h[?25l[44;130H~@k[30;1H[44;130H   [31;1H[44;141H1[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [32;1H[44;141H2[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [33;1H[44;141H3[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [34;1H[44;141H4[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [35;1H[44;141H5[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [36;1H[44;141H6[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [37;1H[44;141H7[37;1H[?25h[?25l[44;141H8[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H[36mterminationMessagePath[m[35m:[m /dev/termination-log[44;1H[K[44;140H39,1[11C3%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mterminationMessagePolicy[m[35m:[m File[44;140H[K[44;140H40,1[11C7%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H[36mdnsPolicy[m[35m:[m ClusterFirst[44;140H[K[44;140H41,1[10C11%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mrestartPolicy[m[35m:[m Always[44;140H[K[44;140H42,1[10C15%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mschedulerName[m[35m:[m default-scheduler[44;140H[K[44;140H43,1[10C19%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [37;1H[44;141H2[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [36;1H[44;141H1[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [35;1H[44;141H0[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [34;1H[44;140H39[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [33;1H[44;141H8[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [32;1H[44;141H7[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [31;1H[44;141H6[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [32;1H[44;141H7[32;1H[?25h[?25l[44;130H^[[32;1H[44;130H  [32;1H[44;130H^[[32;1H[44;130H  [32;1H[?25h[?25l[44;130HA[32;1H[44;130H [32;31H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H37,31[9C19%[32;31H[?25h[?25l[32;7H  [33m- [m[36mimage[m[35m:[m anilbidari/todo:[44;144H4[32;34H[?25h[?25l2[44;144H5[32;35H[?25h[?25l.[44;144H6[32;36H[?25h[?25l0[44;144H7[32;37H[?25h[44;1H[K[32;36H[?25l[44;130H^[[32;36H[44;130H  [32;37H[44;140H37,36[9C19%[32;36H[?25h[?25l[44;130H:[32;36H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"/tmp/kubectl-edit-2544675606.yaml" 69L, 1909B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;merror: deployments.apps "avengers-deployment" is invalid
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"/tmp/kubectl-edit-4022702531.yaml" 72L, 2081B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be[m[2;91H[K[3;1H[34m# reopened with the relevant failures.[m[3;39H[K[4;1H[34m#
+# deployments.apps "avengers-deployment" was not valid:
+# * <nil>: Invalid value: "The edited file failed validation": yaml: line 33: did not find expected '-' indicator
+#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"2"[m
+  [36mcreationTimestamp[m[35m:[m [31m"2025-05-20T08:33:22Z"[m
+  [36mgeneration[m[35m:[m [31m2[m
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+  [36mname[m[35m:[m avengers-deployment
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"16285"[m
+  [36muid[m[35m:[m e86d5b37-5ea0-41e6-9a74-b52dedaa2c82
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[27;7H[36mapp[m[35m:[m avengers
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[30;7H[36mmaxSurge[m[35m:[m 25%[31;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[35;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[36;7H[36mlabels[m[35m:[m[37;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[39;7H[36mcontainers[m[35m:[m[40;9H[33m- [m[36mimage[m[35m:[m anilbidari/todo:2.0[41;9H[36mimagePullPolicy[m[35m:[m Always[42;9H[36mname[m[35m:[m avengers-deployment[43;9H[36mports[m[35m:[m[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H~@k[1;1H[44;130H   [2;1H[44;140H2[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;1H[44;140H3[3;1H[?25h[?25l[44;130H~@k[3;1H[44;130H   [4;1H[44;140H4[4;1H[?25h[?25l[44;130H~@k[4;1H[44;130H   [5;1H[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [9;1H[44;140H9[9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [10;1H[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [12;1H[44;141H2[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [13;1H[44;141H3[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [14;1H[44;141H4[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H5[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H6[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [17;1H[44;141H7[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [18;1H[44;141H8[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H9[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;140H20[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;141H1[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;141H2[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [23;1H[44;141H3[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [24;1H[44;141H4[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [25;1H[44;141H5[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [26;1H[44;141H6[26;1H[?25h[?25l[44;130H~@k[26;1H[44;130H   [27;1H[44;141H7[27;1H[?25h[?25l[44;130H~@k[27;1H[44;130H   [28;1H[44;141H8[28;1H[?25h[?25l[44;130H~@k[28;1H[44;130H   [29;1H[44;141H9[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [30;1H[44;140H30[30;1H[?25h[?25l[44;130H~@k[30;1H[44;130H   [31;1H[44;141H1[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [32;1H[44;141H2[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [33;1H[44;141H3[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [34;1H[44;141H4[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [35;1H[44;141H5[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [36;1H[44;141H6[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [37;1H[44;141H7[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [38;1H[44;141H8[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[33m- [m[36mcontainerPort[m[35m:[m [31m8080[m[44;1H[K[44;140H39,1[11C3%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;11H[36mprotocol[m[35m:[m TCP[44;140H[K[44;140H40,1[11C6%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mresources[m[35m:[m [35m{}[m[44;140H[K[44;140H41,1[10C10%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [37;1H[44;141H0[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [37;2H[44;143H2[37;2H[?25h[?25l[44;130H~@k[37;2H[44;130H   [37;3H[44;143H3[37;3H[?25h[?25l[44;130H~@k[37;3H[44;130H   [37;4H[44;143H4[37;4H[?25h[?25l[44;130H~@k[37;4H[44;130H   [37;5H[44;143H5[37;5H[?25h[?25l[44;130H~@k[37;5H[44;130H   [37;6H[44;143H6[37;6H[?25h[?25l[44;130H~@k[37;6H[44;130H   [37;7H[44;143H7[37;7H[?25h[?25l[44;130H~@k[37;7H[44;130H   [37;8H[44;143H8[37;8H[?25h[?25l[44;130H~@k[37;8H[44;130H   [37;9H[44;143H9[37;9H[?25h[?25l[44;130H~@k[37;9H[44;130H   [37;10H[44;143H10[37;10H[?25h[?25l[44;130H~@k[37;10H[44;130H   [37;11H[44;144H1[37;11H[?25h[?25l[44;130H~@k[37;11H[44;130H   [37;12H[44;144H2[37;12H[?25h[?25l[44;130H~@k[37;12H[44;130H   [37;13H[44;144H3[37;13H[?25h[?25l[44;130H~@k[37;13H[44;130H   [37;14H[44;144H4[37;14H[?25h[?25l[44;130H~@k[37;14H[44;130H   [37;15H[44;144H5[37;15H[?25h[?25l[44;130H~@k[37;15H[44;130H   [37;16H[44;144H6[37;16H[?25h[?25l[44;130H~@k[37;16H[44;130H   [37;17H[44;144H7[37;17H[?25h[?25l[44;130H~@k[37;17H[44;130H   [37;18H[44;144H8[37;18H[?25h[?25l[44;130H~@k[37;18H[44;130H   [37;19H[44;144H9[37;19H[?25h[?25l[44;130H~@k[37;19H[44;130H   [37;20H[44;143H20[37;20H[?25h[?25l[44;130H~@k[37;20H[44;130H   [37;21H[44;144H1[37;21H[?25h[?25l[44;130H~@k[37;21H[44;130H   [37;22H[44;144H2[37;22H[?25h[?25l[44;130H~@k[37;22H[44;130H   [37;23H[44;144H3[37;23H[?25h[?25l[44;130H~@k[37;23H[44;130H   [37;24H[44;144H4[37;24H[?25h[?25l[44;130H~@k[37;24H[44;130H   [37;25H[44;144H5[37;25H[?25h[?25l[44;130H~@k[37;25H[44;130H   [37;26H[44;144H6[37;26H[?25h[?25l[44;130H~@k[37;26H[44;130H   [37;27H[44;144H7[37;27H[?25h[?25l[44;130H~@k[37;27H[44;130H   [37;28H[44;144H8[37;28H[?25h[?25l[44;130H~@k[37;28H[44;130H   [37;29H[44;144H9[37;29H[?25h[?25l[44;130H~@k[37;29H[44;130H   [37;30H[44;143H30[37;30H[?25h[?25l[44;130H~@k[37;30H[44;130H   [37;31H[44;144H1[37;31H[?25h[?25l[44;130H~@k[37;31H[44;130H   [37;32H[44;144H2[37;32H[?25h[?25l[44;130H~@k[37;32H[44;130H   [37;33H[44;144H3[37;33H[?25h[?25l[44;130H~@k[37;33H[44;130H   [37;34H[44;144H4[37;34H[?25h[?25l[44;144H5[37;35H[?25h[?25l[44;130H~@k[37;35H[44;130H   [37;36H[44;144H6[37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;35H[44;144H5[37;35H[?25h[?25l[44;130H~@k[37;35H[44;130H   [37;34H[44;144H4[37;34H[?25h[?25l[44;130H~@k[37;34H[44;130H   [37;35H[44;144H5[37;35H[?25h[?25l[44;130H~@k[37;35H[44;130H   [37;36H[44;144H6[37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H~@k[37;36H[44;130H   [37;36H[?25h[?25l[44;130H^[[37;36H[44;130H  [37;36H[44;130H^[[37;36H[44;130H  [37;36H[?25h[?25l[44;130H^[[37;36H[44;130H  [37;36H[44;130H^[[37;36H[44;130H  [37;36H[?25h[?25l[44;130H:[37;36H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"/tmp/kubectl-edit-4022702531.yaml" 72L, 2081B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;mA copy of your changes has been stored to "/tmp/kubectl-edit-4022702531.yaml"
+error: Edit cancelled, no valid changes were saved.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl edit deployment avengers-deployment[4@describe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pedit[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"/tmp/kubectl-edit-1577952087.yaml" 69L, 1903B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be[m[2;91H[K[3;1H[34m# reopened with the relevant failures.[m[3;39H[K[4;1H[34m#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"2"[m
+  [36mcreationTimestamp[m[35m:[m [31m"2025-05-20T08:33:22Z"[m
+  [36mgeneration[m[35m:[m [31m2[m
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+  [36mname[m[35m:[m avengers-deployment
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"16285"[m
+  [36muid[m[35m:[m e86d5b37-5ea0-41e6-9a74-b52dedaa2c82
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[24;7H[36mapp[m[35m:[m avengers
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[27;7H[36mmaxSurge[m[35m:[m 25%[28;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[32;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[33;7H[36mlabels[m[35m:[m[34;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[36;7H[36mcontainers[m[35m:[m[37;7H[33m- [m[36mimage[m[35m:[m anilbidari/todo[38;9H[36mimagePullPolicy[m[35m:[m Always[39;9H[36mname[m[35m:[m avengers-deployment[40;9H[36mports[m[35m:[m[41;9H[33m- [m[36mcontainerPort[m[35m:[m [31m8080[m[42;11H[36mprotocol[m[35m:[m TCP[43;9H[36mresources[m[35m:[m [35m{}[m[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H~@k[1;1H[44;130H   [2;1H[44;140H2[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;1H[44;140H3[3;1H[?25h[?25l[44;130H~@k[3;1H[44;130H   [4;1H[44;140H4[4;1H[?25h[?25l[44;130H~@k[4;1H[44;130H   [5;1H[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [4;1H[44;140H4[4;1H[?25h[?25l[44;130H~@k[4;1H[44;130H   [5;1H[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [9;1H[44;140H9[9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [10;1H[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [12;1H[44;141H2[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [13;1H[44;141H3[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [14;1H[44;141H4[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H5[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H6[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [17;1H[44;141H7[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [18;1H[44;141H8[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H9[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;140H20[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;141H1[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;141H2[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [23;1H[44;141H3[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [24;1H[44;141H4[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [25;1H[44;141H5[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [26;1H[44;141H6[26;1H[?25h[?25l[44;130H~@k[26;1H[44;130H   [27;1H[44;141H7[27;1H[?25h[?25l[44;130H~@k[27;1H[44;130H   [28;1H[44;141H8[28;1H[?25h[?25l[44;130H~@k[28;1H[44;130H   [29;1H[44;141H9[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [30;1H[44;140H30[30;1H[?25h[?25l[44;130H~@k[30;1H[44;130H   [31;1H[44;141H1[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [32;1H[44;141H2[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [33;1H[44;141H3[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [34;1H[44;141H4[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [35;1H[44;141H5[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [36;1H[44;141H6[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [37;1H[44;141H7[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [38;1H[44;141H8[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mterminationMessagePath[m[35m:[m /dev/termination-log[44;1H[K[44;140H39,1[11C3%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mterminationMessagePolicy[m[35m:[m File[44;140H[K[44;140H40,1[11C7%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mdnsPolicy[m[35m:[m ClusterFirst[44;140H[K[44;140H41,1[10C11%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mrestartPolicy[m[35m:[m Always[44;140H[K[44;140H42,1[10C15%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mschedulerName[m[35m:[m default-scheduler[44;140H[K[44;140H43,1[10C19%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36msecurityContext[m[35m:[m [35m{}[m[44;140H[K[44;140H44,1[10C23%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mterminationGracePeriodSeconds[m[35m:[m [31m30[m[44;140H[K[44;140H45,1[10C26%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;1H[36mstatus[m[35m:[m[44;140H[K[44;140H46,1[10C30%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mavailableReplicas[m[35m:[m [31m5[m[44;140H[K[44;140H47,1[10C34%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mconditions[m[35m:[m[44;140H[K[44;140H48,1[10C38%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[33m- [m[36mlastTransitionTime[m[35m:[m [31m"2025-05-20T08:33:28Z"[m[44;140H[K[44;140H49,1[10C42%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mlastUpdateTime[m[35m:[m [31m"2025-05-20T08:33:28Z"[m[44;140H[K[44;140H50,1[10C46%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mmessage[m[35m:[m Deployment has minimum availability.[44;140H[K[44;140H51,1[10C50%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mreason[m[35m:[m MinimumReplicasAvailable[44;140H[K[44;140H52,1[10C53%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mstatus[m[35m:[m [31m"True"[m[44;140H[K[44;140H53,1[10C57%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mtype[m[35m:[m Available[44;140H[K[44;140H54,1[10C61%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[33m- [m[36mlastTransitionTime[m[35m:[m [31m"2025-05-20T08:33:22Z"[m[44;140H[K[44;140H55,1[10C65%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mlastUpdateTime[m[35m:[m [31m"2025-05-20T08:42:29Z"[m[44;140H[K[44;140H56,1[10C69%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mmessage[m[35m:[m ReplicaSet [31m"avengers-deployment-575bbcc55d"[m has successfully progressed.[44;140H[K[44;140H57,1[10C73%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mreason[m[35m:[m NewReplicaSetAvailable[44;140H[K[44;140H58,1[10C76%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mstatus[m[35m:[m [31m"True"[m[44;140H[K[44;140H59,1[10C80%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;5H[36mtype[m[35m:[m Progressing[44;140H[K[44;140H60,1[10C84%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mobservedGeneration[m[35m:[m [31m2[m[44;140H[K[44;140H61,1[10C88%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mreadyReplicas[m[35m:[m [31m5[m[44;140H[K[44;140H62,1[10C92%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mreplicas[m[35m:[m [31m5[m[44;140H[K[44;140H63,1[10C96%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mupdatedReplicas[m[35m:[m [31m5[m[44;140H[K[44;140H64,1[10CBot[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [37;1H[44;141H3[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [36;1H[44;141H2[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [35;1H[44;141H1[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [34;1H[44;141H0[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [33;1H[44;140H59[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [32;1H[44;141H8[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [31;1H[44;141H7[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [30;1H[44;141H6[30;1H[?25h[?25l[44;130H~@k[30;1H[44;130H   [29;1H[44;141H5[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [28;1H[44;141H4[28;1H[?25h[?25l[44;130H~@k[28;1H[44;130H   [27;1H[44;141H3[27;1H[?25h[?25l[44;130H~@k[27;1H[44;130H   [26;1H[44;141H2[26;1H[?25h[?25l[44;141H1[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [24;1H[44;141H0[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [23;1H[44;140H49[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [22;1H[44;141H8[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [21;1H[44;141H7[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [20;1H[44;141H6[20;1H[?25h[?25l[44;141H5[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [18;1H[44;141H4[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [17;1H[44;141H3[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [16;1H[44;141H2[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [15;1H[44;141H1[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [14;1H[44;141H0[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [13;1H[44;140H39[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [12;1H[44;141H8[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [11;1H[44;141H7[11;1H[?25h[?25l[44;130H^[[11;1H[44;130H  [11;1H[44;130H^[[11;1H[44;130H  [11;1H[?25h[?25l[44;130HA[11;1H[44;130H [11;31H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H37,31[9CBot[11;31H[?25h[?25l[11;7H  [33m- [m[36mimage[m[35m:[m anilbidari/todo:[44;144H4[11;34H[?25h[?25l2[44;144H5[11;35H[?25h[44;1H[K[11;34H[?25l[44;130H^[[11;34H[44;130H  [11;35H[44;140H37,34[9CBot[11;34H[?25h[?25l[44;130H:[11;34H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"/tmp/kubectl-edit-1577952087.yaml" 69L, 1907B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;merror: deployments.apps "avengers-deployment" is invalid
+[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"/tmp/kubectl-edit-4236035573.yaml" 72L, 2079B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be[m[2;91H[K[3;1H[34m# reopened with the relevant failures.[m[3;39H[K[4;1H[34m#
+# deployments.apps "avengers-deployment" was not valid:
+# * <nil>: Invalid value: "The edited file failed validation": yaml: line 33: did not find expected '-' indicator
+#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"2"[m
+  [36mcreationTimestamp[m[35m:[m [31m"2025-05-20T08:33:22Z"[m
+  [36mgeneration[m[35m:[m [31m2[m
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+  [36mname[m[35m:[m avengers-deployment
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"16285"[m
+  [36muid[m[35m:[m e86d5b37-5ea0-41e6-9a74-b52dedaa2c82
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[27;7H[36mapp[m[35m:[m avengers
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[30;7H[36mmaxSurge[m[35m:[m 25%[31;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[35;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[36;7H[36mlabels[m[35m:[m[37;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[39;7H[36mcontainers[m[35m:[m[40;9H[33m- [m[36mimage[m[35m:[m anilbidari/todo:2[41;9H[36mimagePullPolicy[m[35m:[m Always[42;9H[36mname[m[35m:[m avengers-deployment[43;9H[36mports[m[35m:[m[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130H:[1;1H[44;1H[K[44;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[44;1H[K[44;1H[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;mA copy of your changes has been stored to "/tmp/kubectl-edit-4236035573.yaml"
+error: Edit cancelled, no valid changes were saved.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 8
+drwxr-xr-x 6 root root 4096 May 20 07:58 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root root  374 May 20 08:52 avengers.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi avengers.yaml 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"avengers.yaml" 22L, 374B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment[2;17H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;3H[36mname[m[35m:[m avengers-deployment
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+[36mspec[m[35m:[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[11;7H[36mapp[m[35m:[m avengers
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[14;7H[36mlabels[m[35m:[m[15;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[17;7H[36mcontainers[m[35m:[m[18;7H[33m- [m[36mname[m[35m:[m avengers-deployment[19;9H[36mimage[m[35m:[m anilbidari/todo.v2[20;9H[36mports[m[35m:[m[21;9H[33m- [m[36mcontainerPort[m[35m:[m [31m80[m
+
+[1m[34m~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H19,33[9CAll[19;33H[?25h[?4m[?25l[44;130H^[[19;33H[44;130H  [19;33H[44;130H^[[19;33H[44;130H  [19;33H[?25h[?25l[44;130Hx[19;33H[44;130H [19;33H[44;130Hdl[19;33H[44;130H  [19;32H[19;33H[K[44;144H2[19;32H[?25h[?25l[44;130Hx[19;32H[44;130H [19;32H[44;130Hdl[19;32H[44;130H  [19;31H[19;32H[K[44;144H1[19;31H[?25h[?25l[44;130Hx[19;31H[44;130H [19;31H[44;130Hdl[19;31H[44;130H  [19;30H[19;31H[K[44;144H0[19;30H[?25h[?25l[44;130H^[[19;30H[44;130H  [19;30H[44;130H^[[19;30H[44;130H  [19;30H[?25h[?25l[44;130HA[19;30H[44;130H [19;31H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H19,31[9CAll[19;31H[?25h[?25l:[44;144H2[19;32H[?25h[?25l2[44;144H3[19;33H[?25h[?25l.[44;144H4[19;34H[?25h[?25l0[44;144H5[19;35H[?25h[44;1H[K[19;34H[?25l[44;130H^[[19;34H[44;130H  [19;35H[44;140H19,34[9CAll[19;34H[?25h[?25l[44;130H:[19;34H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"avengers.yaml" 22L, 375B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl apply -f avengers.yaml 
+[?2004lWarning: resource deployments/avengers-deployment is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
+deployment.apps/avengers-deployment configured
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl apply -f avengers.yaml [14Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"avengers.yaml" 22L, 375B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment[2;17H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;3H[36mname[m[35m:[m avengers-deployment
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+[36mspec[m[35m:[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[11;7H[36mapp[m[35m:[m avengers
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[14;7H[36mlabels[m[35m:[m[15;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[17;7H[36mcontainers[m[35m:[m[18;7H[33m- [m[36mname[m[35m:[m avengers-deployment[19;9H[36mimage[m[35m:[m anilbidari/todo:2.0[20;9H[36mports[m[35m:[m[21;9H[33m- [m[36mcontainerPort[m[35m:[m [31m80[m
+
+[1m[34m~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H19,34[9CAll[19;34H[?25h[?4m[?25l[44;130H^[[19;34H[44;130H  [19;34H[44;130H^[[19;34H[44;130H  [19;34H[?25h[?25l[44;130Hx[19;34H[44;130H [19;34H[44;130Hdl[19;34H[44;130H  [19;33H[19;34H[K[44;144H3[19;33H[?25h[?25l[44;130Hx[19;33H[44;130H [19;33H[44;130Hdl[19;33H[44;130H  [19;32H[19;33H[K[44;144H2[19;32H[?25h[?25l[44;130H^[[19;32H[44;130H  [19;32H[44;130H^[[19;32H[44;130H  [19;32H[?25h[?25l[44;130H:[19;32H[44;1H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"avengers.yaml" 22L, 373B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi avengers.yaml [14@kubectl apply -f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004ldeployment.apps/avengers-deployment configured
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get deployments[K
+[?2004lNAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+avengers-deployment   5/5     5            5           22m
+python-deployment     3/3     3            3           57m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# describe deployment [7mavengers-deployment[27mavengers-deployment
+[?2004ldescribe: command not found
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# describe deployment avengers-deployment[1@k[1@u[1@b[1@e[1@c[1@t[1@l[1@ 
+[?2004lName:                   avengers-deployment
+Namespace:              default
+CreationTimestamp:      Tue, 20 May 2025 08:33:22 +0000
+Labels:                 app=avengers
+Annotations:            deployment.kubernetes.io/revision: 4
+Selector:               app=avengers
+Replicas:               5 desired | 5 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=avengers
+  Containers:
+   avengers-deployment:
+    Image:        anilbidari/todo:2
+    Ports:        80/TCP, 8080/TCP
+    Host Ports:   0/TCP, 0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  avengers-deployment-656c9b8866 (0/0 replicas created), avengers-deployment-575bbcc55d (0/0 replicas created), avengers-deployment-5d65bfc45d (0/0 replicas created)
+NewReplicaSet:   avengers-deployment-57cdcbccf6 (5/5 replicas created)
+Events:
+  Type    Reason             Age                 From                   Message
+  ----    ------             ----                ----                   -------
+  Normal  ScalingReplicaSet  23m                 deployment-controller  Scaled up replica set avengers-deployment-656c9b8866 to 5
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 2
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 4 from 5
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 3 from 2
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 1 from 2
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 4 from 3
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 2 from 3
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 5 from 4
+  Normal  ScalingReplicaSet  13m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 3 from 4
+  Normal  ScalingReplicaSet  56s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 4 from 5
+  Normal  ScalingReplicaSet  56s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 2
+  Normal  ScalingReplicaSet  56s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 3 from 2
+  Normal  ScalingReplicaSet  51s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 3 from 4
+  Normal  ScalingReplicaSet  51s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 4 from 3
+  Normal  ScalingReplicaSet  51s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 2 from 3
+  Normal  ScalingReplicaSet  51s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 5 from 4
+  Normal  ScalingReplicaSet  50s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 1 from 2
+  Normal  ScalingReplicaSet  49s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 0 from 1
+  Normal  ScalingReplicaSet  22s (x10 over 13m)  deployment-controller  (combined from similar events): Scaled down replica set avengers-deployment-5d65bfc45d to 0 from 1
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment avengers-deployment[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Pkubectl get deploymentapply -f avengers.yaml [9Pget deployment[K[K[K[K[K[K[K[K[K[Kpods [1@w[1@a[1@t[1@c[1@h[1@ 
+[?2004l[?1049h[22;0;0t[1;44r(B[m[4l[?7h[39;49m[39;49m(B[m[H[2JEvery 2.0s: kubectl get pods[1;116Hip-172-31-19-219: Tue May 20 08:56:41 2025[3;1HNAME[3;40HREADY   STATUS    RESTARTS   AGE[4davengers-deployment-57cdcbccf6-dnsrc   1/1     Running   0[4;69H50s[5davengers-deployment-57cdcbccf6-kckrm   1/1     Running   0[5;69H43s[6davengers-deployment-57cdcbccf6-stm4n   1/1     Running   0[6;69H49s[7davengers-deployment-57cdcbccf6-wlrdf   1/1     Running   0[7;69H43s[8davengers-deployment-57cdcbccf6-znq2q   1/1     Running   0[8;69H50s[9dpython-deployment-5dc868bd7c-g9tm8     1/1     Running   0[9;69H57m[10dpython-deployment-5dc868bd7c-rpvww     1/1     Running   0[10;69H56m[11dpython-deployment-5dc868bd7c-vbh2z     1/1     Running   0[11;69H57m[44;157H(B[m[1;152H3[4;70H2[5d5[6d51[7d5[8d2[44;157H(B[m[1;152H5[4;70H4[5d7[6d3[7d7[8d4[9d8[11d8[44;157H(B[m[1;152H7[4;70H6[5d9[6d5[7d9[8d6[44;157H(B[m[1;152H9[4;70H8[5d51[6d7[7d51[8d8[44;157H(B[m[1;151H51[4;69H60[5d3[6d9[7d3[8d60[44;157H(B[m[1;152H3[4;70H2[5d5[6d61[7d5[8d2[44;157H(B[m[1;152H5[4;70H4[5d7[6d3[7d7[8d4[44;157H(B[m[1;152H7[4;70H6[5d9[6d5[7d9[8d6[44;157H(B[m[1;152H9[4;70H8[5d61[6d7[7d61[8d8[44;157H(B[m[44;1H[?1049l[23;0;0t[?1l>[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# watch kubectl get pods kubectl describe deployment avengers-deployment[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8P[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[17Pkubectl get deployment
+[?2004lNAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+avengers-deployment   5/5     5            5           23m
+python-deployment     3/3     3            3           58m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get deploymentwatch kubectl get pods [1Pkubectl get deployment[Kkubectl de[K[Kget deployment
+[?2004lNAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+avengers-deployment   5/5     5            5           24m
+python-deployment     3/3     3            3           59m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get deployment
+[?2004lNAME                  READY   UP-TO-DATE   AVAILABLE   AGE
+avengers-deployment   5/5     5            5           24m
+python-deployment     3/3     3            3           59m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get deployment[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdescrive [K[K[Kbe deployment [7mavengers-deployment[27mavengers-deployment
+[?2004lName:                   avengers-deployment
+Namespace:              default
+CreationTimestamp:      Tue, 20 May 2025 08:33:22 +0000
+Labels:                 app=avengers
+Annotations:            deployment.kubernetes.io/revision: 4
+Selector:               app=avengers
+Replicas:               5 desired | 5 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=avengers
+  Containers:
+   avengers-deployment:
+    Image:        anilbidari/todo:2
+    Ports:        80/TCP, 8080/TCP
+    Host Ports:   0/TCP, 0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  avengers-deployment-656c9b8866 (0/0 replicas created), avengers-deployment-575bbcc55d (0/0 replicas created), avengers-deployment-5d65bfc45d (0/0 replicas created)
+NewReplicaSet:   avengers-deployment-57cdcbccf6 (5/5 replicas created)
+Events:
+  Type    Reason             Age                   From                   Message
+  ----    ------             ----                  ----                   -------
+  Normal  ScalingReplicaSet  25m                   deployment-controller  Scaled up replica set avengers-deployment-656c9b8866 to 5
+  Normal  ScalingReplicaSet  16m                   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 2
+  Normal  ScalingReplicaSet  16m                   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 4 from 5
+  Normal  ScalingReplicaSet  16m                   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 3 from 2
+  Normal  ScalingReplicaSet  15m                   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 1 from 2
+  Normal  ScalingReplicaSet  15m                   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 4 from 3
+  Normal  ScalingReplicaSet  15m                   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 2 from 3
+  Normal  ScalingReplicaSet  15m                   deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 5 from 4
+  Normal  ScalingReplicaSet  15m                   deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 3 from 4
+  Normal  ScalingReplicaSet  2m59s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 4 from 5
+  Normal  ScalingReplicaSet  2m59s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 2
+  Normal  ScalingReplicaSet  2m59s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 3 from 2
+  Normal  ScalingReplicaSet  2m54s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 3 from 4
+  Normal  ScalingReplicaSet  2m54s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 4 from 3
+  Normal  ScalingReplicaSet  2m54s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 2 from 3
+  Normal  ScalingReplicaSet  2m54s                 deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 5 from 4
+  Normal  ScalingReplicaSet  2m53s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 1 from 2
+  Normal  ScalingReplicaSet  2m52s                 deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 0 from 1
+  Normal  ScalingReplicaSet  2m25s (x10 over 15m)  deployment-controller  (combined from similar events): Scaled down replica set avengers-deployment-5d65bfc45d to 0 from 1
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment avengers-deployment[25Pget deployment[K[K[K[K[K[K[K[K[K[Kpods
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-57cdcbccf6-dnsrc   1/1     Running   0          2m51s
+avengers-deployment-57cdcbccf6-kckrm   1/1     Running   0          2m44s
+avengers-deployment-57cdcbccf6-stm4n   1/1     Running   0          2m50s
+avengers-deployment-57cdcbccf6-wlrdf   1/1     Running   0          2m44s
+avengers-deployment-57cdcbccf6-znq2q   1/1     Running   0          2m51s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          59m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          58m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          59m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get podsdescribe deployment avengers-deployment[25Pget deploymentdescribe deployment avengers-deployment[1P[1P[1P[1P[1P[1P[1P[1P[1@e[1@d[1@i[1@t
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"/tmp/kubectl-edit-3720564706.yaml" 73L, 2409B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be[m[2;91H[K[3;1H[34m# reopened with the relevant failures.[m[3;39H[K[4;1H[34m#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"4"[m
+    [36mkubectl.kubernetes.io/last-applied-configuration[m[35m:[m |[11;7H[35m{[m[31m"apiVersion"[m[35m:[m[31m"apps/v1"[m,[31m"kind"[m[35m:[m[31m"Deployment"[m,[31m"metadata"[m[35m:{[m[31m"annotations"[m[35m:{}[m,[31m"labels"[m[35m:{[m[31m"app"[m[35m:[m[31m"avengers"[m[35m}[m,[31m"name"[m[35m:[m[31m"avengers-deployment"[m,[31m"namespace"[m[35m:[m[31m"default""[m[12;1H[35m}[m,[31m"spec"[m[35m:{[m[31m"replicas"[m[35m:[m5,[31m"selector"[m[35m:{[m[31m"matchLabels"[m[35m:{[m[31m"app"[m[35m:[m[31m"avengers"[m[35m}}[m,[31m"template"[m[35m:{[m[31m"metadata"[m[35m:{[m[31m"labels"[m[35m:{[m[31m"app"[m[35m:[m[31m"avengers"[m[35m}}[m,[31m"spec"[m[35m:{[m[31m"containers"[m[35m:[{[m[31m"image"[m[35m:[m[31m"anii[13;1Hlbidari/todo:2"[m,[31m"name"[m[35m:[m[31m"avengers-deployment"[m,[31m"ports"[m[35m:[{[m[31m"containerPort"[m[35m:[m80[35m}]}]}}}}[m
+  [36mcreationTimestamp[m[35m:[m [31m"2025-05-20T08:33:22Z"[m
+  [36mgeneration[m[35m:[m [31m4[m
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+  [36mname[m[35m:[m avengers-deployment
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"17924"[m
+  [36muid[m[35m:[m e86d5b37-5ea0-41e6-9a74-b52dedaa2c82
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[28;7H[36mapp[m[35m:[m avengers
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[31;7H[36mmaxSurge[m[35m:[m 25%[32;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[36;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[37;7H[36mlabels[m[35m:[m[38;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[40;7H[36mcontainers[m[35m:[m[41;7H[33m- [m[36mimage[m[35m:[m anilbidari/todo:2[42;9H[36mimagePullPolicy[m[35m:[m Always[43;9H[36mname[m[35m:[m avengers-deployment[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H~@k[1;1H[44;130H   [2;1H[44;140H2[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;1H[44;140H3[3;1H[?25h[?25l[44;130H~@k[3;1H[44;130H   [4;1H[44;140H4[4;1H[?25h[?25l[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [9;1H[44;140H9[9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [10;1H[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;141H2[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H3[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H4[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [17;1H[44;141H5[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [18;1H[44;141H6[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H7[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;141H8[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;141H9[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;140H20[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [23;1H[44;141H1[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [24;1H[44;141H2[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [25;1H[44;141H3[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [26;1H[44;141H4[26;1H[?25h[?25l[44;130H~@k[26;1H[44;130H   [27;1H[44;141H5[27;1H[?25h[?25l[44;130H~@k[27;1H[44;130H   [28;1H[44;141H6[28;1H[?25h[?25l[44;130H~@k[28;1H[44;130H   [29;1H[44;141H7[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [30;1H[44;141H8[30;1H[?25h[?25l[44;130H~@k[30;1H[44;130H   [31;1H[44;141H9[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [32;1H[44;140H30[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [33;1H[44;141H1[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [34;1H[44;141H2[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [35;1H[44;141H3[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [36;1H[44;141H4[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [37;1H[44;141H5[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [38;1H[44;141H6[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mports[m[35m:[m[44;1H[K[44;140H37,1[11C3%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[33m- [m[36mcontainerPort[m[35m:[m [31m80[m[44;140H[K[44;140H38,1[11C6%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;11H[36mprotocol[m[35m:[m TCP[44;140H[K[44;140H39,1[11C9%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[33m- [m[36mcontainerPort[m[35m:[m [31m8080[m[44;140H[K[44;140H40,1[10C12%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;11H[36mprotocol[m[35m:[m TCP[44;140H[K[44;140H41,1[10C15%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mresources[m[35m:[m [35m{}[m[44;140H[K[44;140H42,1[10C18%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mterminationMessagePath[m[35m:[m /dev/termination-log[44;140H[K[44;140H43,1[10C21%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;9H[36mterminationMessagePolicy[m[35m:[m File[44;140H[K[44;140H44,1[10C25%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mdnsPolicy[m[35m:[m ClusterFirst[44;140H[K[44;140H45,1[10C28%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;7H[36mrestartPolicy[m[35m:[m Always[44;140H[K[44;140H46,1[10C31%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [36;1H[1;43r[1;1H[3M[1;44r[41;7H[36mschedulerName[m[35m:[m default-scheduler[42;7H[36msecurityContext[m[35m:[m [35m{}[m[43;7H[36mterminationGracePeriodSeconds[m[35m:[m [31m30[m[44;140H[K[44;140H47,1[10C36%[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [37;1H[44;141H8[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [38;1H[44;141H9[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;1H[36mstatus[m[35m:[m[44;140H[K[44;140H50,1[10C40%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [38;1H[1;43r[43;1H
+[1;44r[43;3H[36mavailableReplicas[m[35m:[m [31m5[m[44;140H[K[44;140H51,1[10C43%[38;1H[?25h[?25l[44;130H~@k[38;1H[44;130H   [37;1H[44;141H0[37;1H[?25h[?25l[44;130H~@k[37;1H[44;130H   [36;1H[44;140H49[36;1H[?25h[?25l[44;130H~@k[36;1H[44;130H   [35;1H[44;141H8[35;1H[?25h[?25l[44;130H~@k[35;1H[44;130H   [34;1H[44;141H7[34;1H[?25h[?25l[44;130H~@k[34;1H[44;130H   [33;1H[44;141H6[33;1H[?25h[?25l[44;130H~@k[33;1H[44;130H   [32;1H[44;141H5[32;1H[?25h[?25l[44;130H~@k[32;1H[44;130H   [31;1H[44;141H4[31;1H[?25h[?25l[44;130H~@k[31;1H[44;130H   [30;1H[44;141H3[30;1H[?25h[?25l[44;130H~@k[30;1H[44;130H   [29;1H[44;141H2[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [28;1H[44;141H1[28;1H[?25h[?25l[44;130H~@k[28;1H[44;130H   [27;1H[44;141H0[27;1H[?25h[?25l[44;130H~@k[27;1H[44;130H   [26;1H[44;140H39[26;1H[?25h[?25l[44;130H~@k[26;1H[44;130H   [26;2H[44;143H2[26;2H[?25h[?25l[44;130H~@k[26;2H[44;130H   [26;3H[44;143H3[26;3H[?25h[?25l[44;130H~@k[26;3H[44;130H   [26;4H[44;143H4[26;4H[?25h[?25l[44;130H~@k[26;4H[44;130H   [26;5H[44;143H5[26;5H[?25h[?25l[44;130H~@k[26;5H[44;130H   [26;6H[44;143H6[26;6H[?25h[?25l[44;130H~@k[26;6H[44;130H   [26;7H[44;143H7[26;7H[?25h[?25l[44;130H~@k[26;7H[44;130H   [26;8H[44;143H8[26;8H[?25h[?25l[44;130H~@k[26;8H[44;130H   [26;9H[44;143H9[26;9H[?25h[?25l[44;130H~@k[26;9H[44;130H   [26;10H[44;143H10[26;10H[?25h[?25l[44;130H~@k[26;10H[44;130H   [26;11H[44;144H1[26;11H[?25h[?25l[44;130H~@k[26;11H[44;130H   [26;12H[44;144H2[26;12H[?25h[?25l[44;130H~@k[26;12H[44;130H   [26;13H[44;144H3[26;13H[?25h[?25l[44;130H~@k[26;13H[44;130H   [26;14H[44;144H4[26;14H[?25h[?25l[44;130H~@k[26;14H[44;130H   [26;15H[44;144H5[26;15H[?25h[?25l[44;130H~@k[26;15H[44;130H   [26;16H[44;144H6[26;16H[?25h[?25l[44;130H~@k[26;16H[44;130H   [26;17H[44;144H7[26;17H[?25h[?25l[44;130H~@k[26;17H[44;130H   [26;18H[44;144H8[26;18H[?25h[?25l[44;130H~@k[26;18H[44;130H   [26;19H[44;144H9[26;19H[?25h[?25l[44;130H~@k[26;19H[44;130H   [26;20H[44;143H20[26;20H[?25h[?25l[44;130H~@k[26;20H[44;130H   [26;21H[44;144H1[26;21H[?25h[?25l[44;130H~@k[26;21H[44;130H   [26;22H[44;144H2[26;22H[?25h[?25l[44;130H~@k[26;22H[44;130H   [26;23H[44;144H3[26;23H[?25h[?25l[44;130H~@k[26;23H[44;130H   [26;24H[44;144H4[26;24H[?25h[?25l[44;130H~@k[26;24H[44;130H   [26;25H[44;144H5[26;25H[?25h[?25l[44;130H~@k[26;25H[44;130H   [26;26H[44;144H6[26;26H[?25h[?25l[44;130H~@k[26;26H[44;130H   [26;27H[44;144H7[26;27H[?25h[?25l[44;130H~@k[26;27H[44;130H   [26;28H[44;144H8[26;28H[?25h[?25l[44;130H~@k[26;28H[44;130H   [26;29H[44;144H9[26;29H[?25h[?25l[44;130H~@k[26;29H[44;130H   [26;30H[44;143H30[26;30H[?25h[?25l[44;130H~@k[26;30H[44;130H   [26;31H[44;144H1[26;31H[?25h[?25l[44;130H~@k[26;31H[44;130H   [26;32H[44;144H2[26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H~@k[26;32H[44;130H   [26;32H[?25h[?25l[44;130H^[[26;32H[44;130H  [26;32H[44;130H^[[26;32H[44;130H  [26;32H[?25h[?25l[44;130HA[26;32H[44;130H [26;33H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H39,33[9C43%[26;33H[?25h[?25l.[44;144H4[26;34H[?25h[?25l0[44;144H5[26;35H[?25h[44;1H[K[26;34H[?25l[44;130H^[[26;34H[44;130H  [26;35H[44;140H39,34[9C43%[26;34H[?25h[?25l[44;130H:[26;34H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"/tmp/kubectl-edit-3720564706.yaml" 73L, 2411B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;mdeployment.apps/avengers-deployment edited
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl edit deployment avengers-deploymentget pods[K
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-5d65bfc45d-4r4wf   1/1     Running   0          6s
+avengers-deployment-5d65bfc45d-5lvrg   1/1     Running   0          6s
+avengers-deployment-5d65bfc45d-ckdjr   1/1     Running   0          4s
+avengers-deployment-5d65bfc45d-hc86r   1/1     Running   0          5s
+avengers-deployment-5d65bfc45d-m72j9   1/1     Running   0          6s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          65m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          63m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          65m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-5d65bfc45d-4r4wf   1/1     Running   0          8s
+avengers-deployment-5d65bfc45d-5lvrg   1/1     Running   0          8s
+avengers-deployment-5d65bfc45d-ckdjr   1/1     Running   0          6s
+avengers-deployment-5d65bfc45d-hc86r   1/1     Running   0          7s
+avengers-deployment-5d65bfc45d-m72j9   1/1     Running   0          8s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          65m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          63m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          65m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get podsedit deployment avengers-deploymentget pods[K
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-5d65bfc45d-4r4wf   1/1     Running   0          10s
+avengers-deployment-5d65bfc45d-5lvrg   1/1     Running   0          10s
+avengers-deployment-5d65bfc45d-ckdjr   1/1     Running   0          8s
+avengers-deployment-5d65bfc45d-hc86r   1/1     Running   0          9s
+avengers-deployment-5d65bfc45d-m72j9   1/1     Running   0          10s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          65m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          63m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          65m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get podsedit deployment avengers-deploymentget pods[Kdescribe deployment avengers-deployment
+[?2004lName:                   avengers-deployment
+Namespace:              default
+CreationTimestamp:      Tue, 20 May 2025 08:33:22 +0000
+Labels:                 app=avengers
+Annotations:            deployment.kubernetes.io/revision: 5
+Selector:               app=avengers
+Replicas:               5 desired | 5 updated | 5 total | 5 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=avengers
+  Containers:
+   avengers-deployment:
+    Image:        anilbidari/todo:2.0
+    Ports:        80/TCP, 8080/TCP
+    Host Ports:   0/TCP, 0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  avengers-deployment-656c9b8866 (0/0 replicas created), avengers-deployment-575bbcc55d (0/0 replicas created), avengers-deployment-57cdcbccf6 (0/0 replicas created)
+NewReplicaSet:   avengers-deployment-5d65bfc45d (5/5 replicas created)
+Events:
+  Type    Reason             Age                 From                   Message
+  ----    ------             ----                ----                   -------
+  Normal  ScalingReplicaSet  31m                 deployment-controller  Scaled up replica set avengers-deployment-656c9b8866 to 5
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 2
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 4 from 5
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 3 from 2
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 1 from 2
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 4 from 3
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 2 from 3
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled up replica set avengers-deployment-575bbcc55d to 5 from 4
+  Normal  ScalingReplicaSet  22m                 deployment-controller  Scaled down replica set avengers-deployment-656c9b8866 to 3 from 4
+  Normal  ScalingReplicaSet  9m2s                deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 4 from 5
+  Normal  ScalingReplicaSet  9m2s                deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 2
+  Normal  ScalingReplicaSet  9m2s                deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 3 from 2
+  Normal  ScalingReplicaSet  8m57s               deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 3 from 4
+  Normal  ScalingReplicaSet  8m57s               deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 4 from 3
+  Normal  ScalingReplicaSet  8m57s               deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 2 from 3
+  Normal  ScalingReplicaSet  8m57s               deployment-controller  Scaled up replica set avengers-deployment-5d65bfc45d to 5 from 4
+  Normal  ScalingReplicaSet  8m56s               deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 1 from 2
+  Normal  ScalingReplicaSet  8m55s               deployment-controller  Scaled down replica set avengers-deployment-575bbcc55d to 0 from 1
+  Normal  ScalingReplicaSet  21s (x12 over 21m)  deployment-controller  (combined from similar events): Scaled down replica set avengers-deployment-57cdcbccf6 to 4 from 5
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment avengers-deploymentget pods[K
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-5d65bfc45d-4r4wf   1/1     Running   0          28s
+avengers-deployment-5d65bfc45d-5lvrg   1/1     Running   0          28s
+avengers-deployment-5d65bfc45d-ckdjr   1/1     Running   0          26s
+avengers-deployment-5d65bfc45d-hc86r   1/1     Running   0          27s
+avengers-deployment-5d65bfc45d-m72j9   1/1     Running   0          28s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          65m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          64m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          65m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get podsdescribe deployment avengers-deploymentget pods[Kedit deployment avengers-deployment
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"/tmp/kubectl-edit-3161006135.yaml" 73L, 2411B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be[m[2;91H[K[3;1H[34m# reopened with the relevant failures.[m[3;39H[K[4;1H[34m#[m
+[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m
+  [36mannotations[m[35m:[m
+    [36mdeployment.kubernetes.io/revision[m[35m:[m [31m"5"[m
+    [36mkubectl.kubernetes.io/last-applied-configuration[m[35m:[m |[11;7H[35m{[m[31m"apiVersion"[m[35m:[m[31m"apps/v1"[m,[31m"kind"[m[35m:[m[31m"Deployment"[m,[31m"metadata"[m[35m:{[m[31m"annotations"[m[35m:{}[m,[31m"labels"[m[35m:{[m[31m"app"[m[35m:[m[31m"avengers"[m[35m}[m,[31m"name"[m[35m:[m[31m"avengers-deployment"[m,[31m"namespace"[m[35m:[m[31m"default""[m[12;1H[35m}[m,[31m"spec"[m[35m:{[m[31m"replicas"[m[35m:[m5,[31m"selector"[m[35m:{[m[31m"matchLabels"[m[35m:{[m[31m"app"[m[35m:[m[31m"avengers"[m[35m}}[m,[31m"template"[m[35m:{[m[31m"metadata"[m[35m:{[m[31m"labels"[m[35m:{[m[31m"app"[m[35m:[m[31m"avengers"[m[35m}}[m,[31m"spec"[m[35m:{[m[31m"containers"[m[35m:[{[m[31m"image"[m[35m:[m[31m"anii[13;1Hlbidari/todo:2"[m,[31m"name"[m[35m:[m[31m"avengers-deployment"[m,[31m"ports"[m[35m:[{[m[31m"containerPort"[m[35m:[m80[35m}]}]}}}}[m
+  [36mcreationTimestamp[m[35m:[m [31m"2025-05-20T08:33:22Z"[m
+  [36mgeneration[m[35m:[m [31m5[m
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m avengers
+  [36mname[m[35m:[m avengers-deployment
+  [36mnamespace[m[35m:[m default
+  [36mresourceVersion[m[35m:[m [31m"18858"[m
+  [36muid[m[35m:[m e86d5b37-5ea0-41e6-9a74-b52dedaa2c82
+[36mspec[m[35m:[m
+  [36mprogressDeadlineSeconds[m[35m:[m [31m600[m
+  [36mreplicas[m[35m:[m [31m5[m
+  [36mrevisionHistoryLimit[m[35m:[m [31m10[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[28;7H[36mapp[m[35m:[m avengers
+  [36mstrategy[m[35m:[m
+    [36mrollingUpdate[m[35m:[m[31;7H[36mmaxSurge[m[35m:[m 25%[32;7H[36mmaxUnavailable[m[35m:[m 25%
+    [36mtype[m[35m:[m RollingUpdate
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[36;7H[36mcreationTimestamp[m[35m:[m [31mnull[m[37;7H[36mlabels[m[35m:[m[38;9H[36mapp[m[35m:[m avengers
+    [36mspec[m[35m:[m[40;7H[36mcontainers[m[35m:[m[41;7H[33m- [m[36mimage[m[35m:[m anilbidari/todo:2.0[42;9H[36mimagePullPolicy[m[35m:[m Always[43;9H[36mname[m[35m:[m avengers-deployment[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H~@k[1;1H[44;130H   [2;1H[44;140H2[2;1H[?25h[?25l[44;140H3[3;1H[?25h[?25l[44;130H~@k[3;1H[44;130H   [4;1H[44;140H4[4;1H[?25h[?25l[44;140H5[5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [9;1H[44;140H9[9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [10;1H[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [14;1H[44;141H2[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H3[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H4[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [17;1H[44;141H5[17;1H[?25h[?25l[44;130H~@k[17;1H[44;130H   [18;1H[44;141H6[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H7[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;141H8[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;141H9[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;140H20[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [23;1H[44;141H1[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [23;2H[44;143H2[23;2H[?25h[?25l[44;130H~@k[23;2H[44;130H   [23;3H[44;143H3[23;3H[?25h[?25l[44;130H~@k[23;3H[44;130H   [23;4H[44;143H4[23;4H[?25h[?25l[44;130H~@k[23;4H[44;130H   [23;5H[44;143H5[23;5H[?25h[?25l[44;130H~@k[23;5H[44;130H   [23;6H[44;143H6[23;6H[?25h[?25l[44;130H~@k[23;6H[44;130H   [23;7H[44;143H7[23;7H[?25h[?25l[44;130H~@k[23;7H[44;130H   [23;8H[44;143H8[23;8H[?25h[?25l[44;130H~@k[23;8H[44;130H   [23;9H[44;143H9[23;9H[?25h[?25l[44;143H10[23;10H[?25h[?25l[44;130H~@k[23;10H[44;130H   [24;10H[44;141H2[24;10H[?25h[?25l[44;130H~@k[24;10H[44;130H   [24;11H[44;144H1[24;11H[?25h[?25l[44;130H~@k[24;11H[44;130H   [24;12H[44;144H2[24;12H[?25h[?25l[44;130H~@k[24;12H[44;130H   [24;13H[44;144H3[24;13H[?25h[?25l[44;130H^[[24;13H[44;130H  [24;13H[44;130H^[[24;13H[44;130H  [24;13H[?25h[?25l[44;130Hr[24;13H[?25h[?25l[44;131H3[24;13H[44;130H  [24;13H[31m3[?25h[?25l[m[44;130H^[[24;13H[44;130H  [24;13H[44;130H^[[24;13H[44;130H  [24;13H[?25h[?25l[44;130H:[24;13H[44;1H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"/tmp/kubectl-edit-3161006135.yaml" 73L, 2411B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;mdeployment.apps/avengers-deployment edited
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl edit deployment avengers-deploymentget pods[K
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-5d65bfc45d-5lvrg   1/1     Running   0          73s
+avengers-deployment-5d65bfc45d-hc86r   1/1     Running   0          72s
+avengers-deployment-5d65bfc45d-m72j9   1/1     Running   0          73s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          66m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          64m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          66m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods
+[?2004lNAME                                   READY   STATUS    RESTARTS   AGE
+avengers-deployment-5d65bfc45d-5lvrg   1/1     Running   0          75s
+avengers-deployment-5d65bfc45d-hc86r   1/1     Running   0          74s
+avengers-deployment-5d65bfc45d-m72j9   1/1     Running   0          75s
+python-deployment-5dc868bd7c-g9tm8     1/1     Running   0          66m
+python-deployment-5dc868bd7c-rpvww     1/1     Running   0          64m
+python-deployment-5dc868bd7c-vbh2z     1/1     Running   0          66m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods[Kkubectl get pods | grep [7mavengers[27mavengers
+[?2004l[01;31m[Kavengers[m[K-deployment-5d65bfc45d-5lvrg   1/1     Running   0          99s
+[01;31m[Kavengers[m[K-deployment-5d65bfc45d-hc86r   1/1     Running   0          98s
+[01;31m[Kavengers[m[K-deployment-5d65bfc45d-m72j9   1/1     Running   0          99s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods | grep avengers | wc -l
+[?2004l3
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# 
+Broadcast message from root@ip-172-31-19-219 (Tue 2025-05-20 09:06:34 UTC):
+
+The system will power off now!
+
+
+Broadcast message from root@ip-172-31-19-219 (Tue 2025-05-20 09:06:34 UTC):
+
+The system will power off now!
+

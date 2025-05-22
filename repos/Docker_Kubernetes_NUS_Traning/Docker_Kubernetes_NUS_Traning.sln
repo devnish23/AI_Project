@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.36105.23 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Docker_Kubernetes_NUS_Traning", "Docker_Kubernetes_NUS_Traning\Docker_Kubernetes_NUS_Traning.pyproj", "{DF6D729B-592F-40EF-A66E-576B1A1F323E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DF6D729B-592F-40EF-A66E-576B1A1F323E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF6D729B-592F-40EF-A66E-576B1A1F323E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7022CDFF-B314-4528-9CDB-E5D8662B33EF}
+	EndGlobalSection
+EndGlobal

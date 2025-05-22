@@ -1,0 +1,41 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.20 11:41:51 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 20 03:42:00 UTC 2025
+
+  System load:  0.47              Temperature:           -273.1 C
+  Usage of /:   2.6% of 95.82GB   Processes:             112
+  Memory usage: 8%                Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.19.219
+
+Expanded Security Maintenance for Applications is not enabled.
+
+83 updates can be applied immediately.
+40 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+To run a command as administrator (user "root"), use "sudo <command>".
+See "man sudo_root" for details.
+
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ exit
+[?2004llogout

@@ -1,0 +1,699 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.20 09:03:41 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 20 01:04:02 UTC 2025
+
+  System load:  0.16               Temperature:           -273.1 C
+  Usage of /:   25.3% of 28.02GB   Processes:             118
+  Memory usage: 29%                Users logged in:       0
+  Swap usage:   0%                 IPv4 address for ens5: 172.31.22.130
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+40 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Mon May 19 02:42:16 2025 from 202.73.59.190
+[?2004h]0;ubuntu@ip-172-31-22-130: ~ubuntu@ip-172-31-22-130:~$ [K]0;ubuntu@ip-172-31-22-130: ~ubuntu@ip-172-31-22-130:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# df -h
+[?2004lFilesystem       Size  Used Avail Use% Mounted on
+/dev/root         29G  7.1G   21G  26% /
+tmpfs            458M     0  458M   0% /dev/shm
+tmpfs            183M  920K  182M   1% /run
+tmpfs            5.0M     0  5.0M   0% /run/lock
+efivarfs         128K  3.8K  120K   4% /sys/firmware/efi/efivars
+/dev/nvme0n1p16  881M  137M  683M  17% /boot
+/dev/nvme0n1p15  105M  6.1M   99M   6% /boot/efi
+tmpfs             92M   16K   92M   1% /run/user/1000
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# docker 
+[?2004l
+Usage:  docker [OPTIONS] COMMAND
+
+A self-sufficient runtime for containers
+
+Common Commands:
+  run         Create and run a new container from an image
+  exec        Execute a command in a running container
+  ps          List containers
+  build       Build an image from a Dockerfile
+  pull        Download an image from a registry
+  push        Upload an image to a registry
+  images      List images
+  login       Log in to a registry
+  logout      Log out from a registry
+  search      Search Docker Hub for images
+  version     Show the Docker version information
+  info        Display system-wide information
+
+Management Commands:
+  builder     Manage builds
+  buildx*     Docker Buildx
+  container   Manage containers
+  context     Manage contexts
+  image       Manage images
+  manifest    Manage Docker image manifests and manifest lists
+  network     Manage networks
+  plugin      Manage plugins
+  system      Manage Docker
+  trust       Manage trust on Docker images
+  volume      Manage volumes
+
+Swarm Commands:
+  swarm       Manage Swarm
+
+Commands:
+  attach      Attach local standard input, output, and error streams to a running container
+  commit      Create a new image from a container's changes
+  cp          Copy files/folders between a container and the local filesystem
+  create      Create a new container
+  diff        Inspect changes to files or directories on a container's filesystem
+  events      Get real time events from the server
+  export      Export a container's filesystem as a tar archive
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Return low-level information on Docker objects
+  kill        Kill one or more running containers
+  load        Load an image from a tar archive or STDIN
+  logs        Fetch the logs of a container
+  pause       Pause all processes within one or more containers
+  port        List port mappings or a specific mapping for the container
+  rename      Rename a container
+  restart     Restart one or more containers
+  rm          Remove one or more containers
+  rmi         Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  start       Start one or more stopped containers
+  stats       Display a live stream of container(s) resource usage statistics
+  stop        Stop one or more running containers
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+  top         Display the running processes of a container
+  unpause     Unpause all processes within one or more containers
+  update      Update configuration of one or more containers
+  wait        Block until one or more containers stop, then print their exit codes
+
+Global Options:
+      --config string      Location of client config files (default "/root/.docker")
+  -c, --context string     Name of the context to use to connect to the daemon (overrides DOCKER_HOST env var and default context set with "docker
+                           context use")
+  -D, --debug              Enable debug mode
+  -H, --host list          Daemon socket to connect to
+  -l, --log-level string   Set the logging level ("debug", "info", "warn", "error", "fatal") (default "info")
+      --tls                Use TLS; implied by --tlsverify
+      --tlscacert string   Trust certs signed only by this CA (default "/root/.docker/ca.pem")
+      --tlscert string     Path to TLS certificate file (default "/root/.docker/cert.pem")
+      --tlskey string      Path to TLS key file (default "/root/.docker/key.pem")
+      --tlsverify          Use TLS and verify the remote
+  -v, --version            Print version information and quit
+
+Run 'docker COMMAND --help' for more information on a command.
+
+For more help on how to use Docker, head to https://docs.docker.com/go/guides/
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# docker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# df -h
+[?2004lFilesystem       Size  Used Avail Use% Mounted on
+/dev/root         29G  7.1G   21G  26% /
+tmpfs            458M     0  458M   0% /dev/shm
+tmpfs            183M  920K  182M   1% /run
+tmpfs            5.0M     0  5.0M   0% /run/lock
+efivarfs         128K  3.8K  120K   4% /sys/firmware/efi/efivars
+/dev/nvme0n1p16  881M  137M  683M  17% /boot
+/dev/nvme0n1p15  105M  6.1M   99M   6% /boot/efi
+tmpfs             92M   16K   92M   1% /run/user/1000
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# top[K[K[Kfree -m
+[?2004l               total        used        free      shared  buff/cache   available
+Mem:             914         401         144           2         522         512
+Swap:              0           0           0
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# docker images
+[?2004lREPOSITORY   TAG       IMAGE ID   CREATED   SIZE
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# docker images[K[K[K[K[K[Kps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 20 01:05:18 UTC 2025
+
+  System load:  0.04               Temperature:           -273.1 C
+  Usage of /:   25.3% of 28.02GB   Processes:             125
+  Memory usage: 31%                Users logged in:       1
+  Swap usage:   0%                 IPv4 address for ens5: 172.31.22.130
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+40 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Tue May 20 01:04:03 2025 from 202.73.59.190
+[?2004h]0;ubuntu@ip-172-31-22-130: ~ubuntu@ip-172-31-22-130:~$ e[Ksudo su 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# apt update
+[?2004l[33m0% [Working][0m            Hit:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Connecting to security.ubuntu.com (185.125.190.81)][0m                                                       Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+                                                       Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+[33m0% [Connecting to security.ubuntu.com (185.125.190.81)][0m[33m                                                       0% [Waiting for headers][0m                        Get:4 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+[33m0% [4 InRelease 14.2 kB/126 kB 11%][0m[33m0% [4 InRelease 14.2 kB/126 kB 11%][0m                                   Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1101 kB]
+[33m0% [5 Packages 0 B/1101 kB 0%] [4 InRelease 14.2 kB/126 kB 11%][0m[33m                                                               0% [4 InRelease 25.8 kB/126 kB 20%][0m[33m0% [5 Packages store 0 B] [4 InRelease 25.8 kB/126 kB 20%][0m                                                          Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [234 kB]
+[33m0% [5 Packages store 0 B] [6 Translation-en 0 B/234 kB 0%] [4 InRelease 28.7 kB/126 kB 23%][0m[33m                                                                                           0% [5 Packages store 0 B] [4 InRelease 31.5 kB/126 kB 25%][0m                                                          Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Components [161 kB]
+[33m0% [5 Packages store 0 B] [7 Components-amd64 116 kB/161 kB 72%] [4 InRelease 31.5 kB/126 kB 25%][0m[33m                                                                                                 0% [5 Packages store 0 B] [4 InRelease 34.4 kB/126 kB 27%][0m                                                          Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1064 kB]
+[33m0% [5 Packages store 0 B] [8 Packages 0 B/1064 kB 0%] [4 InRelease 37.3 kB/126 kB 30%][0m[33m                                                                                      0% [5 Packages store 0 B] [4 InRelease 43.1 kB/126 kB 34%][0m                                                          Get:9 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe Translation-en [269 kB]
+[33m0% [5 Packages store 0 B] [9 Translation-en 69.1 kB/269 kB 26%] [4 InRelease 43.1 kB/126 kB 34%][0m[33m                                                                                                0% [5 Packages store 0 B] [4 InRelease 43.1 kB/126 kB 34%][0m                                                          Get:10 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Components [376 kB]
+[33m0% [5 Packages store 0 B] [10 Components-amd64 259 kB/376 kB 69%] [4 InRelease 43.1 kB/126 kB 34%][0m[33m0% [5 Packages store 0 B] [10 Components-amd64 376 kB/376 kB 100%] [4 InRelease 50.4 kB/126 kB 40%][0m                                                                                                   Get:11 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [1155 kB]
+[33m                                                                                                   0% [5 Packages store 0 B] [11 Packages 538 kB/1155 kB 47%] [4 InRelease 53.3 kB/126 kB 42%][0m[33m                                                                                           0% [5 Packages store 0 B] [4 InRelease 56.2 kB/126 kB 45%][0m                                                          Get:12 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted Translation-en [240 kB]
+[33m0% [5 Packages store 0 B] [12 Translation-en 169 kB/240 kB 70%] [4 InRelease 56.2 kB/126 kB 45%][0m[33m                                                                                                0% [5 Packages store 0 B] [4 InRelease 59.1 kB/126 kB 47%][0m                                                          Get:13 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Components [212 B]
+[33m0% [5 Packages store 0 B] [13 Components-amd64 0 B/212 B 0%] [4 InRelease 59.1 kB/126 kB 47%][0m[33m                                                                                             0% [5 Packages store 0 B] [4 InRelease 59.1 kB/126 kB 47%][0m                                                          Get:14 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Components [940 B]
+[33m0% [5 Packages store 0 B] [14 Components-amd64 0 B/940 B 0%] [4 InRelease 59.1 kB/126 kB 47%][0m[33m                                                                                             0% [5 Packages store 0 B] [4 InRelease 59.1 kB/126 kB 47%][0m                                                          Get:15 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports/main amd64 Components [7076 B]
+[33m0% [5 Packages store 0 B] [15 Components-amd64 0 B/7076 B 0%] [4 InRelease 59.1 kB/126 kB 47%][0m[33m                                                                                              0% [5 Packages store 0 B] [4 InRelease 59.1 kB/126 kB 47%][0m                                                          Get:16 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports/universe amd64 Components [16.4 kB]
+[33m0% [5 Packages store 0 B] [16 Components-amd64 16.4 kB/16.4 kB 100%] [4 InRelease 62.0 kB/126 kB 49%][0m[33m                                                                                                     0% [5 Packages store 0 B] [4 InRelease 62.0 kB/126 kB 49%][0m                                                          Get:17 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports/restricted amd64 Components [216 B]
+[33m0% [5 Packages store 0 B] [17 Components-amd64 216 B/216 B 100%] [4 InRelease 62.0 kB/126 kB 49%][0m[33m                                                                                                 0% [5 Packages store 0 B] [Waiting for headers] [4 InRelease 62.0 kB/126 kB 49%][0m                                                                                Get:18 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Components [212 B]
+[33m                                                                                0% [5 Packages store 0 B] [4 InRelease 62.0 kB/126 kB 49%][0m[33m                                                          0% [4 InRelease 114 kB/126 kB 90%][0m[33m0% [6 Translation-en store 0 B] [4 InRelease 114 kB/126 kB 90%][0m[33m                                                               0% [6 Translation-en store 0 B][0m[33m                               0% [Working][0m[33m0% [7 Components-amd64 store 0 B][0m[33m64% [7 Components-amd64 store 0 B][0m[33m                                  64% [Waiting for headers][0m[33m64% [8 Packages store 0 B] [Waiting for headers][0m                                                Get:19 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [854 kB]
+[33m64% [8 Packages store 0 B] [19 Packages 2657 B/854 kB 0%][0m[33m                                                         65% [19 Packages 80.8 kB/854 kB 9%][0m[33m65% [9 Translation-en store 0 B] [19 Packages 80.8 kB/854 kB 9%][0m[33m                                                                65% [19 Packages 142 kB/854 kB 17%][0m[33m65% [10 Components-amd64 store 0 B] [19 Packages 142 kB/854 kB 17%][0m[33m                                                                   67% [19 Packages 304 kB/854 kB 36%][0m[33m67% [11 Packages store 0 B] [19 Packages 307 kB/854 kB 36%][0m[33m                                                           72% [11 Packages store 0 B][0m[33m                           72% [Waiting for headers][0m[33m72% [12 Translation-en store 0 B] [Waiting for headers][0m                                                       Get:20 http://security.ubuntu.com/ubuntu noble-security/main Translation-en [156 kB]
+[33m73% [12 Translation-en store 0 B] [20 Translation-en 15.7 kB/156 kB 10%][0m                                                                        Get:21 http://security.ubuntu.com/ubuntu noble-security/main amd64 Components [21.6 kB]
+[33m74% [12 Translation-en store 0 B] [21 Components-amd64 11.6 kB/21.6 kB 54%][0m[33m                                                                           74% [12 Translation-en store 0 B] [Waiting for headers][0m                                                       Get:22 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [840 kB]
+[33m74% [12 Translation-en store 0 B] [22 Packages 12.9 kB/840 kB 2%][0m[33m                                                                 77% [22 Packages 252 kB/840 kB 30%][0m[33m77% [13 Components-amd64 store 0 B] [22 Packages 264 kB/840 kB 31%][0m[33m                                                                   77% [22 Packages 264 kB/840 kB 31%][0m[33m77% [14 Components-amd64 store 0 B] [22 Packages 264 kB/840 kB 31%][0m[33m                                                                   77% [22 Packages 276 kB/840 kB 33%][0m[33m77% [15 Components-amd64 store 0 B] [22 Packages 276 kB/840 kB 33%][0m[33m                                                                   78% [22 Packages 294 kB/840 kB 35%][0m[33m78% [16 Components-amd64 store 0 B] [22 Packages 306 kB/840 kB 36%][0m[33m                                                                   78% [22 Packages 352 kB/840 kB 42%][0m[33m78% [17 Components-amd64 store 0 B] [22 Packages 352 kB/840 kB 42%][0m[33m                                                                   79% [22 Packages 352 kB/840 kB 42%][0m[33m79% [18 Components-amd64 store 0 B] [22 Packages 352 kB/840 kB 42%][0m[33m                                                                   79% [22 Packages 364 kB/840 kB 43%][0m[33m79% [19 Packages store 0 B] [22 Packages 364 kB/840 kB 43%][0m                                                           Get:23 http://security.ubuntu.com/ubuntu noble-security/universe Translation-en [183 kB]
+[33m83% [19 Packages store 0 B] [23 Translation-en 7625 B/183 kB 4%][0m[33m                                                                85% [19 Packages store 0 B][0m                           Get:24 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Components [52.2 kB]
+[33m85% [19 Packages store 0 B] [24 Components-amd64 83 B/52.2 kB 0%][0m[33m                                                                 86% [19 Packages store 0 B][0m                           Get:25 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [1116 kB]
+[33m86% [19 Packages store 0 B] [25 Packages 9559 B/1116 kB 1%][0m[33m                                                           90% [25 Packages 439 kB/1116 kB 39%][0m[33m90% [20 Translation-en store 0 B] [25 Packages 452 kB/1116 kB 41%][0m[33m                                                                  96% [25 Packages 1020 kB/1116 kB 91%][0m[33m96% [21 Components-amd64 store 0 B] [25 Packages 1020 kB/1116 kB 91%][0m[33m                                                                     97% [25 Packages 1114 kB/1116 kB 100%][0m[33m97% [22 Packages store 0 B] [25 Packages 1114 kB/1116 kB 100%][0m[33m                                                              97% [22 Packages store 0 B][0m                           Get:26 http://security.ubuntu.com/ubuntu noble-security/restricted Translation-en [232 kB]
+[33m97% [22 Packages store 0 B] [26 Translation-en 52.1 kB/232 kB 22%][0m                                                                  Get:27 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Components [212 B]
+                                                                  Get:28 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Components [212 B]
+[33m                                                                  99% [22 Packages store 0 B][0m[33m                           99% [Working][0m[33m99% [23 Translation-en store 0 B][0m[33m                                 99% [Working][0m[33m99% [24 Components-amd64 store 0 B][0m[33m                                   99% [Working][0m[33m99% [25 Packages store 0 B][0m[33m                           99% [Working][0m[33m99% [26 Translation-en store 0 B][0m[33m                                 100% [Working][0m[33m100% [Working][0m[33m100% [Working][0m              Fetched 8458 kB in 2s (5005 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 4%Reading package lists... 4%Reading package lists... 5%Reading package lists... 5%Reading package lists... 47%Reading package lists... 47%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 65%Reading package lists... 66%Reading package lists... 66%Reading package lists... 66%Reading package lists... 67%Reading package lists... 67%Reading package lists... 70%Reading package lists... 70%Reading package lists... 72%Reading package lists... 72%Reading package lists... 76%Reading package lists... 76%Reading package lists... 77%Reading package lists... 77%Reading package lists... 81%Reading package lists... 81%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 84%Reading package lists... 87%Reading package lists... 87%Reading package lists... 89%Reading package lists... 89%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 92%Reading package lists... 96%Reading package lists... 96%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+44 packages can be upgraded. Run 'apt list --upgradable' to see them.
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# apt update[K[K[K[K[K[K[K[K[K[Kdocker info
+[?2004lClient:
+ Version:    26.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.14.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+
+Server:
+ Containers: 13
+  Running: 0
+  Paused: 0
+  Stopped: 13
+ Images: 0
+ Server Version: 26.1.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-1029-aws
+ Operating System: Ubuntu 24.04.2 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 2
+ Total Memory: 914.1MiB
+ Name: ip-172-31-22-130
+ ID: d4849848-0303-40d8-8e1c-b530c45f15fa
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Username: devadevops
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# apt install docker.io
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+docker.io is already the newest version (26.1.3-0ubuntu1~24.04.1).
+0 upgraded, 0 newly installed, 0 to remove and 44 not upgraded.
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# dc[Kocker create volume myvol2 [1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@v[1@l[1P[1P[C[1@ [1@v[1@o[1@l[1@u[1@m[1@e[C[1@ [1@c[1@r[1@e[1@a[1@t[1@e[C[1@ 
+[?2004lmyvol2
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# docker inspect [7mmyvol2[27mmyvol2[7mmyvol2[27m[1Pmyvol[K[K[K[K[K
+[?2004l[
+    {
+        "CreatedAt": "2025-05-20T01:34:19Z",
+        "Driver": "local",
+        "Labels": null,
+        "Mountpoint": "/var/lib/docker/volumes/myvol2/_data",
+        "Name": "myvol2",
+        "Options": null,
+        "Scope": "local"
+    }
+]
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# cd /var/lib/docker/volumes/
+[?2004l[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# ls -ltr
+[?2004ltotal 36
+drwx-----x 3 root root   4096 May 19 08:20 [0m[01;34m8cda4a4a2286e400cd86671b356e75b5fe32ddf2341cd413e873af33a467f63f[0m
+drwx-----x 3 root root   4096 May 19 08:21 [01;34m0edd30f405ef3dd3a8e9b10d5b78fe4ddff8302796dc06765e40e0eaab80467f[0m
+brw------- 1 root root 259, 1 May 20 01:02 [40;33;01mbackingFsBlockDev[0m
+drwx-----x 3 root root   4096 May 20 01:34 [01;34mmyvol2[0m
+-rw------- 1 root root  32768 May 20 01:34 metadata.db
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# [7mdocker volume ls[27mdocker volume ls
+[?2004lDRIVER    VOLUME NAME
+local     0edd30f405ef3dd3a8e9b10d5b78fe4ddff8302796dc06765e40e0eaab80467f
+local     8cda4a4a2286e400cd86671b356e75b5fe32ddf2341cd413e873af33a467f63f
+local     myvol2
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker volume ls[9Pls -ltrcd /var/lib/docker/volumes/[6Pdocker inspect myvol2 | grep Mountpoint [K ; "exho[K[K[Kcho "_data is default d[Kcreation when creating the volume and all th e data from the container mapped to myvol2 is placed under _datam_datay_datav_datao_datal_data0_data2_data/_data[C[C[C[C[C"
+[?2004l[?2004h> "
+[?2004l        "[01;31m[KMountpoint[m[K": "/var/lib/docker/volumes/myvol2/_data",
+echo _data: command not found
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker run -itd --name web-host -v myvol2:/data [7mubuntu:14.04[27mubuntu:14.04
+[?2004lUnable to find image 'ubuntu:14.04' locally
+14.04: Pulling from library/ubuntu
+
+[1A[2K2e6e20c8e2e6: Already exists [1B
+[1A[2K0551a797c01d: Already exists [1B
+[1A[2K512123a864da: Already exists [1BDigest: sha256:64483f3496c1373bfd55348e88694d1c4d0c9b660dee6bfef5e12f43b9933b30
+Status: Downloaded newer image for ubuntu:14.04
+0c8504a59bb6284c828536dca5fdd7b15d70991f4baddc426382184e84746c48
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker exec -it ls -l /data [7mweb-host[27mweb-host
+[?2004lError response from daemon: No such container: ls
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker exec -it ls -l /data web-host[1@w[1@e[1@b[1@-[1@h[1@o[1@s[1@t[1@ [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K[K[K[K[K[K[K[K
+[?2004ltotal 0
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker exec -it web-host ls -l /data [K[K[K[K[Kbin/bash
+[?2004l-rwxr-xr-x 1 root root 1021112 May 16  2017 /bin/bash
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker exec -it web-host ls -l /bin/bash[1P /bin/bash[1P /bin/bash[1P/bin/bash[1P /bin/bash[1P /bin/bash
+[?2004l]0;root@0c8504a59bb6: /root@0c8504a59bb6:/# c cd /data
+]0;root@0c8504a59bb6: /dataroot@0c8504a59bb6:/data# touch file1.txt
+]0;root@0c8504a59bb6: /dataroot@0c8504a59bb6:/data# touch file1.txt[1P[1@2
+]0;root@0c8504a59bb6: /dataroot@0c8504a59bb6:/data# exit
+exit
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker ps
+[?2004lCONTAINER ID   IMAGE          COMMAND       CREATED              STATUS              PORTS     NAMES
+0c8504a59bb6   ubuntu:14.04   "/bin/bash"   About a minute ago   Up About a minute             web-host
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker rm [7m0c8504a59bb6[27m0c8504a59bb6
+[?2004lError response from daemon: cannot remove container "/web-host": container is running: stop the container before removing or force remove
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# docker rm 0c8504a59bb6[C-0c8504a59bb6f0c8504a59bb6 0c8504a59bb6
+[?2004l0c8504a59bb6
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# cd /[K[K[K[Kls -ltr
+[?2004ltotal 36
+drwx-----x 3 root root   4096 May 19 08:20 [0m[01;34m8cda4a4a2286e400cd86671b356e75b5fe32ddf2341cd413e873af33a467f63f[0m
+drwx-----x 3 root root   4096 May 19 08:21 [01;34m0edd30f405ef3dd3a8e9b10d5b78fe4ddff8302796dc06765e40e0eaab80467f[0m
+brw------- 1 root root 259, 1 May 20 01:02 [40;33;01mbackingFsBlockDev[0m
+drwx-----x 3 root root   4096 May 20 01:34 [01;34mmyvol2[0m
+-rw------- 1 root root  32768 May 20 01:34 metadata.db
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumesroot@ip-172-31-22-130:/var/lib/docker/volumes# cd myvol2/
+[?2004l[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2root@ip-172-31-22-130:/var/lib/docker/volumes/myvol2# ls -ltr
+[?2004ltotal 4
+drwxr-xr-x 2 root root 4096 May 20 01:38 [0m[01;34m_data[0m
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2root@ip-172-31-22-130:/var/lib/docker/volumes/myvol2# cd _data/
+[?2004l[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# ls -ltr
+[?2004ltotal 0
+-rw-r--r-- 1 root root 0 May 20 01:38 file1.txt
+-rw-r--r-- 1 root root 0 May 20 01:38 file2.txt
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# docker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# docker ps -a
+[?2004lCONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS                      PORTS     NAMES
+ad4af7b27f44   2c849dee4ca9   "docker-entrypoint.s…"   17 hours ago   Exited (1) 17 hours ago               wizardly_merkle
+632d90d5896e   dde32939d517   "/bin/bash /opt/spac…"   17 hours ago   Exited (137) 17 hours ago             superman
+96a532fc5770   14334068fd60   "java -jar todorest.…"   18 hours ago   Exited (137) 17 hours ago             avengers
+b14c4c2d3c29   ubuntu:14.04   "/bin/bash"              18 hours ago   Exited (0) 17 hours ago               container03
+f9ead4ab0466   ubuntu:14.04   "/bin/bash"              18 hours ago   Exited (0) 17 hours ago               container02
+0bf5cdbc41d4   ubuntu:14.04   "/bin/bash"              18 hours ago   Exited (0) 17 hours ago               container01
+9fda7b57044b   a98a171b5cc6   "python /app/main.py"    18 hours ago   Exited (137) 17 hours ago             d2
+3edaf3aa8cc6   6d6f9d829286   "python /app/main.py"    18 hours ago   Exited (137) 17 hours ago             d1
+595c7e037c8c   ubuntu:14.04   "/bin/bash"              18 hours ago   Exited (0) 17 hours ago               deva
+fe1ed5ec6e37   ubuntu:14.04   "/bin/bash"              18 hours ago   Exited (0) 17 hours ago               new-container
+8b05a497bc58   c72e5f6ae60b   "python /app/main.py"    19 hours ago   Exited (137) 17 hours ago             c3
+b7c8704e394b   a98a171b5cc6   "python /app/main.py"    19 hours ago   Exited (137) 17 hours ago             c2
+05ced4d592f6   6d6f9d829286   "python /app/main.py"    20 hours ago   Exited (137) 17 hours ago             c1
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# docker ps -a[K[K[K[K run -itd web-host1 -v [7mmyvol2/[27mmyvol2/[K:/data1 [7mubuntu:14.04[27mubuntu:14.04
+[?2004lUnable to find image 'web-host1:latest' locally
+docker: Error response from daemon: pull access denied for web-host1, repository does not exist or may require 'docker login': denied: requested access to the resource is denied.
+See 'docker run --help'.
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# docker run -itd web-host1 -v myvol2:/data1 ubuntu:14.04[1@-[1@-[1@n[1@a[1@m[1@e[1@ 
+[?2004ldc5b37c689d35d1f283040a7036006da7166f33ba5013219b64c5ade0b646efe
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# docker ps
+[?2004lCONTAINER ID   IMAGE          COMMAND       CREATED         STATUS         PORTS     NAMES
+dc5b37c689d3   ubuntu:14.04   "/bin/bash"   3 seconds ago   Up 3 seconds             web-host1
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# docker exec -it web-host1 ls l [K[K-l /fda[K[K[Kdata1
+[?2004ltotal 0
+-rw-r--r-- 1 root root 0 May 20 01:38 file1.txt
+-rw-r--r-- 1 root root 0 May 20 01:38 file2.txt
+[?2004h]0;root@ip-172-31-22-130: /var/lib/docker/volumes/myvol2/_dataroot@ip-172-31-22-130:/var/lib/docker/volumes/myvol2/_data# exit
+[?2004lexit
+[?2004h]0;ubuntu@ip-172-31-22-130: ~ubuntu@ip-172-31-22-130:~$ sudo su -
+[?2004l[?2004h]0;root@ip-172-31-22-130: ~root@ip-172-31-22-130:~# login as: ubunut  tu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 20 01:59:40 UTC 2025
+
+  System load:  0.0                Temperature:           -273.1 C
+  Usage of /:   25.3% of 28.02GB   Processes:             122
+  Memory usage: 31%                Users logged in:       1
+  Swap usage:   0%                 IPv4 address for ens5: 172.31.22.130
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+40 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Tue May 20 01:05:19 2025 from 202.73.59.190
+[?2004h]0;ubuntu@ip-172-31-22-130: ~ubuntu@ip-172-31-22-130:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# [7mapt install docker-compose[27mapt install docker-compose
+[?2004lReading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  python3-compose python3-docker python3-dockerpty python3-docopt python3-dotenv python3-texttable python3-websocket
+The following NEW packages will be installed:
+  docker-compose python3-compose python3-docker python3-dockerpty python3-docopt python3-dotenv python3-texttable python3-websocket
+0 upgraded, 8 newly installed, 0 to remove and 44 not upgraded.
+Need to get 297 kB of archives.
+After this operation, 1589 kB of additional disk space will be used.
+Do you want to continue? [Y/n] y
+[33m0% [Working][0m            Get:1 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-websocket all 1.7.0-1 [38.1 kB]
+[33m0% [1 python3-websocket 0 B/38.1 kB 0%][0m[33m                                       13% [Waiting for headers][0m                         Get:2 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-docker all 5.0.3-1ubuntu1.1 [89.1 kB]
+[33m26% [2 python3-docker 47.8 kB/89.1 kB 54%][0m[33m                                          39% [Waiting for headers][0m                         Get:3 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-dockerpty all 0.4.1-5 [11.4 kB]
+[33m39% [3 python3-dockerpty 0 B/11.4 kB 0%][0m[33m                                        45% [Waiting for headers][0m                         Get:4 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-docopt all 0.6.2-6 [26.1 kB]
+[33m47% [4 python3-docopt 8069 B/26.1 kB 31%][0m[33m                                         54% [Waiting for headers][0m                         Get:5 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-dotenv all 1.0.1-1 [22.3 kB]
+[33m58% [5 python3-dotenv 13.9 kB/22.3 kB 62%][0m[33m                                          63% [Waiting for headers][0m                         Get:6 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-texttable all 1.6.7-1 [11.0 kB]
+[33m66% [6 python3-texttable 11.0 kB/11.0 kB 100%][0m[33m                                              68% [Waiting for headers][0m                         Get:7 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-compose all 1.29.2-6ubuntu1 [84.6 kB]
+[33m71% [7 python3-compose 8071 B/84.6 kB 10%][0m[33m                                          94% [Waiting for headers][0m                         Get:8 http://us-east-2.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 docker-compose all 1.29.2-6ubuntu1 [14.0 kB]
+[33m96% [8 docker-compose 8069 B/14.0 kB 57%][0m[33m                                         100% [Working][0m              Fetched 297 kB in 0s (9018 kB/s)
+
+7[0;43r8[1ASelecting previously unselected package python3-websocket.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 125318 files and directories currently installed.)
+Preparing to unpack .../0-python3-websocket_1.7.0-1_all.deb ...
+7[44;0f[42m[30mProgress: [  0%][49m[39m [.......................................................................................................................................] 87[44;0f[42m[30mProgress: [  3%][49m[39m [####...................................................................................................................................] 8Unpacking python3-websocket (1.7.0-1) ...
+7[44;0f[42m[30mProgress: [  6%][49m[39m [########...............................................................................................................................] 8Selecting previously unselected package python3-docker.
+Preparing to unpack .../1-python3-docker_5.0.3-1ubuntu1.1_all.deb ...
+7[44;0f[42m[30mProgress: [  9%][49m[39m [############...........................................................................................................................] 8Unpacking python3-docker (5.0.3-1ubuntu1.1) ...
+7[44;0f[42m[30mProgress: [ 12%][49m[39m [################.......................................................................................................................] 8Selecting previously unselected package python3-dockerpty.
+Preparing to unpack .../2-python3-dockerpty_0.4.1-5_all.deb ...
+7[44;0f[42m[30mProgress: [ 15%][49m[39m [####################...................................................................................................................] 8Unpacking python3-dockerpty (0.4.1-5) ...
+7[44;0f[42m[30mProgress: [ 18%][49m[39m [########################...............................................................................................................] 8Selecting previously unselected package python3-docopt.
+Preparing to unpack .../3-python3-docopt_0.6.2-6_all.deb ...
+7[44;0f[42m[30mProgress: [ 21%][49m[39m [############################...........................................................................................................] 8Unpacking python3-docopt (0.6.2-6) ...
+7[44;0f[42m[30mProgress: [ 24%][49m[39m [################################.......................................................................................................] 8Selecting previously unselected package python3-dotenv.
+Preparing to unpack .../4-python3-dotenv_1.0.1-1_all.deb ...
+7[44;0f[42m[30mProgress: [ 27%][49m[39m [####################################...................................................................................................] 8Unpacking python3-dotenv (1.0.1-1) ...
+7[44;0f[42m[30mProgress: [ 30%][49m[39m [########################################...............................................................................................] 8Selecting previously unselected package python3-texttable.
+Preparing to unpack .../5-python3-texttable_1.6.7-1_all.deb ...
+7[44;0f[42m[30mProgress: [ 33%][49m[39m [############################################...........................................................................................] 8Unpacking python3-texttable (1.6.7-1) ...
+7[44;0f[42m[30mProgress: [ 36%][49m[39m [#################################################......................................................................................] 8Selecting previously unselected package python3-compose.
+Preparing to unpack .../6-python3-compose_1.29.2-6ubuntu1_all.deb ...
+7[44;0f[42m[30mProgress: [ 39%][49m[39m [#####################################################..................................................................................] 8Unpacking python3-compose (1.29.2-6ubuntu1) ...
+7[44;0f[42m[30mProgress: [ 42%][49m[39m [#########################################################..............................................................................] 8Selecting previously unselected package docker-compose.
+Preparing to unpack .../7-docker-compose_1.29.2-6ubuntu1_all.deb ...
+7[44;0f[42m[30mProgress: [ 45%][49m[39m [#############################################################..........................................................................] 8Unpacking docker-compose (1.29.2-6ubuntu1) ...
+7[44;0f[42m[30mProgress: [ 48%][49m[39m [#################################################################......................................................................] 8Setting up python3-dotenv (1.0.1-1) ...
+7[44;0f[42m[30mProgress: [ 52%][49m[39m [#####################################################################..................................................................] 87[44;0f[42m[30mProgress: [ 55%][49m[39m [#########################################################################..............................................................] 8Setting up python3-texttable (1.6.7-1) ...
+7[44;0f[42m[30mProgress: [ 58%][49m[39m [#############################################################################..........................................................] 87[44;0f[42m[30mProgress: [ 61%][49m[39m [#################################################################################......................................................] 8Setting up python3-docopt (0.6.2-6) ...
+7[44;0f[42m[30mProgress: [ 64%][49m[39m [#####################################################################################..................................................] 87[44;0f[42m[30mProgress: [ 67%][49m[39m [#########################################################################################..............................................] 8Setting up python3-websocket (1.7.0-1) ...
+7[44;0f[42m[30mProgress: [ 70%][49m[39m [##############################################################################################.........................................] 87[44;0f[42m[30mProgress: [ 73%][49m[39m [##################################################################################################.....................................] 8Setting up python3-dockerpty (0.4.1-5) ...
+7[44;0f[42m[30mProgress: [ 76%][49m[39m [######################################################################################################.................................] 87[44;0f[42m[30mProgress: [ 79%][49m[39m [##########################################################################################################.............................] 8Setting up python3-docker (5.0.3-1ubuntu1.1) ...
+7[44;0f[42m[30mProgress: [ 82%][49m[39m [##############################################################################################################.........................] 87[44;0f[42m[30mProgress: [ 85%][49m[39m [##################################################################################################################.....................] 8Setting up python3-compose (1.29.2-6ubuntu1) ...
+7[44;0f[42m[30mProgress: [ 88%][49m[39m [######################################################################################################################.................] 87[44;0f[42m[30mProgress: [ 91%][49m[39m [##########################################################################################################################.............] 8Setting up docker-compose (1.29.2-6ubuntu1) ...
+7[44;0f[42m[30mProgress: [ 94%][49m[39m [##############################################################################################################################.........] 87[44;0f[42m[30mProgress: [ 97%][49m[39m [##################################################################################################################################.....] 8Processing triggers for man-db (2.12.0-4build2) ...
+
+7[0;44r8[1A[JScanning processes... [                                                                                                                                     ]Scanning processes... [=                                                                                                                                    ]Scanning processes... [==                                                                                                                                   ]Scanning processes... [===                                                                                                                                  ]Scanning processes... [====                                                                                                                                 ]Scanning processes... [=====                                                                                                                                ]Scanning processes... [======                                                                                                                               ]Scanning processes... [=======                                                                                                                              ]Scanning processes... [========                                                                                                                             ]Scanning processes... [=========                                                                                                                            ]Scanning processes... [==========                                                                                                                           ]Scanning processes... [===========                                                                                                                          ]Scanning processes... [============                                                                                                                         ]Scanning processes... [=============                                                                                                                        ]Scanning processes... [==============                                                                                                                       ]Scanning processes... [===============                                                                                                                      ]Scanning processes... [================                                                                                                                     ]Scanning processes... [=================                                                                                                                    ]Scanning processes... [==================                                                                                                                   ]Scanning processes... [===================                                                                                                                  ]Scanning processes... [====================                                                                                                                 ]Scanning processes... [=====================                                                                                                                ]Scanning processes... [======================                                                                                                               ]Scanning processes... [=======================                                                                                                              ]Scanning processes... [========================                                                                                                             ]Scanning processes... [=========================                                                                                                            ]Scanning processes... [==========================                                                                                                           ]Scanning processes... [===========================                                                                                                          ]Scanning processes... [============================                                                                                                         ]Scanning processes... [=============================                                                                                                        ]Scanning processes... [==============================                                                                                                       ]Scanning processes... [===============================                                                                                                      ]Scanning processes... [================================                                                                                                     ]Scanning processes... [=================================                                                                                                    ]Scanning processes... [==================================                                                                                                   ]Scanning processes... [===================================                                                                                                  ]Scanning processes... [====================================                                                                                                 ]Scanning processes... [=====================================                                                                                                ]Scanning processes... [======================================                                                                                               ]Scanning processes... [=======================================                                                                                              ]Scanning processes... [========================================                                                                                             ]Scanning processes... [=========================================                                                                                            ]Scanning processes... [==========================================                                                                                           ]Scanning processes... [===========================================                                                                                          ]Scanning processes... [============================================                                                                                         ]Scanning processes... [=============================================                                                                                        ]Scanning processes... [==============================================                                                                                       ]Scanning processes... [===============================================                                                                                      ]Scanning processes... [================================================                                                                                     ]Scanning processes... [=================================================                                                                                    ]Scanning processes... [==================================================                                                                                   ]Scanning processes... [===================================================                                                                                  ]Scanning processes... [====================================================                                                                                 ]Scanning processes... [=====================================================                                                                                ]Scanning processes... [======================================================                                                                               ]Scanning processes... [=======================================================                                                                              ]Scanning processes... [========================================================                                                                             ]Scanning processes... [=========================================================                                                                            ]Scanning processes... [==========================================================                                                                           ]Scanning processes... [===========================================================                                                                          ]Scanning processes... [============================================================                                                                         ]Scanning processes... [=============================================================                                                                        ]Scanning processes... [==============================================================                                                                       ]Scanning processes... [===============================================================                                                                      ]Scanning processes... [================================================================                                                                     ]Scanning processes... [=================================================================                                                                    ]Scanning processes... [==================================================================                                                                   ]Scanning processes... [===================================================================                                                                  ]Scanning processes... [====================================================================                                                                 ]Scanning processes... [=====================================================================                                                                ]Scanning processes... [======================================================================                                                               ]Scanning processes... [=======================================================================                                                              ]Scanning processes... [========================================================================                                                             ]Scanning processes... [=========================================================================                                                            ]Scanning processes... [==========================================================================                                                           ]Scanning processes... [===========================================================================                                                          ]Scanning processes... [============================================================================                                                         ]Scanning processes... [=============================================================================                                                        ]Scanning processes... [==============================================================================                                                       ]Scanning processes... [===============================================================================                                                      ]Scanning processes... [================================================================================                                                     ]Scanning processes... [=================================================================================                                                    ]Scanning processes... [==================================================================================                                                   ]Scanning processes... [===================================================================================                                                  ]Scanning processes... [====================================================================================                                                 ]Scanning processes... [=====================================================================================                                                ]Scanning processes... [======================================================================================                                               ]Scanning processes... [=======================================================================================                                              ]Scanning processes... [========================================================================================                                             ]Scanning processes... [=========================================================================================                                            ]Scanning processes... [==========================================================================================                                           ]Scanning processes... [===========================================================================================                                          ]Scanning processes... [============================================================================================                                         ]Scanning processes... [=============================================================================================                                        ]Scanning processes... [==============================================================================================                                       ]Scanning processes... [===============================================================================================                                      ]Scanning processes... [================================================================================================                                     ]Scanning processes... [=================================================================================================                                    ]Scanning processes... [==================================================================================================                                   ]Scanning processes... [===================================================================================================                                  ]Scanning processes... [====================================================================================================                                 ]Scanning processes... [=====================================================================================================                                ]Scanning processes... [======================================================================================================                               ]Scanning processes... [=======================================================================================================                              ]Scanning processes... [========================================================================================================                             ]Scanning processes... [=========================================================================================================                            ]Scanning processes... [==========================================================================================================                           ]Scanning processes... [===========================================================================================================                          ]Scanning processes... [============================================================================================================                         ]Scanning processes... [=============================================================================================================                        ]Scanning processes... [==============================================================================================================                       ]Scanning processes... [===============================================================================================================                      ]Scanning processes... [================================================================================================================                     ]Scanning processes... [=================================================================================================================                    ]Scanning processes... [==================================================================================================================                   ]Scanning processes... [===================================================================================================================                  ]Scanning processes... [====================================================================================================================                 ]Scanning processes... [=====================================================================================================================                ]Scanning processes... [======================================================================================================================               ]Scanning processes... [=======================================================================================================================              ]Scanning processes... [========================================================================================================================             ]Scanning processes... [=========================================================================================================================            ]Scanning processes... [==========================================================================================================================           ]Scanning processes... [===========================================================================================================================          ]Scanning processes... [============================================================================================================================         ]Scanning processes... [=============================================================================================================================        ]Scanning processes... [==============================================================================================================================       ]Scanning processes... [===============================================================================================================================      ]Scanning processes... [================================================================================================================================     ]Scanning processes... [=================================================================================================================================    ]Scanning processes... [==================================================================================================================================   ]Scanning processes... [===================================================================================================================================  ]Scanning processes... [=====================================================================================================================================]Scanning processes...                                                                                                                                        
+Scanning linux images... [                                                                                                                                  ]Scanning linux images... [================================                                                                                                  ]Scanning linux images... [=================================================================                                                                 ]Scanning linux images... [=================================================================================================                                 ]Scanning linux images... [==================================================================================================================================]Scanning linux images...                                                                                                                                     
+
+Running kernel seems to be up-to-date.
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# [7mmkdir my-wordpress[27mmkdir my-wordpress
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubunturoot@ip-172-31-22-130:/home/ubuntu# cd my-wordpress/
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# ls -ltr
+[?2004ltotal 0
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# [7mvi docker-compose.yaml[27mvi docker-compose.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"docker-compose.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;1H[?25h[?25l[36mversion[m[35m:[m [31m'3.8'[m[2;1H[K[3;1H[36mservices[m[35m:[m[3;10H[K[4;1H  [36mdb[m[35m:[m[4;6H[K[5;1H    [36mimage[m[35m:[m mysql:5.7[5;21H[K[6;1H    vo[6;7H[K[6;7H[?25h[?25l[36mvolumes[m[35m:[m
+      [33m- [mdb_data:/var/lib/mysql[7;31H[K[8;1H    [36mrestart[m[35m:[m always[8;20H[K[9;1H   [9;4H[K[9;4H[?25h[?25l [36menvironment[m[35m:[m[10;1H[K[10;1H[?25h[?25l      [36mMYSQL_ROOT_PASSWORD[m[35m:[m somewordpress
+      MYSQL_DATA[11;17H[K[11;17H[?25h[?25l[11;7H[36mMYSQL_DATABASE[m[35m:[m wordpress
+      [36mMYSQL_USER[m[35m:[m wordpress[12;28H[K[13;1H      MYSQL_PAS[13;16H[K[13;16H[?25h[?25l[13;7H[36mMYSQL_PASSWORD[m[35m:[m wordpress[14;1H[K[15;1H  [36mwordpress[m[35m:[m[15;13H[K[16;1H    [36mdepends_on[m[35m:[m[16;16H[K[17;1H      [33m- [mdb[17;11H[K[18;1H  [18;3H[K[18;3H[?25h[?25l  [36mimage[m[35m:[m wordpress:latest
+    [36mports[m[35m:[m[19;11H[K[20;1H      [33m- [m[31m"8000:80"[m[20;18H[K[21;1H    re[21;7H[K[21;7H[?25h[?25l[36mrestart[m[35m:[m always
+    [36menvironment[m[35m:[m[22;17H[K[23;1H      [36mWORDPRESS_DB_HOST[m[35m:[m db:330[23;32H[K[23;32H[?25h[?25l6
+      [36mWORDPRESS_DB_USER[m[35m:[m wordpress[24;35H[K[25;1H      WORDPRESS_DB_PASSWO[25;26H[K[25;26H[?25h[?25l[25;7H[36mWORDPRESS_DB_PASSWORD[m[35m:[m wordpress
+      [36mWORDPRESS_DB_NAME[m[35m:[m wordpress[26;35H[K[27;1H    [36mvolumes[m[35m:[m[27;13H[K[28;1H[K[28;1H[?25h[?25l      [33m- [mwordpress_data:/var/www/html[29;1H[K[30;1H[36mvolumes[m[35m:[m[30;9H[K[31;1H  [36mdb_data[m[35m:[m[31;11H[K[32;1H  wor[32;6H[K[32;6H[?25h[?25l[36mwordpress_data[m[35m:[m[33;1H[K[44;140H33,1[33;1H[?25h[44;1H[K[33;1H[?25l[44;130H^[[33;1H[44;130H  [33;1H[44;140H33,0-1[8CAll[33;1H[?25h[?25l[44;130H^[[33;1H[44;130H  [33;1H[44;130H^[[33;1H[44;130H  [33;1H[?25h[?25l[44;130Hd[33;1H[?25h[?25l[44;131Hd[33;1H[44;130H  [32;3H
+[1m[34m~                                                                                                                                                            [m[44;141H2,3  [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [31;3H[44;141H1[31;3H[?25h[?25l[44;130H~@k[31;3H[44;130H   [30;3H[44;141H0[30;3H[?25h[?25l[44;140H29,0-1[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [28;3H[44;141H8,3  [28;3H[?25h[?25l[44;130H~@k[28;3H[44;130H   [27;3H[44;141H7[27;3H[?25h[?25l[44;130H~@k[27;3H[44;130H   [26;3H[44;141H6[26;3H[?25h[?25l[44;130H~@k[26;3H[44;130H   [25;3H[44;141H5[25;3H[?25h[?25l[44;130H~@k[25;3H[44;130H   [24;3H[44;141H4[24;3H[?25h[?25l[44;141H3[23;3H[?25h[?25l[44;130H~@k[23;3H[44;130H   [22;3H[44;141H2[22;3H[?25h[?25l[44;130H~@k[22;3H[44;130H   [21;3H[44;141H1[21;3H[?25h[?25l[44;141H0[20;3H[?25h[?25l[44;130H~@k[20;3H[44;130H   [19;3H[44;140H19[19;3H[?25h[?25l[44;130H~@k[19;3H[44;130H   [18;3H[44;141H8[18;3H[?25h[?25l[44;130H~@k[18;3H[44;130H   [17;3H[44;141H7[17;3H[?25h[?25l[44;130H~@k[17;3H[44;130H   [16;3H[44;141H6[16;3H[?25h[?25l[44;130H~@k[16;3H[44;130H   [15;3H[44;141H5[15;3H[?25h[?25l[44;130H~@k[15;3H[44;130H   [14;1H[44;141H4,0-1[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [13;3H[44;141H3,3  [13;3H[?25h[?25l[44;130H~@k[13;3H[44;130H   [12;3H[44;141H2[12;3H[?25h[?25l[44;130H~@k[12;3H[44;130H   [11;3H[44;141H1[11;3H[?25h[?25l[44;130H~@k[11;3H[44;130H   [10;3H[44;141H0[10;3H[?25h[?25l[44;130H~@k[10;3H[44;130H   [9;3H[44;140H9,3 [9;3H[?25h[?25l[44;130H~@k[9;3H[44;130H   [8;3H[44;140H8[8;3H[?25h[?25l[44;130H~@k[8;3H[44;130H   [7;3H[44;140H7[7;3H[?25h[?25l[44;130H~@k[7;3H[44;130H   [6;3H[44;140H6[6;3H[?25h[?25l[44;130H~@k[6;3H[44;130H   [5;3H[44;140H5[5;3H[?25h[?25l[44;130H~@k[5;3H[44;130H   [4;3H[44;140H4[4;3H[?25h[?25l[44;130H~@k[4;3H[44;130H   [3;3H[44;140H3[3;3H[?25h[?25l[44;130H~@k[3;3H[44;130H   [2;1H[44;140H2,0-1[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [1;3H[44;140H1,3  [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [2;1H[44;140H2,0-1[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;3H[44;140H3,3  [3;3H[?25h[?25l[44;130H~@k[3;3H[44;130H   [4;3H[44;140H4[4;3H[?25h[?25l[44;130H~@k[4;3H[44;130H   [5;3H[44;140H5[5;3H[?25h[?25l[44;130H~@k[5;3H[44;130H   [6;3H[44;140H6[6;3H[?25h[?25l[44;130H~@k[6;3H[44;130H   [7;3H[44;140H7[7;3H[?25h[?25l[44;130H~@k[7;3H[44;130H   [8;3H[44;140H8[8;3H[?25h[?25l[44;130H~@k[8;3H[44;130H   [9;3H[44;140H9[9;3H[?25h[?25l[44;130H~@k[9;3H[44;130H   [10;3H[44;140H10,3[10;3H[?25h[?25l[44;130H~@k[10;3H[44;130H   [11;3H[44;141H1[11;3H[?25h[?25l[44;130H~@k[11;3H[44;130H   [12;3H[44;141H2[12;3H[?25h[?25l[44;130H~@k[12;3H[44;130H   [13;3H[44;141H3[13;3H[?25h[?25l[44;130H~@k[13;3H[44;130H   [14;1H[44;141H4,0-1[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;3H[44;141H5,3  [15;3H[?25h[?25l[44;130H~@k[15;3H[44;130H   [16;3H[44;141H6[16;3H[?25h[?25l[44;130H~@k[16;3H[44;130H   [17;3H[44;141H7[17;3H[?25h[?25l[44;130H~@k[17;3H[44;130H   [18;3H[44;141H8[18;3H[?25h[?25l[44;130H~@k[18;3H[44;130H   [19;3H[44;141H9[19;3H[?25h[?25l[44;130H~@k[19;3H[44;130H   [20;3H[44;140H20[20;3H[?25h[?25l[44;130H~@k[20;3H[44;130H   [21;3H[44;141H1[21;3H[?25h[?25l[44;130H~@k[21;3H[44;130H   [22;3H[44;141H2[22;3H[?25h[?25l[44;130H~@k[22;3H[44;130H   [23;3H[44;141H3[23;3H[?25h[?25l[44;130H~@k[23;3H[44;130H   [24;3H[44;141H4[24;3H[?25h[?25l[44;130H~@k[24;3H[44;130H   [25;3H[44;141H5[25;3H[?25h[?25l[44;141H6[26;3H[?25h[?25l[44;130H~@k[26;3H[44;130H   [27;3H[44;141H7[27;3H[?25h[?25l[44;130H~@k[27;3H[44;130H   [28;3H[44;141H8[28;3H[?25h[?25l[44;130H~@k[28;3H[44;130H   [29;1H[44;141H9,0-1[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [30;3H[44;140H30,3  [30;3H[?25h[?25l[44;130H~@k[30;3H[44;130H   [31;3H[44;141H1[31;3H[?25h[?25l[44;130H~@k[31;3H[44;130H   [32;3H[44;141H2[32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [31;3H[44;141H1[31;3H[?25h[?25l[44;130H~@k[31;3H[44;130H   [30;3H[44;141H0[30;3H[?25h[?25l[44;130H~@k[30;3H[44;130H   [29;1H[44;140H29,0-1[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [28;3H[44;141H8,3  [28;3H[?25h[?25l[44;130H~@k[28;3H[44;130H   [27;3H[44;141H7[27;3H[?25h[?25l[44;130H~@k[27;3H[44;130H   [26;3H[44;141H6[26;3H[?25h[?25l[44;130H~@k[26;3H[44;130H   [25;3H[44;141H5[25;3H[?25h[?25l[44;130H~@k[25;3H[44;130H   [24;3H[44;141H4[24;3H[?25h[?25l[44;130H~@k[24;3H[44;130H   [23;3H[44;141H3[23;3H[?25h[?25l[44;130H~@k[23;3H[44;130H   [22;3H[44;141H2[22;3H[?25h[?25l[44;130H~@k[22;3H[44;130H   [21;3H[44;141H1[21;3H[?25h[?25l[44;130H~@k[21;3H[44;130H   [20;3H[44;141H0[20;3H[?25h[?25l[44;130H~@k[20;3H[44;130H   [19;3H[44;140H19[19;3H[?25h[?25l[44;130H~@k[19;3H[44;130H   [18;3H[44;141H8[18;3H[?25h[?25l[44;130H~@k[18;3H[44;130H   [17;3H[44;141H7[17;3H[?25h[?25l[44;130H~@k[17;3H[44;130H   [16;3H[44;141H6[16;3H[?25h[?25l[44;130H~@k[16;3H[44;130H   [15;3H[44;141H5[15;3H[?25h[?25l[44;130H~@k[15;3H[44;130H   [14;1H[44;141H4,0-1[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [13;3H[44;141H3,3  [13;3H[?25h[?25l[44;130H~@k[13;3H[44;130H   [12;3H[44;141H2[12;3H[?25h[?25l[44;130H~@k[12;3H[44;130H   [11;3H[44;141H1[11;3H[?25h[?25l[44;130H~@k[11;3H[44;130H   [10;3H[44;141H0[10;3H[?25h[?25l[44;130H~@k[10;3H[44;130H   [9;3H[44;140H9,3 [9;3H[?25h[?25l[44;130H~@k[9;3H[44;130H   [8;3H[44;140H8[8;3H[?25h[?25l[44;130H~@k[8;3H[44;130H   [7;3H[44;140H7[7;3H[?25h[?25l[44;130H~@k[7;3H[44;130H   [6;3H[44;140H6[6;3H[?25h[?25l[44;130H~@k[6;3H[44;130H   [5;3H[44;140H5[5;3H[?25h[?25l[44;130H~@k[5;3H[44;130H   [4;3H[44;140H4[4;3H[?25h[?25l[44;130H~@k[4;3H[44;130H   [3;3H[44;140H3[3;3H[?25h[?25l[44;130H~@k[3;3H[44;130H   [2;1H[44;140H2,0-1[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [1;3H[44;140H1,3  [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [1;3H[?25h[?25l[44;130H~@k[1;3H[44;130H   [2;1H[44;140H2,0-1[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;3H[44;140H3,3  [3;3H[?25h[?25l[44;130H~@k[3;3H[44;130H   [4;3H[44;140H4[4;3H[?25h[?25l[44;130H~@k[4;3H[44;130H   [5;3H[44;140H5[5;3H[?25h[?25l[44;130H~@k[5;3H[44;130H   [6;3H[44;140H6[6;3H[?25h[?25l[44;130H~@k[6;3H[44;130H   [7;3H[44;140H7[7;3H[?25h[?25l[44;130H~@k[7;3H[44;130H   [8;3H[44;140H8[8;3H[?25h[?25l[44;130H~@k[8;3H[44;130H   [9;3H[44;140H9[9;3H[?25h[?25l[44;130H~@k[9;3H[44;130H   [10;3H[44;140H10,3[10;3H[?25h[?25l[44;130H~@k[10;3H[44;130H   [11;3H[44;141H1[11;3H[?25h[?25l[44;130H~@k[11;3H[44;130H   [12;3H[44;141H2[12;3H[?25h[?25l[44;130H~@k[12;3H[44;130H   [13;3H[44;141H3[13;3H[?25h[?25l[44;130H~@k[13;3H[44;130H   [14;1H[44;141H4,0-1[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;3H[44;141H5,3  [15;3H[?25h[?25l[44;130H~@k[15;3H[44;130H   [16;3H[44;141H6[16;3H[?25h[?25l[44;130H~@k[16;3H[44;130H   [17;3H[44;141H7[17;3H[?25h[?25l[44;130H~@k[17;3H[44;130H   [18;3H[44;141H8[18;3H[?25h[?25l[44;130H~@k[18;3H[44;130H   [19;3H[44;141H9[19;3H[?25h[?25l[44;130H~@k[19;3H[44;130H   [20;3H[44;140H20[20;3H[?25h[?25l[44;130H~@k[20;3H[44;130H   [21;3H[44;141H1[21;3H[?25h[?25l[44;130H~@k[21;3H[44;130H   [20;3H[44;141H0[20;3H[?25h[?25l[44;130H~@k[20;3H[44;130H   [19;3H[44;140H19[19;3H[?25h[?25l[44;130H~@k[19;3H[44;130H   [20;3H[44;140H20[20;3H[?25h[?25l[44;130H~@k[20;3H[44;130H   [21;3H[44;141H1[21;3H[?25h[?25l[44;130H~@k[21;3H[44;130H   [22;3H[44;141H2[22;3H[?25h[?25l[44;130H~@k[22;3H[44;130H   [23;3H[44;141H3[23;3H[?25h[?25l[44;130H~@k[23;3H[44;130H   [24;3H[44;141H4[24;3H[?25h[?25l[44;130H~@k[24;3H[44;130H   [25;3H[44;141H5[25;3H[?25h[?25l[44;130H~@k[25;3H[44;130H   [26;3H[44;141H6[26;3H[?25h[?25l[44;130H~@k[26;3H[44;130H   [27;3H[44;141H7[27;3H[?25h[?25l[44;130H~@k[27;3H[44;130H   [28;3H[44;141H8[28;3H[?25h[?25l[44;130H~@k[28;3H[44;130H   [29;1H[44;141H9,0-1[29;1H[?25h[?25l[44;130H~@k[29;1H[44;130H   [30;3H[44;140H30,3  [30;3H[?25h[?25l[44;130H~@k[30;3H[44;130H   [31;3H[44;141H1[31;3H[?25h[?25l[44;130H~@k[31;3H[44;130H   [32;3H[44;141H2[32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H~@k[32;3H[44;130H   [32;3H[?25h[?25l[44;130H^[[32;3H[44;130H  [32;3H[44;130H^[[32;3H[44;130H  [32;3H[?25h[?25l[44;130H:[32;3H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"docker-compose.yaml" [New] 32L, 633B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# cat docker-compose.yaml 
+[?2004lversion: '3.8'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:latest
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+    volumes:
+      - wordpress_data:/var/www/html
+
+volumes:
+  db_data:
+  wordpress_data:
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# [7mdocker-compose up -d[27mdocker-compose up -d
+[?2004lCreating network "my-wordpress_default" with the default driver
+Creating volume "my-wordpress_db_data" with default driver
+Creating volume "my-wordpress_wordpress_data" with default driver
+Pulling db (mysql:5.7)...
+[2K5.7: Pulling from library/mysql
+
+[1A[2K20e4dcae4c69: Pulling fs layer[1B
+[1A[2K1c56c3d4ce74: Pulling fs layer[1B
+[1A[2Ke9f03a1c24ce: Pulling fs layer[1B
+[1A[2K68c3898c2015: Pulling fs layer[1B
+[1A[2K6b95a940e7b6: Pulling fs layer[1B
+[1A[2K90986bb8de6e: Pulling fs layer[1B
+[1A[2Kae71319cb779: Pulling fs layer[1B
+[1A[2Kffc89e9dfd88: Pulling fs layer[1B
+[1A[2K43d05e938198: Pulling fs layer[1B
+[1A[2K064b2d298fba: Pulling fs layer[1B
+[1A[2Kdf9a4d85569b: Pulling fs layer[1B[7A[2K6b95a940e7b6: Waiting[7B[6A[2K90986bb8de6e: Waiting[6B[5A[2Kae71319cb779: Waiting[5B[4A[2Kffc89e9dfd88: Waiting[4B[3A[2K43d05e938198: Waiting[3B[2A[2K064b2d298fba: Waiting[2B[1A[2Kdf9a4d85569b: Waiting[1B[8A[2K68c3898c2015: Waiting[8B[10A[2K1c56c3d4ce74: Downloading [==================================================>]     869B/869B[10B[10A[2K1c56c3d4ce74: Verifying Checksum[10B[10A[2K1c56c3d4ce74: Download complete[10B[11A[2K20e4dcae4c69: Downloading [>                                                  ]  506.3kB/50.5MB[11B[9A[2Ke9f03a1c24ce: Downloading [>                                                  ]  10.52kB/983.5kB[9B[9A[2Ke9f03a1c24ce: Downloading [==================================================>]  983.5kB/983.5kB[9B[9A[2Ke9f03a1c24ce: Verifying Checksum[9B[9A[2Ke9f03a1c24ce: Download complete[9B[8A[2K68c3898c2015: Downloading [>                                                  ]  45.93kB/4.578MB[8B[7A[2K6b95a940e7b6: Downloading [===============>                                   ]     934B/3.08kB[7B[7A[2K6b95a940e7b6: Downloading [==================================================>]   3.08kB/3.08kB[7B[7A[2K6b95a940e7b6: Verifying Checksum[7B[7A[2K6b95a940e7b6: Download complete[7B[11A[2K20e4dcae4c69: Downloading [==============>                                    ]  14.84MB/50.5MB[11B[8A[2K68c3898c2015: Download complete[8B[6A[2K90986bb8de6e: Downloading [==================================================>]     331B/331B[6B[6A[2K90986bb8de6e: Verifying Checksum[6B[6A[2K90986bb8de6e: Download complete[6B[11A[2K20e4dcae4c69: Downloading [============================>                      ]  28.67MB/50.5MB[11B[4A[2Kffc89e9dfd88: Downloading [==================================================>]     317B/317B[4B[4A[2Kffc89e9dfd88: Verifying Checksum[4B[4A[2Kffc89e9dfd88: Download complete[4B[11A[2K20e4dcae4c69: Downloading [=========================================>         ]  41.49MB/50.5MB[11B[5A[2Kae71319cb779: Downloading [>                                                  ]  265.7kB/25.53MB[5B[3A[2K43d05e938198: Downloading [>                                                  ]  526.8kB/56.29MB[3B[5A[2Kae71319cb779: Downloading [===================>                               ]  10.01MB/25.53MB[5B[11A[2K20e4dcae4c69: Downloading [=================================================> ]  50.19MB/50.5MB[11B[11A[2K20e4dcae4c69: Verifying Checksum[11B[11A[2K20e4dcae4c69: Download complete[11B[3A[2K43d05e938198: Downloading [=========>                                         ]  11.21MB/56.29MB[3B[11A[2K20e4dcae4c69: Extracting [>                                                  ]  524.3kB/50.5MB[11B[5A[2Kae71319cb779: Downloading [=========================================>         ]  21.03MB/25.53MB[5B[5A[2Kae71319cb779: Verifying Checksum[5B[5A[2Kae71319cb779: Download complete[5B[2A[2K064b2d298fba: Downloading [========>                                          ]     934B/5.384kB[2B[2A[2K064b2d298fba: Downloading [==================================================>]  5.384kB/5.384kB[2B[2A[2K064b2d298fba: Verifying Checksum[2B[2A[2K064b2d298fba: Download complete[2B[3A[2K43d05e938198: Downloading [====================>                              ]  22.97MB/56.29MB[3B[11A[2K20e4dcae4c69: Extracting [=>                                                 ]  1.573MB/50.5MB[11B[1A[2Kdf9a4d85569b: Downloading [==================================================>]     122B/122B[1B[1A[2Kdf9a4d85569b: Verifying Checksum[1B[1A[2Kdf9a4d85569b: Download complete[1B[3A[2K43d05e938198: Downloading [============================>                      ]  31.53MB/56.29MB[3B[11A[2K20e4dcae4c69: Extracting [=====>                                             ]  5.243MB/50.5MB[11B[3A[2K43d05e938198: Downloading [====================================>              ]  41.16MB/56.29MB[3B[11A[2K20e4dcae4c69: Extracting [========>                                          ]  8.389MB/50.5MB[11B[3A[2K43d05e938198: Downloading [================================================>  ]  55.06MB/56.29MB[3B[3A[2K43d05e938198: Verifying Checksum[3B[3A[2K43d05e938198: Download complete[3B[11A[2K20e4dcae4c69: Extracting [==========>                                        ]  11.01MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [============>                                      ]  12.58MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [===============>                                   ]  15.73MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [====================>                              ]  20.45MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [=======================>                           ]  24.12MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [===========================>                       ]  27.79MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [===============================>                   ]  31.46MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [================================>                  ]  32.51MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [=================================>                 ]  33.55MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [===================================>               ]  35.65MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [=====================================>             ]  37.75MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [=========================================>         ]  41.42MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [===========================================>       ]  43.52MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [=============================================>     ]  46.14MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [==============================================>    ]  47.19MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [================================================>  ]  48.76MB/50.5MB[11B[11A[2K20e4dcae4c69: Extracting [==================================================>]   50.5MB/50.5MB[11B[11A[2K20e4dcae4c69: Pull complete[11B[10A[2K1c56c3d4ce74: Extracting [==================================================>]     869B/869B[10B[10A[2K1c56c3d4ce74: Extracting [==================================================>]     869B/869B[10B[10A[2K1c56c3d4ce74: Pull complete[10B[9A[2Ke9f03a1c24ce: Extracting [=>                                                 ]  32.77kB/983.5kB[9B[9A[2Ke9f03a1c24ce: Extracting [==================================================>]  983.5kB/983.5kB[9B[9A[2Ke9f03a1c24ce: Pull complete[9B[8A[2K68c3898c2015: Extracting [>                                                  ]  65.54kB/4.578MB[8B[8A[2K68c3898c2015: Extracting [==========================>                        ]  2.425MB/4.578MB[8B[8A[2K68c3898c2015: Extracting [==================================================>]  4.578MB/4.578MB[8B[8A[2K68c3898c2015: Extracting [==================================================>]  4.578MB/4.578MB[8B[8A[2K68c3898c2015: Pull complete[8B[7A[2K6b95a940e7b6: Extracting [==================================================>]   3.08kB/3.08kB[7B[7A[2K6b95a940e7b6: Extracting [==================================================>]   3.08kB/3.08kB[7B[7A[2K6b95a940e7b6: Pull complete[7B[6A[2K90986bb8de6e: Extracting [==================================================>]     331B/331B[6B[6A[2K90986bb8de6e: Extracting [==================================================>]     331B/331B[6B[6A[2K90986bb8de6e: Pull complete[6B[5A[2Kae71319cb779: Extracting [>                                                  ]  262.1kB/25.53MB[5B[5A[2Kae71319cb779: Extracting [========>                                          ]  4.456MB/25.53MB[5B[5A[2Kae71319cb779: Extracting [==================>                                ]  9.437MB/25.53MB[5B[5A[2Kae71319cb779: Extracting [===========================>                       ]  14.16MB/25.53MB[5B[5A[2Kae71319cb779: Extracting [=======================================>           ]  19.92MB/25.53MB[5B[5A[2Kae71319cb779: Extracting [=============================================>     ]  23.33MB/25.53MB[5B[5A[2Kae71319cb779: Extracting [==================================================>]  25.53MB/25.53MB[5B[5A[2Kae71319cb779: Pull complete[5B[4A[2Kffc89e9dfd88: Extracting [==================================================>]     317B/317B[4B[4A[2Kffc89e9dfd88: Extracting [==================================================>]     317B/317B[4B[4A[2Kffc89e9dfd88: Pull complete[4B[3A[2K43d05e938198: Extracting [>                                                  ]  557.1kB/56.29MB[3B[3A[2K43d05e938198: Extracting [=====>                                             ]  6.128MB/56.29MB[3B[3A[2K43d05e938198: Extracting [==========>                                        ]  12.26MB/56.29MB[3B[3A[2K43d05e938198: Extracting [==============>                                    ]  16.71MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===================>                               ]  21.73MB/56.29MB[3B[3A[2K43d05e938198: Extracting [======================>                            ]  25.07MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=======================>                           ]  26.74MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===========================>                       ]  30.64MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=============================>                     ]  33.42MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===============================>                   ]  35.09MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===============================>                   ]  35.65MB/56.29MB[3B[3A[2K43d05e938198: Extracting [================================>                  ]  36.21MB/56.29MB[3B[3A[2K43d05e938198: Extracting [================================>                  ]  36.77MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=================================>                 ]  37.32MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=================================>                 ]  37.88MB/56.29MB[3B[3A[2K43d05e938198: Extracting [==================================>                ]  38.44MB/56.29MB[3B[3A[2K43d05e938198: Extracting [==================================>                ]  38.99MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===================================>               ]  39.55MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===================================>               ]  40.11MB/56.29MB[3B[3A[2K43d05e938198: Extracting [====================================>              ]  40.67MB/56.29MB[3B[3A[2K43d05e938198: Extracting [====================================>              ]  41.22MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=====================================>             ]  41.78MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=====================================>             ]  42.34MB/56.29MB[3B[3A[2K43d05e938198: Extracting [======================================>            ]  42.89MB/56.29MB[3B[3A[2K43d05e938198: Extracting [======================================>            ]  43.45MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=======================================>           ]  44.01MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=======================================>           ]  44.56MB/56.29MB[3B[3A[2K43d05e938198: Extracting [========================================>          ]  45.68MB/56.29MB[3B[3A[2K43d05e938198: Extracting [==========================================>        ]  47.35MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===========================================>       ]  48.46MB/56.29MB[3B[3A[2K43d05e938198: Extracting [=============================================>     ]  50.69MB/56.29MB[3B[3A[2K43d05e938198: Extracting [===============================================>   ]  53.48MB/56.29MB[3B[3A[2K43d05e938198: Extracting [==================================================>]  56.29MB/56.29MB[3B[3A[2K43d05e938198: Pull complete[3B[2A[2K064b2d298fba: Extracting [==================================================>]  5.384kB/5.384kB[2B[2A[2K064b2d298fba: Extracting [==================================================>]  5.384kB/5.384kB[2B[2A[2K064b2d298fba: Pull complete[2B[1A[2Kdf9a4d85569b: Extracting [==================================================>]     122B/122B[1B[1A[2Kdf9a4d85569b: Extracting [==================================================>]     122B/122B[1B[1A[2Kdf9a4d85569b: Pull complete[1B[2KDigest: sha256:4bc6bc963e6d8443453676cae56536f4b8156d78bae03c0145cbe47c2aad73bb
+[2KStatus: Downloaded newer image for mysql:5.7
+Pulling wordpress (wordpress:latest)...
+[2Klatest: Pulling from library/wordpress
+
+[1A[2K254e724d7786: Pulling fs layer[1B
+[1A[2K45d789cd9c84: Pulling fs layer[1B
+[1A[2K1d3659077708: Pulling fs layer[1B
+[1A[2Kb98ca3230ca2: Pulling fs layer[1B
+[1A[2Ka2de5d8c5156: Pulling fs layer[1B
+[1A[2Kff5d5a2cec55: Pulling fs layer[1B
+[1A[2K41763122faa0: Pulling fs layer[1B
+[1A[2K727efbdd2260: Pulling fs layer[1B
+[1A[2K9684ac5f3e3b: Pulling fs layer[1B
+[1A[2K9e624203aed6: Pulling fs layer[1B
+[1A[2Ka6f9d43f5dbf: Pulling fs layer[1B
+[1A[2Kcbe5f891bcf0: Pulling fs layer[1B
+[1A[2Kd3ce6e797145: Pulling fs layer[1B
+[1A[2K4f4fb700ef54: Pulling fs layer[1B
+[1A[2K49d19ba9139d: Pulling fs layer[1B
+[1A[2K303194fffa86: Pulling fs layer[1B[13A[2Kb98ca3230ca2: Waiting[13B
+[1A[2K0050e7b26347: Pulling fs layer[1B
+[1A[2Kcc1255b71004: Pulling fs layer[1B[14A[2Ka2de5d8c5156: Waiting[14B
+[1A[2Kcbce11e680dd: Pulling fs layer[1B
+[1A[2K2010de4d78dc: Pulling fs layer[1B
+[1A[2K17ea93f28c60: Pulling fs layer[1B
+[1A[2Kb7a4ba2298cf: Pulling fs layer[1B[17A[2Kff5d5a2cec55: Waiting[17B[16A[2K41763122faa0: Waiting[16B[15A[2K727efbdd2260: Waiting[15B[14A[2K9684ac5f3e3b: Waiting[14B[6A[2K0050e7b26347: Waiting[6B[13A[2K9e624203aed6: Waiting[13B[12A[2Ka6f9d43f5dbf: Waiting[12B[11A[2Kcbe5f891bcf0: Waiting[11B[10A[2Kd3ce6e797145: Waiting[10B[9A[2K4f4fb700ef54: Waiting[9B[8A[2K49d19ba9139d: Waiting[8B[7A[2K303194fffa86: Waiting[7B[5A[2Kcc1255b71004: Waiting[5B[4A[2Kcbce11e680dd: Waiting[4B[3A[2K2010de4d78dc: Waiting[3B[2A[2K17ea93f28c60: Waiting[2B[1A[2Kb7a4ba2298cf: Waiting[1B[21A[2K45d789cd9c84: Downloading [==================================================>]     226B/226B[21B[21A[2K45d789cd9c84: Verifying Checksum[21B[21A[2K45d789cd9c84: Download complete[21B[22A[2K254e724d7786: Downloading [>                                                  ]  294.4kB/28.23MB[22B[20A[2K1d3659077708: Downloading [>                                                  ]  527.8kB/104.3MB[20B[19A[2Kb98ca3230ca2: Downloading [==================================================>]     226B/226B[19B[19A[2Kb98ca3230ca2: Verifying Checksum[19B[19A[2Kb98ca3230ca2: Download complete[19B[22A[2K254e724d7786: Downloading [==========================>                        ]  14.79MB/28.23MB[22B[20A[2K1d3659077708: Downloading [=====>                                             ]  11.24MB/104.3MB[20B[18A[2Ka2de5d8c5156: Downloading [>                                                  ]  204.5kB/20.12MB[18B[20A[2K1d3659077708: Downloading [=======>                                           ]  16.08MB/104.3MB[20B[22A[2K254e724d7786: Downloading [=================================================> ]  27.86MB/28.23MB[22B[22A[2K254e724d7786: Verifying Checksum[22B[22A[2K254e724d7786: Download complete[22B[18A[2Ka2de5d8c5156: Downloading [======================================>            ]  15.68MB/20.12MB[18B[22A[2K254e724d7786: Extracting [>                                                  ]  294.9kB/28.23MB[22B[18A[2Ka2de5d8c5156: Verifying Checksum[18B[18A[2Ka2de5d8c5156: Download complete[18B[20A[2K1d3659077708: Downloading [==========>                                        ]  21.43MB/104.3MB[20B[17A[2Kff5d5a2cec55: Downloading [==================================================>]     428B/428B[17B[17A[2Kff5d5a2cec55: Verifying Checksum[17B[17A[2Kff5d5a2cec55: Download complete[17B[22A[2K254e724d7786: Extracting [===>                                               ]  2.064MB/28.23MB[22B[16A[2K41763122faa0: Downloading [==================================================>]     483B/483B[16B[16A[2K41763122faa0: Verifying Checksum[16B[16A[2K41763122faa0: Download complete[16B[20A[2K1d3659077708: Downloading [============>                                      ]  26.23MB/104.3MB[20B[15A[2K727efbdd2260: Downloading [>                                                  ]  123.1kB/12.28MB[15B[22A[2K254e724d7786: Extracting [======>                                            ]  3.834MB/28.23MB[22B[14A[2K9684ac5f3e3b: Downloading [==================================================>]     488B/488B[14B[14A[2K9684ac5f3e3b: Verifying Checksum[14B[14A[2K9684ac5f3e3b: Download complete[14B[20A[2K1d3659077708: Downloading [===============>                                   ]  32.65MB/104.3MB[20B[15A[2K727efbdd2260: Downloading [=============================>                     ]  7.326MB/12.28MB[15B[22A[2K254e724d7786: Extracting [========>                                          ]  4.719MB/28.23MB[22B[15A[2K727efbdd2260: Verifying Checksum[15B[15A[2K727efbdd2260: Download complete[15B[20A[2K1d3659077708: Downloading [===================>                               ]  40.67MB/104.3MB[20B[22A[2K254e724d7786: Extracting [===========>                                       ]  6.488MB/28.23MB[22B[13A[2K9e624203aed6: Downloading [>                                                  ]  114.7kB/11.42MB[13B[20A[2K1d3659077708: Downloading [========================>                          ]   51.4MB/104.3MB[20B[12A[2Ka6f9d43f5dbf: Downloading [===================>                               ]     934B/2.454kB[12B[12A[2Ka6f9d43f5dbf: Downloading [==================================================>]  2.454kB/2.454kB[12B[12A[2Ka6f9d43f5dbf: Verifying Checksum[12B[12A[2Ka6f9d43f5dbf: Download complete[12B[20A[2K1d3659077708: Downloading [============================>                      ]  59.98MB/104.3MB[20B[13A[2K9e624203aed6: Downloading [====================================>              ]  8.338MB/11.42MB[13B[22A[2K254e724d7786: Extracting [=============>                                     ]  7.373MB/28.23MB[22B[13A[2K9e624203aed6: Verifying Checksum[13B[13A[2K9e624203aed6: Download complete[13B[11A[2Kcbe5f891bcf0: Downloading [==================================================>]     243B/243B[11B[11A[2Kcbe5f891bcf0: Verifying Checksum[11B[11A[2Kcbe5f891bcf0: Download complete[11B[20A[2K1d3659077708: Downloading [=================================>                 ]  70.15MB/104.3MB[20B[22A[2K254e724d7786: Extracting [===============>                                   ]  8.847MB/28.23MB[22B[10A[2Kd3ce6e797145: Downloading [==================================================>]     889B/889B[10B[10A[2Kd3ce6e797145: Verifying Checksum[10B[10A[2Kd3ce6e797145: Download complete[10B[20A[2K1d3659077708: Downloading [====================================>              ]  76.54MB/104.3MB[20B[9A[2K4f4fb700ef54: Downloading [==================================================>]      32B/32B[9B[9A[2K4f4fb700ef54: Verifying Checksum[9B[9A[2K4f4fb700ef54: Download complete[9B[22A[2K254e724d7786: Extracting [=================>                                 ]  10.03MB/28.23MB[22B[8A[2K49d19ba9139d: Downloading [>                                                  ]    278kB/26.25MB[8B[20A[2K1d3659077708: Downloading [======================================>            ]  81.36MB/104.3MB[20B[7A[2K303194fffa86: Downloading [>                                                  ]  184.2kB/18.02MB[7B[8A[2K49d19ba9139d: Downloading [===============>                                   ]  7.973MB/26.25MB[8B[20A[2K1d3659077708: Downloading [=========================================>         ]  87.24MB/104.3MB[20B[22A[2K254e724d7786: Extracting [===================>                               ]  11.21MB/28.23MB[22B[7A[2K303194fffa86: Downloading [=================>                                 ]  6.253MB/18.02MB[7B[8A[2K49d19ba9139d: Downloading [==========================>                        ]  13.76MB/26.25MB[8B[20A[2K1d3659077708: Downloading [============================================>      ]  93.13MB/104.3MB[20B[8A[2K49d19ba9139d: Downloading [=====================================>             ]  19.56MB/26.25MB[8B[22A[2K254e724d7786: Extracting [====================>                              ]   11.8MB/28.23MB[22B[7A[2K303194fffa86: Downloading [===================================>               ]  12.68MB/18.02MB[7B[7A[2K303194fffa86: Verifying Checksum[7B[7A[2K303194fffa86: Download complete[7B[20A[2K1d3659077708: Downloading [================================================>  ]  101.7MB/104.3MB[20B[20A[2K1d3659077708: Downloading [==================================================>]  104.3MB/104.3MB[20B[20A[2K1d3659077708: Verifying Checksum[20B[20A[2K1d3659077708: Download complete[20B[8A[2K49d19ba9139d: Downloading [=======================================>           ]  20.68MB/26.25MB[8B[22A[2K254e724d7786: Extracting [========================>                          ]  13.57MB/28.23MB[22B[5A[2Kcc1255b71004: Downloading [==================================================>]     392B/392B[5B[5A[2Kcc1255b71004: Verifying Checksum[5B[5A[2Kcc1255b71004: Download complete[5B[6A[2K0050e7b26347: Downloading [==================================================>]     362B/362B[6B[6A[2K0050e7b26347: Verifying Checksum[6B[6A[2K0050e7b26347: Download complete[6B[8A[2K49d19ba9139d: Verifying Checksum[8B[8A[2K49d19ba9139d: Download complete[8B[22A[2K254e724d7786: Extracting [============================>                      ]  16.22MB/28.23MB[22B[3A[2K2010de4d78dc: Downloading [>                                                  ]    278kB/26.89MB[3B[2A[2K17ea93f28c60: Downloading [===================>                               ]     934B/2.438kB[2B[2A[2K17ea93f28c60: Downloading [==================================================>]  2.438kB/2.438kB[2B[2A[2K17ea93f28c60: Verifying Checksum[2B[2A[2K17ea93f28c60: Download complete[2B[4A[2Kcbce11e680dd: Downloading [==>                                                ]     933B/19.15kB[4B[4A[2Kcbce11e680dd: Downloading [==================================================>]  19.15kB/19.15kB[4B[4A[2Kcbce11e680dd: Verifying Checksum[4B[4A[2Kcbce11e680dd: Download complete[4B[22A[2K254e724d7786: Extracting [=================================>                 ]  19.17MB/28.23MB[22B[3A[2K2010de4d78dc: Downloading [==================>                                ]  9.718MB/26.89MB[3B[1A[2Kb7a4ba2298cf: Downloading [==========================>                        ]     934B/1.73kB[1B[1A[2Kb7a4ba2298cf: Downloading [==================================================>]   1.73kB/1.73kB[1B[1A[2Kb7a4ba2298cf: Verifying Checksum[1B[1A[2Kb7a4ba2298cf: Download complete[1B[22A[2K254e724d7786: Extracting [====================================>              ]  20.64MB/28.23MB[22B[3A[2K2010de4d78dc: Downloading [=======================================>           ]  21.08MB/26.89MB[3B[22A[2K254e724d7786: Extracting [========================================>          ]  22.71MB/28.23MB[22B[3A[2K2010de4d78dc: Verifying Checksum[3B[3A[2K2010de4d78dc: Download complete[3B[22A[2K254e724d7786: Extracting [==========================================>        ]  23.89MB/28.23MB[22B[22A[2K254e724d7786: Extracting [===============================================>   ]  26.54MB/28.23MB[22B[22A[2K254e724d7786: Extracting [================================================>  ]  27.13MB/28.23MB[22B[22A[2K254e724d7786: Extracting [================================================>  ]  27.43MB/28.23MB[22B[22A[2K254e724d7786: Extracting [==================================================>]  28.23MB/28.23MB[22B[22A[2K254e724d7786: Pull complete[22B[21A[2K45d789cd9c84: Extracting [==================================================>]     226B/226B[21B[21A[2K45d789cd9c84: Extracting [==================================================>]     226B/226B[21B[21A[2K45d789cd9c84: Pull complete[21B[20A[2K1d3659077708: Extracting [>                                                  ]  557.1kB/104.3MB[20B[20A[2K1d3659077708: Extracting [==>                                                ]  4.456MB/104.3MB[20B[20A[2K1d3659077708: Extracting [===>                                               ]  7.799MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=====>                                             ]  12.26MB/104.3MB[20B[20A[2K1d3659077708: Extracting [========>                                          ]  16.71MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=========>                                         ]  20.61MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==========>                                        ]  22.28MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==========>                                        ]  22.84MB/104.3MB[20B[20A[2K1d3659077708: Extracting [===========>                                       ]  23.95MB/104.3MB[20B[20A[2K1d3659077708: Extracting [============>                                      ]  25.07MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=============>                                     ]   27.3MB/104.3MB[20B[20A[2K1d3659077708: Extracting [===============>                                   ]  32.31MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=================>                                 ]  36.21MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==================>                                ]  39.55MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=====================>                             ]  45.12MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=======================>                           ]  49.02MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=========================>                         ]  52.36MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==========================>                        ]  55.71MB/104.3MB[20B[20A[2K1d3659077708: Extracting [============================>                      ]  58.49MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==============================>                    ]  62.95MB/104.3MB[20B[20A[2K1d3659077708: Extracting [================================>                  ]  66.85MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=================================>                 ]  70.75MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==================================>                ]  72.97MB/104.3MB[20B[20A[2K1d3659077708: Extracting [====================================>              ]  76.87MB/104.3MB[20B[20A[2K1d3659077708: Extracting [======================================>            ]  80.77MB/104.3MB[20B[20A[2K1d3659077708: Extracting [========================================>          ]  84.67MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==========================================>        ]  88.57MB/104.3MB[20B[20A[2K1d3659077708: Extracting [============================================>      ]  93.03MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=============================================>     ]   94.7MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==============================================>    ]  97.48MB/104.3MB[20B[20A[2K1d3659077708: Extracting [===============================================>   ]  99.16MB/104.3MB[20B[20A[2K1d3659077708: Extracting [================================================>  ]  100.3MB/104.3MB[20B[20A[2K1d3659077708: Extracting [================================================>  ]  101.9MB/104.3MB[20B[20A[2K1d3659077708: Extracting [=================================================> ]  103.6MB/104.3MB[20B[20A[2K1d3659077708: Extracting [==================================================>]  104.3MB/104.3MB[20B[20A[2K1d3659077708: Pull complete[20B[19A[2Kb98ca3230ca2: Extracting [==================================================>]     226B/226B[19B[19A[2Kb98ca3230ca2: Extracting [==================================================>]     226B/226B[19B[19A[2Kb98ca3230ca2: Pull complete[19B[18A[2Ka2de5d8c5156: Extracting [>                                                  ]  229.4kB/20.12MB[18B[18A[2Ka2de5d8c5156: Extracting [======>                                            ]  2.753MB/20.12MB[18B[18A[2Ka2de5d8c5156: Extracting [===================>                               ]  7.799MB/20.12MB[18B[18A[2Ka2de5d8c5156: Extracting [==============================>                    ]  12.16MB/20.12MB[18B[18A[2Ka2de5d8c5156: Extracting [======================================>            ]   15.6MB/20.12MB[18B[18A[2Ka2de5d8c5156: Extracting [==================================================>]  20.12MB/20.12MB[18B[18A[2Ka2de5d8c5156: Pull complete[18B[17A[2Kff5d5a2cec55: Extracting [==================================================>]     428B/428B[17B[17A[2Kff5d5a2cec55: Extracting [==================================================>]     428B/428B[17B[17A[2Kff5d5a2cec55: Pull complete[17B[16A[2K41763122faa0: Extracting [==================================================>]     483B/483B[16B[16A[2K41763122faa0: Extracting [==================================================>]     483B/483B[16B[16A[2K41763122faa0: Pull complete[16B[15A[2K727efbdd2260: Extracting [>                                                  ]  131.1kB/12.28MB[15B[15A[2K727efbdd2260: Extracting [=================================================> ]  12.19MB/12.28MB[15B[15A[2K727efbdd2260: Extracting [==================================================>]  12.28MB/12.28MB[15B[15A[2K727efbdd2260: Pull complete[15B[14A[2K9684ac5f3e3b: Extracting [==================================================>]     488B/488B[14B[14A[2K9684ac5f3e3b: Extracting [==================================================>]     488B/488B[14B[14A[2K9684ac5f3e3b: Pull complete[14B[13A[2K9e624203aed6: Extracting [>                                                  ]  131.1kB/11.42MB[13B[13A[2K9e624203aed6: Extracting [=============>                                     ]  3.146MB/11.42MB[13B[13A[2K9e624203aed6: Extracting [============================>                      ]  6.423MB/11.42MB[13B[13A[2K9e624203aed6: Extracting [======================================>            ]  8.782MB/11.42MB[13B[13A[2K9e624203aed6: Extracting [===========================================>       ]   9.83MB/11.42MB[13B[13A[2K9e624203aed6: Extracting [================================================>  ]  11.14MB/11.42MB[13B[13A[2K9e624203aed6: Extracting [==================================================>]  11.42MB/11.42MB[13B[13A[2K9e624203aed6: Pull complete[13B[12A[2Ka6f9d43f5dbf: Extracting [==================================================>]  2.454kB/2.454kB[12B[12A[2Ka6f9d43f5dbf: Extracting [==================================================>]  2.454kB/2.454kB[12B[12A[2Ka6f9d43f5dbf: Pull complete[12B[11A[2Kcbe5f891bcf0: Extracting [==================================================>]     243B/243B[11B[11A[2Kcbe5f891bcf0: Extracting [==================================================>]     243B/243B[11B[11A[2Kcbe5f891bcf0: Pull complete[11B[10A[2Kd3ce6e797145: Extracting [==================================================>]     889B/889B[10B[10A[2Kd3ce6e797145: Extracting [==================================================>]     889B/889B[10B[10A[2Kd3ce6e797145: Pull complete[10B[9A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[9B[9A[2K4f4fb700ef54: Extracting [==================================================>]      32B/32B[9B[9A[2K4f4fb700ef54: Pull complete[9B[8A[2K49d19ba9139d: Extracting [>                                                  ]  294.9kB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [==========>                                        ]  5.603MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [===========>                                       ]  6.193MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [===============>                                   ]  7.963MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [===========================>                       ]  14.45MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [=======================================>           ]  20.64MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [=========================================>         ]  21.82MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [==============================================>    ]  24.48MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [=================================================> ]  26.25MB/26.25MB[8B[8A[2K49d19ba9139d: Extracting [==================================================>]  26.25MB/26.25MB[8B[8A[2K49d19ba9139d: Pull complete[8B[7A[2K303194fffa86: Extracting [>                                                  ]  196.6kB/18.02MB[7B[7A[2K303194fffa86: Extracting [=======>                                           ]  2.753MB/18.02MB[7B[7A[2K303194fffa86: Extracting [===================>                               ]  6.881MB/18.02MB[7B[7A[2K303194fffa86: Extracting [==================================>                ]  12.39MB/18.02MB[7B[7A[2K303194fffa86: Extracting [==========================================>        ]  15.34MB/18.02MB[7B[7A[2K303194fffa86: Extracting [=================================================> ]  17.69MB/18.02MB[7B[7A[2K303194fffa86: Extracting [==================================================>]  18.02MB/18.02MB[7B[7A[2K303194fffa86: Pull complete[7B[6A[2K0050e7b26347: Extracting [==================================================>]     362B/362B[6B[6A[2K0050e7b26347: Extracting [==================================================>]     362B/362B[6B[6A[2K0050e7b26347: Pull complete[6B[5A[2Kcc1255b71004: Extracting [==================================================>]     392B/392B[5B[5A[2Kcc1255b71004: Extracting [==================================================>]     392B/392B[5B[5A[2Kcc1255b71004: Pull complete[5B[4A[2Kcbce11e680dd: Extracting [==================================================>]  19.15kB/19.15kB[4B[4A[2Kcbce11e680dd: Extracting [==================================================>]  19.15kB/19.15kB[4B[4A[2Kcbce11e680dd: Pull complete[4B[3A[2K2010de4d78dc: Extracting [>                                                  ]  294.9kB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [===>                                               ]  1.769MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [===========>                                       ]  6.193MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [======================>                            ]  12.09MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [=============================>                     ]  15.93MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [==============================>                    ]  16.22MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [===============================>                   ]  16.81MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [=================================>                 ]  18.28MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [=====================================>             ]  20.35MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [=========================================>         ]  22.41MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [============================================>      ]  24.18MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [===============================================>   ]  25.66MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [=================================================> ]  26.84MB/26.89MB[3B[3A[2K2010de4d78dc: Extracting [==================================================>]  26.89MB/26.89MB[3B[3A[2K2010de4d78dc: Pull complete[3B[2A[2K17ea93f28c60: Extracting [==================================================>]  2.438kB/2.438kB[2B[2A[2K17ea93f28c60: Extracting [==================================================>]  2.438kB/2.438kB[2B[2A[2K17ea93f28c60: Pull complete[2B[1A[2Kb7a4ba2298cf: Extracting [==================================================>]   1.73kB/1.73kB[1B[1A[2Kb7a4ba2298cf: Extracting [==================================================>]   1.73kB/1.73kB[1B[1A[2Kb7a4ba2298cf: Pull complete[1B[2KDigest: sha256:626ea197cb3f17747b24de6ba8f52a5a841efbb68a11167a115a6401ccb6cd3c
+[2KStatus: Downloaded newer image for wordpress:latest
+Creating my-wordpress_db_1 ... 
+[1A[2KCreating my-wordpress_db_1 ... [32mdone[0m[1BCreating my-wordpress_wordpress_1 ... 
+[1A[2KCreating my-wordpress_wordpress_1 ... [32mdone[0m[1B[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# d[Kdocker-compose ps
+[?2004l          Name                        Command               State                  Ports                
+--------------------------------------------------------------------------------------------------------
+my-wordpress_db_1          docker-entrypoint.sh mysqld      Up      3306/tcp, 33060/tcp                 
+my-wordpress_wordpress_1   docker-entrypoint.sh apach ...   Up      0.0.0.0:8000->80/tcp,:::8000->80/tcp
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# cat *rlease[K[K[K[K[K[K[K[K /etc/*rlease[K[K[K[K[Kelease*
+[?2004lDISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=24.04
+DISTRIB_CODENAME=noble
+DISTRIB_DESCRIPTION="Ubuntu 24.04.2 LTS"
+PRETTY_NAME="Ubuntu 24.04.2 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.2 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+LOGO=ubuntu-logo
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# [7msudo apt install docker-compose-plugin[27m[1Psudo apt install docker-compose-plugi[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kdocker [K-compose --version
+[?2004ldocker-compose version 1.29.2, build unknown
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# docker --version
+[?2004lDocker version 26.1.3, build 26.1.3-0ubuntu1~24.04.1
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# docker --version[K[K[K[K[K[K[K[K[K[K info
+[?2004lClient:
+ Version:    26.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.14.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+
+Server:
+ Containers: 16
+  Running: 3
+  Paused: 0
+  Stopped: 13
+ Images: 3
+ Server Version: 26.1.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-1029-aws
+ Operating System: Ubuntu 24.04.2 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 2
+ Total Memory: 914.1MiB
+ Name: ip-172-31-22-130
+ ID: d4849848-0303-40d8-8e1c-b530c45f15fa
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Username: devadevops
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# docker info--version[1Pversion[1Pversion[1Pversion
+[?2004ldockerversion: command not found
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# dockerversion version
+[?2004lClient:
+ Version:           26.1.3
+ API version:       1.45
+ Go version:        go1.22.2
+ Git commit:        26.1.3-0ubuntu1~24.04.1
+ Built:             Mon Oct 14 14:29:26 2024
+ OS/Arch:           linux/amd64
+ Context:           default
+
+Server:
+ Engine:
+  Version:          26.1.3
+  API version:      1.45 (minimum version 1.24)
+  Go version:       go1.22.2
+  Git commit:       26.1.3-0ubuntu1~24.04.1
+  Built:            Mon Oct 14 14:29:26 2024
+  OS/Arch:          linux/amd64
+  Experimental:     false
+ containerd:
+  Version:          1.7.24
+  GitCommit:        
+ runc:
+  Version:          1.1.12-0ubuntu3.1
+  GitCommit:        
+ docker-init:
+  Version:          0.19.0
+  GitCommit:        
+[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# 
+[?2004l[?2004h]0;root@ip-172-31-22-130: /home/ubuntu/my-wordpressroot@ip-172-31-22-130:/home/ubuntu/my-wordpress# 
+Broadcast message from root@ip-172-31-22-130 (Tue 2025-05-20 03:37:30 UTC):
+
+The system will power off now!
+
+
+Broadcast message from root@ip-172-31-22-130 (Tue 2025-05-20 03:37:30 UTC):
+
+The system will power off now!
+

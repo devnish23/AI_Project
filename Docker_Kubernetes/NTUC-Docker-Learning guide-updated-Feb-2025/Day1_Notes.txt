@@ -40,4 +40,217 @@ check how the ip is segemented, and can we pre-define the ip segement for the cu
   241  history
 
 
+Day 2 : student : Docker 11 [18.220.209.101].
+User Name : ubuntu
+Password : CloudEnabled
+
+Q1 : is there any metnolodigy to handle the data multi-write in docker.
+
+********* decoupled Approach ****************************
+
+does POD recreate the container image in Data plane?
+
+Flow of POD deletion and creation/recreate????
+
+
+
+Kubernetes Master : 18.222.175.208
+Slave1 Node : 18.189.7.104
+Slave2 Node : 3.17.109.177
+
+kubeadm join 172.31.19.219:6443 --token 9seabd.d09aa4fvtnle8ngt --discovery-token-ca-cert-hash sha256:0b12443d2b67b8598e5fc1299851085301af5bfcfcb52bc264779212e89e1df4
+
+
+Assignment :-
+
+
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avengers-deployment
+  labels:
+    app: avengers
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: avengers
+  template:
+    metadata:
+      labels:
+        app: avengers
+    spec:
+      containers:
+      - name: avengers-deployment
+        image: anilbidari/todo:1.0
+        ports:
+        - containerPort: 80
+
+
+Assignment : [upgrade for version 1.0 -> 2.0].
+-----------------------
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avengers-deployment
+  labels:
+    app: avengers
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: avengers
+  template:
+    metadata:
+      labels:
+        app: avengers
+    spec:
+      containers:
+      - name: avengers-deployment
+        image: anilbidari/todo:2.0
+        ports:
+        - containerPort: 80
+
+
+Day 3: 
+
+Master Node : 18.118.206.232
+
+Usecase : 
+1. developer code [either docker / container] ==> convert to Kubernetes manifest with recommendation.************
+2. User Interface for Helm chat inputs with 12factor methology, and YML standards.*******
+
+check kubectl apply to modify the RS count using [apply and edit].
+
+kubectl rollout undo deployment/python-deploymtn --to-revision=1
+
+==>
+
+root@ip-172-31-19-219:~# kubectl get rs
+NAME                           DESIRED   CURRENT   READY   AGE
+python-deployment-5dc868bd7c   0         0         0       17h
+python-deployment-6878447bc6   1         1         0       4m40s
+python-deployment-74c4f84bbc   0         0         0       4m44s
+python-deployment-9b669fc4b    3         3         3       7m58s
+root@ip-172-31-19-219:~#
+
+try : 
+
+check kubectl apply to modify the RS count using [apply and edit].
+
+kubectl rollout undo deployment/python-deployment --to-revision=1
+
+
+
+https://codeshare.io/504Kxa
+
+
+====
+
+Assigment : 
+
+
+Delayed and failed due to deployment labeling not working, hurry and not clearly read the instruction.
+
+
+Day 4:-
+
+Day 2 : student : Docker 11 [3.138.141.240].
+User Name : ubuntu
+Password : CloudEnabled
+
+Slave1 Node : 18.189.7.104
+Slave2 Node : 3.17.109.177
+
+
+Q : how to clean the terminated pods /namespace / services.
+Q : root@ip-172-31-19-219:/home/ubuntu# helm  list.
+Q : deploy MySQL with secret
+
+
+NAME    NAMESPACE       REVISION        UPDATED STATUS  CHART   APP VERSION
+why blank?
+
+==================================
+
+Q.1 EXPECTATIONS  - 
+values ===
+image : anilbidari/python:v1 port : 8 , replicas:3
+HPA - min 5 max 20 , cpu : 60% 
+
+Required evidence 
+	1) Deployment yaml file code  screenshot 
+	2)  service yaml file content screenshot
+  3) autocaling yaml fiel content screenshot
+  
+Q.2 Expectations 
+
+values == 
+pv name - avengers-pv
+pvc name = agengers-pvc
+pod name = avengers-pod
+image - mysql
+
+A) Create persistent volume – yaml file screnshot
+B) Create Persistent volume claim - yaml fiel screnshot
+C) Mysql- single replica deployment which mounts persistent volume - yaml fiel screenshot
+D) kubectl get pods – pod showing up 
+
+
+Q3. Expectations 
+
+values ==
+image = anilbidari/python:v1 , port : 80 , replica 3 
+expopse with Clusterip 
+upgrade to v2 
+
+evidence
+
+1)	Deployment of pod yaml content file screenshot 
+2)	Kubectl describe command of deployment of showing version 1.0 image is deployed 
+3)	Upgrade command to version 2.0 image 
+4)	Kubectl describe command of deployment of showing version 2.0 image is deployed 
+
+========================================
+
+
+Usecase : create a cluster with application DB and the password must be from Hasicorp vault.
+
+Need to check why?
+
+#################################################################################
+######   WARNING: Persistence is disabled!!! You will lose your data when   #####
+######            the Server pod is terminated.                             #####
+#################################################################################
+
+
+The Prometheus alertmanager can be accessed via port 9093 on the following DNS name from within your cluster:
+prometheus-alertmanager.monitoring.svc.cluster.local
+
+
+Get the Alertmanager URL by running these commands in the same shell:
+  export POD_NAME=$(kubectl get pods --namespace monitoring -l "app.kubernetes.io/name=alertmanager,app.kubernetes.io/instance=prometheus" -o jsonpath="{.items[0].metadata.name}")
+  kubectl --namespace monitoring port-forward $POD_NAME 9093
+#################################################################################
+######   WARNING: Pod Security Policy has been disabled by default since    #####
+######            it deprecated after k8s 1.25+. use                        #####
+######            (index .Values "prometheus-node-exporter" "rbac"          #####
+###### .          "pspEnabled") with (index .Values                         #####
+######            "prometheus-node-exporter" "rbac" "pspAnnotations")       #####
+######            in case you still need it.                                #####
+#################################################################################
+
+
+The Prometheus PushGateway can be accessed via port 9091 on the following DNS name from within your cluster:
+prometheus-prometheus-pushgateway.monitoring.svc.cluster.local
+
+
+Get the PushGateway URL by running these commands in the same shell:
+  export POD_NAME=$(kubectl get pods --namespace monitoring -l "app=prometheus-pushgateway,component=pushgateway" -o jsonpath="{.items[0].metadata.name}")
+  kubectl --namespace monitoring port-forward $POD_NAME 9091
+
+For more information on running Prometheus, visit:
+https://prometheus.io/
 

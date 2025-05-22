@@ -1,0 +1,2213 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.21 20:49:02 =~=~=~=~=~=~=~=~=~=~=~=
+login as: vagrant
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 22.04.5 LTS (GNU/Linux 5.15.0-135-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Wed May 21 09:28:42 UTC 2025
+
+  System load:             0.47
+  Usage of /:              39.1% of 38.70GB
+  Memory usage:            43%
+  Swap usage:              0%
+  Processes:               111
+  Users logged in:         1
+  IPv4 address for enp0s3: 10.0.2.15
+  IPv6 address for enp0s3: fd00::d8:5dff:fe67:2c80
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+18 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+New release '24.04.2 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Wed May 21 05:09:53 2025 from 10.0.2.2
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [K]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ sudo su -
+[?2004l[?2004h]0;root@controlplane01: ~root@controlplane01:~# ip a
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 02:d8:5d:67:2c:80 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 61223sec preferred_lft 61223sec
+    inet6 fd00::d8:5dff:fe67:2c80/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86331sec preferred_lft 14331sec
+    inet6 fe80::d8:5dff:fe67:2c80/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:b5:9b:e2 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.11/24 brd 192.168.56.255 scope global enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:feb5:9be2/64 scope link 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:17:2a:a9:dc brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+[?2004h]0;root@controlplane01: ~root@controlplane01:~# [7mvim python1.yaml[27mvim python1.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python1.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;1H[?25h[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;1H[?25h[?25l[36mapiVersion[m[35m:[m v1
+[36mkind[m[35m:[m Pod[2;10H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;1H  [36mname[m[35m:[m python1-pod[4;20H[K[5;1H[K[5;1H[?25h[?25l[36mspec[m[35m:[m
+  [36mcontainers[m[35m:[m[6;14H[K[7;1H  [33m- [m[36mname[m[35m:[m python1-container[7;28H[K[8;1H    [36mimage[m[35m:[m ani[8;15H[K[8;15H[?25h[?25llbidari/python:v1
+    [36mports[m[35m:[m[9;11H[K[10;1H    [33m- [m[36mcontainerPort[m[35m:[m [31m80[m[10;24H[K[11;1H[K[44;140H11,1[11;1H[?25h[44;1H[K[11;1H[?25l[44;130H^[[11;1H[44;130H  [11;1H[44;140H11,0-1[8CAll[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [10;1H[44;141H0,1  [10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [9;1H[44;140H9,1 [9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [8;1H[44;140H8[8;1H[?25h[?25l[44;130H~@k[8;1H[44;130H   [8;2H[44;142H2[8;2H[?25h[?25l[44;130H~@k[8;2H[44;130H   [8;3H[44;142H3[8;3H[?25h[?25l[44;130H~@k[8;3H[44;130H   [8;4H[44;142H4[8;4H[?25h[?25l[44;130H~@k[8;4H[44;130H   [8;5H[44;142H5[8;5H[?25h[?25l[44;130H~@k[8;5H[44;130H   [8;6H[44;142H6[8;6H[?25h[?25l[44;130H~@k[8;6H[44;130H   [8;7H[44;142H7[8;7H[?25h[?25l[44;130H~@k[8;7H[44;130H   [8;8H[44;142H8[8;8H[?25h[?25l[44;130H~@k[8;8H[44;130H   [8;9H[44;142H9[8;9H[?25h[?25l[44;130H~@k[8;9H[44;130H   [8;10H[44;142H10[8;10H[?25h[?25l[44;130H~@k[8;10H[44;130H   [8;11H[44;143H1[8;11H[?25h[?25l[44;130H~@k[8;11H[44;130H   [8;12H[44;143H2[8;12H[?25h[?25l[44;130H^[[8;12H[44;130H  [8;12H[44;130H^[[8;12H[44;130H  [8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hnilbidari/python:v1[8;31H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hilbidari/python:v1[8;30H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hlbidari/python:v1[8;29H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hbidari/python:v1[8;28H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hidari/python:v1[8;27H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hdari/python:v1[8;26H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hari/python:v1[8;25H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hri/python:v1[8;24H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12Hi/python:v1[8;23H[K[8;12H[?25h[?25l[44;130Hx[8;12H[44;130H [8;12H[44;130Hdl[8;12H[44;130H  [8;12H/python:v1[8;22H[K[8;12H[?25h[?25l[44;130H^[[8;12H[44;130H  [8;12H[44;130H^[[8;12H[44;130H  [8;12H[?25h[?25l[44;130Hi[8;12H[44;130H [8;12H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H8,12[10CAll[8;12H[?25h[?25ld/python:v1[44;143H3[8;13H[?25h[?25le/python:v1[44;143H4[8;14H[?25h[?25lv/python:v1[44;143H5[8;15H[?25h[?25la/python:v1[44;143H6[8;16H[?25h[?25ld/python:v1[44;143H7[8;17H[?25h[?25le/python:v1[44;143H8[8;18H[?25h[?25lo/python:v1[44;143H9[8;19H[?25h[?25lp/python:v1[44;142H20[8;20H[?25h[?25ls/python:v1[44;143H1[8;21H[?25h[?25l/python:v1[8;30H[K[44;143H0[8;20H[?25h[?25l/python:v1[8;29H[K[44;142H19[8;19H[?25h[?25l/python:v1[8;28H[K[44;143H8[8;18H[?25h[?25l/python:v1[8;27H[K[44;143H7[8;17H[?25h[?25le/python:v1[44;143H8[8;18H[?25h[?25lv/python:v1[44;143H9[8;19H[?25h[?25lo/python:v1[44;142H20[8;20H[?25h[?25lp/python:v1[44;143H1[8;21H[?25h[?25la/python:v1[44;143H2[8;22H[?25h[?25l/python:v1[8;31H[K[44;143H1[8;21H[?25h[?25ls/python:v1[44;143H2[8;22H[?25h[44;1H[K[8;21H[?25l[44;130H^[[8;21H[44;130H  [8;22H[44;140H8,21[10CAll[8;21H[?25h[?25l[44;130H:[8;21H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python1.yaml" [New] 11L, 171B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;root@controlplane01: ~root@controlplane01:~# kubectl creat [Ke -f python1.yaml 
+[?2004lerror: error validating "python1.yaml": error validating data: failed to download openapi: Get "http://localhost:8080/openapi/v2?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused; if you choose to ignore these errors, turn validation off with --validate=false
+[?2004h]0;root@controlplane01: ~root@controlplane01:~# exit
+[?2004llogout
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vim [7mpython1.yaml[27mpython1.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python1.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33m  1 [m
+[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;5H[?25h[?25l[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;5H[?25h[44;1H[K[1;5H[?25l[44;140H0,0-1[9CAll[1;5H[?25h[?25l[44;1H[1m-- INSERT --[m[44;140H[K[44;140H0,1[11CAll[1;5H[?25h[?25l[36mapiVersion[m[35m:[m v1
+[33m  2 [m[36mkind[m[35m:[m Pod[2;14H[K[3;1H[33m  3 [m[36mmetadata[m[35m:[m[3;14H[K[4;1H[33m  4 [m  [36mname[m[35m:[m python1-pod[4;24H[K[4;24H[?25h[?25l
+[33m  5 [m[36mspec[m[35m:[m[5;10H[K[6;1H[33m  6 [m  [36mcontainers[m[35m:[m[6;18H[K[7;1H[33m  7 [m  [33m- [m[36mname[m[35m:[m python1-container[7;32H[K[8;1H[33m  8 [m    [36mimage[m[35m:[m a[8;17H[K[8;17H[?25h[?25lnilbidari/python:v1
+[33m  9 [m    [36mports[m[35m:[m[9;15H[K[10;1H[33m 10 [m    [33m- [m[36mcontainerPort[m[35m:[m [31m80[m[10;28H[K[11;1H[33m 11 [m[11;5H[K[44;140H11,1[11;5H[?25h[?25l[44;141H0[10;5H[?25h[?25l[44;140H9,1 [9;5H[?25h[?25l[44;140H8[8;5H[?25h[?25l[44;142H2[8;6H[?25h[?25l[44;142H3[8;7H[?25h[?25l[44;142H4[8;8H[?25h[?25l[44;142H5[8;9H[?25h[?25l[44;142H6[8;10H[?25h[?25l[44;142H7[8;11H[?25h[?25l[44;142H8[8;12H[?25h[?25l[44;142H9[8;13H[?25h[?25l[44;142H10[8;14H[?25h[?25l[44;143H1[8;15H[?25h[?25l[44;143H2[8;16H[?25h[44;1H[K[8;15H[?25l[44;140H8,11[10CAll[8;15H[?25h[?25l[44;143H2[8;16H[?25h[?25lnilbidari/python:v1[8;35H[K[8;16H[?25h[?25lilbidari/python:v1[8;34H[K[8;16H[?25h[?25llbidari/python:v1[8;33H[K[8;16H[?25h[?25lbidari/python:v1[8;32H[K[8;16H[?25h[?25lidari/python:v1[8;31H[K[8;16H[?25h[?25ldari/python:v1[8;30H[K[8;16H[?25h[?25lari/python:v1[8;29H[K[8;16H[?25h[?25lri/python:v1[8;28H[K[8;16H[?25h[?25li/python:v1[8;27H[K[8;16H[?25h[?25l/python:v1[8;26H[K[8;16H[?25h[?25l[44;1H[1m-- INSERT --[m[44;140H[K[44;140H8,12[10CAll[8;16H[?25h[?25ld/python:v1[44;143H3[8;17H[?25h[?25le/python:v1[44;143H4[8;18H[?25h[?25lv/python:v1[44;143H5[8;19H[?25h[?25la/python:v1[44;143H6[8;20H[?25h[?25ld/python:v1[44;143H7[8;21H[?25h[?25le/python:v1[44;143H8[8;22H[?25h[?25lo/python:v1[44;143H9[8;23H[?25h[?25lp/python:v1[44;142H20[8;24H[?25h[?25l/python:v1[8;33H[K[44;142H19[8;23H[?25h[?25l/python:v1[8;32H[K[44;143H8[8;22H[?25h[?25lv/python:v1[44;143H9[8;23H[?25h[?25lo/python:v1[44;142H20[8;24H[?25h[?25lp/python:v1[44;143H1[8;25H[?25h[?25ls/python:v1[44;143H2[8;26H[?25h[44;1H[K[8;25H[?25l[44;140H8,21[10CAll[8;25H[?25h[?25l[44;140H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python1.yaml" [New] 11L, 171B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl apply -f [7mpython1.yaml[27mpython1.yaml
+[?2004lpod/python1-pod created
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS              RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running             0          110m
+devops-todo-7989bfc946-bg9p9                       1/1     Running             0          147m
+nginx-deployment-75d7449996-tzkth                  1/1     Running             0          3h47m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running             0          4h19m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running             0          4h19m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running             0          4h19m
+python1-pod                                        0/1     ContainerCreating   0          7s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running   0          110m
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          148m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          3h47m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          4h19m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          4h19m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          4h19m
+python1-pod                                        1/1     Running   0          11s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running   0          110m
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          148m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          3h47m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          4h19m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          4h19m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          4h19m
+python1-pod                                        1/1     Running   0          13s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec -it [7mpython1-pod[27mpython1-pod /bin/bash
+[?2004lerror: exec [POD] [COMMAND] is not supported anymore. Use exec [POD] -- [COMMAND] instead
+See 'kubectl exec -h' for help and examples
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec -it python1-pod /bin/bash[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lerror: exec [POD] [COMMAND] is not supported anymore. Use exec [POD] -- [COMMAND] instead
+See 'kubectl exec -h' for help and examples
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec -it python1-pod /bin/bash[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexec
+[?2004lerror: pod, type/name or --filename must be specified
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec --it 
+[?2004lerror: unknown flag: --it
+See 'kubectl exec --help' for usage.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec --it [7mpython1-pod[27mpython1-pod
+[?2004lerror: unknown flag: --it
+See 'kubectl exec --help' for usage.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec --it python1-pod[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C /bin/bash
+[?2004lerror: unknown flag: --it
+See 'kubectl exec --help' for usage.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mkubectl exec -it python1-pod -- /bin/bash[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl exec -it python1-pod -- /bin/bash
+[?2004lerror: Internal error occurred: unable to upgrade connection: Unauthorized
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec -it python1-pod -- /bin/bash[1P/bin/bash
+[?2004lerror: unknown flag: --/bin/bash
+See 'kubectl exec --help' for usage.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl exec -it python1-pod --/bin/bash bin/bash[1Pbin/bash bin/bash[1Pbin/bash /bin/bash
+[?2004lerror: Internal error occurred: unable to upgrade connection: Unauthorized
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running   0          113m
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          151m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          3h51m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          4h23m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          4h23m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          4h23m
+python1-pod                                        1/1     Running   0          3m33s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mkubectl get pods -o wide[27mkubectl get pods -o wide
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE     IP          NODE     NOMINATED NODE   READINESS GATES
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running   0          114m    10.44.0.4   node01   <none>           <none>
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          151m    10.32.0.5   node02   <none>           <none>
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          3h51m   10.32.0.4   node02   <none>           <none>
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          4h23m   10.44.0.2   node01   <none>           <none>
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          4h23m   10.32.0.3   node02   <none>           <none>
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          4h23m   10.44.0.3   node01   <none>           <none>
+python1-pod                                        1/1     Running   0          3m45s   10.44.0.5   node01   <none>           <none>
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mkubectl exec -it python1-pod ls  /tmp[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl exec -it python1-pod ls  /tmp
+[?2004lerror: exec [POD] [COMMAND] is not supported anymore. Use exec [POD] -- [COMMAND] instead
+See 'kubectl exec -h' for help and examples
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vi[K[K[7mvim python.yaml[27mvim python.yaml~[K4.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python4.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33m  1 [m
+[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;5H[?25h[?25l[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;5H[?25h[44;1H[K[1;5H[?25l[44;140H0,0-1[9CAll[1;5H[?25h[?25l[44;1H[1m-- INSERT --[m[44;140H[K[44;140H0,1[11CAll[1;5H[?25h[?25l[36mapiVersion[m[35m:[m apps/v1
+[33m  2 [m[36mkind[m[35m:[m Deployment[2;21H[K[3;1H[33m  3 [m[36mmetadata[m[35m:[m[3;14H[K[4;1H[33m  4 [m[4;5H[K[4;5H[?25h[?25l  [36mname[m[35m:[m python-deployment
+[33m  5 [m  [36mlabels[m[35m:[m[5;14H[K[6;1H[33m  6 [m    [36mapp[m[35m:[m python[6;20H[K[7;1H[33m  7 [m[36mspec[m[35m:[m[7;10H[K[8;1H[33m  8 [m  repl[8;11H[K[8;11H[?25h[?25l[36mreplicas[m[35m:[m [31m3[m
+[33m  9 [m  [36mselector[m[35m:[m[9;16H[K[10;1H[33m 10 [m    [36mmatchLabels[m[35m:[m[10;21H[K[11;1H[33m 11 [m      [36mapp[m[35m:[m python[11;22H[K[12;1H[33m 12 [m  templat[12;14H[K[12;14H[?25h[?25l[12;7H[36mtemplate[m[35m:[m
+[33m 13 [m    [36mmetadata[m[35m:[m[13;18H[K[14;1H[33m 14 [m      [36mlabels[m[35m:[m[14;18H[K[15;1H[33m 15 [m        [36mapp[m[35m:[m python[15;24H[K[16;1H[33m 16 [m    [36mspec[m[35m:[m[16;14H[K[17;1H[33m 17 [m  [17;7H[K[17;7H[?25h[?25l    [36mcontainers[m[35m:[m
+[33m 18 [m      [33m- [m[36mname[m[35m:[m python-container[18;35H[K[19;1H[33m 19 [m        [36mimage[m[35m:[m a[19;21H[K[19;21H[?25h[?25lnilbidari/python:v1
+[33m 20 [m        [36mports[m[35m:[m[20;19H[K[21;1H[33m 21 [m        [33m- [m[36mcontainerPort[m[35m:[m [31m80[m[21;32H[K[22;1H[33m 22 [m[22;5H[K[22;5H[?25h[?25l[44;140H22,1[22;5H[?25h[44;1H[K[22;5H[?25l[44;140H22,0-1[8CAll[22;5H[?25h[?25l[1m[34m~                                                                                                                                                            [m[44;141H1,9  [21;13H[?25h[?25l[44;141H0[20;13H[?25h[?25l[44;140H19[19;13H[?25h[?25l[44;143H10[19;14H[?25h[?25l[44;144H1[19;15H[?25h[?25l[44;144H2[19;16H[?25h[?25l[44;144H3[19;17H[?25h[?25l[44;144H4[19;18H[?25h[?25l[44;144H5[19;19H[?25h[?25l[44;144H6[19;20H[?25h[?25l[44;144H7[19;21H[?25h[?25l[44;144H6[19;20H[?25h[?25lnilbidari/python:v1[19;39H[K[19;20H[?25h[?25lilbidari/python:v1[19;38H[K[19;20H[?25h[?25llbidari/python:v1[19;37H[K[19;20H[?25h[?25lbidari/python:v1[19;36H[K[19;20H[?25h[?25lidari/python:v1[19;35H[K[19;20H[?25h[?25ldari/python:v1[19;34H[K[19;20H[?25h[?25lari/python:v1[19;33H[K[19;20H[?25h[?25lri/python:v1[19;32H[K[19;20H[?25h[?25li/python:v1[19;31H[K[19;20H[?25h[?25l/python:v1[19;30H[K[19;20H[?25h[?25l[44;1H[1m-- INSERT --[m[44;140H[K[44;140H19,16[9CAll[19;20H[?25h[?25ld/python:v1[44;144H7[19;21H[?25h[?25le/python:v1[44;144H8[19;22H[?25h[?25lv/python:v1[44;144H9[19;23H[?25h[?25la/python:v1[44;143H20[19;24H[?25h[?25ld/python:v1[44;144H1[19;25H[?25h[?25le/python:v1[44;144H2[19;26H[?25h[?25lv/python:v1[44;144H3[19;27H[?25h[?25lo/python:v1[44;144H4[19;28H[?25h[?25lp/python:v1[44;144H5[19;29H[?25h[?25ls/python:v1[44;144H6[19;30H[?25h[44;1H[K[19;29H[?25l[44;140H19,25[9CAll[19;29H[?25h[?25l[44;140H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python4.yaml" [New] 21L, 364B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mkubectl get rs [27mkubectl get rs 
+[?2004lNAME                                         DESIRED   CURRENT   READY   AGE
+awx-operator-controller-manager-799967c78c   1         1         1       116m
+devops-todo-7989bfc946                       1         1         1       153m
+nginx-deployment-75d7449996                  1         1         1       3h53m
+python-deployment-7bf5b7b99f                 3         3         3       4h25m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mkubectl create -f python.yaml[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl create -f python.yaml
+[?2004lError from server (AlreadyExists): error when creating "python.yaml": deployments.apps "python-deployment" already exists
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl create -f python.yaml4.yaml
+[?2004lError from server (AlreadyExists): error when creating "python4.yaml": deployments.apps "python-deployment" already exists
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vi [7mpython.yaml[27mpython.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python.yaml" 21L, 364B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33m  1 [m[36mapiVersion[m[35m:[m apps/v1
+[33m  2 [m[36mkind[m[35m:[m Deployment[2;21H[K[3;1H[33m  3 [m[36mmetadata[m[35m:[m[3;14H[K[4;1H[33m  4 [m  [36mname[m[35m:[m python-deployment
+[33m  5 [m  [36mlabels[m[35m:[m
+[33m  6 [m    [36mapp[m[35m:[m python
+[33m  7 [m[36mspec[m[35m:[m
+[33m  8 [m  [36mreplicas[m[35m:[m [31m3[m
+[33m  9 [m  [36mselector[m[35m:[m
+[33m 10 [m    [36mmatchLabels[m[35m:[m
+[33m 11 [m      [36mapp[m[35m:[m python
+[33m 12 [m  [36mtemplate[m[35m:[m
+[33m 13 [m    [36mmetadata[m[35m:[m
+[33m 14 [m      [36mlabels[m[35m:[m
+[33m 15 [m[8C[36mapp[m[35m:[m python
+[33m 16 [m    [36mspec[m[35m:[m
+[33m 17 [m      [36mcontainers[m[35m:[m
+[33m 18 [m      [33m- [m[36mname[m[35m:[m python-container
+[33m 19 [m[8C[36mimage[m[35m:[m anilbidari/python:v1
+[33m 20 [m[8C[36mports[m[35m:[m
+[33m 21 [8C- [m[36mcontainerPort[m[35m:[m [31m80[m
+[1m[34m~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H1,1[11CAll[1;5H[?25h[?25l[44;140H2[2;5H[?25h[?25l[44;140H3[3;5H[?25h[?25l[44;140H4[4;5H[?25h[?25l[44;140H5[5;5H[?25h[?25l[44;140H4[4;5H[?25h[?25l[44;142H2[4;6H[?25h[?25l[44;142H3[4;7H[?25h[?25l[44;142H4[4;8H[?25h[?25l[44;142H5[4;9H[?25h[?25l[44;142H6[4;10H[?25h[?25l[44;142H7[4;11H[?25h[?25l[44;142H8[4;12H[?25h[?25l[44;142H9[4;13H[?25h[?25l[44;142H10[4;14H[?25h[?25l[44;143H1[4;15H[?25h[?25l[44;143H2[4;16H[?25h[?25l[44;143H3[4;17H[?25h[?25l[44;143H4[4;18H[?25h[?25l[44;143H5[4;19H[?25h[?25l[44;143H6[4;20H[?25h[?25l[44;143H7[4;21H[?25h[?25l[44;143H8[4;22H[?25h[?25l[44;143H9[4;23H[?25h[?25l[44;142H20[4;24H[?25h[?25l[44;143H1[4;25H[?25h[?25l[44;143H2[4;26H[?25h[?25l[44;143H3[4;27H[?25h[?25l[44;143H4[4;28H[?25h[?25l[44;143H5[4;29H[?25h[?25l[44;1H[1m-- INSERT --[m[44;13H[K[44;140H4,26[10CAll[4;30H[?25h[?25l_[44;143H7[4;31H[?25h[?25l1[44;143H8[4;32H[?25h[?25l[44;140H5,10[5;14H[?25h[?25l[44;140H6,16[6;20H[?25h[?25l[44;140H7,6 [7;10H[?25h[?25l[44;140H8,14[8;18H[?25h[?25l[44;140H9,12[9;16H[?25h[?25l[44;140H10,17[10;21H[?25h[?25l[44;141H1,18[11;22H[?25h[?25l[44;141H2,12[12;16H[?25h[?25l[44;141H3,14[13;18H[?25h[?25l[44;141H4[14;18H[?25h[?25l[44;141H5,20[15;24H[?25h[?25l[44;141H6,1[16;14H[?25h[?25l[44;141H7,18[17;22H[?25h[?25l[44;141H8,2[18;32H[?25h[44;1H[K[18;31H[?25l[44;140H18,27[9CAll[18;31H[?25h[?25l[44;1H[1m-- INSERT --[m[44;140H[K[44;140H18,31[9CAll[18;35H[?25h[?25l_[44;144H2[18;36H[?25h[?25l1[44;144H3[18;37H[?25h[44;1H[K[18;36H[?25l[44;140H18,32[9CAll[18;36H[?25h[?25l[44;141H9[19;36H[?25h[?25l[44;144H1[19;35H[?25h[?25l[44;144H0[19;34H[?25h[?25l[44;143H29[19;33H[?25h[?25l[44;144H8[19;32H[?25h[?25l[44;144H7[19;31H[?25h[?25l[44;144H6[19;30H[?25h[?25l[44;144H5[19;29H[?25h[?25l[44;144H4[19;28H[?25h[?25l[44;144H3[19;27H[?25h[?25l[44;144H2[19;26H[?25h[?25l[44;144H1[19;25H[?25h[?25l[44;144H0[19;24H[?25h[?25l[44;143H19[19;23H[?25h[?25l[44;144H8[19;22H[?25h[?25l[44;144H7[19;21H[?25h[?25l[44;144H6[19;20H[?25h[?25lnilbidari/python:v1[19;39H[K[19;20H[?25h[?25lilbidari/python:v1[19;38H[K[19;20H[?25h[?25llbidari/python:v1[19;37H[K[19;20H[?25h[?25lbidari/python:v1[19;36H[K[19;20H[?25h[?25lidari/python:v1[19;35H[K[19;20H[?25h[?25ldari/python:v1[19;34H[K[19;20H[?25h[?25lari/python:v1[19;33H[K[19;20H[?25h[?25lri/python:v1[19;32H[K[19;20H[?25h[?25li/python:v1[19;31H[K[19;20H[?25h[?25l/python:v1[19;30H[K[19;20H[?25h[?25l[44;1H[1m-- INSERT --[m[44;140H[K[44;140H19,16[9CAll[19;20H[?25h[?25ld/python:v1[44;144H7[19;21H[?25h[?25le/python:v1[44;144H8[19;22H[?25h[?25lv/python:v1[44;144H9[19;23H[?25h[?25la/python:v1[44;143H20[19;24H[?25h[?25ld/python:v1[44;144H1[19;25H[?25h[?25le/python:v1[44;144H2[19;26H[?25h[?25lv/python:v1[44;144H3[19;27H[?25h[?25lo/python:v1[44;144H4[19;28H[?25h[?25lp/python:v1[44;144H5[19;29H[?25h[?25ls/python:v1[44;144H6[19;30H[?25h[44;1H[K[19;29H[?25l[44;140H19,25[9CAll[19;29H[?25h[?25l[44;140H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python.yaml" 21L, 368B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vi python.yamlkubectl create -f python4.yaml
+[?2004lError from server (AlreadyExists): error when creating "python4.yaml": deployments.apps "python-deployment" already exists
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl create -f python4.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pvi python.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python.yaml" 21L, 368B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33m  1 [m[36mapiVersion[m[35m:[m apps/v1
+[33m  2 [m[36mkind[m[35m:[m Deployment[2;21H[K[3;1H[33m  3 [m[36mmetadata[m[35m:[m[3;14H[K[4;1H[33m  4 [m  [36mname[m[35m:[m python-deployment_1
+[33m  5 [m  [36mlabels[m[35m:[m
+[33m  6 [m    [36mapp[m[35m:[m python
+[33m  7 [m[36mspec[m[35m:[m
+[33m  8 [m  [36mreplicas[m[35m:[m [31m3[m
+[33m  9 [m  [36mselector[m[35m:[m
+[33m 10 [m    [36mmatchLabels[m[35m:[m
+[33m 11 [m      [36mapp[m[35m:[m python
+[33m 12 [m  [36mtemplate[m[35m:[m
+[33m 13 [m    [36mmetadata[m[35m:[m
+[33m 14 [m      [36mlabels[m[35m:[m
+[33m 15 [m[8C[36mapp[m[35m:[m python
+[33m 16 [m    [36mspec[m[35m:[m
+[33m 17 [m      [36mcontainers[m[35m:[m
+[33m 18 [m      [33m- [m[36mname[m[35m:[m python-container_1
+[33m 19 [m[8C[36mimage[m[35m:[m devadevops/python:v1
+[33m 20 [m[8C[36mports[m[35m:[m
+[33m 21 [8C- [m[36mcontainerPort[m[35m:[m [31m80[m
+[1m[34m~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H1,1[11CAll[1;5H[?25h[?25l[44;1H[K[44;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[44;1H[K[44;1H[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vi python.yamlkubectl create -f python4.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pvi python.yamlkubectl create -f python4.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[16Pvi python.yaml4.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python4.yaml" 21L, 364B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33m  1 [m[36mapiVersion[m[35m:[m apps/v1
+[33m  2 [m[36mkind[m[35m:[m Deployment[2;21H[K[3;1H[33m  3 [m[36mmetadata[m[35m:[m[3;14H[K[4;1H[33m  4 [m  [36mname[m[35m:[m python-deployment
+[33m  5 [m  [36mlabels[m[35m:[m
+[33m  6 [m    [36mapp[m[35m:[m python
+[33m  7 [m[36mspec[m[35m:[m
+[33m  8 [m  [36mreplicas[m[35m:[m [31m3[m
+[33m  9 [m  [36mselector[m[35m:[m
+[33m 10 [m    [36mmatchLabels[m[35m:[m
+[33m 11 [m      [36mapp[m[35m:[m python
+[33m 12 [m  [36mtemplate[m[35m:[m
+[33m 13 [m    [36mmetadata[m[35m:[m
+[33m 14 [m      [36mlabels[m[35m:[m
+[33m 15 [m[8C[36mapp[m[35m:[m python
+[33m 16 [m    [36mspec[m[35m:[m
+[33m 17 [m      [36mcontainers[m[35m:[m
+[33m 18 [m      [33m- [m[36mname[m[35m:[m python-container
+[33m 19 [m[8C[36mimage[m[35m:[m devadevops/python:v1
+[33m 20 [m[8C[36mports[m[35m:[m
+[33m 21 [8C- [m[36mcontainerPort[m[35m:[m [31m80[m
+[1m[34m~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H1,1[11CAll[1;5H[?25h[?25l[44;140H2[2;5H[?25h[?25l[44;140H3[3;5H[?25h[?25l[44;140H4[4;5H[?25h[?25l[44;140H5[5;5H[?25h[?25l[44;140H6[6;5H[?25h[?25l[44;140H7[7;5H[?25h[?25l[44;140H8[8;5H[?25h[?25l[44;140H9[9;5H[?25h[?25l[44;140H10,1[10;5H[?25h[?25l[44;140H9,1 [9;5H[?25h[?25l[44;140H8[8;5H[?25h[?25l[44;140H7[7;5H[?25h[?25l[44;140H6[6;5H[?25h[?25l[44;140H5[5;5H[?25h[?25l[44;140H4[4;5H[?25h[?25l[44;140H5[5;5H[?25h[?25l[44;140H4[4;5H[?25h[?25l[44;142H2[4;6H[?25h[?25l[44;142H3[4;7H[?25h[?25l[44;142H4[4;8H[?25h[?25l[44;142H5[4;9H[?25h[?25l[44;142H6[4;10H[?25h[?25l[44;142H7[4;11H[?25h[?25l[44;142H8[4;12H[?25h[?25l[44;142H9[4;13H[?25h[?25l[44;142H10[4;14H[?25h[?25l[44;143H1[4;15H[?25h[?25l[44;143H2[4;16H[?25h[?25l[44;143H3[4;17H[?25h[?25l[44;143H4[4;18H[?25h[?25l[44;143H5[4;19H[?25h[?25l[44;143H6[4;20H[?25h[?25l[44;143H7[4;21H[?25h[?25l[44;143H8[4;22H[?25h[?25l[44;143H9[4;23H[?25h[?25l[44;142H20[4;24H[?25h[?25l[44;143H1[4;25H[?25h[?25l[44;143H2[4;26H[?25h[?25l[44;143H3[4;27H[?25h[?25l[44;143H4[4;28H[?25h[?25l[44;143H5[4;29H[?25h[?25l[44;1H[1m-- INSERT --[m[44;13H[K[44;140H4,26[10CAll[4;30H[?25h[?25l_[44;143H7[4;31H[?25h[?25l4[44;143H8[4;32H[?25h[?25l[44;140H5,10[5;14H[?25h[?25l[44;140H6,16[6;20H[?25h[?25l[44;140H7,6 [7;10H[?25h[?25l[44;140H8,14[8;18H[?25h[?25l[44;140H9,12[9;16H[?25h[?25l[44;140H10,17[10;21H[?25h[?25l[44;141H1,18[11;22H[?25h[?25l[44;141H2,12[12;16H[?25h[?25l[44;141H3,14[13;18H[?25h[?25l[44;141H4[14;18H[?25h[?25l[44;141H5,20[15;24H[?25h[?25l[44;141H6,1[16;14H[?25h[?25l[44;141H7,18[17;22H[?25h[?25l[44;141H8,2[18;32H[?25h[?25l[44;144H9[18;33H[?25h[?25l[44;143H30[18;34H[?25h[?25l[44;144H1[18;35H[?25h[44;1H[K[18;34H[?25l[44;140H18,30[9CAll[18;34H[?25h[?25l[44;140H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python4.yaml" 21L, 366B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vi python4.yaml[1P.yamlkubectl create -f python4.yaml
+[?2004lThe Deployment "python-deployment_4" is invalid: metadata.name: Invalid value: "python-deployment_4": a lowercase RFC 1123 subdomain must consist of lower case alphanumeric characters, '-' or '.', and must start and end with an alphanumeric character (e.g. 'example.com', regex used for validation is '[a-z0-9]([-a-z0-9]*[a-z0-9])?(\.[a-z0-9]([-a-z0-9]*[a-z0-9])?)*')
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl create -f python4.yaml[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[15Pvi[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python4.yaml" 21L, 366B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33m  1 [m[36mapiVersion[m[35m:[m apps/v1
+[33m  2 [m[36mkind[m[35m:[m Deployment[2;21H[K[3;1H[33m  3 [m[36mmetadata[m[35m:[m[3;14H[K[4;1H[33m  4 [m  [36mname[m[35m:[m python-deployment_4
+[33m  5 [m  [36mlabels[m[35m:[m
+[33m  6 [m    [36mapp[m[35m:[m python
+[33m  7 [m[36mspec[m[35m:[m
+[33m  8 [m  [36mreplicas[m[35m:[m [31m3[m
+[33m  9 [m  [36mselector[m[35m:[m
+[33m 10 [m    [36mmatchLabels[m[35m:[m
+[33m 11 [m      [36mapp[m[35m:[m python
+[33m 12 [m  [36mtemplate[m[35m:[m
+[33m 13 [m    [36mmetadata[m[35m:[m
+[33m 14 [m      [36mlabels[m[35m:[m
+[33m 15 [m[8C[36mapp[m[35m:[m python
+[33m 16 [m    [36mspec[m[35m:[m
+[33m 17 [m      [36mcontainers[m[35m:[m
+[33m 18 [m      [33m- [m[36mname[m[35m:[m python-container
+[33m 19 [m[8C[36mimage[m[35m:[m devadevops/python:v1
+[33m 20 [m[8C[36mports[m[35m:[m
+[33m 21 [8C- [m[36mcontainerPort[m[35m:[m [31m80[m
+[1m[34m~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H1,1[11CAll[1;5H[?25h[?25l[44;140H2[2;5H[?25h[?25l[44;140H3[3;5H[?25h[?25l[44;140H4[4;5H[?25h[?25l[44;142H2[4;6H[?25h[?25l[44;142H3[4;7H[?25h[?25l[44;142H4[4;8H[?25h[?25l[44;142H5[4;9H[?25h[?25l[44;142H6[4;10H[?25h[?25l[44;142H7[4;11H[?25h[?25l[44;142H8[4;12H[?25h[?25l[44;142H9[4;13H[?25h[?25l[44;142H10[4;14H[?25h[?25l[44;143H1[4;15H[?25h[?25l[44;143H2[4;16H[?25h[?25l[44;143H3[4;17H[?25h[?25l[44;143H4[4;18H[?25h[?25l[44;143H5[4;19H[?25h[?25l[44;143H6[4;20H[?25h[?25l[44;143H7[4;21H[?25h[?25l[44;143H8[4;22H[?25h[?25l[44;143H9[4;23H[?25h[?25l[44;142H20[4;24H[?25h[?25l[44;143H1[4;25H[?25h[?25l[44;143H2[4;26H[?25h[?25l[44;143H3[4;27H[?25h[?25l[44;143H4[4;28H[?25h[?25l[44;143H5[4;29H[?25h[?25l[44;143H6[4;30H[?25h[?25l4[4;31H[K[4;30H[?25h[?25l[44;1H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python4.yaml" 21L, 365B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?25h[>4;m[?1049l[23;0;0t[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ vi python4.yaml[15@kubectl create -f[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004ldeployment.apps/python-deployment4 created
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS              RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running             0          118m
+devops-todo-7989bfc946-bg9p9                       1/1     Running             0          156m
+nginx-deployment-75d7449996-tzkth                  1/1     Running             0          3h56m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running             0          4h28m
+python-deployment4-7686744db9-254xj                0/1     ContainerCreating   0          6s
+python-deployment4-7686744db9-drkxw                0/1     ContainerCreating   0          6s
+python-deployment4-7686744db9-jsfsq                1/1     Running             0          6s
+python1-pod                                        1/1     Running             0          8m30s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS              RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running             0          118m
+devops-todo-7989bfc946-bg9p9                       1/1     Running             0          156m
+nginx-deployment-75d7449996-tzkth                  1/1     Running             0          3h56m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running             0          4h28m
+python-deployment4-7686744db9-254xj                0/1     ContainerCreating   0          10s
+python-deployment4-7686744db9-drkxw                0/1     ContainerCreating   0          10s
+python-deployment4-7686744db9-jsfsq                1/1     Running             0          10s
+python1-pod                                        1/1     Running             0          8m34s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS              RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running             0          118m
+devops-todo-7989bfc946-bg9p9                       1/1     Running             0          156m
+nginx-deployment-75d7449996-tzkth                  1/1     Running             0          3h56m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running             0          4h28m
+python-deployment4-7686744db9-254xj                0/1     ContainerCreating   0          11s
+python-deployment4-7686744db9-drkxw                0/1     ContainerCreating   0          11s
+python-deployment4-7686744db9-jsfsq                1/1     Running             0          11s
+python1-pod                                        1/1     Running             0          8m35s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS              RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running             0          118m
+devops-todo-7989bfc946-bg9p9                       1/1     Running             0          156m
+nginx-deployment-75d7449996-tzkth                  1/1     Running             0          3h56m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running             0          4h28m
+python-deployment4-7686744db9-254xj                0/1     ContainerCreating   0          12s
+python-deployment4-7686744db9-drkxw                0/1     ContainerCreating   0          12s
+python-deployment4-7686744db9-jsfsq                1/1     Running             0          12s
+python1-pod                                        1/1     Running             0          8m36s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS              RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running             0          118m
+devops-todo-7989bfc946-bg9p9                       1/1     Running             0          156m
+nginx-deployment-75d7449996-tzkth                  1/1     Running             0          3h56m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running             0          4h28m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running             0          4h28m
+python-deployment4-7686744db9-254xj                0/1     ContainerCreating   0          13s
+python-deployment4-7686744db9-drkxw                1/1     Running             0          13s
+python-deployment4-7686744db9-jsfsq                1/1     Running             0          13s
+python1-pod                                        1/1     Running             0          8m37s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running   0          118m
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          156m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          3h56m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          4h28m
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          4h28m
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          4h28m
+python-deployment4-7686744db9-254xj                1/1     Running   0          15s
+python-deployment4-7686744db9-drkxw                1/1     Running   0          15s
+python-deployment4-7686744db9-jsfsq                1/1     Running   0          15s
+python1-pod                                        1/1     Running   0          8m39s
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-8wnxm   2/2     Running   0          5h42m
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          6h20m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          7h40m
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          8h
+python-deployment4-7686744db9-254xj                1/1     Running   0          3h44m
+python-deployment4-7686744db9-drkxw                1/1     Running   0          3h44m
+python-deployment4-7686744db9-jsfsq                1/1     Running   0          3h44m
+python1-pod                                        1/1     Running   0          3h52m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods[K[K[K[Kdeployemnt
+[?2004lerror: the server doesn't have a resource type "deployemnt"
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get deployemnt[K[K[K[Kment
+[?2004lNAME                              READY   UP-TO-DATE   AVAILABLE   AGE
+awx-operator-controller-manager   1/1     1            1           5h43m
+devops-todo                       1/1     1            1           6h20m
+nginx-deployment                  1/1     1            1           7h40m
+python-deployment                 3/3     3            3           8h
+python-deployment4                3/3     3            3           3h44m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get deployment[K[K[K[K[K[K[K[K[K[Ksvc
+[?2004lNAME                                              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+awx-operator-controller-manager-metrics-service   ClusterIP   10.96.86.59    <none>        8443/TCP         5h43m
+devops-todo                                       NodePort    10.96.54.209   <none>        8080:31589/TCP   6h20m
+kubernetes                                        ClusterIP   10.96.0.1      <none>        443/TCP          59d
+nginx                                             NodePort    10.96.18.145   <none>        80:30458/TCP     59d
+python-deployment                                 NodePort    10.96.150.33   <none>        80:30110/TCP     8h
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ crul [K[K[K[Kurl [7m10.96.86.59[27m[1P10.96.86.5[K[K[K[K[K[K[K[K[K[Khttps://[7m10.96.86.59[27m10.96.86.59:8443
+[?2004l^C
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ curl https://10.96.86.59:8443[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[14Pkubectl get svc -o wide
+[?2004lNAME                                              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE     SELECTOR
+awx-operator-controller-manager-metrics-service   ClusterIP   10.96.86.59    <none>        8443/TCP         5h44m   control-plane=controller-manager,helm.sh/chart=awx-operator
+devops-todo                                       NodePort    10.96.54.209   <none>        8080:31589/TCP   6h21m   app.kubernetes.io/instance=devops,app.kubernetes.io/name=todo
+kubernetes                                        ClusterIP   10.96.0.1      <none>        443/TCP          59d     <none>
+nginx                                             NodePort    10.96.18.145   <none>        80:30458/TCP     59d     app=nginx
+python-deployment                                 NodePort    10.96.150.33   <none>        80:30110/TCP     8h      app=python
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get svc -o wide[K[K[K[K[K[K[K[K[K[K[Kdescribe [7mawx-operator-controller-manager-metrics-service[27mawx-operator-controller-manager-metrics-service 
+[?2004lerror: the server doesn't have a resource type "describe"
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get describe awx-operator-controller-manager-metrics-service [1P[1P[1P[1P[1P[1@c[1@r[1@i[1@b[1@e
+[?2004lerror: the server doesn't have a resource type "describe"
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get describe awx-operator-controller-manager-metrics-service [C[1P[1P[1P[1P[1P[1@ [C[C[C[C[C[C[C[C[C[1@s[1@v[1@c[1@ 
+[?2004lName:                     awx-operator-controller-manager-metrics-service
+Namespace:                default
+Labels:                   app.kubernetes.io/managed-by=Helm
+                          control-plane=controller-manager
+                          helm.sh/chart=awx-operator
+Annotations:              meta.helm.sh/release-name: my-awx-operator
+                          meta.helm.sh/release-namespace: default
+Selector:                 control-plane=controller-manager,helm.sh/chart=awx-operator
+Type:                     ClusterIP
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.96.86.59
+IPs:                      10.96.86.59
+Port:                     https  8443/TCP
+TargetPort:               https/TCP
+Endpoints:                10.44.0.4:8443
+Session Affinity:         None
+Internal Traffic Policy:  Cluster
+Events:                   <none>
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ ip a
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 02:d8:5d:67:2c:80 brd ff:ff:ff:ff:ff:ff
+    inet 10.0.2.15/24 metric 100 brd 10.0.2.255 scope global dynamic enp0s3
+       valid_lft 58976sec preferred_lft 58976sec
+    inet6 fd00::d8:5dff:fe67:2c80/64 scope global dynamic mngtmpaddr noprefixroute 
+       valid_lft 86229sec preferred_lft 14229sec
+    inet6 fe80::d8:5dff:fe67:2c80/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:b5:9b:e2 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.11/24 brd 192.168.56.255 scope global enp0s8
+       valid_lft forever preferred_lft forever
+    inet6 fe80::a00:27ff:feb5:9be2/64 scope link 
+       valid_lft forever preferred_lft forever
+4: docker0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc noqueue state DOWN group default 
+    link/ether 02:42:17:2a:a9:dc brd ff:ff:ff:ff:ff:ff
+    inet 172.17.0.1/16 brd 172.17.255.255 scope global docker0
+       valid_lft forever preferred_lft forever
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ cat /etc/hosts
+[?2004l127.0.0.1	localhost
+
+# The following lines are desirable for IPv6 capable hosts
+::1	ip6-localhost	ip6-loopback
+fe00::0	ip6-localnet
+ff00::0	ip6-mcastprefix
+ff02::1	ip6-allnodes
+ff02::2	ip6-allrouters
+ff02::3	ip6-allhosts
+
+192.168.56.11	controlplane01
+192.168.56.12	controlplane02
+192.168.56.21	node01
+192.168.56.22	node02
+192.168.56.30	loadbalancer
+127.0.1.1	ubuntu-jammy	ubuntu-jammy
+
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ cat /etc/hostsip a[Kkubectl describe svc awx-operator-controller-manager-metrics-service [C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget describe[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csvc -o wide[K
+[?2004lNAME                                              TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE     SELECTOR
+awx-operator-controller-manager-metrics-service   ClusterIP   10.96.86.59    <none>        8443/TCP         5h46m   control-plane=controller-manager,helm.sh/chart=awx-operator
+devops-todo                                       NodePort    10.96.54.209   <none>        8080:31589/TCP   6h23m   app.kubernetes.io/instance=devops,app.kubernetes.io/name=todo
+kubernetes                                        ClusterIP   10.96.0.1      <none>        443/TCP          59d     <none>
+nginx                                             NodePort    10.96.18.145   <none>        80:30458/TCP     59d     app=nginx
+python-deployment                                 NodePort    10.96.150.33   <none>        80:30110/TCP     8h      app=python
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ l[Khelm list
+[?2004lNAME           	NAMESPACE	REVISION	UPDATED                                	STATUS  	CHART             	APP VERSION
+devops         	default  	1       	2025-05-21 07:04:23.461344496 +0000 UTC	deployed	todo-0.1.0        	1.16.0     
+my-awx-operator	default  	1       	2025-05-21 07:41:55.703885825 +0000 UTC	deployed	awx-operator-3.1.0	2.19.1     
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ helm list[K[K[K[Kdelete [7mmy-awx-operator[27mmy-awx-operator
+[?2004lrelease "my-awx-operator" uninstalled
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ (reverse-i-search)`': [Kh': [7mh[27melm delete my-awx-operator[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[1@e': [7mhe[27m[1@l': [7mhel[27m[1@m': [7mhelm[27m[1@ ': [7mhelm [27m[1P]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ helm [C[C[C[C[C[C[C[C[C[C[C[C[1P my-awx-operator[1P my-awx-operator[1P my-awx-operator[1P my-awx-operator[1P my-awx-operator[1P my-awx-operatori my-awx-operatorn my-awx-operators my-awx-operatort my-awx-operatora my-awx-operatorl my-awx-operatorl my-awx-operator
+[?2004lError: INSTALLATION FAILED: must either provide a name or specify --generate-name
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ history
+[?2004l    1  exit
+    2  id
+    3  ssh-keygen
+    4  ls -ltr
+    5  cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
+    6  ssh-copy-id -o StrictHostKeyChecking=no $(whoami)@controlplane02
+    7  ssh-copy-id -o StrictHostKeyChecking=no $(whoami)@loadbalancer
+    8  ssh-copy-id -o StrictHostKeyChecking=no $(whoami)@node01
+    9  ssh-copy-id -o StrictHostKeyChecking=no $(whoami)@node02
+   10  ssh controlplane01
+   11  ssh controlplane02
+   12  ssh node01
+   13  ssh node02
+   14  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/${ARCH}/kubectl"
+   15  chmod +x kubectl
+   16  sudo mv kubectl /usr/local/bin/
+   17  kubectl version --client
+   18  dig +short controlplane01
+   19  CONTROL01=$(dig +short controlplane01)
+   20  CONTROL02=$(dig +short controlplane02)
+   21  LOADBALANCER=$(dig +short loadbalancer)
+   22  SERVICE_CIDR=10.96.0.0/24
+   23  API_SERVICE=$(echo $SERVICE_CIDR | awk 'BEGIN {FS="."} ; { printf("%s.%s.%s.1", $1, $2, $3) }')
+   24  echo $CONTROL01
+   25  echo $CONTROL02
+   26  echo $LOADBALANCER
+   27  echo $SERVICE_CIDR
+   28  echo $API_SERVICE
+   29  openssl genrsa -out ca.key 2048
+   30  openssl req -new -key ca.key -subj "/CN=KUBERNETES-CA/O=Kubernetes" -out ca.csr
+   31  openssl x509 -req -in ca.csr -signkey ca.key -CAcreateserial -out ca.crt -days 1000
+   32  ls -ltr
+   33  openssl req -new -key admin.key -subj "/CN=admin/O=system:masters" -out admin.csr
+   34  openssl x509 -req -in admin.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out admin.crt -days 1000
+   35  ls -ltr
+   36  openssl genrsa -out kube-controller-manager.key 2048
+   37  openssl req -new -key kube-controller-manager.key     -subj "/CN=system:kube-controller-manager/O=system:kube-controller-manager" -out kube-controller-manager.csr
+   38  openssl x509 -req -in kube-controller-manager.csr     -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-controller-manager.crt -days 1000
+   39  ls -ltr
+   40  openssl genrsa -out kube-proxy.key 2048
+   41  openssl req -new -key kube-proxy.key     -subj "/CN=system:kube-proxy/O=system:node-proxier" -out kube-proxy.csr
+   42  openssl x509 -req -in kube-proxy.csr     -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-proxy.crt -days 1000
+   43  ls -ltr
+   44  openssl genrsa -out kube-scheduler.key 2048
+   45  openssl x509 -req -in kube-scheduler.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-scheduler.crt -days 1000
+   46  ls -ltr
+   47  cat > openssl.cnf <<EOF
+   48  [req]
+   49  req_extensions = v3_req
+   50  distinguished_name = req_distinguished_name
+   51  [req_distinguished_name]
+   52  [v3_req]
+   53  basicConstraints = critical, CA:FALSE
+   54  keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
+   55  extendedKeyUsage = serverAuth
+   56  subjectAltName = @alt_names
+   57  [alt_names]
+   58  DNS.1 = kubernetes
+   59  DNS.2 = kubernetes.default
+   60  DNS.3 = kubernetes.default.svc
+   61  DNS.4 = kubernetes.default.svc.cluster
+   62  DNS.5 = kubernetes.default.svc.cluster.local
+   63  IP.1 = ${API_SERVICE}
+   64  IP.2 = ${CONTROL01}
+   65  IP.3 = ${CONTROL02}
+   66  IP.4 = ${LOADBALANCER}
+   67  IP.5 = 127.0.0.1
+   68  EOF
+   69  ls -ltr
+   70  cat openssl.cnf 
+   71  openssl genrsa -out kube-apiserver.key 2048
+   72  openssl req -new -key kube-apiserver.key     -subj "/CN=kube-apiserver/O=Kubernetes" -out kube-apiserver.csr -config openssl.cnf
+   73  openssl x509 -req -in kube-apiserver.csr     -CA ca.crt -CAkey ca.key -CAcreateserial -out kube-apiserver.crt -extensions v3_req -extfile openssl.cnf -days 1000
+   74  ls -ltr
+   75  cat openssl.cnf 
+   76  cat > openssl-kubelet.cnf <<EOF
+   77  [req]
+   78  req_extensions = v3_req
+   79  distinguished_name = req_distinguished_name
+   80  [req_distinguished_name]
+   81  [v3_req]
+   82  basicConstraints = critical, CA:FALSE
+   83  keyUsage = critical, nonRepudiation, digitalSignature, keyEncipherment
+   84  extendedKeyUsage = clientAuth
+   85  EOF
+   86  ls -ltr
+   87  cat openssl-kubelet.cnf 
+   88  openssl genrsa -out apiserver-kubelet-client.key 2048
+   89  openssl req -new -key apiserver-kubelet-client.key     -subj "/CN=kube-apiserver-kubelet-client/O=system:masters" -out apiserver-kubelet-client.csr -config openssl-kubelet.cnf
+   90  openssl x509 -req -in apiserver-kubelet-client.csr     -CA ca.crt -CAkey ca.key -CAcreateserial -out apiserver-kubelet-client.crt -extensions v3_req -extfile openssl-kubelet.cnf
+   91  ls -ltr
+   92  cat > openssl-etcd.cnf <<EOF
+   93  [req]
+   94  req_extensions = v3_req
+   95  distinguished_name = req_distinguished_name
+   96  [req_distinguished_name]
+   97  [ v3_req ]
+   98  basicConstraints = CA:FALSE
+   99  keyUsage = nonRepudiation, digitalSignature, keyEncipherment
+  100  subjectAltName = @alt_names
+  101  [alt_names]
+  102  IP.1 = ${CONTROL01}
+  103  IP.2 = ${CONTROL02}
+  104  IP.3 = 127.0.0.1
+  105  EOF
+  106  ls -ltr
+  107  openssl genrsa -out etcd-server.key 2048
+  108  openssl req -new -key etcd-server.key     -subj "/CN=etcd-server/O=Kubernetes" -out etcd-server.csr -config openssl-etcd.cnf
+  109  openssl x509 -req -in etcd-server.csr     -CA ca.crt -CAkey ca.key -CAcreateserial -out etcd-server.crt -extensions v3_req -extfile openssl-etcd.cnf -days 1000
+  110  ls -ltr
+  111  openssl genrsa -out service-account.key 2048
+  112  openssl req -new -key service-account.key     -subj "/CN=service-accounts/O=Kubernetes" -out service-account.csr
+  113  openssl x509 -req -in service-account.csr     -CA ca.crt -CAkey ca.key -CAcreateserial -out service-account.crt -days 1000
+  114  ls -ltr
+  115  ./cert_verify.sh 
+  116  for instance in controlplane01 controlplane02; do   scp -o StrictHostKeyChecking=no ca.crt ca.key kube-apiserver.key kube-apiserver.crt     apiserver-kubelet-client.crt apiserver-kubelet-client.key     service-account.key service-account.crt     etcd-server.key etcd-server.crt     kube-controller-manager.key kube-controller-manager.crt     kube-scheduler.key kube-scheduler.crt     ${instance}:~/; done
+  117  for instance in node01 node02 ; do   scp ca.crt kube-proxy.crt kube-proxy.key ${instance}:~/; done
+  118  ./cert_verify.sh 
+  119  ssh controlplane02
+  120  LOADBALANCER=$(dig +short loadbalancer)
+  121  kubectl config set-cluster kubernetes-the-hard-way     --certificate-authority=/var/lib/kubernetes/pki/ca.crt     --server=https://${LOADBALANCER}:6443     --kubeconfig=kube-proxy.kubeconfig
+  122  kubectl config set-credentials system:kube-proxy     --client-certificate=/var/lib/kubernetes/pki/kube-proxy.crt     --client-key=/var/lib/kubernetes/pki/kube-proxy.key     --kubeconfig=kube-proxy.kubeconfig
+  123  kubectl config set-context default     --cluster=kubernetes-the-hard-way     --user=system:kube-proxy     --kubeconfig=kube-proxy.kubeconfig
+  124  kubectl config use-context default --kubeconfig=kube-proxy.kubeconfig
+  125  ls -ltr
+  126  cat kube-proxy.kubeconfig 
+  127  kubectl config set-cluster kubernetes-the-hard-way     --certificate-authority=/var/lib/kubernetes/pki/ca.crt     --server=https://127.0.0.1:6443     --kubeconfig=kube-controller-manager.kubeconfig
+  128  kubectl config set-credentials system:kube-controller-manager     --client-certificate=/var/lib/kubernetes/pki/kube-controller-manager.crt     --client-key=/var/lib/kubernetes/pki/kube-controller-manager.key     --kubeconfig=kube-controller-manager.kubeconfig
+  129  kubectl config set-context default     --cluster=kubernetes-the-hard-way     --user=system:kube-controller-manager     --kubeconfig=kube-controller-manager.kubeconfig
+  130  kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconfig
+  131  kubectl config set-cluster kubernetes-the-hard-way     --certificate-authority=/var/lib/kubernetes/pki/ca.crt     --server=https://127.0.0.1:6443     --kubeconfig=kube-scheduler.kubeconfig
+  132  kubectl config set-credentials system:kube-scheduler     --client-certificate=/var/lib/kubernetes/pki/kube-scheduler.crt     --client-key=/var/lib/kubernetes/pki/kube-scheduler.key     --kubeconfig=kube-scheduler.kubeconfig
+  133  kubectl config set-context default     --cluster=kubernetes-the-hard-way     --user=system:kube-scheduler     --kubeconfig=kube-scheduler.kubeconfig
+  134  kubectl config use-context default --kubeconfig=kube-scheduler.kubeconfig
+  135  ls -ltr
+  136  kubectl config set-cluster kubernetes-the-hard-way     --certificate-authority=ca.crt     --embed-certs=true     --server=https://127.0.0.1:6443     --kubeconfig=admin.kubeconfig
+  137  kubectl config set-credentials admin     --client-certificate=admin.crt     --client-key=admin.key     --embed-certs=true     --kubeconfig=admin.kubeconfig
+  138  kubectl config set-context default     --cluster=kubernetes-the-hard-way     --user=admin     --kubeconfig=admin.kubeconfig
+  139  kubectl config use-context default --kubeconfig=admin.kubeconfig
+  140  for instance in node01 node02; do   scp kube-proxy.kubeconfig ${instance}:~/; done
+  141  for instance in controlplane01 controlplane02; do   scp admin.kubeconfig kube-controller-manager.kubeconfig kube-scheduler.kubeconfig ${instance}:~/; done
+  142  ./cert_verify.sh
+  143  ssh controlplane02
+  144  ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)
+  145  cat > encryption-config.yaml <<EOF
+  146  kind: EncryptionConfig
+  147  apiVersion: v1
+  148  resources:
+  149    - resources:
+  150        - secrets
+  151      providers:
+  152        - aescbc:
+  153            keys:
+  154              - name: key1
+  155                secret: ${ENCRYPTION_KEY}
+  156        - identity: {}
+  157  EOF
+  158  ls -ltr
+  159  cat encryption-config.yaml 
+  160  for instance in controlplane01 controlplane02; do   scp encryption-config.yaml ${instance}:~/; done
+  161  for instance in controlplane01 controlplane02; do   ssh ${instance} sudo mkdir -p /var/lib/kubernetes/;   ssh ${instance} sudo mv encryption-config.yaml /var/lib/kubernetes/; done
+  162  ETCD_VERSION="v3.5.9"
+  163  wget -q --show-progress --https-only --timestamping   "https://github.com/coreos/etcd/releases/download/${ETCD_VERSION}/etcd-${ETCD_VERSION}-linux-${ARCH}.tar.gz"
+  164  ssh controlplane02
+  165  tar -xvf etcd-${ETCD_VERSION}-linux-${ARCH}.tar.gz
+  166  ssh controlplane02
+  167  CONTROL01=$(dig +short controlplane01)
+  168  CONTROL02=$(dig +short controlplane02)
+  169  ETCD_NAME=$(hostname -s)
+  170  cat <<EOF | sudo tee /etc/systemd/system/etcd.service
+  171  [Unit]
+  172  Description=etcd
+  173  Documentation=https://github.com/coreos
+  174  [Service]
+  175  ExecStart=/usr/local/bin/etcd \\
+  176    --name ${ETCD_NAME} \\
+  177    --cert-file=/etc/etcd/etcd-server.crt \\
+  178    --key-file=/etc/etcd/etcd-server.key \\
+  179    --peer-cert-file=/etc/etcd/etcd-server.crt \\
+  180    --peer-key-file=/etc/etcd/etcd-server.key \\
+  181    --trusted-ca-file=/etc/etcd/ca.crt \\
+  182    --peer-trusted-ca-file=/etc/etcd/ca.crt \\
+  183    --peer-client-cert-auth \\
+  184    --client-cert-auth \\
+  185    --initial-advertise-peer-urls https://${PRIMARY_IP}:2380 \\
+  186    --listen-peer-urls https://${PRIMARY_IP}:2380 \\
+  187    --listen-client-urls https://${PRIMARY_IP}:2379,https://127.0.0.1:2379 \\
+  188    --advertise-client-urls https://${PRIMARY_IP}:2379 \\
+  189    --initial-cluster-token etcd-cluster-0 \\
+  190    --initial-cluster controlplane01=https://${CONTROL01}:2380,controlplane02=https://${CONTROL02}:2380 \\
+  191    --initial-cluster-state new \\
+  192    --data-dir=/var/lib/etcd
+  193  Restart=on-failure
+  194  RestartSec=5
+  195  [Install]
+  196  WantedBy=multi-user.target
+  197  EOF
+  198  sudo systemctl daemon-reload
+  199  ssh controlplane02
+  200  sudo ETCDCTL_API=3 etcdctl member list   --endpoints=https://127.0.0.1:2379   --cacert=/etc/etcd/ca.crt   --cert=/etc/etcd/etcd-server.crt   --key=/etc/etcd/etcd-server.key
+  201  KUBE_VERSION=$(curl -L -s https://dl.k8s.io/release/stable.txt)
+  202  wget -q --show-progress --https-only --timestamping   "https://dl.k8s.io/release/${KUBE_VERSION}/bin/linux/${ARCH}/kube-apiserver"   "https://dl.k8s.io/release/${KUBE_VERSION}/bin/linux/${ARCH}/kube-controller-manager"   "https://dl.k8s.io/release/${KUBE_VERSION}/bin/linux/${ARCH}/kube-scheduler"   "https://dl.k8s.io/release/${KUBE_VERSION}/bin/linux/${ARCH}/kubectl"
+  203  chmod +x kube-apiserver kube-controller-manager kube-scheduler kubectl
+  204  sudo mv kube-apiserver kube-controller-manager kube-scheduler kubectl /usr/local/bin/
+  205  sudo mkdir -p /var/lib/kubernetes/pki
+  206  sudo cp ca.crt ca.key /var/lib/kubernetes/pki
+  207  for c in kube-apiserver service-account apiserver-kubelet-client etcd-server kube-scheduler kube-controller-manager;   do     sudo mv "$c.crt" "$c.key" /var/lib/kubernetes/pki/;   done
+  208  ssh controlplane02
+  209  LOADBALANCER=$(dig +short loadbalancer)
+  210  CONTROL01=$(dig +short controlplane01)
+  211  CONTROL02=$(dig +short controlplane02)
+  212  POD_CIDR=10.244.0.0/16
+  213  SERVICE_CIDR=10.96.0.0/16
+  214  cat <<EOF | sudo tee /etc/systemd/system/kube-apiserver.service
+  215  [Unit]
+  216  Description=Kubernetes API Server
+  217  Documentation=https://github.com/kubernetes/kubernetes
+  218  [Service]
+  219  ExecStart=/usr/local/bin/kube-apiserver \\
+  220    --advertise-address=${PRIMARY_IP} \\
+  221    --allow-privileged=true \\
+  222    --apiserver-count=2 \\
+  223    --audit-log-maxage=30 \\
+  224    --audit-log-maxbackup=3 \\
+  225    --audit-log-maxsize=100 \\
+  226    --audit-log-path=/var/log/audit.log \\
+  227    --authorization-mode=Node,RBAC \\
+  228    --bind-address=0.0.0.0 \\
+  229    --client-ca-file=/var/lib/kubernetes/pki/ca.crt \\
+  230    --enable-admission-plugins=NodeRestriction,ServiceAccount \\
+  231    --enable-bootstrap-token-auth=true \\
+  232    --etcd-cafile=/var/lib/kubernetes/pki/ca.crt \\
+  233    --etcd-certfile=/var/lib/kubernetes/pki/etcd-server.crt \\
+  234    --etcd-keyfile=/var/lib/kubernetes/pki/etcd-server.key \\
+  235    --etcd-servers=https://${CONTROL01}:2379,https://${CONTROL02}:2379 \\
+  236    --event-ttl=1h \\
+  237    --encryption-provider-config=/var/lib/kubernetes/encryption-config.yaml \\
+  238    --kubelet-certificate-authority=/var/lib/kubernetes/pki/ca.crt \\
+  239    --kubelet-client-certificate=/var/lib/kubernetes/pki/apiserver-kubelet-client.crt \\
+  240    --kubelet-client-key=/var/lib/kubernetes/pki/apiserver-kubelet-client.key \\
+  241    --runtime-config=api/all=true \\
+  242    --service-account-key-file=/var/lib/kubernetes/pki/service-account.crt \\
+  243    --service-account-signing-key-file=/var/lib/kubernetes/pki/service-account.key \\
+  244    --service-account-issuer=https://${LOADBALANCER}:6443 \\
+  245    --service-cluster-ip-range=${SERVICE_CIDR} \\
+  246    --service-node-port-range=30000-32767 \\
+  247    --tls-cert-file=/var/lib/kubernetes/pki/kube-apiserver.crt \\
+  248    --tls-private-key-file=/var/lib/kubernetes/pki/kube-apiserver.key \\
+  249    --v=2
+  250  Restart=on-failure
+  251  RestartSec=5
+  252  [Install]
+  253  WantedBy=multi-user.target
+  254  EOF
+  255  sudo mv kube-controller-manager.kubeconfig /var/lib/kubernetes/
+  256  cat <<EOF | sudo tee /etc/systemd/system/kube-controller-manager.service
+  257  [Unit]
+  258  Description=Kubernetes Controller Manager
+  259  Documentation=https://github.com/kubernetes/kubernetes
+  260  [Service]
+  261  ExecStart=/usr/local/bin/kube-controller-manager \\
+  262    --allocate-node-cidrs=true \\
+  263    --authentication-kubeconfig=/var/lib/kubernetes/kube-controller-manager.kubeconfig \\
+  264    --authorization-kubeconfig=/var/lib/kubernetes/kube-controller-manager.kubeconfig \\
+  265    --bind-address=127.0.0.1 \\
+  266    --client-ca-file=/var/lib/kubernetes/pki/ca.crt \\
+  267    --cluster-cidr=${POD_CIDR} \\
+  268    --cluster-name=kubernetes \\
+  269    --cluster-signing-cert-file=/var/lib/kubernetes/pki/ca.crt \\
+  270    --cluster-signing-key-file=/var/lib/kubernetes/pki/ca.key \\
+  271    --controllers=*,bootstrapsigner,tokencleaner \\
+  272    --kubeconfig=/var/lib/kubernetes/kube-controller-manager.kubeconfig \\
+  273    --leader-elect=true \\
+  274    --node-cidr-mask-size=24 \\
+  275    --requestheader-client-ca-file=/var/lib/kubernetes/pki/ca.crt \\
+  276    --root-ca-file=/var/lib/kubernetes/pki/ca.crt \\
+  277    --service-account-private-key-file=/var/lib/kubernetes/pki/service-account.key \\
+  278    --service-cluster-ip-range=${SERVICE_CIDR} \\
+  279    --use-service-account-credentials=true \\
+  280    --v=2
+  281  Restart=on-failure
+  282  RestartSec=5
+  283  [Install]
+  284  WantedBy=multi-user.target
+  285  EOF
+  286  sudo mv kube-scheduler.kubeconfig /var/lib/kubernetes/
+  287  cat <<EOF | sudo tee /etc/systemd/system/kube-scheduler.service
+  288  [Unit]
+  289  Description=Kubernetes Scheduler
+  290  Documentation=https://github.com/kubernetes/kubernetes
+  291  [Service]
+  292  ExecStart=/usr/local/bin/kube-scheduler \\
+  293    --kubeconfig=/var/lib/kubernetes/kube-scheduler.kubeconfig \\
+  294    --leader-elect=true \\
+  295    --v=2
+  296  Restart=on-failure
+  297  RestartSec=5
+  298  [Install]
+  299  WantedBy=multi-user.target
+  300  EOF
+  301  sudo chmod 600 /var/lib/kubernetes/*.kubeconfig
+  302  ssh controlplane02
+  303  ./cert_verify.sh 
+  304  exit
+  305  kubectl get pods
+  306  kubectl get sa
+  307  kubectl get pods
+  308  ip a
+  309  df -h
+  310  cd /home/vagrant/
+  311  ls -ltr
+  312  df -h .
+  313  du -sh *
+  314  ls -ltr
+  315  tar -xvf ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64.tar.gz /opt/
+  316  mv ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64.tar.gz /opt
+  317  sudo mv ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64.tar.gz /opt
+  318  cd /opt
+  319  ls -ltr
+  320  tar -xvf ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64.tar.gz 
+  321  sudo tar -xvf /opt/ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64.tar.gz 
+  322  sudo su -
+  323  sudo /opt/ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64/
+  324  sudo cd /opt/ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64/
+  325  pwd
+  326  cd ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64/
+  327  ls -ltr
+  328  touch aap-namespace.yaml
+  329  sudo touch aap-namespace.yaml
+  330  sudo vi aap-namespace.yaml
+  331  kubectl apply -f aap-namespace.yaml
+  332  kubectl get ns
+  333  sudo touch aap-pv.yaml
+  334  sudo vi aap-pv.yaml
+  335  ls -ltr
+  336  kubectl apply -f aap-pv.yaml 
+  337  kubectl get pv
+  338  touch aap-postgres.yaml
+  339  sudo touch aap-postgres.yaml
+  340  sudo vi aap-postgres.yaml
+  341  kubectl apply -f aap-postgres.yaml 
+  342  sudo vi aap-postgres.yaml
+  343  kubectl get pods
+  344  kubectl get ns
+  345  kubectl get pods --namespace=ansible-automation-platform
+  346  kubectl describe pod aap-postgres-0 --namespace=ansible-automation-platform
+  347  kubectl get nodes
+  348  kubectl get pvc -n ansible-automation-platform
+  349  ls -ltr
+  350  vi aap-pv.yaml 
+  351  kubectl get pvc -n ansible-automation-platform
+  352  kubectl get pv
+  353  cd /opt/
+  354  ls -l
+  355  cat /etc/hosts
+  356  ssh node01
+  357  kubectl get pv
+  358  kubectl get pvc
+  359  kubectl describe pv
+  360  ssh node01
+  361  kubectl get pv
+  362  kubectl get pods
+  363  kubectl get pods --namespace=ansible-automation-platform
+  364  kubectl desctibe pod  aap-postgres-0 --namespace=ansible-automation-platform
+  365  kubectl describe pod  aap-postgres-0 --namespace=ansible-automation-platform
+  366  kubectl get deployments --namespace=ansible-automation-platform
+  367  kubectl get pods --namespace=ansible-automation-platform
+  368  kubectl edit pods --namespace=ansible-automation-platform
+  369  ssh node01
+  370  exit
+  371  kubectl get pods
+  372  kubectl get deployments
+  373  kubectl get -A all
+  374  kubectl get pods
+  375  kubectl get deployments
+  376  kubectl get ns
+  377  kubectl get pod -ns automation
+  378  kubectl get pod --namespace automation
+  379  kubectl get pod --namespace awx
+  380  kubectl delete pod awx-operator-controller-manager-5dcb8cb8f8-7gx8p --namespace awx
+  381  kubectl delete --namespace awx
+  382  kubectl delete namespace awx
+  383  kubectl delete namespace automation
+  384  kubectl delete namespace
+  385  kubectl get ns
+  386  kubectl delete ns webhook-1544
+  387  kubectl get ns
+  388  sudo su -
+  389  vim python1.yaml
+  390  kubectl apply -f python1.yaml
+  391  kubectl get pods
+  392  kubectl exec -it python1-pod /bin/bash
+  393  kubectl exec
+  394  kubectl exec --it 
+  395  kubectl exec --it python1-pod
+  396  kubectl exec --it python1-pod /bin/bash
+  397  kubectl exec -it python1-pod -- /bin/bash
+  398  kubectl exec -it python1-pod --/bin/bash
+  399  kubectl exec -it python1-pod -- /bin/bash
+  400  kubectl get pods
+  401  kubectl get pods -o wide
+  402  kubectl exec -it python1-pod ls  /tmp
+  403  vim python4.yaml
+  404  kubectl get rs 
+  405  kubectl create -f python.yaml
+  406  kubectl create -f python4.yaml
+  407  vi python.yaml
+  408  kubectl create -f python4.yaml
+  409  vi python.yaml
+  410  vi python4.yaml
+  411  kubectl create -f python4.yaml
+  412  vi python4.yaml
+  413  kubectl create -f python4.yaml
+  414  kubectl get pods
+  415  kubectl get deployemnt
+  416  kubectl get deployment
+  417  kubectl get svc
+  418  curl https://10.96.86.59:8443
+  419  kubectl get svc -o wide
+  420  kubectl get describe awx-operator-controller-manager-metrics-service 
+  421  kubectl describe svc awx-operator-controller-manager-metrics-service 
+  422  ip a
+  423  cat /etc/hosts
+  424  kubectl get svc -o wide
+  425  helm list
+  426  helm delete my-awx-operator
+  427  helm install my-awx-operator
+  428  history
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ history | grep helm
+[?2004l  425  [01;31m[Khelm[m[K list
+  426  [01;31m[Khelm[m[K delete my-awx-operator
+  427  [01;31m[Khelm[m[K install my-awx-operator
+  429  history | grep [01;31m[Khelm[m[K
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get svc
+[?2004lNAME                TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
+devops-todo         NodePort    10.96.54.209   <none>        8080:31589/TCP   6h26m
+kubernetes          ClusterIP   10.96.0.1      <none>        443/TCP          59d
+nginx               NodePort    10.96.18.145   <none>        80:30458/TCP     59d
+python-deployment   NodePort    10.96.150.33   <none>        80:30110/TCP     8h
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ ls -ltr
+[?2004ltotal 110488
+-rw-rw-r--  1 vagrant vagrant 19351494 May 11  2023 [0m[01;31metcd-v3.5.9-linux-amd64.tar.gz[0m
+-rw-rw-r--  1 vagrant vagrant 78503123 Mar  4 19:28 [01;31mgo1.24.1.linux-amd64.tar.gz[0m
+lrwxrwxrwx  1 root    root          30 Mar 23 05:28 [01;36mcert_verify.sh[0m -> [01;32m/vagrant/ubuntu/cert_verify.sh[0m
+-rw-rw-r--  1 vagrant vagrant      225 Mar 23 05:28 approve-csr.sh
+-rw-rw-r--  1 vagrant vagrant      924 Mar 23 05:48 ca.csr
+-rw-------  1 vagrant vagrant     1704 Mar 23 06:06 admin.key
+-rw-rw-r--  1 vagrant vagrant      920 Mar 23 06:06 admin.csr
+-rw-rw-r--  1 vagrant vagrant      976 Mar 23 06:08 kube-controller-manager.csr
+-rw-------  1 vagrant vagrant     1708 Mar 23 06:08 kube-proxy.key
+-rw-rw-r--  1 vagrant vagrant      944 Mar 23 06:08 kube-proxy.csr
+-rw-rw-r--  1 vagrant vagrant     1078 Mar 23 06:09 kube-proxy.crt
+-rw-rw-r--  1 vagrant vagrant      952 Mar 23 06:09 kube-scheduler.csr
+-rw-rw-r--  1 vagrant vagrant      545 Mar 23 06:10 openssl.cnf
+-rw-rw-r--  1 vagrant vagrant     1253 Mar 23 06:10 kube-apiserver.csr
+-rw-rw-r--  1 vagrant vagrant      247 Mar 23 06:11 openssl-kubelet.cnf
+-rw-rw-r--  1 vagrant vagrant     1045 Mar 23 06:11 apiserver-kubelet-client.csr
+-rw-rw-r--  1 vagrant vagrant      298 Mar 23 06:12 openssl-etcd.cnf
+-rw-rw-r--  1 vagrant vagrant     1017 Mar 23 06:12 etcd-server.csr
+-rw-rw-r--  1 vagrant vagrant      928 Mar 23 06:14 service-account.csr
+-rw-rw-r--  1 vagrant vagrant     1058 Mar 23 06:16 ca.crt
+-rw-------  1 vagrant vagrant     1704 Mar 23 06:16 ca.key
+-rw-------  1 vagrant vagrant      480 Mar 23 06:21 kube-proxy.kubeconfig
+-rw-------  1 vagrant vagrant     5453 Mar 23 06:24 admin.kubeconfig
+drwxr-xr-x  3 vagrant vagrant     4096 Mar 23 06:28 [01;34metcd-v3.5.9-linux-amd64[0m
+-rw-rw-r--  1 vagrant vagrant      275 Mar 23 07:02 openssl-node01.cnf
+-rw-------  1 vagrant vagrant     1704 Mar 23 07:02 node01.key
+-rw-rw-r--  1 vagrant vagrant     1025 Mar 23 07:02 node01.csr
+-rw-rw-r--  1 vagrant vagrant     1306 Mar 23 07:02 node01.crt
+-rw-------  1 vagrant vagrant      474 Mar 23 07:04 node01.kubeconfig
+-rw-rw-r--  1 vagrant vagrant      348 Mar 23 07:12 csrs-for-bootstrapping.yaml
+-rw-rw-r--  1 vagrant vagrant      743 Mar 23 07:13 bootstrap-token-07401b.yaml
+-rw-rw-r--  1 vagrant vagrant      399 Mar 23 07:14 auto-approve-csrs-for-group.yaml
+-rw-rw-r--  1 vagrant vagrant      395 Mar 23 07:15 auto-approve-renewals-for-nodes.yaml
+drwxrwxr-x  4 vagrant vagrant     4096 Mar 23 07:35 [01;34mgo[0m
+drwxrwxr-x  3 vagrant vagrant     4096 Mar 23 10:08 [01;34m_rundir[0m
+drwxrwxr-x  4 vagrant vagrant     4096 Mar 23 11:06 [01;34m_artifacts[0m
+-rw-------  1 vagrant vagrant     1708 Mar 26 00:15 deva.key
+-rw-rw-r--  1 vagrant vagrant      883 Mar 26 00:15 deva.csr
+-rw-rw-r--  1 vagrant vagrant     1074 Mar 29 01:20 deva.crt
+-rw-rw-r--  1 vagrant vagrant     1054 Mar 29 01:30 admin.crt
+-rw-------  1 vagrant vagrant     1704 Mar 29 01:52 admin1.key
+-rw-rw-r--  1 vagrant vagrant      915 Mar 29 01:52 admin1.csr
+-rw-rw-r--  1 vagrant vagrant     1050 Mar 29 01:52 admin1.crt
+-rw-------  1 vagrant vagrant     1704 Mar 29 01:59 poweruser.key
+-rw-rw-r--  1 vagrant vagrant      920 Mar 29 01:59 poweruser.csr
+-rw-rw-r--  1 vagrant vagrant     1054 Mar 29 01:59 poweruser.crt
+-rw-rw-r--  1 vagrant vagrant 15023104 Mar 30 07:28 [01;31mhelm.tar.gz[0m
+drwxr-xr-x  2 vagrant vagrant     4096 Mar 30 07:28 [01;34mlinux-amd64[0m
+-rw-rw-r--  1 vagrant vagrant      894 Mar 30 07:58 ansible-automation-deployment.yaml
+-rw-rw-r--  1 vagrant vagrant    26557 Apr  1 23:41 awx-operator.yaml
+-rw-rw-r--  1 vagrant vagrant      271 Apr  1 23:45 awx-deployment.yaml
+drwxrwxr-x 15 vagrant vagrant     4096 Apr  2 00:07 [01;34mawx-operator[0m
+-rw-rw-r--  1 vagrant vagrant      519 May 21 05:44 livenessprobe.yaml
+-rwx------  1 vagrant vagrant    11913 May 21 06:01 [01;32mget_helm.sh[0m
+drwxr-xr-x  4 vagrant vagrant     4096 May 21 07:03 [01;34mtodo[0m
+-rw-rw-r--  1 vagrant vagrant      171 May 21 09:32 python1.yaml
+-rw-rw-r--  1 vagrant vagrant      368 May 21 09:39 python.yaml
+-rw-rw-r--  1 vagrant vagrant      365 May 21 09:40 python4.yaml
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ cd awx-operator/
+[?2004l[?2004h]0;vagrant@controlplane01: ~/awx-operatorvagrant@controlplane01:~/awx-operator$ ls -ltr
+[?2004ltotal 128
+-rw-rw-r--  1 vagrant vagrant   136 Apr  1 23:57 awxmeshingress-demo.yml
+-rw-rw-r--  1 vagrant vagrant   108 Apr  1 23:57 awx-demo.yml
+-rw-rw-r--  1 vagrant vagrant   264 Apr  1 23:57 SECURITY.md
+-rw-rw-r--  1 vagrant vagrant   907 Apr  1 23:57 PROJECT
+-rw-rw-r--  1 vagrant vagrant 11357 Apr  1 23:57 LICENSE
+-rw-rw-r--  1 vagrant vagrant  3402 Apr  1 23:57 CHANGELOG.md
+drwxrwxr-x 11 vagrant vagrant  4096 Apr  1 23:57 [0m[01;34mconfig[0m
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  1 23:57 [01;34mprojects[0m
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  1 23:57 [01;34mplaybooks[0m
+-rw-rw-r--  1 vagrant vagrant   335 Apr  1 23:57 noxfile.py
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  1 23:57 [01;34mhack[0m
+drwxrwxr-x  3 vagrant vagrant  4096 Apr  1 23:57 [01;34mvendor[0m
+drwxrwxr-x  7 vagrant vagrant  4096 Apr  1 23:57 [01;34mroles[0m
+-rw-rw-r--  1 vagrant vagrant   774 Apr  1 23:57 watches.yaml
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  2 00:01 [01;34mbin[0m
+-rw-rw-r--  1 vagrant vagrant   685 Apr  2 00:07 Dockerfile
+-rw-rw-r--  1 vagrant vagrant  6212 Apr  2 00:07 CONTRIBUTING.md
+drwxrwxr-x  9 vagrant vagrant  4096 Apr  2 00:07 [01;34mdocs[0m
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  2 00:07 [01;34mansible[0m
+-rw-rw-r--  1 vagrant vagrant  2891 Apr  2 00:07 README.md
+-rw-rw-r--  1 vagrant vagrant 18311 Apr  2 00:07 Makefile
+-rw-rw-r--  1 vagrant vagrant   115 Apr  2 00:07 requirements.yml
+drwxrwxr-x  4 vagrant vagrant  4096 Apr  2 00:07 [01;34mmolecule[0m
+-rw-rw-r--  1 vagrant vagrant  4813 Apr  2 00:07 mkdocs.yml
+[?2004h]0;vagrant@controlplane01: ~/awx-operatorvagrant@controlplane01:~/awx-operator$ vi [K[K[Kvi[K[K[7mhelm install my-awx-operator awx-operator/awx-operator -n awx --create-namespace -f my-values.yml --version 1.3.0[27m^C[?2004l[?2004h[?2004l
+[?2004h]0;vagrant@controlplane01: ~/awx-operatorvagrant@controlplane01:~/awx-operator$ vi [K[K[Kcd ansible/
+[?2004l[?2004h]0;vagrant@controlplane01: ~/awx-operator/ansiblevagrant@controlplane01:~/awx-operator/ansible$ ls -l
+[?2004ltotal 12
+-rw-rw-r-- 1 vagrant vagrant 4125 Apr  2 00:07 helm-release.yml
+-rw-rw-r-- 1 vagrant vagrant 1159 Apr  1 23:57 instantiate-awx-deployment.yml
+[?2004h]0;vagrant@controlplane01: ~/awx-operator/ansiblevagrant@controlplane01:~/awx-operator/ansible$ cat [K[K[K[Kls -ltrR
+[?2004l.:
+total 12
+-rw-rw-r-- 1 vagrant vagrant 1159 Apr  1 23:57 instantiate-awx-deployment.yml
+-rw-rw-r-- 1 vagrant vagrant 4125 Apr  2 00:07 helm-release.yml
+[?2004h]0;vagrant@controlplane01: ~/awx-operator/ansiblevagrant@controlplane01:~/awx-operator/ansible$ cd ../
+[?2004l[?2004h]0;vagrant@controlplane01: ~/awx-operatorvagrant@controlplane01:~/awx-operator$ ls -ltrR
+[?2004l.:
+total 128
+-rw-rw-r--  1 vagrant vagrant   136 Apr  1 23:57 awxmeshingress-demo.yml
+-rw-rw-r--  1 vagrant vagrant   108 Apr  1 23:57 awx-demo.yml
+-rw-rw-r--  1 vagrant vagrant   264 Apr  1 23:57 SECURITY.md
+-rw-rw-r--  1 vagrant vagrant   907 Apr  1 23:57 PROJECT
+-rw-rw-r--  1 vagrant vagrant 11357 Apr  1 23:57 LICENSE
+-rw-rw-r--  1 vagrant vagrant  3402 Apr  1 23:57 CHANGELOG.md
+drwxrwxr-x 11 vagrant vagrant  4096 Apr  1 23:57 [0m[01;34mconfig[0m
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  1 23:57 [01;34mprojects[0m
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  1 23:57 [01;34mplaybooks[0m
+-rw-rw-r--  1 vagrant vagrant   335 Apr  1 23:57 noxfile.py
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  1 23:57 [01;34mhack[0m
+drwxrwxr-x  3 vagrant vagrant  4096 Apr  1 23:57 [01;34mvendor[0m
+drwxrwxr-x  7 vagrant vagrant  4096 Apr  1 23:57 [01;34mroles[0m
+-rw-rw-r--  1 vagrant vagrant   774 Apr  1 23:57 watches.yaml
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  2 00:01 [01;34mbin[0m
+-rw-rw-r--  1 vagrant vagrant   685 Apr  2 00:07 Dockerfile
+-rw-rw-r--  1 vagrant vagrant  6212 Apr  2 00:07 CONTRIBUTING.md
+drwxrwxr-x  9 vagrant vagrant  4096 Apr  2 00:07 [01;34mdocs[0m
+drwxrwxr-x  2 vagrant vagrant  4096 Apr  2 00:07 [01;34mansible[0m
+-rw-rw-r--  1 vagrant vagrant  2891 Apr  2 00:07 README.md
+-rw-rw-r--  1 vagrant vagrant 18311 Apr  2 00:07 Makefile
+-rw-rw-r--  1 vagrant vagrant   115 Apr  2 00:07 requirements.yml
+drwxrwxr-x  4 vagrant vagrant  4096 Apr  2 00:07 [01;34mmolecule[0m
+-rw-rw-r--  1 vagrant vagrant  4813 Apr  2 00:07 mkdocs.yml
+
+./config:
+total 36
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mprometheus[0m
+drwxrwxr-x 3 vagrant vagrant 4096 Apr  1 23:57 [01;34mmanifests[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mdefault[0m
+drwxrwxr-x 3 vagrant vagrant 4096 Apr  1 23:57 [01;34mcrd[0m
+drwxrwxr-x 3 vagrant vagrant 4096 Apr  1 23:57 [01;34mtesting[0m
+drwxrwxr-x 4 vagrant vagrant 4096 Apr  1 23:57 [01;34mscorecard[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34msamples[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mrbac[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mmanager[0m
+
+./config/prometheus:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 490 Apr  1 23:57 monitor.yaml
+-rw-rw-r-- 1 vagrant vagrant  26 Apr  1 23:57 kustomization.yaml
+
+./config/manifests:
+total 8
+-rw-rw-r-- 1 vagrant vagrant  226 Apr  1 23:57 kustomization.yaml
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mbases[0m
+
+./config/manifests/bases:
+total 60
+-rw-rw-r-- 1 vagrant vagrant 60481 Apr  2 00:07 awx-operator.clusterserviceversion.yaml
+
+./config/default:
+total 12
+-rw-rw-r-- 1 vagrant vagrant  494 Apr  1 23:57 manager_config_patch.yaml
+-rw-rw-r-- 1 vagrant vagrant 1143 Apr  1 23:57 manager_auth_proxy_patch.yaml
+-rw-rw-r-- 1 vagrant vagrant  872 Apr  2 00:01 kustomization.yaml
+
+./config/crd:
+total 8
+-rw-rw-r-- 1 vagrant vagrant  405 Apr  1 23:57 kustomization.yaml
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mbases[0m
+
+./config/crd/bases:
+total 132
+-rw-rw-r-- 1 vagrant vagrant  5913 Apr  1 23:57 awx.ansible.com_awxrestores.yaml
+-rw-rw-r-- 1 vagrant vagrant 21053 Apr  1 23:57 awx.ansible.com_awxmeshingresses.yaml
+-rw-rw-r-- 1 vagrant vagrant  5794 Apr  1 23:57 awx.ansible.com_awxbackups.yaml
+-rw-rw-r-- 1 vagrant vagrant 90998 Apr  2 00:07 awx.ansible.com_awxs.yaml
+
+./config/testing:
+total 16
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mpull_policy[0m
+-rw-rw-r-- 1 vagrant vagrant  197 Apr  1 23:57 manager_image.yaml
+-rw-rw-r-- 1 vagrant vagrant  438 Apr  1 23:57 kustomization.yaml
+-rw-rw-r-- 1 vagrant vagrant  254 Apr  1 23:57 debug_logs_patch.yaml
+
+./config/testing/pull_policy:
+total 12
+-rw-rw-r-- 1 vagrant vagrant 205 Apr  1 23:57 Never.yaml
+-rw-rw-r-- 1 vagrant vagrant 212 Apr  1 23:57 IfNotPresent.yaml
+-rw-rw-r-- 1 vagrant vagrant 206 Apr  1 23:57 Always.yaml
+
+./config/scorecard:
+total 12
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mpatches[0m
+-rw-rw-r-- 1 vagrant vagrant  383 Apr  1 23:57 kustomization.yaml
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mbases[0m
+
+./config/scorecard/patches:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 1205 Apr  1 23:57 olm.config.yaml
+-rw-rw-r-- 1 vagrant vagrant  231 Apr  1 23:57 basic.config.yaml
+
+./config/scorecard/bases:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 134 Apr  1 23:57 config.yaml
+
+./config/samples:
+total 24
+-rw-rw-r-- 1 vagrant vagrant 245 Apr  1 23:57 kustomization.yaml
+-rw-rw-r-- 1 vagrant vagrant 301 Apr  1 23:57 awx_v1beta1_awxrestore.yaml
+-rw-rw-r-- 1 vagrant vagrant 264 Apr  1 23:57 awx_v1beta1_awxbackup.yaml
+-rw-rw-r-- 1 vagrant vagrant 860 Apr  1 23:57 awx_v1beta1_awx_resource_limits.yaml
+-rw-rw-r-- 1 vagrant vagrant 316 Apr  1 23:57 awx_v1beta1_awx.yaml
+-rw-rw-r-- 1 vagrant vagrant 195 Apr  1 23:57 awx_v1alpha1_awxmeshingress.yaml
+
+./config/rbac:
+total 72
+-rw-rw-r-- 1 vagrant vagrant  312 Apr  1 23:57 awx_viewer_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  355 Apr  1 23:57 awx_editor_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  286 Apr  1 23:57 auth_proxy_service.yaml
+-rw-rw-r-- 1 vagrant vagrant  268 Apr  1 23:57 auth_proxy_role_binding.yaml
+-rw-rw-r-- 1 vagrant vagrant  280 Apr  1 23:57 auth_proxy_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  150 Apr  1 23:57 auth_proxy_client_clusterrole.yaml
+-rw-rw-r-- 1 vagrant vagrant   93 Apr  1 23:57 service_account.yaml
+-rw-rw-r-- 1 vagrant vagrant  254 Apr  1 23:57 role_binding.yaml
+-rw-rw-r-- 1 vagrant vagrant 2490 Apr  1 23:57 role.yaml
+-rw-rw-r-- 1 vagrant vagrant  274 Apr  1 23:57 leader_election_role_binding.yaml
+-rw-rw-r-- 1 vagrant vagrant  476 Apr  1 23:57 leader_election_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  693 Apr  1 23:57 kustomization.yaml
+-rw-rw-r-- 1 vagrant vagrant  340 Apr  1 23:57 awxrestore_viewer_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  383 Apr  1 23:57 awxrestore_editor_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  641 Apr  1 23:57 awxmeshingress_viewer_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  684 Apr  1 23:57 awxmeshingress_editor_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  336 Apr  1 23:57 awxbackup_viewer_role.yaml
+-rw-rw-r-- 1 vagrant vagrant  379 Apr  1 23:57 awxbackup_editor_role.yaml
+
+./config/manager:
+total 12
+-rw-rw-r-- 1 vagrant vagrant  897 Apr  1 23:57 controller_manager_config.yaml
+-rw-rw-r-- 1 vagrant vagrant 2397 Apr  2 00:07 manager.yaml
+-rw-rw-r-- 1 vagrant vagrant  316 Apr  2 00:07 kustomization.yaml
+
+./projects:
+total 0
+
+./playbooks:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 816 Apr  1 23:57 awx.yml
+
+./hack:
+total 8
+-rwxrwxr-x 1 vagrant vagrant 4757 Apr  1 23:57 [01;32mpublish-to-operator-hub.sh[0m
+
+./vendor:
+total 4
+drwxrwxr-x 4 vagrant vagrant 4096 Apr  2 00:07 [01;34mgalaxy.ansible.com[0m
+
+./vendor/galaxy.ansible.com:
+total 8
+drwxrwxr-x 3 vagrant vagrant 4096 Apr  1 23:57 [01;34moperator_sdk[0m
+drwxrwxr-x 3 vagrant vagrant 4096 Apr  2 00:07 [01;34mkubernetes[0m
+
+./vendor/galaxy.ansible.com/operator_sdk:
+total 4
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mutil[0m
+
+./vendor/galaxy.ansible.com/operator_sdk/util:
+total 24
+-rw-rw-r-- 1 vagrant vagrant 23926 Apr  1 23:57 [01;31moperator_sdk-util-0.4.0.tar.gz[0m
+
+./vendor/galaxy.ansible.com/kubernetes:
+total 4
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mcore[0m
+
+./vendor/galaxy.ansible.com/kubernetes/core:
+total 244
+-rw-rw-r-- 1 vagrant vagrant 247240 Apr  2 00:07 [01;31mkubernetes-core-2.3.2.tar.gz[0m
+
+./roles:
+total 20
+drwxrwxr-x 6 vagrant vagrant 4096 Apr  1 23:57 [01;34mcommon[0m
+drwxrwxr-x 7 vagrant vagrant 4096 Apr  1 23:57 [01;34mbackup[0m
+drwxrwxr-x 7 vagrant vagrant 4096 Apr  1 23:57 [01;34mrestore[0m
+drwxrwxr-x 5 vagrant vagrant 4096 Apr  1 23:57 [01;34mmesh_ingress[0m
+drwxrwxr-x 9 vagrant vagrant 4096 Apr  2 00:07 [01;34minstaller[0m
+
+./roles/common:
+total 16
+drwxrwxr-x 3 vagrant vagrant 4096 Apr  1 23:57 [01;34mtemplates[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mtasks[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mmeta[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mdefaults[0m
+
+./roles/common/templates:
+total 4
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mlabels[0m
+
+./roles/common/templates/labels:
+total 12
+-rw-rw-r-- 1 vagrant vagrant  85 Apr  1 23:57 version.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 420 Apr  1 23:57 common.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 104 Apr  1 23:57 additional_labels.yaml.j2
+
+./roles/common/tasks:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 599 Apr  1 23:57 main.yml
+
+./roles/common/meta:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 447 Apr  1 23:57 main.yml
+
+./roles/common/defaults:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 224 Apr  1 23:57 main.yml
+
+./roles/backup:
+total 24
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mdefaults[0m
+-rw-rw-r-- 1 vagrant vagrant 3928 Apr  1 23:57 README.md
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mvars[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mmeta[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mtemplates[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mtasks[0m
+
+./roles/backup/defaults:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 1453 Apr  1 23:57 main.yml
+
+./roles/backup/vars:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 216 Apr  1 23:57 main.yml
+
+./roles/backup/meta:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 456 Apr  1 23:57 main.yml
+
+./roles/backup/templates:
+total 12
+-rw-rw-r-- 1 vagrant vagrant 1039 Apr  1 23:57 management-pod.yml.j2
+-rw-rw-r-- 1 vagrant vagrant  513 Apr  1 23:57 backup_pvc.yml.j2
+-rw-rw-r-- 1 vagrant vagrant  408 Apr  2 00:07 event.yml.j2
+
+./roles/backup/tasks:
+total 64
+-rw-rw-r-- 1 vagrant vagrant  418 Apr  1 23:57 update_status.yml
+-rw-rw-r-- 1 vagrant vagrant 5696 Apr  1 23:57 postgres.yml
+-rw-rw-r-- 1 vagrant vagrant  169 Apr  1 23:57 main.yml
+-rw-rw-r-- 1 vagrant vagrant 2937 Apr  1 23:57 init.yml
+-rw-rw-r-- 1 vagrant vagrant  529 Apr  1 23:57 finalizer.yml
+-rw-rw-r-- 1 vagrant vagrant  269 Apr  1 23:57 error_handling.yml
+-rw-rw-r-- 1 vagrant vagrant  841 Apr  1 23:57 dump_secret.yml
+-rw-rw-r-- 1 vagrant vagrant  671 Apr  1 23:57 dump_receptor_secrets.yml
+-rw-rw-r-- 1 vagrant vagrant  671 Apr  1 23:57 dump_ingress_tls_secrets.yml
+-rw-rw-r-- 1 vagrant vagrant 1082 Apr  1 23:57 dump_generated_secret.yml
+-rw-rw-r-- 1 vagrant vagrant  301 Apr  1 23:57 delete_backup.yml
+-rw-rw-r-- 1 vagrant vagrant 1520 Apr  1 23:57 creation.yml
+-rw-rw-r-- 1 vagrant vagrant  206 Apr  1 23:57 cleanup.yml
+-rw-rw-r-- 1 vagrant vagrant 1365 Apr  1 23:57 awx-cro.yml
+-rw-rw-r-- 1 vagrant vagrant 1858 Apr  2 00:07 secrets.yml
+
+./roles/restore:
+total 24
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mvars[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mtasks[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mmeta[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mdefaults[0m
+-rw-rw-r-- 1 vagrant vagrant 3734 Apr  1 23:57 README.md
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mtemplates[0m
+
+./roles/restore/vars:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 755 Apr  1 23:57 main.yml
+
+./roles/restore/tasks:
+total 44
+-rw-rw-r-- 1 vagrant vagrant  312 Apr  1 23:57 update_status.yml
+-rw-rw-r-- 1 vagrant vagrant 4251 Apr  1 23:57 secrets.yml
+-rw-rw-r-- 1 vagrant vagrant 5140 Apr  1 23:57 postgres.yml
+-rw-rw-r-- 1 vagrant vagrant 1572 Apr  1 23:57 main.yml
+-rw-rw-r-- 1 vagrant vagrant 3907 Apr  1 23:57 init.yml
+-rw-rw-r-- 1 vagrant vagrant  581 Apr  1 23:57 import_vars.yml
+-rw-rw-r-- 1 vagrant vagrant  269 Apr  1 23:57 error_handling.yml
+-rw-rw-r-- 1 vagrant vagrant  728 Apr  1 23:57 deploy_awx.yml
+-rw-rw-r-- 1 vagrant vagrant  919 Apr  1 23:57 cleanup.yml
+
+./roles/restore/meta:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 457 Apr  1 23:57 main.yml
+
+./roles/restore/defaults:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 1092 Apr  1 23:57 main.yml
+
+./roles/restore/templates:
+total 16
+-rw-rw-r-- 1 vagrant vagrant  461 Apr  1 23:57 secrets.yml.j2
+-rw-rw-r-- 1 vagrant vagrant 1043 Apr  1 23:57 management-pod.yml.j2
+-rw-rw-r-- 1 vagrant vagrant  182 Apr  1 23:57 awx_object.yml.j2
+-rw-rw-r-- 1 vagrant vagrant  410 Apr  2 00:07 event.yml.j2
+
+./roles/mesh_ingress:
+total 12
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mdefaults[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mtasks[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mtemplates[0m
+
+./roles/mesh_ingress/defaults:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 441 Apr  1 23:57 main.yml
+
+./roles/mesh_ingress/tasks:
+total 16
+-rw-rw-r-- 1 vagrant vagrant 4817 Apr  1 23:57 creation.yml
+-rw-rw-r-- 1 vagrant vagrant  264 Apr  1 23:57 main.yml
+-rw-rw-r-- 1 vagrant vagrant 1174 Apr  1 23:57 finalizer.yml
+
+./roles/mesh_ingress/templates:
+total 20
+-rw-rw-r-- 1 vagrant vagrant  146 Apr  1 23:57 service_account.yml.j2
+-rw-rw-r-- 1 vagrant vagrant  294 Apr  1 23:57 service.yml.j2
+-rw-rw-r-- 1 vagrant vagrant  615 Apr  2 00:07 receptor_conf.configmap.yml.j2
+-rw-rw-r-- 1 vagrant vagrant 2098 Apr  2 00:07 ingress.yml.j2
+-rw-rw-r-- 1 vagrant vagrant 3543 Apr  2 00:07 deployment.yml.j2
+
+./roles/installer:
+total 32
+drwxrwxr-x  2 vagrant vagrant 4096 Apr  1 23:57 [01;34mmeta[0m
+drwxrwxr-x  2 vagrant vagrant 4096 Apr  1 23:57 [01;34mfilter_plugins[0m
+drwxrwxr-x  3 vagrant vagrant 4096 Apr  1 23:57 [01;34mfiles[0m
+drwxrwxr-x 13 vagrant vagrant 4096 Apr  1 23:57 [01;34mtemplates[0m
+drwxrwxr-x  2 vagrant vagrant 4096 Apr  2 00:07 [01;34mvars[0m
+drwxrwxr-x  2 vagrant vagrant 4096 Apr  2 00:07 [01;34mtasks[0m
+drwxrwxr-x  2 vagrant vagrant 4096 Apr  2 00:07 [01;34mdefaults[0m
+-rw-rw-r--  1 vagrant vagrant  442 Apr  2 00:07 README.md
+
+./roles/installer/meta:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 461 Apr  1 23:57 main.yml
+
+./roles/installer/filter_plugins:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 801 Apr  1 23:57 cpu_string_to_decimal.py
+
+./roles/installer/files:
+total 4
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mpre-stop[0m
+
+./roles/installer/files/pre-stop:
+total 12
+-rwxrwxr-x 1 vagrant vagrant  646 Apr  1 23:57 [01;32mtermination-waiter[0m
+-rwxrwxr-x 1 vagrant vagrant 1313 Apr  1 23:57 [01;32mtermination-master[0m
+-rw-rw-r-- 1 vagrant vagrant 2450 Apr  1 23:57 termination-env
+
+./roles/installer/templates:
+total 44
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34msettings[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34msecrets[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mrbac[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mnetworking[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mcronjobs[0m
+drwxrwxr-x 4 vagrant vagrant 4096 Apr  1 23:57 [01;34mcommon[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mstorage[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mstatefulsets[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mjobs[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mdeployments[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34mconfigmaps[0m
+
+./roles/installer/templates/settings:
+total 12
+-rw-rw-r-- 1 vagrant vagrant  331 Apr  1 23:57 ldap.py.j2
+-rw-rw-r-- 1 vagrant vagrant  321 Apr  1 23:57 execution_environments.py.j2
+-rw-rw-r-- 1 vagrant vagrant 1286 Apr  1 23:57 credentials.py.j2
+
+./roles/installer/templates/secrets:
+total 32
+-rw-rw-r-- 1 vagrant vagrant 361 Apr  1 23:57 secret_key.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 499 Apr  1 23:57 receptor_work_signing_secret.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 453 Apr  1 23:57 receptor_ca_secret.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 550 Apr  1 23:57 postgres_upgrade_secret.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 572 Apr  1 23:57 postgres_secret.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 366 Apr  1 23:57 broadcast_websocket_secret.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 566 Apr  1 23:57 app_credentials.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 363 Apr  1 23:57 admin_password_secret.yaml.j2
+
+./roles/installer/templates/rbac:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 1466 Apr  1 23:57 service_account.yaml.j2
+
+./roles/installer/templates/networking:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 2009 Apr  1 23:57 service.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 3672 Apr  1 23:57 ingress.yaml.j2
+
+./roles/installer/templates/cronjobs:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 3793 Apr  1 23:57 metrics-utility-report.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 4094 Apr  1 23:57 metrics-utility-gather.yaml.j2
+
+./roles/installer/templates/common:
+total 8
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mvolumes[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mvolume_mounts[0m
+
+./roles/installer/templates/common/volumes:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 812 Apr  1 23:57 extra_settings_files.yaml.j2
+
+./roles/installer/templates/common/volume_mounts:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 770 Apr  1 23:57 extra_settings_files.yaml.j2
+
+./roles/installer/templates/storage:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 590 Apr  1 23:57 persistent.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 540 Apr  2 00:07 metrics-utility.yaml.j2
+
+./roles/installer/templates/statefulsets:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 8036 Apr  2 00:07 postgres.yaml.j2
+
+./roles/installer/templates/jobs:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 5242 Apr  2 00:07 migration.yaml.j2
+
+./roles/installer/templates/deployments:
+total 44
+-rw-rw-r-- 1 vagrant vagrant 24167 Apr  1 23:57 task.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 18330 Apr  2 00:07 web.yaml.j2
+
+./roles/installer/templates/configmaps:
+total 16
+-rw-rw-r-- 1 vagrant vagrant   683 Apr  1 23:57 pre_stop_scripts.yaml.j2
+-rw-rw-r-- 1 vagrant vagrant 11378 Apr  2 00:07 config.yaml.j2
+
+./roles/installer/vars:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 1421 Apr  2 00:07 main.yml
+
+./roles/installer/tasks:
+total 108
+-rw-rw-r-- 1 vagrant vagrant   429 Apr  1 23:57 enable_metrics_utility_console.yml
+-rw-rw-r-- 1 vagrant vagrant  1036 Apr  1 23:57 enable_metrics_utility.yml
+-rw-rw-r-- 1 vagrant vagrant  1440 Apr  1 23:57 cleanup.yml
+-rw-rw-r-- 1 vagrant vagrant  1994 Apr  1 23:57 broadcast_websocket_configuration.yml
+-rw-rw-r-- 1 vagrant vagrant  1712 Apr  1 23:57 admin_password_configuration.yml
+-rw-rw-r-- 1 vagrant vagrant  1456 Apr  1 23:57 set_images.yml
+-rw-rw-r-- 1 vagrant vagrant  1596 Apr  1 23:57 secret_key_configuration.yml
+-rw-rw-r-- 1 vagrant vagrant   750 Apr  1 23:57 scale_down_deployment.yml
+-rw-rw-r-- 1 vagrant vagrant 10040 Apr  1 23:57 resources_configuration.yml
+-rw-rw-r-- 1 vagrant vagrant   662 Apr  1 23:57 load_route_tls_secret.yml
+-rw-rw-r-- 1 vagrant vagrant   487 Apr  1 23:57 load_bundle_cacert_secret.yml
+-rw-rw-r-- 1 vagrant vagrant  5190 Apr  2 00:07 upgrade_postgres.yml
+-rw-rw-r-- 1 vagrant vagrant  3965 Apr  2 00:07 update_status.yml
+-rw-rw-r-- 1 vagrant vagrant  2023 Apr  2 00:07 migrate_schema.yml
+-rw-rw-r-- 1 vagrant vagrant  3018 Apr  2 00:07 migrate_data.yml
+-rw-rw-r-- 1 vagrant vagrant  1150 Apr  2 00:07 main.yml
+-rw-rw-r-- 1 vagrant vagrant   472 Apr  2 00:07 load_ldap_password_secret.yml
+-rw-rw-r-- 1 vagrant vagrant   462 Apr  2 00:07 load_ldap_cacert_secret.yml
+-rw-rw-r-- 1 vagrant vagrant  3828 Apr  2 00:07 install.yml
+-rw-rw-r-- 1 vagrant vagrant  5382 Apr  2 00:07 initialize_django.yml
+-rw-rw-r-- 1 vagrant vagrant 10460 Apr  2 00:07 database_configuration.yml
+
+./roles/installer/defaults:
+total 16
+-rw-rw-r-- 1 vagrant vagrant 13660 Apr  2 00:07 main.yml
+
+./bin:
+total 14332
+-rwxr-xr-x 1 vagrant vagrant 14675968 Mar 14  2023 [01;32mkustomize[0m
+
+./docs:
+total 872
+-rw-rw-r-- 1 vagrant vagrant   3990 Apr  1 23:57 requirements.txt
+-rw-rw-r-- 1 vagrant vagrant     85 Apr  1 23:57 requirements.in
+-rw-rw-r-- 1 vagrant vagrant    606 Apr  1 23:57 README.md
+drwxrwxr-x 2 vagrant vagrant   4096 Apr  2 00:07 [01;34mupgrade[0m
+drwxrwxr-x 2 vagrant vagrant   4096 Apr  2 00:07 [01;34muninstall[0m
+drwxrwxr-x 2 vagrant vagrant   4096 Apr  2 00:07 [01;34mtroubleshooting[0m
+drwxrwxr-x 2 vagrant vagrant   4096 Apr  2 00:07 [01;34mmigration[0m
+drwxrwxr-x 2 vagrant vagrant   4096 Apr  2 00:07 [01;34minstallation[0m
+-rw-rw-r-- 1 vagrant vagrant    136 Apr  2 00:07 index.md
+drwxrwxr-x 2 vagrant vagrant   4096 Apr  2 00:07 [01;34mcontributors-guide[0m
+-rw-rw-r-- 1 vagrant vagrant 844635 Apr  2 00:07 [01;35mawx-demo.svg[0m
+drwxrwxr-x 3 vagrant vagrant   4096 Apr  2 00:07 [01;34muser-guide[0m
+
+./docs/upgrade:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 3354 Apr  2 00:07 upgrading.md
+
+./docs/uninstall:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 647 Apr  2 00:07 uninstall.md
+
+./docs/troubleshooting:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 3026 Apr  2 00:07 debugging.md
+
+./docs/migration:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 2790 Apr  2 00:07 migration.md
+
+./docs/installation:
+total 24
+-rw-rw-r-- 1 vagrant vagrant 2472 Apr  2 00:07 kind-install.md
+-rw-rw-r-- 1 vagrant vagrant  166 Apr  2 00:07 index.md
+-rw-rw-r-- 1 vagrant vagrant 1194 Apr  2 00:07 helm-install-on-existing-cluster.md
+-rw-rw-r-- 1 vagrant vagrant 2916 Apr  2 00:07 creating-a-minikube-cluster-for-testing.md
+-rw-rw-r-- 1 vagrant vagrant 6561 Apr  2 00:07 basic-install.md
+
+./docs/contributors-guide:
+total 20
+-rw-rw-r-- 1 vagrant vagrant 2005 Apr  2 00:07 release-process.md
+-rw-rw-r-- 1 vagrant vagrant  313 Apr  2 00:07 get-involved.md
+-rw-rw-r-- 1 vagrant vagrant  129 Apr  2 00:07 contributing.md
+-rw-rw-r-- 1 vagrant vagrant  334 Apr  2 00:07 code-of-conduct.md
+-rw-rw-r-- 1 vagrant vagrant  145 Apr  2 00:07 author.md
+
+./docs/user-guide:
+total 24
+-rw-rw-r-- 1 vagrant vagrant 2601 Apr  2 00:07 admin-user-account-configuration.md
+-rw-rw-r-- 1 vagrant vagrant 6449 Apr  2 00:07 network-and-tls-configuration.md
+-rw-rw-r-- 1 vagrant vagrant 6341 Apr  2 00:07 database-configuration.md
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  2 00:07 [01;34madvanced-configuration[0m
+
+./docs/user-guide/advanced-configuration:
+total 672
+-rw-rw-r-- 1 vagrant vagrant   1007 Apr  2 00:07 labeling-operator-managed-objects.md
+-rw-rw-r-- 1 vagrant vagrant   1294 Apr  2 00:07 horizontal-pod-autoscaler.md
+-rw-rw-r-- 1 vagrant vagrant   5192 Apr  2 00:07 extra-settings.md
+-rw-rw-r-- 1 vagrant vagrant   1268 Apr  2 00:07 exporting-environment-variables-to-containers.md
+-rw-rw-r-- 1 vagrant vagrant   1717 Apr  2 00:07 enabling-ldap-integration-at-awx-bootstrap.md
+-rw-rw-r-- 1 vagrant vagrant    813 Apr  2 00:07 disable-ipv6.md
+-rw-rw-r-- 1 vagrant vagrant   2326 Apr  2 00:07 deploying-a-specific-version-of-awx.md
+-rw-rw-r-- 1 vagrant vagrant   2062 Apr  2 00:07 default-execution-environments-from-private-registries.md
+-rw-rw-r-- 1 vagrant vagrant   7822 Apr  2 00:07 custom-volume-and-volume-mount-options.md
+-rw-rw-r-- 1 vagrant vagrant   1370 Apr  2 00:07 custom-receptor-certs.md
+-rw-rw-r-- 1 vagrant vagrant    412 Apr  2 00:07 csrf-cookie-secure-setting.md
+-rw-rw-r-- 1 vagrant vagrant   3310 Apr  2 00:07 containers-resource-requirements.md
+-rw-rw-r-- 1 vagrant vagrant   2904 Apr  2 00:07 container-probes.md
+-rw-rw-r-- 1 vagrant vagrant   1242 Apr  2 00:07 auto-upgrade.md
+-rw-rw-r-- 1 vagrant vagrant   4909 Apr  2 00:07 assigning-awx-pods-to-specific-nodes.md
+-rw-rw-r-- 1 vagrant vagrant    341 Apr  2 00:07 adding-execution-nodes.md
+-rw-rw-r-- 1 vagrant vagrant   2066 Apr  2 00:07 trusting-a-custom-certificate-authority.md
+-rw-rw-r-- 1 vagrant vagrant    445 Apr  2 00:07 session-cookie-secure-setting.md
+-rw-rw-r-- 1 vagrant vagrant    498 Apr  2 00:07 service-account.md
+-rw-rw-r-- 1 vagrant vagrant    808 Apr  2 00:07 security-context.md
+-rw-rw-r-- 1 vagrant vagrant   1075 Apr  2 00:07 scaling-the-web-and-task-pods-independently.md
+-rw-rw-r-- 1 vagrant vagrant    341 Apr  2 00:07 redis-container-capabilities.md
+-rw-rw-r-- 1 vagrant vagrant    800 Apr  2 00:07 privileged-tasks.md
+-rw-rw-r-- 1 vagrant vagrant    676 Apr  2 00:07 priority-classes.md
+-rw-rw-r-- 1 vagrant vagrant   2155 Apr  2 00:07 pods-termination-grace-period.md
+-rw-rw-r-- 1 vagrant vagrant   1427 Apr  2 00:07 persisting-projects-directory.md
+-rw-rw-r-- 1 vagrant vagrant 209810 Apr  2 00:07 [01;35mpeering-to-mesh-ingress-on-awx-ui.png[0m
+-rw-rw-r-- 1 vagrant vagrant    267 Apr  2 00:07 no-log.md
+-rw-rw-r-- 1 vagrant vagrant  15302 Apr  2 00:07 mesh-ingress.md
+-rw-rw-r-- 1 vagrant vagrant 165650 Apr  2 00:07 [01;35mmesh-ingress-instance-on-awx-ui.png[0m
+-rw-rw-r-- 1 vagrant vagrant 166271 Apr  2 00:07 [01;35mmesh-ingress-instance-listener-address-on-awx-ui.png[0m
+
+./ansible:
+total 12
+-rw-rw-r-- 1 vagrant vagrant 1159 Apr  1 23:57 instantiate-awx-deployment.yml
+-rw-rw-r-- 1 vagrant vagrant 4125 Apr  2 00:07 helm-release.yml
+
+./molecule:
+total 16
+-rw-rw-r-- 1 vagrant vagrant  225 Apr  1 23:57 requirements.txt
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mkind[0m
+drwxrwxr-x 5 vagrant vagrant 4096 Apr  1 23:57 [01;34mdefault[0m
+-rw-rw-r-- 1 vagrant vagrant  144 Apr  2 00:07 requirements.yml
+
+./molecule/kind:
+total 20
+-rw-rw-r-- 1 vagrant vagrant  938 Apr  1 23:57 prepare.yml
+-rw-rw-r-- 1 vagrant vagrant 1425 Apr  1 23:57 molecule.yml
+-rw-rw-r-- 1 vagrant vagrant  493 Apr  1 23:57 destroy.yml
+-rw-rw-r-- 1 vagrant vagrant  748 Apr  1 23:57 create.yml
+-rw-rw-r-- 1 vagrant vagrant 1055 Apr  1 23:57 converge.yml
+
+./molecule/default:
+total 40
+-rw-rw-r-- 1 vagrant vagrant 1527 Apr  1 23:57 verify.yml
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mutils[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mtemplates[0m
+drwxrwxr-x 2 vagrant vagrant 4096 Apr  1 23:57 [01;34mtasks[0m
+-rw-rw-r-- 1 vagrant vagrant  923 Apr  1 23:57 prepare.yml
+-rw-rw-r-- 1 vagrant vagrant 1232 Apr  1 23:57 molecule.yml
+-rw-rw-r-- 1 vagrant vagrant  514 Apr  1 23:57 kustomize.yml
+-rw-rw-r-- 1 vagrant vagrant  614 Apr  1 23:57 destroy.yml
+-rw-rw-r-- 1 vagrant vagrant   92 Apr  1 23:57 create.yml
+-rw-rw-r-- 1 vagrant vagrant  374 Apr  1 23:57 converge.yml
+
+./molecule/default/utils:
+total 8
+-rw-rw-r-- 1 vagrant vagrant 907 Apr  1 23:57 output_k8s_resources.yml
+-rw-rw-r-- 1 vagrant vagrant 706 Apr  1 23:57 output_all_container_logs_for_pod.yml
+
+./molecule/default/templates:
+total 4
+-rw-rw-r-- 1 vagrant vagrant 1105 Apr  1 23:57 awx_cr_molecule.yml.j2
+
+./molecule/default/tasks:
+total 32
+-rw-rw-r-- 1 vagrant vagrant  503 Apr  1 23:57 awxrestore_test.yml
+-rw-rw-r-- 1 vagrant vagrant  551 Apr  1 23:57 awxmeshingress_test.yml
+-rw-rw-r-- 1 vagrant vagrant  501 Apr  1 23:57 awxbackup_test.yml
+-rw-rw-r-- 1 vagrant vagrant 7916 Apr  1 23:57 awx_test.yml
+-rw-rw-r-- 1 vagrant vagrant 1330 Apr  1 23:57 awx_replicas_test.yml
+-rw-rw-r-- 1 vagrant vagrant  339 Apr  1 23:57 apply_awx_spec.yml
+-rw-rw-r-- 1 vagrant vagrant 1147 Apr  1 23:57 _test_case_replicas.yml
+[?2004h]0;vagrant@controlplane01: ~/awx-operatorvagrant@controlplane01:~/awx-operator$ ls -ltrR[2Pcd ../ls -ltrR[Kcd ansible/[4Pls -ltrcd awx-operator/[9Pls -ltr[K[K[K[K[K[K[Kpwd
+[?2004l/home/vagrant/awx-operator
+[?2004h]0;vagrant@controlplane01: ~/awx-operatorvagrant@controlplane01:~/awx-operator$ cd [K[K[Kcd ../
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ cd ../[3Ppwdls -ltrR[2Pcd ../ls -ltrR[Kcd ansible/[4Pls -ltrcd awx-operator/[9Pls -ltrkubectl get svchistory | grep helm[Kelm install my-awx-operator[1Pdelete[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Clist[Kkubectl get svc -o wide[14Phelm listkubectl get svc -o wide[9Pcat /etc/hostsip a[Kkubectl describe svc awx-operator-controller-manager-metrics-service [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mhelm install my-awx-operator awx-operator/awx-operator[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelm install my-awx-operator awx-operator/awx-operator
+[?2004lNAME: my-awx-operator
+LAST DEPLOYED: Wed May 21 13:49:18 2025
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+TEST SUITE: None
+NOTES:
+AWX Operator installed with Helm Chart version 3.1.0
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-qpbsd   2/2     Running   0          65s
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          6h46m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          8h
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          8h
+python-deployment4-7686744db9-254xj                1/1     Running   0          4h9m
+python-deployment4-7686744db9-drkxw                1/1     Running   0          4h9m
+python-deployment4-7686744db9-jsfsq                1/1     Running   0          4h9m
+python1-pod                                        1/1     Running   0          4h18m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods[Kkubectl get deployemnts[K[K[K[K[Kments [7mawx-operator-controller-manager-799967c78c-qpbsd[27mawx-operator-controller-manager-799967c78c-qpbsd
+[?2004lError from server (NotFound): deployments.apps "awx-operator-controller-manager-799967c78c-qpbsd" not found
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get deployments awx-operator-controller-manager-799967c78c-qpbsd[C[1P awx-operator-controller-manager-799967c78c-qpbsd[1P[1P[1P[1@d[1@e[1@s[1@c[1@r[1@i[1@b[1@e
+[?2004lError from server (NotFound): deployments.apps "awx-operator-controller-manager-799967c78c-qpbsd" not found
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe deployment awx-operator-controller-manager-799967c78c-qpbsd[K[Ksd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsd[1P awx-operator-controller-manager-799967c78c-qpbsdp awx-operator-controller-manager-799967c78c-qpbsdo awx-operator-controller-manager-799967c78c-qpbsdd awx-operator-controller-manager-799967c78c-qpbsd
+[?2004lName:             awx-operator-controller-manager-799967c78c-qpbsd
+Namespace:        default
+Priority:         0
+Service Account:  awx-operator-controller-manager
+Node:             node01/192.168.56.21
+Start Time:       Wed, 21 May 2025 13:49:20 +0000
+Labels:           control-plane=controller-manager
+                  helm.sh/chart=awx-operator
+                  pod-template-hash=799967c78c
+Annotations:      kubectl.kubernetes.io/default-container: awx-manager
+Status:           Running
+IP:               10.44.0.4
+IPs:
+  IP:           10.44.0.4
+Controlled By:  ReplicaSet/awx-operator-controller-manager-799967c78c
+Containers:
+  kube-rbac-proxy:
+    Container ID:  containerd://c3d9a561dc860a59f501382580165b8b7a18b2d51fe74e7a163b5f157fcaf3b5
+    Image:         gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0
+    Image ID:      gcr.io/kubebuilder/kube-rbac-proxy@sha256:d8cc6ffb98190e8dd403bfe67ddcb454e6127d32b87acc237b3e5240f70a20fb
+    Port:          8443/TCP
+    Host Port:     0/TCP
+    Args:
+      --secure-listen-address=0.0.0.0:8443
+      --upstream=http://127.0.0.1:8080/
+      --logtostderr=true
+      --v=0
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        5m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+  awx-manager:
+    Container ID:  containerd://a4f319e5379114a2972f3b1a481a25635e1d52b6617d908ad86fb98ae2b2e92f
+    Image:         quay.io/ansible/awx-operator:2.19.1
+    Image ID:      quay.io/ansible/awx-operator@sha256:7302e0c8e5a79c11275848b36c63c61d8e7487840164c109b7cda9aa93456901
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      --health-probe-bind-address=:6789
+      --metrics-bind-address=127.0.0.1:8080
+      --leader-elect
+      --leader-election-id=awx-operator
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:21 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1500m
+      memory:  960Mi
+    Requests:
+      cpu:      50m
+      memory:   32Mi
+    Liveness:   http-get http://:6789/healthz delay=15s timeout=1s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:6789/readyz delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      ANSIBLE_GATHERING:   explicit
+      ANSIBLE_DEBUG_LOGS:  false
+      WATCH_NAMESPACE:     default (v1:metadata.namespace)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mnzdc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                           Age                 From               Message
+  ----     ------                           ----                ----               -------
+  Normal   Scheduled                        2m4s                default-scheduler  Successfully assigned default/awx-operator-controller-manager-799967c78c-qpbsd to node01
+  Normal   Pulled                           2m4s                kubelet            Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0" already present on machine
+  Normal   Created                          2m4s                kubelet            Created container: kube-rbac-proxy
+  Normal   Started                          2m4s                kubelet            Started container kube-rbac-proxy
+  Normal   Pulled                           2m4s                kubelet            Container image "quay.io/ansible/awx-operator:2.19.1" already present on machine
+  Normal   Created                          2m3s                kubelet            Created container: awx-manager
+  Normal   Started                          2m3s                kubelet            Started container awx-manager
+  Warning  FailedToRetrieveImagePullSecret  26s (x6 over 2m4s)  kubelet            Unable to retrieve some image pull secrets (redhat-operators-pull-secret); attempting to pull the image may not succeed.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe pod awx-operator-controller-manager-799967c78c-qpbsd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[K
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe pod awx-operator-controller-manager-799967c78c-qpbsd
+[?2004lName:             awx-operator-controller-manager-799967c78c-qpbsd
+Namespace:        default
+Priority:         0
+Service Account:  awx-operator-controller-manager
+Node:             node01/192.168.56.21
+Start Time:       Wed, 21 May 2025 13:49:20 +0000
+Labels:           control-plane=controller-manager
+                  helm.sh/chart=awx-operator
+                  pod-template-hash=799967c78c
+Annotations:      kubectl.kubernetes.io/default-container: awx-manager
+Status:           Running
+IP:               10.44.0.4
+IPs:
+  IP:           10.44.0.4
+Controlled By:  ReplicaSet/awx-operator-controller-manager-799967c78c
+Containers:
+  kube-rbac-proxy:
+    Container ID:  containerd://c3d9a561dc860a59f501382580165b8b7a18b2d51fe74e7a163b5f157fcaf3b5
+    Image:         gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0
+    Image ID:      gcr.io/kubebuilder/kube-rbac-proxy@sha256:d8cc6ffb98190e8dd403bfe67ddcb454e6127d32b87acc237b3e5240f70a20fb
+    Port:          8443/TCP
+    Host Port:     0/TCP
+    Args:
+      --secure-listen-address=0.0.0.0:8443
+      --upstream=http://127.0.0.1:8080/
+      --logtostderr=true
+      --v=0
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        5m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+  awx-manager:
+    Container ID:  containerd://a4f319e5379114a2972f3b1a481a25635e1d52b6617d908ad86fb98ae2b2e92f
+    Image:         quay.io/ansible/awx-operator:2.19.1
+    Image ID:      quay.io/ansible/awx-operator@sha256:7302e0c8e5a79c11275848b36c63c61d8e7487840164c109b7cda9aa93456901
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      --health-probe-bind-address=:6789
+      --metrics-bind-address=127.0.0.1:8080
+      --leader-elect
+      --leader-election-id=awx-operator
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:21 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1500m
+      memory:  960Mi
+    Requests:
+      cpu:      50m
+      memory:   32Mi
+    Liveness:   http-get http://:6789/healthz delay=15s timeout=1s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:6789/readyz delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      ANSIBLE_GATHERING:   explicit
+      ANSIBLE_DEBUG_LOGS:  false
+      WATCH_NAMESPACE:     default (v1:metadata.namespace)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mnzdc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                           Age                  From               Message
+  ----     ------                           ----                 ----               -------
+  Normal   Scheduled                        6m49s                default-scheduler  Successfully assigned default/awx-operator-controller-manager-799967c78c-qpbsd to node01
+  Normal   Pulled                           6m49s                kubelet            Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0" already present on machine
+  Normal   Created                          6m49s                kubelet            Created container: kube-rbac-proxy
+  Normal   Started                          6m49s                kubelet            Started container kube-rbac-proxy
+  Normal   Pulled                           6m49s                kubelet            Container image "quay.io/ansible/awx-operator:2.19.1" already present on machine
+  Normal   Created                          6m48s                kubelet            Created container: awx-manager
+  Normal   Started                          6m48s                kubelet            Started container awx-manager
+  Warning  FailedToRetrieveImagePullSecret  70s (x9 over 6m49s)  kubelet            Unable to retrieve some image pull secrets (redhat-operators-pull-secret); attempting to pull the image may not succeed.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe pod awx-operator-controller-manager-799967c78c-qpbsd
+[?2004lName:             awx-operator-controller-manager-799967c78c-qpbsd
+Namespace:        default
+Priority:         0
+Service Account:  awx-operator-controller-manager
+Node:             node01/192.168.56.21
+Start Time:       Wed, 21 May 2025 13:49:20 +0000
+Labels:           control-plane=controller-manager
+                  helm.sh/chart=awx-operator
+                  pod-template-hash=799967c78c
+Annotations:      kubectl.kubernetes.io/default-container: awx-manager
+Status:           Running
+IP:               10.44.0.4
+IPs:
+  IP:           10.44.0.4
+Controlled By:  ReplicaSet/awx-operator-controller-manager-799967c78c
+Containers:
+  kube-rbac-proxy:
+    Container ID:  containerd://c3d9a561dc860a59f501382580165b8b7a18b2d51fe74e7a163b5f157fcaf3b5
+    Image:         gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0
+    Image ID:      gcr.io/kubebuilder/kube-rbac-proxy@sha256:d8cc6ffb98190e8dd403bfe67ddcb454e6127d32b87acc237b3e5240f70a20fb
+    Port:          8443/TCP
+    Host Port:     0/TCP
+    Args:
+      --secure-listen-address=0.0.0.0:8443
+      --upstream=http://127.0.0.1:8080/
+      --logtostderr=true
+      --v=0
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        5m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+  awx-manager:
+    Container ID:  containerd://a4f319e5379114a2972f3b1a481a25635e1d52b6617d908ad86fb98ae2b2e92f
+    Image:         quay.io/ansible/awx-operator:2.19.1
+    Image ID:      quay.io/ansible/awx-operator@sha256:7302e0c8e5a79c11275848b36c63c61d8e7487840164c109b7cda9aa93456901
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      --health-probe-bind-address=:6789
+      --metrics-bind-address=127.0.0.1:8080
+      --leader-elect
+      --leader-election-id=awx-operator
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:21 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1500m
+      memory:  960Mi
+    Requests:
+      cpu:      50m
+      memory:   32Mi
+    Liveness:   http-get http://:6789/healthz delay=15s timeout=1s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:6789/readyz delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      ANSIBLE_GATHERING:   explicit
+      ANSIBLE_DEBUG_LOGS:  false
+      WATCH_NAMESPACE:     default (v1:metadata.namespace)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mnzdc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                           Age                  From               Message
+  ----     ------                           ----                 ----               -------
+  Normal   Scheduled                        6m51s                default-scheduler  Successfully assigned default/awx-operator-controller-manager-799967c78c-qpbsd to node01
+  Normal   Pulled                           6m51s                kubelet            Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0" already present on machine
+  Normal   Created                          6m51s                kubelet            Created container: kube-rbac-proxy
+  Normal   Started                          6m51s                kubelet            Started container kube-rbac-proxy
+  Normal   Pulled                           6m51s                kubelet            Container image "quay.io/ansible/awx-operator:2.19.1" already present on machine
+  Normal   Created                          6m50s                kubelet            Created container: awx-manager
+  Normal   Started                          6m50s                kubelet            Started container awx-manager
+  Warning  FailedToRetrieveImagePullSecret  72s (x9 over 6m51s)  kubelet            Unable to retrieve some image pull secrets (redhat-operators-pull-secret); attempting to pull the image may not succeed.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe pod awx-operator-controller-manager-799967c78c-qpbsd
+[?2004lName:             awx-operator-controller-manager-799967c78c-qpbsd
+Namespace:        default
+Priority:         0
+Service Account:  awx-operator-controller-manager
+Node:             node01/192.168.56.21
+Start Time:       Wed, 21 May 2025 13:49:20 +0000
+Labels:           control-plane=controller-manager
+                  helm.sh/chart=awx-operator
+                  pod-template-hash=799967c78c
+Annotations:      kubectl.kubernetes.io/default-container: awx-manager
+Status:           Running
+IP:               10.44.0.4
+IPs:
+  IP:           10.44.0.4
+Controlled By:  ReplicaSet/awx-operator-controller-manager-799967c78c
+Containers:
+  kube-rbac-proxy:
+    Container ID:  containerd://c3d9a561dc860a59f501382580165b8b7a18b2d51fe74e7a163b5f157fcaf3b5
+    Image:         gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0
+    Image ID:      gcr.io/kubebuilder/kube-rbac-proxy@sha256:d8cc6ffb98190e8dd403bfe67ddcb454e6127d32b87acc237b3e5240f70a20fb
+    Port:          8443/TCP
+    Host Port:     0/TCP
+    Args:
+      --secure-listen-address=0.0.0.0:8443
+      --upstream=http://127.0.0.1:8080/
+      --logtostderr=true
+      --v=0
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        5m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+  awx-manager:
+    Container ID:  containerd://a4f319e5379114a2972f3b1a481a25635e1d52b6617d908ad86fb98ae2b2e92f
+    Image:         quay.io/ansible/awx-operator:2.19.1
+    Image ID:      quay.io/ansible/awx-operator@sha256:7302e0c8e5a79c11275848b36c63c61d8e7487840164c109b7cda9aa93456901
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      --health-probe-bind-address=:6789
+      --metrics-bind-address=127.0.0.1:8080
+      --leader-elect
+      --leader-election-id=awx-operator
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:21 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1500m
+      memory:  960Mi
+    Requests:
+      cpu:      50m
+      memory:   32Mi
+    Liveness:   http-get http://:6789/healthz delay=15s timeout=1s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:6789/readyz delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      ANSIBLE_GATHERING:   explicit
+      ANSIBLE_DEBUG_LOGS:  false
+      WATCH_NAMESPACE:     default (v1:metadata.namespace)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mnzdc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                           Age                  From               Message
+  ----     ------                           ----                 ----               -------
+  Normal   Scheduled                        6m52s                default-scheduler  Successfully assigned default/awx-operator-controller-manager-799967c78c-qpbsd to node01
+  Normal   Pulled                           6m52s                kubelet            Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0" already present on machine
+  Normal   Created                          6m52s                kubelet            Created container: kube-rbac-proxy
+  Normal   Started                          6m52s                kubelet            Started container kube-rbac-proxy
+  Normal   Pulled                           6m52s                kubelet            Container image "quay.io/ansible/awx-operator:2.19.1" already present on machine
+  Normal   Created                          6m51s                kubelet            Created container: awx-manager
+  Normal   Started                          6m51s                kubelet            Started container awx-manager
+  Warning  FailedToRetrieveImagePullSecret  73s (x9 over 6m52s)  kubelet            Unable to retrieve some image pull secrets (redhat-operators-pull-secret); attempting to pull the image may not succeed.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe pod awx-operator-controller-manager-799967c78c-qpbsd
+[?2004lName:             awx-operator-controller-manager-799967c78c-qpbsd
+Namespace:        default
+Priority:         0
+Service Account:  awx-operator-controller-manager
+Node:             node01/192.168.56.21
+Start Time:       Wed, 21 May 2025 13:49:20 +0000
+Labels:           control-plane=controller-manager
+                  helm.sh/chart=awx-operator
+                  pod-template-hash=799967c78c
+Annotations:      kubectl.kubernetes.io/default-container: awx-manager
+Status:           Running
+IP:               10.44.0.4
+IPs:
+  IP:           10.44.0.4
+Controlled By:  ReplicaSet/awx-operator-controller-manager-799967c78c
+Containers:
+  kube-rbac-proxy:
+    Container ID:  containerd://c3d9a561dc860a59f501382580165b8b7a18b2d51fe74e7a163b5f157fcaf3b5
+    Image:         gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0
+    Image ID:      gcr.io/kubebuilder/kube-rbac-proxy@sha256:d8cc6ffb98190e8dd403bfe67ddcb454e6127d32b87acc237b3e5240f70a20fb
+    Port:          8443/TCP
+    Host Port:     0/TCP
+    Args:
+      --secure-listen-address=0.0.0.0:8443
+      --upstream=http://127.0.0.1:8080/
+      --logtostderr=true
+      --v=0
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:20 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     500m
+      memory:  128Mi
+    Requests:
+      cpu:        5m
+      memory:     64Mi
+    Environment:  <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+  awx-manager:
+    Container ID:  containerd://a4f319e5379114a2972f3b1a481a25635e1d52b6617d908ad86fb98ae2b2e92f
+    Image:         quay.io/ansible/awx-operator:2.19.1
+    Image ID:      quay.io/ansible/awx-operator@sha256:7302e0c8e5a79c11275848b36c63c61d8e7487840164c109b7cda9aa93456901
+    Port:          <none>
+    Host Port:     <none>
+    Args:
+      --health-probe-bind-address=:6789
+      --metrics-bind-address=127.0.0.1:8080
+      --leader-elect
+      --leader-election-id=awx-operator
+    State:          Running
+      Started:      Wed, 21 May 2025 13:49:21 +0000
+    Ready:          True
+    Restart Count:  0
+    Limits:
+      cpu:     1500m
+      memory:  960Mi
+    Requests:
+      cpu:      50m
+      memory:   32Mi
+    Liveness:   http-get http://:6789/healthz delay=15s timeout=1s period=20s #success=1 #failure=3
+    Readiness:  http-get http://:6789/readyz delay=5s timeout=1s period=10s #success=1 #failure=3
+    Environment:
+      ANSIBLE_GATHERING:   explicit
+      ANSIBLE_DEBUG_LOGS:  false
+      WATCH_NAMESPACE:     default (v1:metadata.namespace)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mnzdc (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mnzdc:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason                           Age                  From               Message
+  ----     ------                           ----                 ----               -------
+  Normal   Scheduled                        6m54s                default-scheduler  Successfully assigned default/awx-operator-controller-manager-799967c78c-qpbsd to node01
+  Normal   Pulled                           6m54s                kubelet            Container image "gcr.io/kubebuilder/kube-rbac-proxy:v0.15.0" already present on machine
+  Normal   Created                          6m54s                kubelet            Created container: kube-rbac-proxy
+  Normal   Started                          6m54s                kubelet            Started container kube-rbac-proxy
+  Normal   Pulled                           6m54s                kubelet            Container image "quay.io/ansible/awx-operator:2.19.1" already present on machine
+  Normal   Created                          6m53s                kubelet            Created container: awx-manager
+  Normal   Started                          6m53s                kubelet            Started container awx-manager
+  Warning  FailedToRetrieveImagePullSecret  75s (x9 over 6m54s)  kubelet            Unable to retrieve some image pull secrets (redhat-operators-pull-secret); attempting to pull the image may not succeed.
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl describe pod awx-operator-controller-manager-799967c78c-qpbsd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@deployment[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pget deployments[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpods[K
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-qpbsd   2/2     Running   0          7m12s
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          6h52m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          8h
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          8h
+python-deployment4-7686744db9-254xj                1/1     Running   0          4h15m
+python-deployment4-7686744db9-drkxw                1/1     Running   0          4h15m
+python-deployment4-7686744db9-jsfsq                1/1     Running   0          4h15m
+python1-pod                                        1/1     Running   0          4h24m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get pods
+[?2004lNAME                                               READY   STATUS    RESTARTS   AGE
+awx-operator-controller-manager-799967c78c-qpbsd   2/2     Running   0          7m21s
+devops-todo-7989bfc946-bg9p9                       1/1     Running   0          6h52m
+nginx-deployment-75d7449996-tzkth                  1/1     Running   0          8h
+python-deployment-7bf5b7b99f-smq98                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-tnpjx                 1/1     Running   0          8h
+python-deployment-7bf5b7b99f-w8d8z                 1/1     Running   0          8h
+python-deployment4-7686744db9-254xj                1/1     Running   0          4h16m
+python-deployment4-7686744db9-drkxw                1/1     Running   0          4h16m
+python-deployment4-7686744db9-jsfsq                1/1     Running   0          4h16m
+python1-pod                                        1/1     Running   0          4h24m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get podsdescribe pod awx-operator-controller-manager-799967c78c-qpbsd[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[7@deployment[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[4Pget deployments[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cpods[Khelm install my-awx-operator awx-operator/awx-operator[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccd ../[K[3Ppwdls -ltrR[2Pcd ../ls -ltrR[Kcd ansible/[4Pls -ltrcd awx-operator/[9Pls -ltrkubectl get svchistory | grep helm[Kelm install my-awx-operator[1Pdelete[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+[?2004lrelease "my-awx-operator" uninstalled
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ helm delete my-awx-operator[11Pkubectl get pods
+[?2004lNAME                                  READY   STATUS    RESTARTS   AGE
+devops-todo-7989bfc946-bg9p9          1/1     Running   0          6h52m
+nginx-deployment-75d7449996-tzkth     1/1     Running   0          8h
+python-deployment-7bf5b7b99f-smq98    1/1     Running   0          8h
+python-deployment-7bf5b7b99f-tnpjx    1/1     Running   0          8h
+python-deployment-7bf5b7b99f-w8d8z    1/1     Running   0          8h
+python-deployment4-7686744db9-254xj   1/1     Running   0          4h16m
+python-deployment4-7686744db9-drkxw   1/1     Running   0          4h16m
+python-deployment4-7686744db9-jsfsq   1/1     Running   0          4h16m
+python1-pod                           1/1     Running   0          4h24m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get podshelm delete my-awx-operator[11Pkubectl get pods
+[?2004lNAME                                  READY   STATUS    RESTARTS   AGE
+devops-todo-7989bfc946-bg9p9          1/1     Running   0          6h58m
+nginx-deployment-75d7449996-tzkth     1/1     Running   0          8h
+python-deployment-7bf5b7b99f-smq98    1/1     Running   0          8h
+python-deployment-7bf5b7b99f-tnpjx    1/1     Running   0          8h
+python-deployment-7bf5b7b99f-w8d8z    1/1     Running   0          8h
+python-deployment4-7686744db9-254xj   1/1     Running   0          4h21m
+python-deployment4-7686744db9-drkxw   1/1     Running   0          4h21m
+python-deployment4-7686744db9-jsfsq   1/1     Running   0          4h21m
+python1-pod                           1/1     Running   0          4h30m
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ df -h
+[?2004lFilesystem      Size  Used Avail Use% Mounted on
+tmpfs           197M  1.1M  196M   1% /run
+/dev/sda1        39G   16G   24G  40% /
+tmpfs           982M     0  982M   0% /dev/shm
+tmpfs           5.0M     0  5.0M   0% /run/lock
+vagrant         476G  319G  158G  68% /vagrant
+tmpfs           197M  4.0K  197M   1% /run/user/1000
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[?2004l[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mhelm repo add prometheus-community https://prometheus-community.github.io/helm-charts[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelm repo add prometheus-community https://prometheus-community.github.io/helm-charts
+[?2004l"prometheus-community" has been added to your repositories
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ helm repo list
+[?2004lNAME                 	URL                                                   
+openshift-helm-charts	https://charts.openshift.io/                          
+awx-operator         	https://ansible-community.github.io/awx-operator-helm/
+prometheus-community 	https://prometheus-community.github.io/helm-charts    
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ 
+[7mhelm repo update[27m
+[Ahelm repo update
+[A
+[?2004lHang tight while we grab the latest from your chart repositories...
+...Successfully got an update from the "awx-operator" chart repository
+...Successfully got an update from the "openshift-helm-charts" chart repository
+...Successfully got an update from the "prometheus-community" chart repository
+Update Complete. ⎈Happy Helming!⎈
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ helm repo list
+[?2004lNAME                 	URL                                                   
+openshift-helm-charts	https://charts.openshift.io/                          
+awx-operator         	https://ansible-community.github.io/awx-operator-helm/
+prometheus-community 	https://prometheus-community.github.io/helm-charts    
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ [7mkubectl create ns monitoring[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl create ns monitoring
+[?2004lnamespace/monitoring created
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ kubectl get ns
+[?2004lNAME              STATUS        AGE
+default           Active        59d
+kube-node-lease   Active        59d
+kube-public       Active        59d
+kube-system       Active        59d
+monitoring        Active        8s
+webhook-1544      Terminating   59d
+webhook-8406      Terminating   59d
+[?2004h]0;vagrant@controlplane01: ~vagrant@controlplane01:~$ exit
+[?2004llogout

@@ -1,0 +1,48 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.20 09:01:28 =~=~=~=~=~=~=~=~=~=~=~=
+login as: vagrant
+vagrant@192.168.56.11's password: 
+Welcome to Ubuntu 18.04.6 LTS (GNU/Linux 4.15.0-212-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Tue May 20 01:01:32 UTC 2025
+
+  System load:                    0.0
+  Usage of /:                     11.6% of 38.70GB
+  Memory usage:                   55%
+  Swap usage:                     0%
+  Processes:                      149
+  Users logged in:                1
+  IP address for enp0s3:          10.0.2.15
+  IP address for enp0s8:          192.168.56.11
+  IP address for docker0:         172.17.0.1
+  IP address for br-2cd217b51d76: 172.18.0.1
+  IP address for br-f6d83b68491c: 172.19.0.1
+  IP address for br-f82ab99df3bd: 10.0.1.1
+
+  => There is 1 zombie process.
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Infrastructure is not enabled.
+
+3 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+132 additional security updates can be applied with ESM Infra.
+Learn more about enabling ESM Infra service for Ubuntu 18.04 at
+https://ubuntu.com/18-04
+
+New release '20.04.6 LTS' available.
+Run 'do-release-upgrade' to upgrade to it.
+
+
+*** System restart required ***
+Last login: Tue May 20 00:58:36 2025 from 10.0.2.2
+]0;vagrant@ubuntu-vms: ~vagrant@ubuntu-vms:~$ exit[K[K[K[Kexit
+logout

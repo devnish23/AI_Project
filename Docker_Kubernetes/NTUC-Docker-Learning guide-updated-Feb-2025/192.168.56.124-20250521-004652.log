@@ -1,0 +1,139 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.21 00:46:52 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infradm
+infradm@192.168.56.124's password: 
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-53-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+This system has been minimized by removing packages and content that are
+not required on a system that users do not log into.
+
+To restore this content, you can run the 'unminimize' command.
+Failed to connect to https://changelogs.ubuntu.com/meta-release-lts. Check your Internet connection or proxy settings
+
+[?2004h]0;infradm@kmasteraaster: ~infradm@kmasteraaster:~$ sudo su -
+[?2004l[sudo] password for infradm: 
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# [K]0;root@kmasteraaster: ~root@kmasteraaster:~# apt update
+[?2004l[33m0% [Working][0m            Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Connecting to security.ubuntu.com][0m                                      Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m                                      0% [Working][0m            Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m0% [Working][0m            Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
+            Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m0% [Working][0m            Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m0% [Working][0m            Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m0% [Working][0m            Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Working][0m            Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m0% [Working][0m            Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Err:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+[33m0% [Connecting to archive.ubuntu.com][0m                                     Err:1 http://archive.ubuntu.com/ubuntu noble InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+[33m                                     0% [Working][0m            Err:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+[33m0% [Working][0m            Err:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+[33m0% [Working][0m            Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 30%Reading package lists... 30%Reading package lists... 43%Reading package lists... 43%Reading package lists... 58%Reading package lists... 63%Reading package lists... 63%Reading package lists... 74%Reading package lists... 74%Reading package lists... 88%Reading package lists... 88%Reading package lists... 97%Reading package lists... 97%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+All packages are up to date.
+[1;33mW: [0mFailed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  Temporary failure resolving 'archive.ubuntu.com'[0m
+[1;33mW: [0mFailed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'[0m
+[1;33mW: [0mFailed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'[0m
+[1;33mW: [0mFailed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  Temporary failure resolving 'security.ubuntu.com'[0m
+[1;33mW: [0mSome index files failed to download. They have been ignored, or old ones used instead.[0m
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# ip a
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:57:c4:75 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.124/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s3
+       valid_lft 317sec preferred_lft 317sec
+    inet6 fe80::a00:27ff:fe57:c475/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+    link/ether 08:00:27:4e:2b:06 brd ff:ff:ff:ff:ff:ff
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# [7mip link set $if down[27mip link set $if down[C[1P down[1P down[1P down[7menp0s8[27m downenp0s8
+[?2004l[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# ip link set enp0s8 down[C[K[K[K[Kup
+[?2004l[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# ip link set enp0s8 updowna[K
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:57:c4:75 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.124/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s3
+       valid_lft 553sec preferred_lft 553sec
+    inet6 fe80::a00:27ff:fe57:c475/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:4e:2b:06 brd ff:ff:ff:ff:ff:ff
+    inet6 fd00::a00:27ff:fe4e:2b06/64 scope global dynamic mngtmpaddr 
+       valid_lft 86399sec preferred_lft 14399sec
+    inet6 fe80::a00:27ff:fe4e:2b06/64 scope link tentative 
+       valid_lft forever preferred_lft forever
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# ip a
+[?2004l1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+       valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host noprefixroute 
+       valid_lft forever preferred_lft forever
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:57:c4:75 brd ff:ff:ff:ff:ff:ff
+    inet 192.168.56.124/24 metric 100 brd 192.168.56.255 scope global dynamic enp0s3
+       valid_lft 543sec preferred_lft 543sec
+    inet6 fe80::a00:27ff:fe57:c475/64 scope link 
+       valid_lft forever preferred_lft forever
+3: enp0s8: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 08:00:27:4e:2b:06 brd ff:ff:ff:ff:ff:ff
+    inet6 fd00::a00:27ff:fe4e:2b06/64 scope global dynamic mngtmpaddr 
+       valid_lft 86390sec preferred_lft 14390sec
+    inet6 fe80::a00:27ff:fe4e:2b06/64 scope link 
+       valid_lft forever preferred_lft forever
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# apt update
+[?2004l[33m0% [Working][0m            Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Working][0m            Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m0% [Connecting to archive.ubuntu.com][0m                                     Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m                                     0% [Working][0m            Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Connecting to archive.ubuntu.com][0m[33m0% [Connecting to archive.ubuntu.com][0m                                     Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Connecting to security.ubuntu.com][0m                                      Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m                                      0% [Working][0m            Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Ign:1 http://archive.ubuntu.com/ubuntu noble InRelease
+[33m0% [Connecting to security.ubuntu.com][0m                                      Ign:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+[33m                                      0% [Working][0m            Ign:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+[33m0% [Working][0m            Ign:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m[33m0% [Working][0m            Err:1 http://archive.ubuntu.com/ubuntu noble InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+[33m0% [Connecting to security.ubuntu.com][0m                                      Err:3 http://archive.ubuntu.com/ubuntu noble-updates InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+                                      Err:4 http://archive.ubuntu.com/ubuntu noble-backports InRelease
+  Temporary failure resolving 'archive.ubuntu.com'
+[33m0% [Connecting to security.ubuntu.com][0m                                      Err:2 http://security.ubuntu.com/ubuntu noble-security InRelease
+  Temporary failure resolving 'security.ubuntu.com'
+[33m                                      0% [Working][0m            Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 30%Reading package lists... 30%Reading package lists... 43%Reading package lists... 43%Reading package lists... 63%Reading package lists... 63%Reading package lists... 74%Reading package lists... 74%Reading package lists... 88%Reading package lists... 88%Reading package lists... 97%Reading package lists... 97%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree... Done
+Reading state information... 0% Reading state information... 0%Reading state information... Done
+All packages are up to date.
+[1;33mW: [0mFailed to fetch http://archive.ubuntu.com/ubuntu/dists/noble/InRelease  Temporary failure resolving 'archive.ubuntu.com'[0m
+[1;33mW: [0mFailed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-updates/InRelease  Temporary failure resolving 'archive.ubuntu.com'[0m
+[1;33mW: [0mFailed to fetch http://archive.ubuntu.com/ubuntu/dists/noble-backports/InRelease  Temporary failure resolving 'archive.ubuntu.com'[0m
+[1;33mW: [0mFailed to fetch http://security.ubuntu.com/ubuntu/dists/noble-security/InRelease  Temporary failure resolving 'security.ubuntu.com'[0m
+[1;33mW: [0mSome index files failed to download. They have been ignored, or old ones used instead.[0m
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# poweroff
+[?2004l
+Broadcast message from root@kmasteraaster on pts/2 (Tue 2025-05-20 16:48:51 UTC):
+
+The system will power off now!
+
+[?2004h]0;root@kmasteraaster: ~root@kmasteraaster:~# 

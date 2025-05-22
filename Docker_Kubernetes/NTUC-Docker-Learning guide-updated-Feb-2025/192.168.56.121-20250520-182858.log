@@ -1,0 +1,156 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.20 18:28:58 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infradm
+infradm@192.168.56.121's password: 
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-60-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue May 20 09:09:44 AM UTC 2025
+
+  System load:             0.03
+  Usage of /:              63.4% of 11.21GB
+  Memory usage:            5%
+  Swap usage:              0%
+  Processes:               114
+  Users logged in:         0
+  IPv4 address for enp0s3: 10.0.2.15
+  IPv6 address for enp0s3: fd00::a00:27ff:fe46:9480
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+Expanded Security Maintenance for Applications is not enabled.
+
+61 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Tue May 20 08:46:41 2025 from 192.168.56.2
+[?2004h]0;infradm@kmaster: ~infradm@kmaster:~$ kube
+kubeadm  kubectl  kubelet  
+]0;infradm@kmaster: ~infradm@kmaster:~$ kubectl get ods
+[?2004lE0520 09:09:52.900618    2739 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:52.900953    2739 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:52.903327    2739 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:52.904069    2739 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:52.905552    2739 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+[?2004h]0;infradm@kmaster: ~infradm@kmaster:~$ kubectl get ods[K[K[Kpods
+[?2004lE0520 09:09:56.227968    2744 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:56.228202    2744 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:56.229621    2744 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:56.229757    2744 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+E0520 09:09:56.231613    2744 memcache.go:265] couldn't get current server API group list: Get "http://localhost:8080/api?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
+[?2004h]0;infradm@kmaster: ~infradm@kmaster:~$ sudo su -
+[?2004l[sudo] password for infradm: 
+[?2004h]0;root@kmaster: ~root@kmaster:~# exitsudo kubeadm reset -f[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[13Pkubeadm sudo kubeadm reset -f
+[?2004l[preflight] Running pre-flight checks
+W0520 10:29:27.248505    2769 removeetcdmember.go:106] [reset] No kubeadm config, using etcd pod spec to get data directory
+[reset] Stopping the kubelet service
+[reset] Unmounting mounted directories in "/var/lib/kubelet"
+W0520 10:29:59.615978    2769 cleanupnode.go:99] [reset] Failed to remove containers: [failed to stop running pod 411fa2ce1b840588551d4be7ea61046c23b27f0bac7ff73ff8debe6fbe90682a: output: E0520 10:29:38.158248    2873 remote_runtime.go:222] "StopPodSandbox from runtime service failed" err="rpc error: code = DeadlineExceeded desc = context deadline exceeded" podSandboxID="411fa2ce1b840588551d4be7ea61046c23b27f0bac7ff73ff8debe6fbe90682a"
+time="2025-05-20T10:29:38Z" level=fatal msg="stopping the pod sandbox \"411fa2ce1b840588551d4be7ea61046c23b27f0bac7ff73ff8debe6fbe90682a\": rpc error: code = DeadlineExceeded desc = context deadline exceeded"
+: exit status 1, failed to stop running pod 2eef2efef03751794086aa1747f4a43799293ced5e1091ba4bf8ee2d53757353: output: E0520 10:29:48.816705    2988 remote_runtime.go:222] "StopPodSandbox from runtime service failed" err="rpc error: code = DeadlineExceeded desc = context deadline exceeded" podSandboxID="2eef2efef03751794086aa1747f4a43799293ced5e1091ba4bf8ee2d53757353"
+time="2025-05-20T10:29:48Z" level=fatal msg="stopping the pod sandbox \"2eef2efef03751794086aa1747f4a43799293ced5e1091ba4bf8ee2d53757353\": rpc error: code = DeadlineExceeded desc = context deadline exceeded"
+: exit status 1, failed to stop running pod ac3f02655ba6963f5cd53b3ef5b58517d6dd16cf838e72afbe664c83188cd405: output: E0520 10:29:59.608509    3101 remote_runtime.go:222] "StopPodSandbox from runtime service failed" err="rpc error: code = DeadlineExceeded desc = context deadline exceeded" podSandboxID="ac3f02655ba6963f5cd53b3ef5b58517d6dd16cf838e72afbe664c83188cd405"
+time="2025-05-20T10:29:59Z" level=fatal msg="stopping the pod sandbox \"ac3f02655ba6963f5cd53b3ef5b58517d6dd16cf838e72afbe664c83188cd405\": rpc error: code = DeadlineExceeded desc = context deadline exceeded"
+: exit status 1]
+[reset] Deleting contents of directories: [/etc/kubernetes/manifests /var/lib/kubelet /etc/kubernetes/pki]
+[reset] Deleting files: [/etc/kubernetes/admin.conf /etc/kubernetes/kubelet.conf /etc/kubernetes/bootstrap-kubelet.conf /etc/kubernetes/controller-manager.conf /etc/kubernetes/scheduler.conf]
+
+The reset process does not clean CNI configuration. To do so, you must remove /etc/cni/net.d
+
+The reset process does not reset or clean up iptables rules or IPVS tables.
+If you wish to reset iptables, you must do so manually by using the "iptables" command.
+
+If your cluster was setup to utilize IPVS, run ipvsadm --clear (or similar)
+to reset your system's IPVS tables.
+
+The reset process does not clean your kubeconfig files and you must remove them manually.
+Please, check the contents of the $HOME/.kube/config file.
+[?2004h]0;root@kmaster: ~root@kmaster:~# [7mrm -rf /etc/cni/net.d[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm -rf /etc/cni/net.d
+[?2004l[?2004h]0;root@kmaster: ~root@kmaster:~# [7mrm -rf /var/lib/kubelet/*[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm -rf /var/lib/kubelet/*
+[?2004l[?2004h]0;root@kmaster: ~root@kmaster:~# [7mrm -rf /etc/kubernetes[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Crm -rf /etc/kubernetes
+[?2004l[?2004h]0;root@kmaster: ~root@kmaster:~# [7msystemctl restart containerd[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csystemctl restart containerd
+[?2004l[?2004h]0;root@kmaster: ~root@kmaster:~# [7msystemctl restart kubelet[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csystemctl restart kubelet
+[?2004l[?2004h]0;root@kmaster: ~root@kmaster:~# [7msudo kubeadm init --apiserver-advertise-address=192.168.56.121 --pod-network-cidr=192.168.0.0/16[27m
+[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Csudo kubeadm init --apiserver-advertise-address=192.168.56.121 --pod-network-cidr=192.168.0.0/16
+[A
+[?2004l
+I0520 10:33:25.974757    3422 version.go:256] remote version is much newer: v1.33.1; falling back to: stable-1.28
+[init] Using Kubernetes version: v1.28.15
+[preflight] Running pre-flight checks
+	[WARNING Swap]: swap is enabled; production deployments should disable swap unless testing the NodeSwap feature gate of the kubelet
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+W0520 10:33:29.009938    3422 checks.go:835] detected that the sandbox image "registry.k8s.io/pause:3.8" of the container runtime is inconsistent with that used by kubeadm. It is recommended that using "registry.k8s.io/pause:3.9" as the CRI sandbox image.
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [kmaster kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 192.168.56.121]
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [kmaster localhost] and IPs [192.168.56.121 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [kmaster localhost] and IPs [192.168.56.121 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Starting the kubelet
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[kubelet-check] Initial timeout of 40s passed.
+[kubelet-check] It seems like the kubelet isn't running or healthy.
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp 127.0.0.1:10248: connect: connection refused.
+[kubelet-check] It seems like the kubelet isn't running or healthy.
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp 127.0.0.1:10248: connect: connection refused.
+[kubelet-check] It seems like the kubelet isn't running or healthy.
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp 127.0.0.1:10248: connect: connection refused.
+[kubelet-check] It seems like the kubelet isn't running or healthy.
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp 127.0.0.1:10248: connect: connection refused.
+[kubelet-check] It seems like the kubelet isn't running or healthy.
+[kubelet-check] The HTTP call equal to 'curl -sSL http://localhost:10248/healthz' failed with error: Get "http://localhost:10248/healthz": dial tcp 127.0.0.1:10248: connect: connection refused.
+
+Unfortunately, an error has occurred:
+	timed out waiting for the condition
+
+This error is likely caused by:
+	- The kubelet is not running
+	- The kubelet is unhealthy due to a misconfiguration of the node in some way (required cgroups disabled)
+
+If you are on a systemd-powered system, you can try to troubleshoot the error with the following commands:
+	- 'systemctl status kubelet'
+	- 'journalctl -xeu kubelet'
+
+Additionally, a control plane component may have crashed or exited when started by the container runtime.
+To troubleshoot, list all containers using your preferred container runtimes CLI.
+Here is one example how you may list all running Kubernetes containers by using crictl:
+	- 'crictl --runtime-endpoint unix:///var/run/containerd/containerd.sock ps -a | grep kube | grep -v pause'
+	Once you have found the failing container, you can inspect its logs with:
+	- 'crictl --runtime-endpoint unix:///var/run/containerd/containerd.sock logs CONTAINERID'
+error execution phase wait-control-plane: couldn't initialize a Kubernetes cluster
+To see the stack trace of this error execute with --v=5 or higher
+[?2004h]0;root@kmaster: ~root@kmaster:~# 
