@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pythonv11
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: pythonv11
+  template:
+    metadata:
+      labels:
+        app: pythonv11
+    spec:
+      containers:
+      - name: pythonv11
+        image: anilbidari/python:v1 
+        ports:
+        - containerPort: 80

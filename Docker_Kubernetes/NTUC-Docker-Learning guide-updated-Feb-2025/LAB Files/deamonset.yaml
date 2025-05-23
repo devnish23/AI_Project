@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: ajay-deamonset
+spec:
+  selector:
+    matchLabels:
+      name: ajay-deamon
+  template:
+    metadata:
+      labels:
+        name: ajay-deamon
+    spec:
+     containers:
+     - name: ajay-deamon
+       image: nginx

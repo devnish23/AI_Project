@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mypod
+spec:
+  containers:
+  - name: mypod
+    image: nginx
+    volumeMounts:
+    - name: secret-volume
+      mountPath: "/etc/secret"
+      readOnly: true
+  volumes:
+  - name: secret-volume
+    secret:
+      secretName: db-password-secret
+

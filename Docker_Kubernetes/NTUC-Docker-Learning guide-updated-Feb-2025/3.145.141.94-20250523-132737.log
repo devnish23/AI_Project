@@ -1,0 +1,245 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.23 13:27:37 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 05:27:45 UTC 2025
+
+  System load:  0.0               Temperature:           -273.1 C
+  Usage of /:   62.8% of 6.71GB   Processes:             118
+  Memory usage: 39%               Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.23.101
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+79 updates can be applied immediately.
+39 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Fri May 23 01:47:25 2025 from 119.234.52.72
+[?2004h]0;ubuntu@ip-172-31-23-101: ~ubuntu@ip-172-31-23-101:~$ [K]0;ubuntu@ip-172-31-23-101: ~ubuntu@ip-172-31-23-101:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# docker info
+[?2004lClient:
+ Version:    26.1.3
+ Context:    default
+ Debug Mode: false
+ Plugins:
+  buildx: Docker Buildx (Docker Inc.)
+    Version:  0.14.1
+    Path:     /usr/libexec/docker/cli-plugins/docker-buildx
+
+Server:
+ Containers: 2
+  Running: 2
+  Paused: 0
+  Stopped: 0
+ Images: 2
+ Server Version: 26.1.3
+ Storage Driver: overlay2
+  Backing Filesystem: extfs
+  Supports d_type: true
+  Using metacopy: false
+  Native Overlay Diff: true
+  userxattr: false
+ Logging Driver: json-file
+ Cgroup Driver: systemd
+ Cgroup Version: 2
+ Plugins:
+  Volume: local
+  Network: bridge host ipvlan macvlan null overlay
+  Log: awslogs fluentd gcplogs gelf journald json-file local splunk syslog
+ Swarm: inactive
+ Runtimes: io.containerd.runc.v2 runc
+ Default Runtime: runc
+ Init Binary: docker-init
+ containerd version: 
+ runc version: 
+ init version: 
+ Security Options:
+  apparmor
+  seccomp
+   Profile: builtin
+  cgroupns
+ Kernel Version: 6.8.0-1024-aws
+ Operating System: Ubuntu 24.04.2 LTS
+ OSType: linux
+ Architecture: x86_64
+ CPUs: 2
+ Total Memory: 914.1MiB
+ Name: ip-172-31-23-101
+ ID: e1a821ed-4a6f-4198-b3ca-47dabb070de4
+ Docker Root Dir: /var/lib/docker
+ Debug Mode: false
+ Username: devadevops
+ Experimental: false
+ Insecure Registries:
+  127.0.0.0/8
+ Live Restore Enabled: false
+
+[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# clear
+[?2004l[H[2J[3J[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# [7m git clone https://github.com/anilbidari/python-kubernetes.git[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C git clone https://github.com/anilbidari/python-kubernetes.git
+[?2004lfatal: destination path 'python-kubernetes' already exists and is not an empty directory.
+[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# ls -ltr
+[?2004ltotal 4
+drwxr-xr-x 6 root root 4096 May 23 01:58 [0m[01;34mpython-kubernetes[0m
+[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# cd python-kubernetes/
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetesroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes# ls -ltr
+[?2004ltotal 20
+drwxr-xr-x 2 root root 4096 May 23 01:58 [0m[01;34mkubernetes[0m
+-rw-r--r-- 1 root root 1832 May 23 01:58 kubeadm.sh
+drwxr-xr-x 2 root root 4096 May 23 01:58 [01;34mdocker[0m
+-rw-r--r-- 1 root root   65 May 23 01:58 README.md
+drwxr-xr-x 2 root root 4096 May 23 01:59 [01;34mapp[0m
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetesroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes# cd docker/
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/dockerroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/docker# ls -ltr
+[?2004ltotal 4
+-rw-r--r-- 1 root root 137 May 23 01:58 Dockerfile
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/dockerroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/docker# vi Dockerfile 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"Dockerfile" 9L, 137B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33mFROM[m python:3.7[2;1H[K[3;1H[33mRUN[m [33mmkdir[m /app[3;15H[K[4;1H[33mWORKDIR[m /app
+[33mADD[m . /app/
+[33mRUN[m pip install [35m-r[m requirements.txt
+
+[33mEXPOSE[m 5000
+[33mCMD[m [35m[[m"[31mpython[m", "[31m/app/main.py[m"[35m][m
+[1m[34m~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H1,1[11CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130H:[1;1H[44;1H[K[44;1H:[?25hq![?25l[?2004l[>4;m[23;2t[23;1t[44;1H[K[44;1H[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/dockerroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/docker# cat [K[K[K[Kls -ltr
+[?2004ltotal 4
+-rw-r--r-- 1 root root 137 May 23 01:58 Dockerfile
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/dockerroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/docker# cd ../
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetesroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes# ls -l[K[K[K[K[Kls -ltr
+[?2004ltotal 20
+drwxr-xr-x 2 root root 4096 May 23 01:58 [0m[01;34mkubernetes[0m
+-rw-r--r-- 1 root root 1832 May 23 01:58 kubeadm.sh
+-rw-r--r-- 1 root root   65 May 23 01:58 README.md
+drwxr-xr-x 2 root root 4096 May 23 01:59 [01;34mapp[0m
+drwxr-xr-x 2 root root 4096 May 23 05:28 [01;34mdocker[0m
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetesroot@ip-172-31-23-101:/home/ubuntu/python-kubernetes# cd app/
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# l s-ltr
+[?2004lls: cannot access 's-ltr': No such file or directory
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cat[K[K[Kls -ltr cat 
+Dockerfile        main.py           requirements.txt  
+]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# ls -ltr cat main.py 
+[?2004lls: cannot access 'cat': No such file or directory
+-rw-r--r-- 1 root root 173 May 23 01:58 main.py
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cat [7m git clone https://github.com/anilbidari/python-kubernetes.git[27m^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cat main.py 
+[?2004lfrom flask import Flask
+app = Flask(__name__)
+
+@app.route("/")
+def hello():
+    return "Hello from Python!"
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=80)
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# vi Dockerfile 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"Dockerfile" 9L, 135B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[33mFROM[m python:3.7[2;1H[K[3;1H[33mRUN[m [33mmkdir[m /app[3;15H[K[4;1H[33mWORKDIR[m /app
+[33mADD[m . /app/
+[33mRUN[m pip install [35m-r[m requirements.txt
+
+[33mEXPOSE[m 80
+[33mCMD[m [35m[[m"[31mpython[m", "[31m/app/main.py[m"[35m][m
+[1m[34m~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H1,1[11CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130H:[1;1H[44;1H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"Dockerfile" 9L, 135B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# [7mdocker buildx build -t anilbidari/python:v1 .[27mdocker buildx build -t anilbidari/python:v1 .^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# [7mdocker run -d --name c1 -p 6001:80  anilbidari/python:v1[27mdocker run -d --name c1 -p 6001:80  anilbidari/python:v1[1P[1P[1P[1P[1@5[1@0[1@0[1@0[1P[1P[17@[7mpython-docker-poc[27mpython-docker-poc
+[?2004ld085433a4891cb230cad07621d536ff17df1e2c066a86100190fca1ce4e40b39
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker ps
+[?2004lCONTAINER ID   IMAGE                  COMMAND                 CREATED         STATUS         PORTS                                   NAMES
+d085433a4891   anilbidari/python:v1   "python /app/main.py"   6 seconds ago   Up 4 seconds   0.0.0.0:5000->80/tcp, :::5000->80/tcp   python-docker-poc
+79fb24c005a8   anilbidari/python:v1   "python /app/main.py"   3 hours ago     Up 3 hours     0.0.0.0:6001->80/tcp, :::6001->80/tcp   c1
+221fc88412a1   devadevops/python:v1   "python /app/main.py"   4 hours ago     Up 4 hours     0.0.0.0:5001->80/tcp, :::5001->80/tcp   container1
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker rm [7md085433a4891[27md085433a4891 [7m79fb24c005a8[27m79fb24c005a8 [7m221fc88412a1[27m221fc88412a1
+[?2004lError response from daemon: cannot remove container "/python-docker-poc": container is running: stop the container before removing or force remove
+Error response from daemon: cannot remove container "/c1": container is running: stop the container before removing or force remove
+Error response from daemon: cannot remove container "/container1": container is running: stop the container before removing or force remove
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker stop [7m221fc88412a1[27m221fc88412a1
+[?2004l
+221fc88412a1
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# 
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# ^C[?2004l[?2004h[?2004l
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker ps
+[?2004lCONTAINER ID   IMAGE                  COMMAND                 CREATED          STATUS          PORTS                                   NAMES
+d085433a4891   anilbidari/python:v1   "python /app/main.py"   40 seconds ago   Up 39 seconds   0.0.0.0:5000->80/tcp, :::5000->80/tcp   python-docker-poc
+79fb24c005a8   anilbidari/python:v1   "python /app/main.py"   4 hours ago      Up 4 hours      0.0.0.0:6001->80/tcp, :::6001->80/tcp   c1
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker stop [7md085433a4891[27md085433a4891
+[?2004l
+
+
+^C
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker stop d085433a4891ps[K
+[?2004lCONTAINER ID   IMAGE                  COMMAND                 CREATED          STATUS          PORTS                                   NAMES
+d085433a4891   anilbidari/python:v1   "python /app/main.py"   55 seconds ago   Up 54 seconds   0.0.0.0:5000->80/tcp, :::5000->80/tcp   python-docker-poc
+79fb24c005a8   anilbidari/python:v1   "python /app/main.py"   4 hours ago      Up 4 hours      0.0.0.0:6001->80/tcp, :::6001->80/tcp   c1
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker stop [7md085433a4891[27md085433a4891
+[?2004ld085433a4891
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker stop d085433a4891[K[K[K[K[K[K[K[K[K[K[K[K[7m79fb24c005a8[27m79fb24c005a8
+[?2004l79fb24c005a8
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# clear
+[?2004l[H[2J[3J[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cleardocker psstop 79fb24c005a8d085433a4891ps[Kstop d085433a4891ps[Kstop 221fc88412a1[24@rm d085433a4891 79fb24c005a8[C[C[C[C[C[C[C[C[C[C[C[C[Cps[Krun -d --name python-docker-poc -p 5000:80  anilbidari/python:v1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cvi Dockerfile [Kdocker run -d --name python-docker-poc -p 5000:80  anilbidari/python:v1[C[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1[1P/python:v1d/python:v1e/python:v1v/python:v1a/python:v1d/python:v1e/python:v1v/python:v1o/python:v1p/python:v1s/python:v1
+[?2004ldocker: Error response from daemon: Conflict. The container name "/python-docker-poc" is already in use by container "d085433a4891cb230cad07621d536ff17df1e2c066a86100190fca1ce4e40b39". You have to remove (or rename) that container to be able to reuse that name.
+See 'docker run --help'.
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker ps
+[?2004lCONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker ps -a
+[?2004lCONTAINER ID   IMAGE                  COMMAND                 CREATED         STATUS                            PORTS     NAMES
+d085433a4891   anilbidari/python:v1   "python /app/main.py"   2 minutes ago   Exited (137) About a minute ago             python-docker-poc
+79fb24c005a8   anilbidari/python:v1   "python /app/main.py"   4 hours ago     Exited (137) 42 seconds ago                 c1
+221fc88412a1   devadevops/python:v1   "python /app/main.py"   4 hours ago     Exited (137) About a minute ago             container1
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker images
+[?2004lREPOSITORY          TAG       IMAGE ID       CREATED       SIZE
+anilbidari/python   v1        9c8916fa9e92   4 hours ago   1.01GB
+devadevops/python   v1        c5e66bb35e63   3 days ago    1.01GB
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker rm [7md085433a4891[27md085433a4891
+[?2004ld085433a4891
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker rm d085433a4891[K[K[K[K[K[K[K[K[K[K[K[K[7m79fb24c005a8[27m79fb24c005a8
+[?2004l79fb24c005a8
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker rm 79fb24c005a8[K[K[K[K[K[K[K[K[K[K[K[K[7m221fc88412a1[27m221fc88412a1
+[?2004l221fc88412a1
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# clear
+[?2004l[H[2J[3J[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cleardocker rm 221fc88412a179fb24c005a8d085433a4891[9Pimages[1Pps -a[Krun -d --name python-docker-poc -p 5000:80  devadevops/python:v1
+[?2004l658971929a1a9c2356f6c4dfee573b7847435b33161b91a66507b2b1cc5fedc9
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# date
+[?2004lFri May 23 05:33:23 UTC 2025
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cat Dockerfile 
+[?2004lFROM python:3.7
+
+RUN mkdir /app
+WORKDIR /app
+ADD . /app/
+RUN pip install -r requirements.txt
+
+EXPOSE 80
+CMD ["python", "/app/main.py"]
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# a[Kdate
+[?2004lFri May 23 05:34:14 UTC 2025
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# docker ps 
+[?2004lCONTAINER ID   IMAGE                  COMMAND                 CREATED              STATUS              PORTS                                   NAMES
+658971929a1a   devadevops/python:v1   "python /app/main.py"   About a minute ago   Up About a minute   0.0.0.0:5000->80/tcp, :::5000->80/tcp   python-docker-poc
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# cat Dockerfile 
+[?2004lFROM python:3.7
+
+RUN mkdir /app
+WORKDIR /app
+ADD . /app/
+RUN pip install -r requirements.txt
+
+EXPOSE 80
+CMD ["python", "/app/main.py"]
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# date
+[?2004lFri May 23 05:36:00 UTC 2025
+[?2004h]0;root@ip-172-31-23-101: /home/ubuntu/python-kubernetes/approot@ip-172-31-23-101:/home/ubuntu/python-kubernetes/app# exit
+[?2004lexit
+[?2004h]0;ubuntu@ip-172-31-23-101: ~ubuntu@ip-172-31-23-101:~$ exit
+[?2004llogout

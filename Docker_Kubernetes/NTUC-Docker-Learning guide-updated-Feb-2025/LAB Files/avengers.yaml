@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avengers-deployment
+  labels:
+    app: avengers
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: avengers
+  template:
+    metadata:
+      labels:
+        app: avengers
+    spec:
+      containers:
+      - name: avengers-deployment
+        image: anilbidari/todo:2
+        ports:
+        - containerPort: 80
+

@@ -1,0 +1,1133 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.23 09:20:47 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 01:20:59 UTC 2025
+
+  System load:  0.02              Temperature:           -273.1 C
+  Usage of /:   5.7% of 95.82GB   Processes:             158
+  Memory usage: 26%               Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.19.219
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+42 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Thu May 22 05:16:51 2025 from 119.234.52.51
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ [K]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ sudo su -[K
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 02:29:29 UTC 2025
+
+  System load:  0.46              Temperature:           -273.1 C
+  Usage of /:   5.7% of 95.82GB   Processes:             163
+  Memory usage: 26%               Users logged in:       1
+  Swap usage:   0%                IPv4 address for ens5: 172.31.19.219
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+43 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri May 23 01:21:01 2025 from 119.234.52.72
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi[K[K[7mvim python.yaml[27mvim python.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;1H[?25h[44;1H[K[1;1H[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;140H0,0-1[9CAll[1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H0,1[11CAll[1;1H[?25h[?25l[36mapiVersion[m[35m:[m apps/v1[2;1H[K[2;1H[?25h[?25l[36mkind[m[35m:[m Deployment
+[36mmetadata[m[35m:[m[3;10H[K[4;1H  [36mname[m[35m:[m python-deployment[4;26H[K[4;26H[?25h[?25l
+  [36mlabels[m[35m:[m[5;10H[K[6;1H    [36mapp[m[35m:[m python[6;16H[K[7;1H[36mspec[m[35m:[m[7;6H[K[8;1H  [36mreplicas[m[35m:[m [31m3[m[8;14H[K[9;1H  selecto[9;10H[K[9;10H[?25h[?25l  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[10;17H[K[11;1H[K[11;1H[?25h[?25l      [36mapp[m[35m:[m python
+  [36mtemplate[m[35m:[m[12;12H[K[13;1H    [36mmetadata[m[35m:[m[13;14H[K[14;1H      l[14;8H[K[14;8H[?25h[?25l[36mlabels[m[35m:[m
+        [36mapp[m[35m:[m python[15;20H[K[16;1H    [36mspec[m[35m:[m[16;10H[K[17;1H      [36mcontainers[m[35m:[m[17;18H[K[18;1H[K[18;1H[?25h[?25l      [33m- [m[36mname[m[35m:[m python-container
+        [36mimage[m[35m:[m anilbidari/p[19;28H[K[19;28H[?25h[?25lython:v1
+        [36mports[m[35m:[m[20;15H[K[21;1H        [33m- [m[36mcontainerPort[m[35m:[m [31m80[m[21;28H[K[22;1H[K[44;140H22,1[22;1H[?25h[?25l[44;141H1[21;1H[?25h[?25l[44;141H0[20;1H[?25h[?25l[44;140H19[19;1H[?25h[?25l[44;143H2[19;2H[?25h[?25l[44;143H3[19;3H[?25h[?25l[44;143H4[19;4H[?25h[?25l[44;143H5[19;5H[?25h[?25l[44;143H6[19;6H[?25h[?25l[44;143H7[19;7H[?25h[?25l[44;143H8[19;8H[?25h[?25l[44;143H9[19;9H[?25h[?25l[44;143H10[19;10H[?25h[?25l[44;144H1[19;11H[?25h[?25l[44;144H2[19;12H[?25h[?25l[44;144H3[19;13H[?25h[?25l[44;144H4[19;14H[?25h[?25l[44;144H5[19;15H[?25h[?25l[44;144H6[19;16H[?25h[?25l[44;144H7[19;17H[?25h[?25l[44;144H8[19;18H[?25h[?25l[44;144H9[19;19H[?25h[?25l[44;144H8[19;18H[?25h[?25l[44;144H7[19;17H[?25h[?25l[44;144H6[19;16H[?25h[44;1H[K[19;15H[?25l[44;130H^[[19;15H[44;130H  [19;16H[44;140H19,15[9CAll[19;15H[?25h[?25l[44;130H~@k[19;15H[44;130H   [19;16H[44;144H6[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hnilbidari/python:v1[19;35H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hilbidari/python:v1[19;34H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hlbidari/python:v1[19;33H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hbidari/python:v1[19;32H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hidari/python:v1[19;31H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hdari/python:v1[19;30H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hari/python:v1[19;29H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hri/python:v1[19;28H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16Hi/python:v1[19;27H[K[19;16H[?25h[?25l[44;130Hx[19;16H[44;130H [19;16H[44;130Hdl[19;16H[44;130H  [19;16H/python:v1[19;26H[K[19;16H[?25h[?25l[44;130H^[[19;16H[44;130H  [19;16H[44;130H^[[19;16H[44;130H  [19;16H[?25h[?25l[44;130Hi[19;16H[44;130H [19;16H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H19,16[9CAll[19;16H[?25h[?25ld/python:v1[44;144H7[19;17H[?25h[?25le/python:v1[44;144H8[19;18H[?25h[?25lv/python:v1[44;144H9[19;19H[?25h[?25la/python:v1[44;143H20[19;20H[?25h[?25ld/python:v1[44;144H1[19;21H[?25h[?25le/python:v1[44;144H2[19;22H[?25h[?25lv/python:v1[44;144H3[19;23H[?25h[?25lo/python:v1[44;144H4[19;24H[?25h[?25lp/python:v1[44;144H5[19;25H[?25h[?25ls/python:v1[44;144H6[19;26H[?25h[44;1H[K[19;25H[?25l[44;130H^[[19;25H[44;130H  [19;26H[44;140H19,25[9CAll[19;25H[?25h[?25l[44;130H:[19;25H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python.yaml" [New] 22L, 365B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl get rs [27mkubectl get rs 
+[?2004lNAME                      DESIRED   CURRENT   READY   AGE
+ajay1-77689b94c8          3         3         3       20h
+ajay2-77689b94c8          3         3         3       20h
+ajay3-77689b94c8          3         3         3       20h
+avengers-pod-55d7bffd7d   1         1         1       18h
+pythonv1-697d9cd845       5         5         5       18h
+pythonv11-669674d778      3         3         3       17h
+pythonv11-f4c6c4d69       0         0         0       18h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deployment [K[K[K[K[K[K[K[K[K[K[Kall
+[?2004lerror: resource(s) were provided, but no name was specified
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete all-all
+[?2004lerror: unknown shorthand flag: 'a' in -all
+See 'kubectl delete --help' for usage.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete -all[K[K[K[K[7majay1-77689b94c8[27majay1-77689b94c8 [7majay2-77689b94c8[27majay2-77689b94c8
+[?2004lerror: the server doesn't have a resource type "ajay1-77689b94c8"
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete ajay1-77689b94c8 ajay2-77689b94c8[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kl delete deploy [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K get deploy
+[?2004lNAME           READY   UP-TO-DATE   AVAILABLE   AGE
+ajay1          3/3     3            3           20h
+ajay2          3/3     3            3           20h
+ajay3          3/3     3            3           20h
+avengers-pod   1/1     1            1           18h
+pythonv1       5/5     5            5           18h
+pythonv11      3/3     3            3           18h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get deploy[K[K[K[K[K[K[K[K[K[Kdelete deploy [7majay1[27majay1
+[?2004ldeployment.apps "ajay1" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deploy ajay1[K2
+[?2004ldeployment.apps "ajay2" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deploy ajay2[K3
+[?2004ldeployment.apps "ajay3" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deploy ajay3[K[K[K[K[K[7mavengers-pod[27mavengers-pod
+[?2004ldeployment.apps "avengers-pod" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deploy avengers-pod[K[K[K[K[K[K[K[K[K[K[K[K[7mpythonv1[27mpythonv1
+[?2004ldeployment.apps "pythonv1" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deploy pythonv1[K[K[K[K[K[K[K[K[7mpythonv11[27mpythonv11
+[?2004ldeployment.apps "pythonv11" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl create -f python.yaml[27mkubectl create -f python.yaml
+[?2004ldeployment.apps/python-deployment created
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods
+[?2004lNAME                                READY   STATUS        RESTARTS   AGE
+ajay-deamonset-9clv2                1/1     Running       0          19h
+ajay-deamonset-gttl5                1/1     Running       0          19h
+multi-cont                          2/2     Running       0          18h
+nginx                               1/1     Running       0          20h
+python-deployment-596b9f899-lq6zr   1/1     Running       0          5s
+python-deployment-596b9f899-qbk62   1/1     Running       0          5s
+python-deployment-596b9f899-zxdzn   1/1     Running       0          5s
+pythonv1-697d9cd845-b6k4h           1/1     Terminating   0          18h
+pythonv1-697d9cd845-f5cmf           1/1     Terminating   0          18h
+pythonv1-697d9cd845-f6scg           1/1     Terminating   0          18h
+pythonv1-697d9cd845-jnt47           1/1     Terminating   0          18h
+pythonv1-697d9cd845-tv66j           1/1     Terminating   0          18h
+pythonv11-669674d778-gfg4x          1/1     Terminating   0          17h
+pythonv11-669674d778-lnmwq          1/1     Terminating   0          17h
+pythonv11-669674d778-qhq7l          1/1     Terminating   0          17h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods[K[K[K[Kds
+[?2004lNAME             DESIRED   CURRENT   READY   UP-TO-DATE   AVAILABLE   NODE SELECTOR   AGE
+ajay-deamonset   2         2         2       2            2           <none>          19h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get ds[1P ds[1P ds[1P dsd dse dsl dse dst dse ds[C[C[C [7majay-deamonset[27majay-deamonset
+[?2004ldaemonset.apps "ajay-deamonset" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete ds ajay-deamonset[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kget hpa
+[?2004lNAME           REFERENCE                     TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
+nginx-hpa      Deployment/nginx-deployment   <unknown>/80%   3         10        3          21h
+pythonv1-hpa   Deployment/pythonv1           <unknown>/60%   5         20        5          18h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get hpa[K[K[K[K[K[K[Kdelete hpa [7mnginx-hpa[27mnginx-hpa
+[?2004lhorizontalpodautoscaler.autoscaling "nginx-hpa" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete hpa nginx-hpa[K[K[K[K[K[K[K[K[K[7mpythonv1-hpa[27mpythonv1-hpa
+[?2004lhorizontalpodautoscaler.autoscaling "pythonv1-hpa" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get rs
+[?2004lNAME                          DESIRED   CURRENT   READY   AGE
+python-deployment-596b9f899   3         3         3       66s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get rsdelete hpa pythonv1-hpa[3Pnginx-hpa[13Pget hpadelete ds ajay-deamonsetget ds[Kpodscreate -f python.yaml[13Pget pods
+[?2004lNAME                                READY   STATUS    RESTARTS   AGE
+multi-cont                          2/2     Running   0          18h
+nginx                               1/1     Running   0          20h
+python-deployment-596b9f899-lq6zr   1/1     Running   0          78s
+python-deployment-596b9f899-qbk62   1/1     Running   0          78s
+python-deployment-596b9f899-zxdzn   1/1     Running   0          78s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubce[Kt[K[Kectl get pods
+[?2004lNAME                                READY   STATUS    RESTARTS   AGE
+multi-cont                          2/2     Running   0          18h
+nginx                               1/1     Running   0          20h
+python-deployment-596b9f899-lq6zr   1/1     Running   0          97s
+python-deployment-596b9f899-qbk62   1/1     Running   0          97s
+python-deployment-596b9f899-zxdzn   1/1     Running   0          97s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods[K[K[K[K[K[K[K[Kdelt[Klete [K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[7mkubectl describe deployment python-deployment[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl describe deployment python-deployment
+[?2004lName:                   python-deployment
+Namespace:              default
+CreationTimestamp:      Fri, 23 May 2025 02:32:51 +0000
+Labels:                 app=python
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=python
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=python
+  Containers:
+   python-container:
+    Image:        devadevops/python:v1
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   python-deployment-596b9f899 (3/3 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  117s  deployment-controller  Scaled up replica set python-deployment-596b9f899 to 3
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# cat pyh[Kthon
+python-kubernetes/ python.yaml        
+]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# cat python.yaml 
+[?2004lapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+  labels:
+    app: python
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: python-container
+        image: devadevops/python:v1
+        ports:
+        - containerPort: 80
+
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get dp[Keploy
+[?2004lNAME                READY   UP-TO-DATE   AVAILABLE   AGE
+python-deployment   3/3     3            3           2m50s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl expose deployment python-deployment --type="NodePort"[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl expose deployment python-deployment --type="NodePort"
+[?2004lservice/python-deployment exposed
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get svc
+[?2004lNAME                TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes          ClusterIP      10.96.0.1       <none>        443/TCP        17h
+nginx-service       LoadBalancer   10.99.216.140   <pending>     80:30635/TCP   21h
+python-deployment   NodePort       10.110.90.100   <none>        80:31056/TCP   6s
+python-service      ClusterIP      10.103.103.12   <none>        80/TCP         17h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubce[K[Kectl get g[Ksvc
+[?2004lNAME                TYPE           CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+kubernetes          ClusterIP      10.96.0.1       <none>        443/TCP        17h
+nginx-service       LoadBalancer   10.99.216.140   <pending>     80:30635/TCP   21h
+python-deployment   NodePort       10.110.90.100   <none>        80:31056/TCP   42s
+python-service      ClusterIP      10.103.103.12   <none>        80/TCP         17h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get svc[K[K[K[K[K[K[Kdescribe svc [7mpython-deployment[27mpython-deployment
+[?2004lName:                     python-deployment
+Namespace:                default
+Labels:                   app=python
+Annotations:              <none>
+Selector:                 app=python
+Type:                     NodePort
+IP Family Policy:         SingleStack
+IP Families:              IPv4
+IP:                       10.110.90.100
+IPs:                      10.110.90.100
+Port:                     <unset>  80/TCP
+TargetPort:               80/TCP
+NodePort:                 <unset>  31056/TCP
+Endpoints:                192.168.101.55:80,192.168.75.97:80,192.168.75.98:80
+Session Affinity:         None
+External Traffic Policy:  Cluster
+Events:                   <none>
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl set image deployment.v1.apps/python-deployment python-container=anilbidari/python:v2[27m[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Ckubectl set image deployment.v1.apps/python-deployment python-container=anilbidari/python:v2
+[?2004ldeployment.apps/python-deployment image updated
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl set image deployment.v1.apps/python-deployment python-container=anilbidari/python:v2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[54Pdescribe svc python-deploymentget svc[Kdescribe svc python-deploymentget svc[Kexpose deployment python-deployment --type="NodePort"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget svc[Kdescribe svc python-deploymentget svc[K[K[K[Kpods
+[?2004lNAME                                READY   STATUS        RESTARTS   AGE
+multi-cont                          2/2     Running       0          19h
+nginx                               1/1     Running       0          20h
+python-deployment-596b9f899-lq6zr   1/1     Terminating   0          5m14s
+python-deployment-596b9f899-qbk62   1/1     Terminating   0          5m14s
+python-deployment-596b9f899-zxdzn   1/1     Terminating   0          5m14s
+python-deployment-9b669fc4b-plctf   1/1     Running       0          12s
+python-deployment-9b669fc4b-tk8tn   1/1     Running       0          14s
+python-deployment-9b669fc4b-xkxrs   1/1     Running       0          15s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubce[K[Kectl descr[K[Kcribe pod [7mpython-deployment-9b669fc4b-tk8tn[27mpython-deployment-9b669fc4b-tk8tn
+[?2004lName:             python-deployment-9b669fc4b-tk8tn
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             ip-172-31-31-206/172.31.31.206
+Start Time:       Fri, 23 May 2025 02:37:51 +0000
+Labels:           app=python
+                  pod-template-hash=9b669fc4b
+Annotations:      cni.projectcalico.org/containerID: 7a5925287b761a12fc9b4e43be1333838e160b4c8413e8e0cabfba92ccfa4237
+                  cni.projectcalico.org/podIP: 192.168.101.53/32
+                  cni.projectcalico.org/podIPs: 192.168.101.53/32
+Status:           Running
+IP:               192.168.101.53
+IPs:
+  IP:           192.168.101.53
+Controlled By:  ReplicaSet/python-deployment-9b669fc4b
+Containers:
+  python-container:
+    Container ID:   containerd://f9ce02423fc800ae2d4311e1e3d77ea91908d5fd8cd22400ca488e3f6aef9876
+    Image:          anilbidari/python:v2
+    Image ID:       docker.io/anilbidari/python@sha256:cc90805335056b729fea9117aeb5976424a2c4b0bd0b42346e761fe51c6afc5a
+    Port:           80/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Fri, 23 May 2025 02:37:52 +0000
+    Ready:          True
+    Restart Count:  0
+    Environment:    <none>
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-hsxh4 (ro)
+Conditions:
+  Type              Status
+  Initialized       True 
+  Ready             True 
+  ContainersReady   True 
+  PodScheduled      True 
+Volumes:
+  kube-api-access-hsxh4:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason     Age   From               Message
+  ----    ------     ----  ----               -------
+  Normal  Scheduled  33s   default-scheduler  Successfully assigned default/python-deployment-9b669fc4b-tk8tn to ip-172-31-31-206
+  Normal  Pulled     33s   kubelet            Container image "anilbidari/python:v2" already present on machine
+  Normal  Created    33s   kubelet            Created container python-container
+  Normal  Started    33s   kubelet            Started container python-container
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubc[Kc[Kectl delete deploy --all
+[?2004ldeployment.apps "python-deployment" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete deploy --all[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kget deploy
+[?2004lNo resources found in default namespace.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get [K[K[K[K[Kdelete [K[K[K[K[K[K[K delete svc --all
+[?2004lservice "kubernetes" deleted
+service "nginx-service" deleted
+service "python-deployment" deleted
+service "python-service" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete svc --all[1P --all[1P --all[1P --allh --allp --alla --all[C --all
+[?2004lNo resources found
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete hpa  --all[C[1P--all[1P--all[1P--all[1P--all[1P--alld--alls--all --all
+[?2004lNo resources found
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete ds --all[C[C[C[C[C[C[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kkubectl delete hpa  --all[1P[1P[1P[1@p[1@v[1@c
+[?2004lpersistentvolumeclaim "avengers-pvc" deleted
+persistentvolumeclaim "mysql-pvc" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete pvc  --all[C[C[C[C[C[1P
+[?2004lpersistentvolume "avengers-pv" deleted
+persistentvolume "mysql-pv" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kube cl[Ktl ns
+[?2004lCommand 'kube' not found, did you mean:
+  command 'kubu' from snap kubu (1.1.4)
+  command 'jube' from deb jube (2.5.1-1)
+  command 'qube' from deb avogadro-utils (1.98.1-2)
+See 'snap info <snapname>' for additional versions.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kube ctl ns[1P[C[C[C[C[C[C[K[Kdelete pv  --all[1@c[C[C[C[C[C[C[C[Kkubectl delete pvc  --all[Kkubectl delete hpa  --all[1Psvc[C[C[C[C[C[C[6Pget deploydelete deploy --allscribe pod python-deployment-9b669fc4b-tk8tn[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cget pods[Kdescribe pod python-deployment-9b669fc4b-tk8tn[27Plete deploy --all
+[?2004lNo resources found
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods
+[?2004lNAME         READY   STATUS    RESTARTS   AGE
+multi-cont   2/2     Running   0          19h
+nginx        1/1     Running   0          20h
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods[C[C[1P pods[1P pods[1P podsd podse podsl podse podst podse pods[Kkubectl delete pods[Kkubectl delete pods[K[Kd [7mmulti-cont[27mmulti-cont
+[?2004lpod "multi-cont" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl delete pod multi-cont[K[K[K[K[K[K[K[K[K[Knginx
+[?2004lpod "nginx" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# helm ls
+[?2004lNAME	NAMESPACE	REVISION	UPDATED	STATUS	CHART	APP VERSION
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# helm ls[K[K[K[K[K[K[Kls -ltr
+[?2004ltotal 84
+-rw-r--r-- 1 root root  373 May 20 08:55 avengers.yaml
+drwxr-xr-x 9 root root 4096 May 22 03:34 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root root  796 May 22 05:20 deployment.yaml
+-rw-r--r-- 1 root root    9 May 22 05:35 db-password.txt
+-rw-r--r-- 1 root root  283 May 22 05:37 pod.yaml
+-rw-r--r-- 1 root root  295 May 22 05:59 deployment2.yaml
+-rw-r--r-- 1 root root  295 May 22 06:02 deployment3.yaml
+-rw-r--r-- 1 root root  505 May 22 06:06 mysql_secret.yaml
+-rw-r--r-- 1 root root  136 May 22 06:23 node.yaml
+-rw-r--r-- 1 root root  266 May 22 07:22 deamonset.yaml
+-rw-r--r-- 1 root root  150 May 22 07:36 multi-container.yaml
+-rw-r--r-- 1 root root  183 May 22 07:55 deloyoment1_service.yaml
+-rw-r--r-- 1 root root  249 May 22 07:58 hpa.yml
+-rw-r--r-- 1 root root  233 May 22 08:11 pv.yaml
+-rw-r--r-- 1 root root  237 May 22 08:11 pvc.yaml
+-rw-r--r-- 1 root root  673 May 22 08:19 mysql.yaml
+-rw-r--r-- 1 root root  326 May 22 08:24 deployment1.yaml
+-rw-r--r-- 1 root root  330 May 22 08:27 1
+-rw-r--r-- 1 root root  330 May 22 08:27 deployment4.yaml
+-rw-r--r-- 1 root root  163 May 22 08:40 deloyoment1_service_clusterip.yaml
+-rw-r--r-- 1 root root  365 May 23 02:31 python.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# cd python-kubernetes/[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kexit
+[?2004lexit
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ ls -ltr
+[?2004ltotal 84
+-rw-r--r-- 1 root root  373 May 20 08:55 avengers.yaml
+drwxr-xr-x 9 root root 4096 May 22 03:34 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root root  796 May 22 05:20 deployment.yaml
+-rw-r--r-- 1 root root    9 May 22 05:35 db-password.txt
+-rw-r--r-- 1 root root  283 May 22 05:37 pod.yaml
+-rw-r--r-- 1 root root  295 May 22 05:59 deployment2.yaml
+-rw-r--r-- 1 root root  295 May 22 06:02 deployment3.yaml
+-rw-r--r-- 1 root root  505 May 22 06:06 mysql_secret.yaml
+-rw-r--r-- 1 root root  136 May 22 06:23 node.yaml
+-rw-r--r-- 1 root root  266 May 22 07:22 deamonset.yaml
+-rw-r--r-- 1 root root  150 May 22 07:36 multi-container.yaml
+-rw-r--r-- 1 root root  183 May 22 07:55 deloyoment1_service.yaml
+-rw-r--r-- 1 root root  249 May 22 07:58 hpa.yml
+-rw-r--r-- 1 root root  233 May 22 08:11 pv.yaml
+-rw-r--r-- 1 root root  237 May 22 08:11 pvc.yaml
+-rw-r--r-- 1 root root  673 May 22 08:19 mysql.yaml
+-rw-r--r-- 1 root root  326 May 22 08:24 deployment1.yaml
+-rw-r--r-- 1 root root  330 May 22 08:27 1
+-rw-r--r-- 1 root root  330 May 22 08:27 deployment4.yaml
+-rw-r--r-- 1 root root  163 May 22 08:40 deloyoment1_service_clusterip.yaml
+-rw-r--r-- 1 root root  365 May 23 02:31 python.yaml
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ cd [K[K[Ksudo su -
+[?2004l[?2004h]0;root@ip-172-31-19-219: ~root@ip-172-31-19-219:~# ch[K[Kexit
+[?2004llogout
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ ls -ltr
+[?2004ltotal 84
+-rw-r--r-- 1 root root  373 May 20 08:55 avengers.yaml
+drwxr-xr-x 9 root root 4096 May 22 03:34 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root root  796 May 22 05:20 deployment.yaml
+-rw-r--r-- 1 root root    9 May 22 05:35 db-password.txt
+-rw-r--r-- 1 root root  283 May 22 05:37 pod.yaml
+-rw-r--r-- 1 root root  295 May 22 05:59 deployment2.yaml
+-rw-r--r-- 1 root root  295 May 22 06:02 deployment3.yaml
+-rw-r--r-- 1 root root  505 May 22 06:06 mysql_secret.yaml
+-rw-r--r-- 1 root root  136 May 22 06:23 node.yaml
+-rw-r--r-- 1 root root  266 May 22 07:22 deamonset.yaml
+-rw-r--r-- 1 root root  150 May 22 07:36 multi-container.yaml
+-rw-r--r-- 1 root root  183 May 22 07:55 deloyoment1_service.yaml
+-rw-r--r-- 1 root root  249 May 22 07:58 hpa.yml
+-rw-r--r-- 1 root root  233 May 22 08:11 pv.yaml
+-rw-r--r-- 1 root root  237 May 22 08:11 pvc.yaml
+-rw-r--r-- 1 root root  673 May 22 08:19 mysql.yaml
+-rw-r--r-- 1 root root  326 May 22 08:24 deployment1.yaml
+-rw-r--r-- 1 root root  330 May 22 08:27 1
+-rw-r--r-- 1 root root  330 May 22 08:27 deployment4.yaml
+-rw-r--r-- 1 root root  163 May 22 08:40 deloyoment1_service_clusterip.yaml
+-rw-r--r-- 1 root root  365 May 23 02:31 python.yaml
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ ls -la
+[?2004ltotal 116
+drwxr-x--- 5 ubuntu ubuntu 4096 May 23 02:31 [0m[01;34m.[0m
+drwxr-xr-x 3 root   root   4096 May 20 03:40 [01;34m..[0m
+-rw------- 1 ubuntu ubuntu  154 May 21 09:31 .bash_history
+-rw-r--r-- 1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
+-rw-r--r-- 1 ubuntu ubuntu 3771 Mar 31  2024 .bashrc
+drwx------ 2 ubuntu ubuntu 4096 May 20 03:42 [01;34m.cache[0m
+-rw-r--r-- 1 ubuntu ubuntu  807 Mar 31  2024 .profile
+drwx------ 2 ubuntu ubuntu 4096 May 20 03:40 [01;34m.ssh[0m
+-rw-r--r-- 1 ubuntu ubuntu    0 May 20 05:09 .sudo_as_admin_successful
+-rw-r--r-- 1 root   root    330 May 22 08:27 1
+-rw-r--r-- 1 root   root    373 May 20 08:55 avengers.yaml
+-rw-r--r-- 1 root   root      9 May 22 05:35 db-password.txt
+-rw-r--r-- 1 root   root    266 May 22 07:22 deamonset.yaml
+-rw-r--r-- 1 root   root    183 May 22 07:55 deloyoment1_service.yaml
+-rw-r--r-- 1 root   root    163 May 22 08:40 deloyoment1_service_clusterip.yaml
+-rw-r--r-- 1 root   root    796 May 22 05:20 deployment.yaml
+-rw-r--r-- 1 root   root    326 May 22 08:24 deployment1.yaml
+-rw-r--r-- 1 root   root    295 May 22 05:59 deployment2.yaml
+-rw-r--r-- 1 root   root    295 May 22 06:02 deployment3.yaml
+-rw-r--r-- 1 root   root    330 May 22 08:27 deployment4.yaml
+-rw-r--r-- 1 root   root    249 May 22 07:58 hpa.yml
+-rw-r--r-- 1 root   root    150 May 22 07:36 multi-container.yaml
+-rw-r--r-- 1 root   root    673 May 22 08:19 mysql.yaml
+-rw-r--r-- 1 root   root    505 May 22 06:06 mysql_secret.yaml
+-rw-r--r-- 1 root   root    136 May 22 06:23 node.yaml
+-rw-r--r-- 1 root   root    283 May 22 05:37 pod.yaml
+-rw-r--r-- 1 root   root    233 May 22 08:11 pv.yaml
+-rw-r--r-- 1 root   root    237 May 22 08:11 pvc.yaml
+drwxr-xr-x 9 root   root   4096 May 22 03:34 [01;34mpython-kubernetes[0m
+-rw-r--r-- 1 root   root    365 May 23 02:31 python.yaml
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ e[Ksudo su -
+[?2004l[?2004h]0;root@ip-172-31-19-219: ~root@ip-172-31-19-219:~# exit
+[?2004llogout
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ sudo su -[K
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# chown -R [7mubuntu[27mubuntu:[7mubuntu[27mubuntu [7m/home/ubuntu[27m/home/ubuntu
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 84
+-rw-r--r-- 1 ubuntu ubuntu  373 May 20 08:55 avengers.yaml
+drwxr-xr-x 9 ubuntu ubuntu 4096 May 22 03:34 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 ubuntu ubuntu  796 May 22 05:20 deployment.yaml
+-rw-r--r-- 1 ubuntu ubuntu    9 May 22 05:35 db-password.txt
+-rw-r--r-- 1 ubuntu ubuntu  283 May 22 05:37 pod.yaml
+-rw-r--r-- 1 ubuntu ubuntu  295 May 22 05:59 deployment2.yaml
+-rw-r--r-- 1 ubuntu ubuntu  295 May 22 06:02 deployment3.yaml
+-rw-r--r-- 1 ubuntu ubuntu  505 May 22 06:06 mysql_secret.yaml
+-rw-r--r-- 1 ubuntu ubuntu  136 May 22 06:23 node.yaml
+-rw-r--r-- 1 ubuntu ubuntu  266 May 22 07:22 deamonset.yaml
+-rw-r--r-- 1 ubuntu ubuntu  150 May 22 07:36 multi-container.yaml
+-rw-r--r-- 1 ubuntu ubuntu  183 May 22 07:55 deloyoment1_service.yaml
+-rw-r--r-- 1 ubuntu ubuntu  249 May 22 07:58 hpa.yml
+-rw-r--r-- 1 ubuntu ubuntu  233 May 22 08:11 pv.yaml
+-rw-r--r-- 1 ubuntu ubuntu  237 May 22 08:11 pvc.yaml
+-rw-r--r-- 1 ubuntu ubuntu  673 May 22 08:19 mysql.yaml
+-rw-r--r-- 1 ubuntu ubuntu  326 May 22 08:24 deployment1.yaml
+-rw-r--r-- 1 ubuntu ubuntu  330 May 22 08:27 1
+-rw-r--r-- 1 ubuntu ubuntu  330 May 22 08:27 deployment4.yaml
+-rw-r--r-- 1 ubuntu ubuntu  163 May 22 08:40 deloyoment1_service_clusterip.yaml
+-rw-r--r-- 1 ubuntu ubuntu  365 May 23 02:31 python.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# rm -rf *.yaml
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 16
+drwxr-xr-x 9 ubuntu ubuntu 4096 May 22 03:34 [0m[01;34mpython-kubernetes[0m
+-rw-r--r-- 1 ubuntu ubuntu    9 May 22 05:35 db-password.txt
+-rw-r--r-- 1 ubuntu ubuntu  249 May 22 07:58 hpa.yml
+-rw-r--r-- 1 ubuntu ubuntu  330 May 22 08:27 1
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# rm -rf 1
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# rm -rf 1[K[7mpython-kubernetes[27mpython-kubernetes [7mdb-password.txt[27mdb-password.txt [7mhpa.yml[27mhpa.yml
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 0
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mhelm create todo[27mhelm create todo
+[?2004lCreating todo
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mhelm show values todo[27mhelm show values todo
+[?2004l# Default values for todo.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+replicaCount: 1
+
+# This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
+image:
+  repository: nginx
+  # This sets the pull policy for images.
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: ""
+
+# This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+imagePullSecrets: []
+# This is to override the chart name.
+nameOverride: ""
+fullnameOverride: ""
+
+# This section builds out the service account more information can be found here: https://kubernetes.io/docs/concepts/security/service-accounts/
+serviceAccount:
+  # Specifies whether a service account should be created
+  create: true
+  # Automatically mount a ServiceAccount's API credentials?
+  automount: true
+  # Annotations to add to the service account
+  annotations: {}
+  # The name of the service account to use.
+  # If not set and create is true, a name is generated using the fullname template
+  name: ""
+
+# This is for setting Kubernetes Annotations to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/
+podAnnotations: {}
+# This is for setting Kubernetes Labels to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/
+podLabels: {}
+
+podSecurityContext: {}
+  # fsGroup: 2000
+
+securityContext: {}
+  # capabilities:
+  #   drop:
+  #   - ALL
+  # readOnlyRootFilesystem: true
+  # runAsNonRoot: true
+  # runAsUser: 1000
+
+# This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/
+service:
+  # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-service-types
+  type: ClusterIP
+  # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports
+  port: 80
+
+# This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+  #  - secretName: chart-example-tls
+  #    hosts:
+  #      - chart-example.local
+
+resources: {}
+  # We usually recommend not to specify default resources and to leave this as a conscious
+  # choice for the user. This also increases chances charts run on environments with little
+  # resources, such as Minikube. If you do want to specify resources, uncomment the following
+  # lines, adjust them as necessary, and remove the curly braces after 'resources:'.
+  # limits:
+  #   cpu: 100m
+  #   memory: 128Mi
+  # requests:
+  #   cpu: 100m
+  #   memory: 128Mi
+
+# This is to setup the liveness and readiness probes more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/
+livenessProbe:
+  httpGet:
+    path: /
+    port: http
+readinessProbe:
+  httpGet:
+    path: /
+    port: http
+
+# This section is for setting up autoscaling more information can be found here: https://kubernetes.io/docs/concepts/workloads/autoscaling/
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  # targetMemoryUtilizationPercentage: 80
+
+# Additional volumes on the output Deployment definition.
+volumes: []
+# - name: foo
+#   secret:
+#     secretName: mysecret
+#     optional: false
+
+# Additional volumeMounts on the output Deployment definition.
+volumeMounts: []
+# - name: foo
+#   mountPath: "/etc/foo"
+#   readOnly: true
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mhelm install devops todo --dry-run[27mhelm install devops todo --dry-run
+[?2004lNAME: devops
+LAST DEPLOYED: Fri May 23 03:07:33 2025
+NAMESPACE: default
+STATUS: pending-install
+REVISION: 1
+HOOKS:
+---
+# Source: todo/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "devops-todo-test-connection"
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['devops-todo:80']
+  restartPolicy: Never
+MANIFEST:
+---
+# Source: todo/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: devops-todo
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+automountServiceAccountToken: true
+---
+# Source: todo/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-todo
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: ClusterIP
+  ports:
+    - port: 80
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+---
+# Source: todo/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-todo
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: todo
+      app.kubernetes.io/instance: devops
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: todo-0.1.0
+        app.kubernetes.io/name: todo
+        app.kubernetes.io/instance: devops
+        app.kubernetes.io/version: "1.16.0"
+        app.kubernetes.io/managed-by: Helm
+    spec:
+      serviceAccountName: devops-todo
+      containers:
+        - name: todo
+          image: "nginx:1.16.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+
+NOTES:
+1. Get the application URL by running these commands:
+  export POD_NAME=$(kubectl get pods --namespace default -l "app.kubernetes.io/name=todo,app.kubernetes.io/instance=devops" -o jsonpath="{.items[0].metadata.name}")
+  export CONTAINER_PORT=$(kubectl get pod --namespace default $POD_NAME -o jsonpath="{.spec.containers[0].ports[0].containerPort}")
+  echo "Visit http://127.0.0.1:8080 to use your application"
+  kubectl --namespace default port-forward $POD_NAME 8080:$CONTAINER_PORT
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi todo/values.yaml 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"todo/values.yaml" 123L, 4290B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[34m# Default values for todo.
+# This is a YAML-formatted file.[m[2;33H[K[3;1H[34m# Declare variables to be passed into your templates.[m[3;54H[K[5;1H[34m# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/[m
+[36mreplicaCount[m[35m:[m [31m1[m
+
+[34m# This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/[m
+[36mimage[m[35m:[m
+  [36mrepository[m[35m:[m nginx
+ [34m # This sets the pull policy for images.[m
+  [36mpullPolicy[m[35m:[m IfNotPresent
+ [34m # Overrides the image tag whose default is the chart appVersion.[m
+  [36mtag[m[35m:[m [31m""[m
+
+[34m# This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-cc[17;1Hontainer/pull-image-private-registry/[m
+[36mimagePullSecrets[m[35m:[m [35m[][m
+[34m# This is to override the chart name.[m
+[36mnameOverride[m[35m:[m [31m""[m
+[36mfullnameOverride[m[35m:[m [31m""[m
+
+[34m# This section builds out the service account more information can be found here: https://kubernetes.io/docs/concepts/security/service-accounts/[m
+[36mserviceAccount[m[35m:[m
+ [34m # Specifies whether a service account should be created[m
+  [36mcreate[m[35m:[m [31mtrue[m
+ [34m # Automatically mount a ServiceAccount's API credentials?[m
+  [36mautomount[m[35m:[m [31mtrue[m
+ [34m # Annotations to add to the service account[m
+  [36mannotations[m[35m:[m [35m{}[m
+ [34m # The name of the service account to use.
+[m [34m # If not set and create is true, a name is generated using the fullname template[m
+  [36mname[m[35m:[m [31m""[m
+
+[34m# This is for setting Kubernetes Annotations to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/annotations/[m
+[36mpodAnnotations[m[35m:[m [35m{}[m
+[34m# This is for setting Kubernetes Labels to a Pod.
+# For more information checkout: https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/[m
+[36mpodLabels[m[35m:[m [35m{}[m
+
+[36mpodSecurityContext[m[35m:[m [35m{}[m
+ [34m # fsGroup: 2000[m[44;140H1,1[11CTop[1;1H[?25h[?4m[?25l[44;130H~@k[1;1H[44;130H   [2;1H[44;140H2[2;1H[?25h[?25l[44;130H~@k[2;1H[44;130H   [3;1H[44;140H3[3;1H[?25h[?25l[44;130H~@k[3;1H[44;130H   [4;1H[44;140H4,0-1[4;1H[?25h[?25l[44;130H~@k[4;1H[44;130H   [5;1H[44;140H5,1  [5;1H[?25h[?25l[44;130H~@k[5;1H[44;130H   [6;1H[44;140H6[6;1H[?25h[?25l[44;130H~@k[6;1H[44;130H   [7;1H[44;140H7,0-1[7;1H[?25h[?25l[44;130H~@k[7;1H[44;130H   [8;1H[44;140H8,1  [8;1H[?25h[?25l[44;140H9[9;1H[?25h[?25l[44;130H~@k[9;1H[44;130H   [10;1H[44;140H10,1[10;1H[?25h[?25l[44;130H~@k[10;1H[44;130H   [11;1H[44;141H1[11;1H[?25h[?25l[44;130H~@k[11;1H[44;130H   [12;1H[44;141H2[12;1H[?25h[?25l[44;130H~@k[12;1H[44;130H   [13;1H[44;141H3[13;1H[?25h[?25l[44;130H~@k[13;1H[44;130H   [14;1H[44;141H4[14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [15;1H[44;141H5,0-1[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [16;1H[44;141H6,1  [16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [18;1H[44;141H7[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [19;1H[44;141H8[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [20;1H[44;141H9[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [21;1H[44;140H20[21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [22;1H[44;141H1,0-1[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [23;1H[44;141H2,1  [23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [24;1H[44;141H3[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [25;1H[44;141H4[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [26;1H[44;141H5[26;1H[?25h[?25l[44;130H~@k[26;1H[44;130H   [25;1H[44;141H4[25;1H[?25h[?25l[44;130H~@k[25;1H[44;130H   [24;1H[44;141H3[24;1H[?25h[?25l[44;130H~@k[24;1H[44;130H   [23;1H[44;141H2[23;1H[?25h[?25l[44;130H~@k[23;1H[44;130H   [22;1H[44;141H1,0-1[22;1H[?25h[?25l[44;130H~@k[22;1H[44;130H   [21;1H[44;141H0,1  [21;1H[?25h[?25l[44;130H~@k[21;1H[44;130H   [20;1H[44;140H19[20;1H[?25h[?25l[44;130H~@k[20;1H[44;130H   [19;1H[44;141H8[19;1H[?25h[?25l[44;130H~@k[19;1H[44;130H   [18;1H[44;141H7[18;1H[?25h[?25l[44;130H~@k[18;1H[44;130H   [16;1H[44;141H6[16;1H[?25h[?25l[44;130H~@k[16;1H[44;130H   [15;1H[44;141H5,0-1[15;1H[?25h[?25l[44;130H~@k[15;1H[44;130H   [14;1H[44;141H4,1  [14;1H[?25h[?25l[44;130H~@k[14;1H[44;130H   [14;2H[44;143H2[14;2H[?25h[?25l[44;130H~@k[14;2H[44;130H   [14;3H[44;143H3[14;3H[?25h[?25l[44;130H~@k[14;3H[44;130H   [14;4H[44;143H4[14;4H[?25h[?25l[44;130H~@k[14;4H[44;130H   [14;5H[44;143H5[14;5H[?25h[?25l[44;130H~@k[14;5H[44;130H   [14;6H[44;143H6[14;6H[?25h[?25l[44;130H~@k[14;6H[44;130H   [14;7H[44;143H7[14;7H[?25h[?25l[44;130H~@k[14;7H[44;130H   [14;8H[44;143H8[14;8H[?25h[?25l[44;130H~@k[14;8H[44;130H   [14;9H[44;143H9[14;9H[?25h[?25l[44;130H^[[14;9H[44;130H  [14;9H[44;130H^[[14;9H[44;130H  [14;9H[?25h[?25l[44;130Hi[14;9H[44;130H [14;9H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H14,9[10CTop[14;9H[?25h[?25l[31m1"[m[44;143H10[14;10H[?25h[?25l[31m."[m[44;144H1[14;11H[?25h[?25l[31m1"[m[44;144H2[14;12H[?25h[?25l[31m6"[m[44;144H3[14;13H[?25h[?25l[31m."[m[44;144H4[14;14H[?25h[?25l[31m0"[m[44;144H5[14;15H[?25h[?25l[44;141H5,1 [15;1H[?25h[?25l[44;141H6,15[16;15H[?25h[?25l[44;141H7[18;15H[?25h[?25l[44;141H8[19;15H[?25h[?25l[44;140H20[21;15H[?25h[?25l[44;141H1,1 [22;1H[?25h[?25l[44;141H2,15[23;15H[?25h[?25l[44;141H3[24;15H[?25h[?25l[44;141H4[25;15H[?25h[?25l[44;141H5[26;15H[?25h[?25l[44;141H6[27;15H[?25h[?25l[44;141H7[28;15H[?25h[?25l[44;141H8[29;15H[?25h[?25l[44;141H9[30;15H[?25h[?25l[44;140H30[31;15H[?25h[?25l[44;141H1[32;15H[?25h[?25l[44;141H2,11[33;11H[?25h[?25l[44;141H3,1 [34;1H[?25h[?25l[44;141H4,15[35;15H[?25h[?25l[44;141H5[36;15H[?25h[?25l[44;141H6[37;15H[?25h[?25l[44;141H7[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[44;140H[K[44;140H38,15[10C1%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[36msecurityContext[m[35m:[m [35m{}[m[44;140H[K[44;140H39,14[10C2%[38;12H[35m[46m{}[?25h[?25l[1;43r[m[43;1H
+[1;44r[43;2H[34m # capabilities:[m[44;140H[K[44;140H40,1[11C3%[37;12H[35m{}
+[?25h[?25l[1;43r[m[43;1H
+[1;44r[43;2H[34m #   drop:[m[44;140H[K[44;140H41,15[10C4%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m #   - ALL[m[44;140H[K[44;140H42,15[10C6%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # readOnlyRootFilesystem: true[m[44;140H[K[44;140H43,1[11C7%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # runAsNonRoot: true[m[44;140H[K[44;140H44,15[10C8%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # runAsUser: 1000[m[44;140H[K[44;140H45,15[10C9%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[44;140H[K[44;140H46,12[9C11%[38;12H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[34m# This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/[m[44;140H[K[44;140H47,12[9C12%[38;12H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[36mservice[m[35m:[m[44;140H[K[44;140H48,15[9C13%[38;15H[?25h[?25l[1;43r[1;1H[2M[1;44r[42;2H[34m # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-servii[43;1Hce-types[m[44;140H[K[44;140H49,15[9C15%[37;15H[?25h[?25l[44;140H50[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mtype[m[35m:[m ClusterIP[44;140H[K[44;140H51,1[10C17%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports[m[44;140H[K[44;140H52,15[9C18%[38;15H[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H[36mport[m[35m:[m [31m80[m[44;140H[K[44;140H53,9[10C19%[37;9H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[34m# This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/[m[44;140H[K[44;140H54,15[9C20%[37;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[36mingress[m[35m:[m[44;140H[K[44;140H55,15[9C22%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36menabled[m[35m:[m [31mfalse[m[44;140H[K[44;140H56,15[9C23%[38;15H[?25h[?25l[44;141H5[37;15H[?25h[?25l[44;141H6[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mclassName[m[35m:[m [31m""[m[44;140H[K[44;140H57,11[9C24%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mannotations[m[35m:[m [35m{}[m[44;140H[K[44;140H58,1[10C25%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;4H[34m # kubernetes.io/ingress.class: nginx[m[44;140H[K[44;140H59,15[9C27%[38;15H[?25h[?25l[1;43r[43;1H
+[1;44r[43;4H[34m # kubernetes.io/tls-acme: "true"[m[44;140H[K[44;140H60,9[10C28%[38;9H[?25h[?25l[44;140H59,15[37;15H[?25h[?25l[44;141H8,1 [36;1H[?25h[?25l[44;141H7,11[35;11H[?25h[?25l[44;141H6,15[34;15H[?25h[?25l[44;141H5[33;15H[?25h[?25l[44;141H4[31;15H[?25h[?25l[44;141H3,9 [30;9H[?25h[?25l[44;141H2,15[29;15H[?25h[?25l[44;141H1,1 [28;1H[?25h[?25l[44;141H0,15[27;15H[?25h[?25l[44;140H49[26;15H[?25h[?25l[44;141H8[25;15H[?25h[?25l[44;141H7,12[24;12H[?25h[?25l[44;141H6[23;12H[?25h[?25l[44;141H5,15[22;15H[?25h[?25l[44;141H4[21;15H[?25h[?25l[44;141H3,1 [20;1H[?25h[?25l[44;141H2,15[19;15H[?25h[?25l[44;141H1[18;15H[?25h[?25l[44;141H0,1 [17;1H[?25h[?25l[16;12H[35m[46m{}[m[44;140H39,14[16;14H[?25h[?25l[35m{}[m[44;141H8,15[15;15H[?25h[?25l[44;141H6[13;15H[?25h[?25l[44;141H5[12;15H[?25h[?25l[44;141H4[11;15H[?25h[?25l[44;141H3,1 [10;1H[?25h[?25l[44;141H2,11[9;11H[?25h[?25l[44;141H1,15[8;15H[?25h[?25l[44;141H0[7;15H[?25h[?25l[44;140H29[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[36mserviceAccount[m[35m:[m[44;140H[K[44;140H28,15[9C27%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[34m# This section builds out the service account more information can be found here: https://kubernetes.io/docs/concepts/security/service-accounts/[m[44;140H[K[44;140H27,15[9C25%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[44;140H[K[44;140H26,15[9C24%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[36mfullnameOverride[m[35m:[m [31m""[m[44;140H[K[44;140H25,15[9C23%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[36mnameOverride[m[35m:[m [31m""[m[44;140H[K[44;140H24,15[9C22%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[34m# This is to override the chart name.[m[44;140H[K[44;140H23,15[9C20%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[36mimagePullSecrets[m[35m:[m [35m[][m[44;140H[K[44;140H22,15[9C19%[6;15H[?25h[?25l[1;43r[1;1H[2L[1;44r[1;1H[34m# This is for the secrets for pulling an image from a private repository more information can be found here: https://kubernetes.io/docs/tasks/configure-pod-cc[2;1Hontainer/pull-image-private-registry/[m[44;140H[K[44;140H21,1[10C18%[7;1H[?25h[?25l[44;141H0,15[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[44;140H[K[44;140H19,15[9C17%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;3H[36mtag[m[35m:[m [31m"1.16.0"[m[44;140H[K[44;140H18,15[9C15%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;2H[34m # Overrides the image tag whose default is the chart appVersion.[m[43;1H[1m[34m@@@                                                                                                                                                          [m[44;140H[K[44;140H17,15[9C14%[6;15H[?25h[?25l[1;43r[1;1H[2L[1;44r[1;2H[34m # This sets the pull policy for images.[m
+  [36mpullPolicy[m[35m:[m IfNotPresent[44;140H[K[44;140H16,15[9C12%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;3H[36mrepository[m[35m:[m nginx[44;140H[K[44;140H15,1[10C11%[6;1H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[36mimage[m[35m:[m[44;140H[K[44;140H14,15[10C9%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[34m# This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/[m[44;140H[K[44;140H13,15[10C8%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[44;140H[K[44;140H12,15[10C7%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[36mreplicaCount[m[35m:[m [31m1[m[44;140H[K[44;140H11,15[10C6%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[34m# This will set the replicaset count more information can be found here: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/[m[44;140H[K[44;140H10,15[10C4%[6;15H[?25h[?25l[1;43r[1;1H[L[1;44r[44;140H[K[44;140H9,7[12C3%[6;7H[?25h[?25l[1;43r[1;1H[L[1;44r[1;1H[34m# Declare variables to be passed into your templates.[m[44;140H[K[44;140H8,15[11C2%[6;15H[?25h[?25l[44;140H9,7 [7;7H[?25h[?25l[44;140H8,15[6;15H[?25h[?25l[1;43r[1;1H[2L[1;44r[1;1H[34m# Default values for todo.
+# This is a YAML-formatted file.[m[44;140H[K[44;140H6,15[10CTop[6;15H[?25h[?25l[44;140H5[5;15H[?25h[?25l[44;140H4,1 [4;1H[?25h[?25l[44;140H3,15[3;15H[?25h[?25l[44;140H2[2;15H[?25h[?25l[44;140H1[1;15H[?25h[?25l[44;140H2[2;15H[?25h[?25l[44;140H3[3;15H[?25h[?25l[44;140H4,1 [4;1H[?25h[?25l[44;140H5,15[5;15H[?25h[?25l[44;140H6[6;15H[?25h[?25l[44;140H7,1 [7;1H[?25h[?25l[44;140H8,15[8;15H[?25h[?25l[44;140H9,7 [9;7H[?25h[?25l[44;140H10,15[10;15H[?25h[44;1H[K[10;14H[?25l[44;130H^[[10;14H[44;130H  [10;15H[44;140H10,14[9CTop[10;14H[?25h[?25l[44;130Hx[10;14H[44;130H [10;14H[44;130Hdl[10;14H[44;130H  [10;14H  repository:nginx[10;19H[K[10;14H[?25h[?25l[44;130Hx[10;14H[44;130H [10;14H[44;130Hdl[10;14H[44;130H  [10;14Hginx[10;18H[K[10;14H[?25h[?25l[44;130Hx[10;14H[44;130H [10;14H[44;130Hdl[10;14H[44;130H  [10;14Hinx[10;17H[K[10;14H[?25h[?25l[44;130Hx[10;14H[44;130H [10;14H[44;130Hdl[10;14H[44;130H  [10;14Hnx[10;16H[K[10;14H[?25h[?25l[44;130Hx[10;14H[44;130H [10;14H[44;130Hdl[10;14H[44;130H  [10;14Hx[10;15H[K[10;14H[?25h[?25l[44;130Hx[10;14H[44;130H [10;14H[44;130Hdl[10;14H[44;130H  [10;13H  [36mrepository[m[35m:[m[10;14H[K[44;144H3[10;13H[?25h[?25l[44;130H^[[10;13H[44;130H  [10;13H[44;130H^[[10;13H[44;130H  [10;13H[?25h[?25l[44;130HA[10;13H[44;130H [10;14H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H10,14[9CTop[10;14H[?25h[?25l[44;144H5[10;15H[?25h[?25la[44;144H6[10;16H[?25h[?25ln[44;144H7[10;17H[?25h[?25li[44;144H8[10;18H[?25h[?25ll[44;144H9[10;19H[?25h[?25lb[44;143H20[10;20H[?25h[?25li[44;144H1[10;21H[?25h[?25ld[44;144H2[10;22H[?25h[?25la[44;144H3[10;23H[?25h[?25lr[44;144H4[10;24H[?25h[?25li[44;144H5[10;25H[?25h[?25l/[44;144H6[10;26H[?25h[?25lt[44;144H7[10;27H[?25h[?25lo[44;144H8[10;28H[?25h[?25lt[44;144H9[10;29H[?25h[?25lo[44;143H30[10;30H[?25h[?25l[10;29H[K[44;143H29[10;29H[?25h[?25l[10;28H[K[44;144H8[10;28H[?25h[?25ld[44;144H9[10;29H[?25h[?25lo[44;143H30[10;30H[?25h[?25l[44;141H1[11;30H[?25h[?25l[44;141H2,27[12;27H[?25h[?25l[44;141H3,30[13;30H[?25h[?25l[44;141H4,16[14;16H[?25h[?25l[44;144H5[14;15H[?25h[?25l[44;144H4[14;14H[?25h[?25l[31m0"[m[14;15H[K[44;144H3[14;13H[?25h[?25l[31m0"[m[14;14H[K[44;144H2[14;12H[?25h[?25l[31m0"[m[14;13H[K[44;144H1[14;11H[?25h[?25l[44;141H5,1 [15;1H[?25h[?25l[44;141H6,11[16;11H[?25h[?25l[44;141H7[18;11H[?25h[?25l[44;141H8[19;11H[?25h[?25l[44;141H9[20;11H[?25h[?25l[44;140H20[21;11H[?25h[?25l[44;141H1,1 [22;1H[?25h[?25l[44;141H2,11[23;11H[?25h[?25l[44;141H3[24;11H[?25h[?25l[44;141H4[25;11H[?25h[?25l[44;141H5[26;11H[?25h[?25l[44;141H6[27;11H[?25h[?25l[44;141H7[28;11H[?25h[?25l[44;141H8[29;11H[?25h[?25l[44;141H9[30;11H[?25h[?25l[44;140H30[31;11H[?25h[?25l[44;141H1[32;11H[?25h[?25l[44;141H2[33;11H[?25h[?25l[44;141H3,1 [34;1H[?25h[?25l[44;141H4,11[35;11H[?25h[?25l[44;141H5[36;11H[?25h[?25l[44;141H6[37;11H[?25h[?25l[44;141H7[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[44;140H[K[44;140H38,11[10C1%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[36msecurityContext[m[35m:[m [35m{}[m[44;140H[K[44;140H39,11[10C2%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # capabilities:[m[44;140H[K[44;140H40,1[11C3%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m #   drop:[m[44;140H[K[44;140H41,11[10C4%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m #   - ALL[m[44;140H[K[44;140H42,11[10C6%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # readOnlyRootFilesystem: true[m[44;140H[K[44;140H43,1[11C7%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # runAsNonRoot: true[m[44;140H[K[44;140H44,11[10C8%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # runAsUser: 1000[m[44;140H[K[44;140H45,11[10C9%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[44;140H[K[44;140H46,11[9C11%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[34m# This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/[m[44;140H[K[44;140H47,11[9C12%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[36mservice[m[35m:[m[44;140H[K[44;140H48,11[9C13%[38;11H[?25h[?25l[1;43r[1;1H[2M[1;44r[42;2H[34m # This sets the service type more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services-servii[43;1Hce-types[m[44;140H[K[44;140H49,11[9C15%[37;11H[?25h[?25l[44;140H50[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mtype[m[35m:[m ClusterIP[44;140H[K[44;140H51,1[10C17%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # This sets the ports more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/#field-spec-ports[m[44;140H[K[44;140H52,11[9C18%[38;11H[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H[36mport[m[35m:[m [31m80[m[44;140H[K[44;140H53,9[10C19%[37;9H[?25h[?25l[1;43r[1;1H[2M[1;44r[42;1H[34m# This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/[m
+[36mingress[m[35m:[m[44;140H[K[44;140H55,11[9C22%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36menabled[m[35m:[m [31mfalse[m[44;140H[K[44;140H56,11[9C23%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mclassName[m[35m:[m [31m""[m[44;140H[K[44;140H57,11[9C24%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mannotations[m[35m:[m [35m{}[m[44;140H[K[44;140H58,1[10C25%[38;1H[?25h[?25l[1;43r[43;1H
+[1;44r[43;4H[34m # kubernetes.io/ingress.class: nginx[m[44;140H[K[44;140H59,11[9C27%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;4H[34m # kubernetes.io/tls-acme: "true"[m[44;140H[K[44;140H60,9[10C28%[38;9H[?25h[?25l[1;43r[1;1H[2M[1;44r[42;3H[36mhosts[m[35m:[m
+    [33m- [m[36mhost[m[35m:[m chart-example.local[44;140H[K[44;140H62,11[9C30%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;7H[36mpaths[m[35m:[m[44;140H[K[44;140H63,11[9C32%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;9H[33m- [m[36mpath[m[35m:[m /[44;140H[K[44;140H64,11[9C33%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;11H[36mpathType[m[35m:[m ImplementationSpecific[44;140H[K[44;140H65,11[9C34%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;3H[36mtls[m[35m:[m [35m[][m[44;140H[K[44;140H66,9[10C35%[38;9H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m #  - secretName: chart-example-tls[m[44;140H[K[44;140H67,11[9C37%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m #    hosts:[m[44;140H[K[44;140H68,11[9C38%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m #      - chart-example.local[m[44;140H[K[44;140H69,11[9C39%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[44;140H[K[44;140H70,11[9C40%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;1H[36mresources[m[35m:[m [35m{}[m[44;140H[K[44;140H71,10[9C41%[38;8H[35m[46m[][?25h[?25l[1;43r[m[43;1H
+[1;44r[43;2H[34m # We usually recommend not to specify default resources and to leave this as a conscious[m[44;140H[K[44;140H72,11[9C43%[37;8H[35m[][38;11H[?25h[?25l[1;43r[m[43;1H
+[1;44r[43;2H[34m # choice for the user. This also increases chances charts run on environments with little[m[44;140H[K[44;140H73,11[9C44%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # resources, such as Minikube. If you do want to specify resources, uncomment the following[m[44;140H[K[44;140H74,11[9C45%[38;11H[?25h[?25l[1;43r[43;1H
+[1;44r[43;2H[34m # lines, adjust them as necessary, and remove the curly braces after 'resources:'.[m[44;140H[K[44;140H75,1[10C46%[38;1H[?25h[?25l[44;141H4,11[37;11H[?25h[?25l[44;141H3[36;11H[?25h[?25l[44;141H2[35;11H[?25h[?25l[34;8H[35m[46m[][m[44;141H1,10[34;10H[?25h[?25l[35m[][m[44;141H0,11[33;11H[?25h[?25l[44;140H69[32;11H[?25h[?25l[44;141H8[31;11H[?25h[?25l[44;141H7[30;11H[?25h[?25l[44;141H6,9 [29;9H[?25h[?25l[44;141H5,11[28;11H[?25h[?25l[44;141H4[27;11H[?25h[?25l[44;141H3[26;11H[?25h[?25l[44;141H2[25;11H[?25h[?25l[44;141H1[24;11H[?25h[?25l[44;141H0,9 [23;9H[?25h[?25l[44;140H59,11[22;11H[?25h[?25l[44;141H8,1 [21;1H[?25h[?25l[44;141H7,11[20;11H[?25h[?25l[44;141H6[19;11H[?25h[?25l[44;141H5[18;11H[?25h[?25l[44;141H4[16;11H[?25h[?25l[44;141H3,9 [15;9H[?25h[?25l[44;141H4,11[16;11H[?25h[?25l[44;141H5[18;11H[?25h[?25l[44;141H6[19;11H[?25h[?25l[44;141H7[20;11H[?25h[?25l[31m8[m[44;144H2[20;12H[?25h[?25l[31m0[m[44;144H3[20;13H[?25h[?25l[44;141H6[19;13H[?25h[?25l[44;141H5[18;13H[?25h[?25l[44;144H4[18;14H[?25h[?25l[44;144H5[18;15H[?25h[?25l[44;144H6[18;16H[?25h[?25l[44;144H7[18;17H[?25h[?25l[44;144H8[18;18H[?25h[?25l[18;17H[K[44;144H7[18;17H[?25h[?25l[18;16H[K[44;144H6[18;16H[?25h[?25l[18;15H[K[44;144H5[18;15H[?25h[?25l[18;14H[K[44;144H4[18;14H[?25h[?25l[18;13H[K[44;144H3[18;13H[?25h[?25l[18;12H[K[44;144H2[18;12H[?25h[?25l[18;11H[K[44;144H1[18;11H[?25h[?25l[18;10H[K[44;144H0[18;10H[?25h[?25l[18;9H[K[44;143H9 [18;9H[?25h[?25lN[44;143H10[18;10H[?25h[?25lo[44;144H1[18;11H[?25h[?25ld[44;144H2[18;12H[?25h[?25le[44;144H3[18;13H[?25h[?25lP[44;144H4[18;14H[?25h[?25lo[44;144H5[18;15H[?25h[?25lr[44;144H6[18;16H[?25h[?25lt[44;144H7[18;17H[?25h[44;1H[K[18;16H[?25l[44;130H^[[18;16H[44;130H  [18;17H[44;140H55,16[9C46%[18;16H[?25h[?25l[44;130H:[18;16H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"todo/values.yaml" 123L, 4304B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# vi todo/values.yaml helm install devops todo --dry-run
+[?2004lNAME: devops
+LAST DEPLOYED: Fri May 23 03:10:01 2025
+NAMESPACE: default
+STATUS: pending-install
+REVISION: 1
+HOOKS:
+---
+# Source: todo/templates/tests/test-connection.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "devops-todo-test-connection"
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args: ['devops-todo:8080']
+  restartPolicy: Never
+MANIFEST:
+---
+# Source: todo/templates/serviceaccount.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: devops-todo
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+automountServiceAccountToken: true
+---
+# Source: todo/templates/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: devops-todo
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  type: NodePort
+  ports:
+    - port: 8080
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+---
+# Source: todo/templates/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devops-todo
+  labels:
+    helm.sh/chart: todo-0.1.0
+    app.kubernetes.io/name: todo
+    app.kubernetes.io/instance: devops
+    app.kubernetes.io/version: "1.16.0"
+    app.kubernetes.io/managed-by: Helm
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: todo
+      app.kubernetes.io/instance: devops
+  template:
+    metadata:
+      labels:
+        helm.sh/chart: todo-0.1.0
+        app.kubernetes.io/name: todo
+        app.kubernetes.io/instance: devops
+        app.kubernetes.io/version: "1.16.0"
+        app.kubernetes.io/managed-by: Helm
+    spec:
+      serviceAccountName: devops-todo
+      containers:
+        - name: todo
+          image: "anilbidari/todo:1.0"
+          imagePullPolicy: IfNotPresent
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+
+NOTES:
+1. Get the application URL by running these commands:
+  export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services devops-todo)
+  export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo http://$NODE_IP:$NODE_PORT
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# helm install devops todo --dry-run[14Pvi todo/values.yaml helm install devops todo --dry-run[K[K[K[K[K[K[K[K[K
+[?2004lNAME: devops
+LAST DEPLOYED: Fri May 23 03:10:07 2025
+NAMESPACE: default
+STATUS: deployed
+REVISION: 1
+NOTES:
+1. Get the application URL by running these commands:
+  export NODE_PORT=$(kubectl get --namespace default -o jsonpath="{.spec.ports[0].nodePort}" services devops-todo)
+  export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
+  echo http://$NODE_IP:$NODE_PORT
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl get svc [27mkubectl get svc 
+[?2004lNAME          TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)          AGE
+devops-todo   NodePort    10.106.133.52   <none>        8080:32217/TCP   26s
+kubernetes    ClusterIP   10.96.0.1       <none>        443/TCP          13m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mhelm delete devops [27mhelm delete devops 
+[?2004lrelease "devops" uninstalled
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get svc
+[?2004lNAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   15m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get svchelm delete devops [3Pkubectl get svc[C
+[?2004lNAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   16m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kube[K[K[K[Kl[Khelm list -n monitoring
+[?2004lNAME      	NAMESPACE 	REVISION	UPDATED                                	STATUS  	CHART             	APP VERSION
+grafana   	monitoring	1       	2025-05-22 01:52:35.521051266 +0000 UTC	deployed	grafana-9.0.1     	12.0.0     
+prometheus	monitoring	1       	2025-05-22 01:45:42.988128044 +0000 UTC	deployed	prometheus-27.16.0	v3.4.0     
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# helm list -n monitoring[1P[1P[1P[1P[1@d[1@e[1@l[1@e[1@t[1@e[C[C[C[C[C[C[C[C[C[C[C[C[C[C [7mgrafana[27mgrafana
+[?2004lrelease "grafana" uninstalled
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# helm delete -n monitoring grafana[K[K[K[K[K[K[K[7mprometheus[27mprometheus
+[?2004lrelease "prometheus" uninstalled
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# helm delete -n monitoring prometheus[3Pgrafana[10Plist -n monitoring
+[?2004lNAME	NAMESPACE	REVISION	UPDATED	STATUS	CHART	APP VERSION
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mvim pv.yaml [27mvim pv.yaml 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"pv.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;1H[?25h[44;1H[K[1;1H[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;140H0,0-1[9CAll[1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H0,1[11CAll[1;1H[?25h[?25l[36mapiVersion[m[35m:[m v1
+[36mkind[m[35m:[m PersistentVolume[2;23H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;1H  [36mname[m[35m:[m[4;8H[K[4;8H[?25h[?25l mysql-pv
+  [36mlabels[m[35m:[m[5;10H[K[6;1H    [36mtype[m[35m:[m local[6;16H[K[7;1H[36mspec[m[35m:[m[7;6H[K[8;1H  [36mstorageClassName[m[35m:[m[8;20H[K[8;20H[?25h[?25l manual
+  [36mcapacity[m[35m:[m[9;12H[K[10;1H    [36mstorage[m[35m:[m 10Gi[10;18H[K[11;1H  [36maccessModes[m[35m:[m[11;15H[K[12;1H    [33m- [mRea[12;10H[K[12;10H[?25h[?25ldWriteOnce
+  [36mhostPath[m[35m:[m[13;12H[K[14;1H    [36mpath[m[35m:[m [31m"/mnt/data/mysql"[m[14;28H[K[15;1H[K[44;140H15,1[15;1H[?25h[44;1H[K[15;1H[?25l[44;130H^[[15;1H[44;130H  [15;1H[44;140H15,0-1[8CAll[15;1H[?25h[?25l[44;130H^[[15;1H[44;130H  [15;1H[44;130H^[[15;1H[44;130H  [15;1H[?25h[?25l[44;130H:[15;1H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"pv.yaml" [New] 15L, 230B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl create -f pv.yaml[27mkubectl create -f pv.yaml
+[?2004lpersistentvolume/mysql-pv created
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl get pv [27mkubectl get pv 
+[?2004lNAME       CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS      CLAIM   STORAGECLASS   REASON   AGE
+mysql-pv   10Gi       RWO            Retain           Available           manual                  6s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mvim pvc.yaml[27mvim pvc.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"pvc.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H0,1[11CAll[1;1H[?25h[44;1H[K[1;1H[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;140H0,0-1[9CAll[1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H0,1[11CAll[1;1H[?25h[?25l[36mapiVersion[m[35m:[m v1
+[36mkind[m[35m:[m PersistentVolumeClaim[2;28H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;1H  [4;3H[K[4;3H[?25h[?25l[36mname[m[35m:[m mysql-pvc
+[36mspec[m[35m:[m[5;6H[K[6;1H  [36mstorageClassName[m[35m:[m manual[6;27H[K[7;1H  accessMode[7;13H[K[7;13H[?25h[?25l  [36maccessModes[m[35m:[m
+    [33m- [mReadWriteOnce[8;20H[K[9;1H  [36mresources[m[35m:[m[9;13H[K[10;1H    [36mrequests[m[35m:[m[10;14H[K[11;1H      storag[11;13H[K[11;13H[?25h[?25l[36mstorage[m[35m:[m 10Gi
+  [36mselector[m[35m:[m[12;12H[K[13;1H    [36mmatchLabels[m[35m:[m[13;17H[K[14;1H      [36mtype[m[35m:[m local[14;18H[K[15;1H[K[44;140H15,1[15;1H[?25h[44;1H[K[15;1H[?25l[44;130H^[[15;1H[44;130H  [15;1H[44;140H15,0-1[8CAll[15;1H[?25h[?25l[44;130H:[15;1H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"pvc.yaml" [New] 15L, 234B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl create -f pvc.yaml[27mkubectl create -f pvc.yaml
+[?2004lpersistentvolumeclaim/mysql-pvc created
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl get pvc[27mkubectl get pvc
+[?2004lNAME        STATUS   VOLUME     CAPACITY   ACCESS MODES   STORAGECLASS   AGE
+mysql-pvc   Bound    mysql-pv   10Gi       RWO            manual         5s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mvim mysql.yaml[27mvim mysql.yaml
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"mysql.yaml" [New][2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[2;1H[1m[34m~                                                                                                                                                            [3;1H~                                                                                                                                                            [4;1H~                                                                                                                                                            [5;1H~                                                                                                                                                            [6;1H~                                                                                                                                                            [7;1H~                                                                                                                                                            [8;1H~                                                                                                                                                            [9;1H~                                                                                                                                                            [10;1H~                                                                                                                                                            [11;1H~                                                                                                                                                            [12;1H~                                                                                                                                                            [13;1H~                                                                                                                                                            [14;1H~                                                                                                                                                            [15;1H~                                                                                                                                                            [16;1H~                                                                                                                                                            [17;1H~                                                                                                                                                            [18;1H~                                                                                                                                                            [19;1H~                                                                                                                                                            [20;1H~                                                                                                                                                            [21;1H~                                                                                                                                                            [22;1H~                                                                                                                                                            [23;1H~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H0,0-1[9CAll[1;1H[?25h[?4m[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;130H^[[1;1H[44;130H  [1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;14H[K[44;140H0,1[11CAll[1;1H[?25h[44;1H[K[1;1H[?25l[44;130H^[[1;1H[44;130H  [1;1H[44;140H0,0-1[9CAll[1;1H[?25h[?25l[44;130Hi[1;1H[44;130H [1;1H[44;1H[1m-- INSERT --[m[44;140H[K[44;140H0,1[11CAll[1;1H[?25h[?25l[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment[2;17H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;1H[K[4;1H[?25h[?25l  [36mname[m[35m:[m mysql
+[36mspec[m[35m:[m[5;6H[K[6;1H  [36mreplicas[m[35m:[m [31m1[m[6;14H[K[7;1H  [36mselector[m[35m:[m[7;12H[K[8;1H    [36mmatchLabels[m[35m:[m[8;17H[K[9;1H [9;2H[K[9;2H[?25h[?25l     [36mapp[m[35m:[m mysql
+  [36mstrategy[m[35m:[m[10;12H[K[11;1H    [36mtype[m[35m:[m Recreate[11;19H[K[12;1H  [36mtemplate[m[35m:[m[12;12H[K[13;1H    m[13;6H[K[13;6H[?25h[?25l[36mmetadata[m[35m:[m
+      [36mlabels[m[35m:[m[14;14H[K[15;1H        [36mapp[m[35m:[m mysql[15;19H[K[16;1H    [36mspec[m[35m:[m[16;10H[K[17;1H      conta[17;12H[K[17;12H[?25h[?25l[36mcontainers[m[35m:[m
+      [33m- [m[36mname[m[35m:[m mysql[18;20H[K[19;1H        [36mimage[m[35m:[m mysql:5.7[19;25H[K[20;1H        env[20;12H[K[20;12H[?25h[?25l[36menv[m[35m:[m
+        [33m- [m[36mname[m[35m:[m MYSQL_ROOT_PASSWORD[21;36H[K[22;1H          [36mvalue[m[35m:[m [31m"yourpas[m[22;26H[K[22;26H[?25h[?25l[31msword"[m [34m # Use a secret in production[m
+        [36mports[m[35m:[m[23;15H[K[24;1H        [33m- [mc[24;12H[K[24;12H[?25h[?25l[36mcontainerPort[m[35m:[m [31m3306[m
+        [36mvolumeMounts[m[35m:[m[25;22H[K[26;1H        [33m- [m[36mname[m[35m:[m mysql-[26;23H[K[26;23H[?25h[?25lstorage
+          [36mmountPath[m[35m:[m /var/lib/mysql[27;36H[K[28;1H      [36mvolumes[m[35m:[m[28;15H[K[29;1H    [29;5H[K[29;5H[?25h[?25l  [33m- [m[36mname[m[35m:[m mysql-storage
+        [36mpersistentVolumeClaim[m[35m:[m[30;31H[K[31;1H        [31;9H[K[31;9H[?25h[?25l  [36mclaimName[m[35m:[m mysql-pvc[32;1H[K[44;140H32,1[32;1H[?25h[44;1H[K[32;1H[?25l[44;130H^[[32;1H[44;130H  [32;1H[44;140H32,0-1[8CAll[32;1H[?25h[?25l[44;130H:[32;1H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"mysql.yaml" [New] 32L, 640B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl create -f  mysql.yaml[27mkubectl create -f  mysql.yaml
+[?2004ldeployment.apps/mysql created
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mkubectl get pods -o wide[27mkubectl get pods -o wide
+[?2004lNAME                     READY   STATUS    RESTARTS   AGE   IP               NODE               NOMINATED NODE   READINESS GATES
+mysql-7dc5bb78dc-j7658   1/1     Running   0          4s    192.168.75.102   ip-172-31-30-108   <none>           <none>
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# [7mssh ubuntu@s14worker1[27mssh ubuntu@s14worker1[K[K[K[K[K[K[K[K[K[K[7mip-172-31-30-108[27mip-172-31-30-108
+[?2004l(ubuntu@ip-172-31-30-108) Password: 
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 03:19:42 UTC 2025
+
+  System load:  0.09               Temperature:           -273.1 C
+  Usage of /:   12.8% of 76.45GB   Processes:             137
+  Memory usage: 22%                Users logged in:       0
+  Swap usage:   0%                 IPv4 address for ens5: 172.31.30.108
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+43 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Thu May 22 03:36:24 2025 from 172.31.19.219
+[?2004h]0;ubuntu@ip-172-31-30-108: ~ubuntu@ip-172-31-30-108:~$ exit
+[?2004llogout
+Connection to ip-172-31-30-108 closed.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubc[Kectl get pods
+[?2004lNAME                     READY   STATUS    RESTARTS   AGE
+mysql-7dc5bb78dc-j7658   1/1     Running   0          67s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get podsssh ubuntu@ip-172-31-30-108
+[?2004l(ubuntu@ip-172-31-30-108) Password: 
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 03:19:42 UTC 2025
+
+  System load:  0.09               Temperature:           -273.1 C
+  Usage of /:   12.8% of 76.45GB   Processes:             137
+  Memory usage: 22%                Users logged in:       0
+  Swap usage:   0%                 IPv4 address for ens5: 172.31.30.108
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+43 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Fri May 23 03:19:43 2025 from 172.31.19.219
+[?2004h]0;ubuntu@ip-172-31-30-108: ~ubuntu@ip-172-31-30-108:~$ [7mls -l /mnt/data/mysql[27mls -l /mnt/data/mysql
+[?2004ltotal 188476
+-rw-r----- 1 999 systemd-journal       56 May 22 03:34 auto.cnf
+-rw------- 1 999 systemd-journal     1680 May 22 03:34 ca-key.pem
+-rw-r--r-- 1 999 systemd-journal     1112 May 22 03:34 ca.pem
+-rw-r--r-- 1 999 systemd-journal     1112 May 22 03:34 client-cert.pem
+-rw------- 1 999 systemd-journal     1676 May 22 03:34 client-key.pem
+-rw-r----- 1 999 systemd-journal      475 May 23 02:32 ib_buffer_pool
+-rw-r----- 1 999 systemd-journal 50331648 May 23 03:18 ib_logfile0
+-rw-r----- 1 999 systemd-journal 50331648 May 22 03:34 ib_logfile1
+-rw-r----- 1 999 systemd-journal 79691776 May 23 03:18 ibdata1
+-rw-r----- 1 999 systemd-journal 12582912 May 23 03:18 ibtmp1
+drwxr-x--- 2 999 systemd-journal     4096 May 22 03:34 [0m[01;34mmysql[0m
+lrwxrwxrwx 1 999 systemd-journal       27 May 23 03:18 [40;31;01mmysql.sock[0m -> [40;31;01m/var/run/mysqld/mysqld.sock[0m
+drwxr-x--- 2 999 systemd-journal     4096 May 22 03:34 [01;34mperformance_schema[0m
+-rw------- 1 999 systemd-journal     1680 May 22 03:34 private_key.pem
+-rw-r--r-- 1 999 systemd-journal      452 May 22 03:34 public_key.pem
+-rw-r--r-- 1 999 systemd-journal     1112 May 22 03:34 server-cert.pem
+-rw------- 1 999 systemd-journal     1676 May 22 03:34 server-key.pem
+drwxr-x--- 2 999 systemd-journal    12288 May 22 03:34 [01;34msys[0m
+[?2004h]0;ubuntu@ip-172-31-30-108: ~ubuntu@ip-172-31-30-108:~$ exit
+[?2004llogout
+Connection to ip-172-31-30-108 closed.
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# ls -ltr
+[?2004ltotal 16
+drwxr-xr-x 4 root root 4096 May 23 03:09 [0m[01;34mtodo[0m
+-rw-r--r-- 1 root root  230 May 23 03:17 pv.yaml
+-rw-r--r-- 1 root root  234 May 23 03:17 pvc.yaml
+-rw-r--r-- 1 root root  640 May 23 03:18 mysql.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubc[Kectl get svc
+[?2004lNAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   25m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# exit
+[?2004lexit
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ exit
+[?2004llogout

@@ -121,6 +121,7 @@ Master Node : 18.118.206.232
 Usecase : 
 1. developer code [either docker / container] ==> convert to Kubernetes manifest with recommendation.************
 2. User Interface for Helm chat inputs with 12factor methology, and YML standards.*******
+3. AI agent, Agentic AI, RAG Agent, MCP??????? 
 
 check kubectl apply to modify the RS count using [apply and edit].
 

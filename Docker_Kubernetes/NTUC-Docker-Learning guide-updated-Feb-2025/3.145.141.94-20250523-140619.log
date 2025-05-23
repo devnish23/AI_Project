@@ -1,0 +1,44 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.23 14:06:19 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Access denied
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1024-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 06:06:34 UTC 2025
+
+  System load:  0.0               Temperature:           -273.1 C
+  Usage of /:   62.8% of 6.71GB   Processes:             113
+  Memory usage: 38%               Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.23.101
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+79 updates can be applied immediately.
+39 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+1 additional security update can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+Last login: Fri May 23 05:27:47 2025 from 119.234.52.72
+[?2004h]0;ubuntu@ip-172-31-23-101: ~ubuntu@ip-172-31-23-101:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# [7mhttp://localhost:5000 [27mhttp://localhost:5000 
+[?2004lbash: http://localhost:5000: No such file or directory
+[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# http://localhost:5000 [1@c[1@u[1@r[1@l[1@ 
+[?2004lHello from Python![?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# date
+[?2004lFri May 23 06:07:46 UTC 2025
+[?2004h]0;root@ip-172-31-23-101: /home/ubunturoot@ip-172-31-23-101:/home/ubuntu# exit
+[?2004lexit
+[?2004h]0;ubuntu@ip-172-31-23-101: ~ubuntu@ip-172-31-23-101:~$ exit
+[?2004llogout

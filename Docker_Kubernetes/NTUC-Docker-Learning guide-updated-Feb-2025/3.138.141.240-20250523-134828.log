@@ -1,0 +1,210 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.23 13:48:28 =~=~=~=~=~=~=~=~=~=~=~=
+login as: ubuntu
+Keyboard-interactive authentication prompts from server:
+| Password: 
+End of keyboard-interactive prompts from server
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.8.0-1029-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Fri May 23 05:48:36 UTC 2025
+
+  System load:  0.22              Temperature:           -273.1 C
+  Usage of /:   5.8% of 95.82GB   Processes:             163
+  Memory usage: 25%               Users logged in:       1
+  Swap usage:   0%                IPv4 address for ens5: 172.31.19.219
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+43 updates can be applied immediately.
+1 of these updates is a standard security update.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+Last login: Fri May 23 05:22:43 2025 from 119.234.52.72
+[?2004h]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ [K]0;ubuntu@ip-172-31-19-219: ~ubuntu@ip-172-31-19-219:~$ sudo su 
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get pods
+[?2004lNAME                                READY   STATUS    RESTARTS   AGE
+python-deployment-596b9f899-rhkvl   1/1     Running   0          5m29s
+python-deployment-596b9f899-sg8k4   1/1     Running   0          5m29s
+python-deployment-596b9f899-xg6pm   1/1     Running   0          5m29s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubed[K[K[K[K[Kdate
+[?2004lFri May 23 05:48:56 UTC 2025
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# datekubectl get podsexit[Kkubectl get svc[8Pls -ltr[K[K[K[K[K[K[Kkubectl desc[K[K[K[Kdescribe [K[K[K[K[K[K[K[K[K[K[K [Kl get deployemnt
+[?2004lerror: the server doesn't have a resource type "deployemnt"
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl get deployemnt[Kkubectl get deployemnt[K[K[K[K[Ky
+[?2004lNAME                READY   UP-TO-DATE   AVAILABLE   AGE
+python-deployment   3/3     3            3           6m36s
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# kubectl describe deployment [7mpython-deployment[27mpython-deployment
+[?2004lName:                   python-deployment
+Namespace:              default
+CreationTimestamp:      Fri, 23 May 2025 05:43:17 +0000
+Labels:                 app=python
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=python
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=python
+  Containers:
+   python-container:
+    Image:        devadevops/python:v1
+    Port:         80/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   python-deployment-596b9f899 (3/3 replicas created)
+Events:
+  Type    Reason             Age    From                   Message
+  ----    ------             ----   ----                   -------
+  Normal  ScalingReplicaSet  6m48s  deployment-controller  Scaled up replica set python-deployment-596b9f899 to 3
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# date
+[?2004lFri May 23 05:50:17 UTC 2025
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# cat py[K[K[K[K[K[Kls -ltr
+[?2004ltotal 20
+drwxr-xr-x 4 root root 4096 May 23 03:09 [0m[01;34mtodo[0m
+-rw-r--r-- 1 root root  230 May 23 03:17 pv.yaml
+-rw-r--r-- 1 root root  234 May 23 03:17 pvc.yaml
+-rw-r--r-- 1 root root  640 May 23 03:18 mysql.yaml
+drwxr-xr-x 3 root root 4096 May 23 05:43 [01;34mdoker-kubernetes-yaml[0m
+[?2004h]0;root@ip-172-31-19-219: /home/ubunturoot@ip-172-31-19-219:/home/ubuntu# cd [7mdoker-kubernetes-yaml[27mdoker-kubernetes-yaml
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# ls -ltr
+[?2004ltotal 32
+-rw-r--r-- 1 root root 909 May 23 05:40 mysql.yaml
+-rw-r--r-- 1 root root 412 May 23 05:40 deploy.yaml
+-rw-r--r-- 1 root root 315 May 23 05:40 autoscale.yaml
+-rw-r--r-- 1 root root  23 May 23 05:40 README.md
+-rw-r--r-- 1 root root 202 May 23 05:40 service.yaml
+-rw-r--r-- 1 root root 202 May 23 05:40 pvc.yaml
+-rw-r--r-- 1 root root 242 May 23 05:40 pv.yaml
+-rw-r--r-- 1 root root 365 May 23 05:43 python.yaml
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# cat [7mpython.yaml[27mpython.yaml
+[?2004lapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+  labels:
+    app: python
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: python-container
+        image: devadevops/python:v1
+        ports:
+        - containerPort: 80
+
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# date
+[?2004lFri May 23 05:51:02 UTC 2025
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# kubectl get deploye[Kment
+[?2004lNAME                READY   UP-TO-DATE   AVAILABLE   AGE
+python-deployment   3/3     3            3           9m52s
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# kubectl delete deploy [7mpython-deployment[27mpython-deployment
+[?2004ldeployment.apps "python-deployment" deleted
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# kubectl delete deploy python-deployment[17Pget deploymentdate[Kcat python.yaml[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kvi python.yaml 
+[?2004l[?1049h[22;0;0t[>4;2m[?1h=[?2004h[?1004h[1;44r[?12h[?12l[22;2t[22;1t[27m[23m[29m[m[H[2J[?25l[44;1H"python.yaml" 22L, 365B[2;1H▽[6n[2;1H  [3;1HPzz\[0%m[6n[3;1H           [1;1H[>c]10;?]11;?[1;1H[36mapiVersion[m[35m:[m apps/v1
+[36mkind[m[35m:[m Deployment[2;17H[K[3;1H[36mmetadata[m[35m:[m[3;10H[K[4;3H[36mname[m[35m:[m python-deployment
+  [36mlabels[m[35m:[m
+    [36mapp[m[35m:[m python
+[36mspec[m[35m:[m
+  [36mreplicas[m[35m:[m [31m3[m
+  [36mselector[m[35m:[m
+    [36mmatchLabels[m[35m:[m[11;7H[36mapp[m[35m:[m python
+  [36mtemplate[m[35m:[m
+    [36mmetadata[m[35m:[m[14;7H[36mlabels[m[35m:[m[15;9H[36mapp[m[35m:[m python
+    [36mspec[m[35m:[m[17;7H[36mcontainers[m[35m:[m[18;7H[33m- [m[36mname[m[35m:[m python-container[19;9H[36mimage[m[35m:[m devadevops/python:v1[20;9H[36mports[m[35m:[m[21;9H[33m- [m[36mcontainerPort[m[35m:[m [31m80[m
+
+[1m[34m~                                                                                                                                                            [24;1H~                                                                                                                                                            [25;1H~                                                                                                                                                            [26;1H~                                                                                                                                                            [27;1H~                                                                                                                                                            [28;1H~                                                                                                                                                            [29;1H~                                                                                                                                                            [30;1H~                                                                                                                                                            [31;1H~                                                                                                                                                            [32;1H~                                                                                                                                                            [33;1H~                                                                                                                                                            [34;1H~                                                                                                                                                            [35;1H~                                                                                                                                                            [36;1H~                                                                                                                                                            [37;1H~                                                                                                                                                            [38;1H~                                                                                                                                                            [39;1H~                                                                                                                                                            [40;1H~                                                                                                                                                            [41;1H~                                                                                                                                                            [42;1H~                                                                                                                                                            [43;1H~                                                                                                                                                            [m[44;140H19,25[9CAll[19;25H[?25h[?4m[?25l[44;130H~@k[19;25H[44;130H   [20;14H[44;140H20,14[20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [20;14H[?25h[?25l[44;130H~@k[20;14H[44;130H   [21;25H[44;141H1,25[21;25H[?25h[?25l[44;130H~@k[21;25H[44;130H   [21;26H[44;144H6[21;26H[?25h[?25l[44;130H~@k[21;26H[44;130H   [21;27H[44;144H7[21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H~@k[21;27H[44;130H   [21;27H[?25h[?25l[44;130H^[[21;27H[44;130H  [21;27H[44;130H^[[21;27H[44;130H  [21;27H[?25h[?25l[44;130Hx[21;27H[44;130H [21;27H[44;130Hdl[21;27H[44;130H  [21;26H[21;27H[K[44;144H6[21;26H[?25h[?25l[44;130Hx[21;26H[44;130H [21;26H[44;130Hdl[21;26H[44;130H  [21;25H[21;26H[K[44;144H5[21;25H[?25h[?25l[44;130H^[[21;25H[44;130H  [21;25H[44;130H^[[21;25H[44;130H  [21;25H[?25h[?25l[44;130Hu[21;25H[44;1H1 change; before #2  2 seconds ago[44;130H[K[21;26H[31m8[m[44;140H21,26[9CAll[44;140H[K[44;140H21,26[9CAll[21;26H[?25h[?25l[44;130Hx[21;26H[44;130H [21;26H[44;130Hdl[21;26H[44;130H  [21;25H[21;26H[K[44;144H5[21;25H[?25h[?25l[44;130H^[[21;25H[44;130H  [21;25H[44;130H^[[21;25H[44;130H  [21;25H[?25h[?25l[44;130Hi[21;25H[44;130H [21;25H[44;1H[1m-- INSERT --[m[44;13H[K[44;140H21,25[9CAll[21;25H[?25h[?25l[44;144H6[21;26H[?25h[?25l[31m5[m[44;144H7[21;27H[?25h[?25l[31m0[m[44;144H8[21;28H[?25h[?25l[31m0[m[44;144H9[21;29H[?25h[?25l[31m0[m[44;143H30[21;30H[?25h[44;1H[K[21;29H[?25l[44;130H^[[21;29H[44;130H  [21;30H[44;140H21,29[9CAll[21;29H[?25h[?25l[44;130H:[21;29H[44;130H[K[44;1H:[?25hwq![?25l[?2004l[>4;m"python.yaml" 22L, 368B written[23;2t[23;1t
+[?1004l[?2004l[?1l>[?1049l[23;0;0t[?25h[>4;m[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# vi python.yaml kubectl delete deploy python-deployment[17Pget deploymentdate[Kcat python.yaml[8Pls -ltrcd doker-kubernetes-yamlls -ltr[K[3Pdatekubectl describe deployment python-deploymentget deploy[Kemntdate[Kkubectl get podsexit[Kkubectl get svc[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kkubectl appl[K[K[K[Kcreate -f [7mpython.yaml[27mpython.yaml
+[?2004ldeployment.apps/python-deployment created
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# kubectl get deployment 
+[?2004lNAME                READY   UP-TO-DATE   AVAILABLE   AGE
+python-deployment   3/3     3            3           13s
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# kube[K[K[K[Kcat [7mpython.yaml[27mpython.yaml
+[?2004lapiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-deployment
+  labels:
+    app: python
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python
+  template:
+    metadata:
+      labels:
+        app: python
+    spec:
+      containers:
+      - name: python-container
+        image: devadevops/python:v1
+        ports:
+        - containerPort: 5000 
+
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# date
+[?2004lFri May 23 05:54:29 UTC 2025
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# kubectl describe deploy [7mpython-deployment[27mpython-deployment
+[?2004lName:                   python-deployment
+Namespace:              default
+CreationTimestamp:      Fri, 23 May 2025 05:54:05 +0000
+Labels:                 app=python
+Annotations:            deployment.kubernetes.io/revision: 1
+Selector:               app=python
+Replicas:               3 desired | 3 updated | 3 total | 3 available | 0 unavailable
+StrategyType:           RollingUpdate
+MinReadySeconds:        0
+RollingUpdateStrategy:  25% max unavailable, 25% max surge
+Pod Template:
+  Labels:  app=python
+  Containers:
+   python-container:
+    Image:        devadevops/python:v1
+    Port:         5000/TCP
+    Host Port:    0/TCP
+    Environment:  <none>
+    Mounts:       <none>
+  Volumes:        <none>
+Conditions:
+  Type           Status  Reason
+  ----           ------  ------
+  Available      True    MinimumReplicasAvailable
+  Progressing    True    NewReplicaSetAvailable
+OldReplicaSets:  <none>
+NewReplicaSet:   python-deployment-6d446445d (3/3 replicas created)
+Events:
+  Type    Reason             Age   From                   Message
+  ----    ------             ----  ----                   -------
+  Normal  ScalingReplicaSet  59s   deployment-controller  Scaled up replica set python-deployment-6d446445d to 3
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# date
+[?2004lFri May 23 05:55:07 UTC 2025
+[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# 
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# 
+[?2004l[?2004h]0;root@ip-172-31-19-219: /home/ubuntu/doker-kubernetes-yamlroot@ip-172-31-19-219:/home/ubuntu/doker-kubernetes-yaml# 
