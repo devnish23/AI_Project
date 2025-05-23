@@ -121,7 +121,8 @@ Master Node : 18.118.206.232
 Usecase : 
 1. developer code [either docker / container] ==> convert to Kubernetes manifest with recommendation.************
 2. User Interface for Helm chat inputs with 12factor methology, and YML standards.*******
-3. AI agent, Agentic AI, RAG Agent, MCP??????? 
+3. What is AI agent, Agentic AI, RAG Agent, MCP???????
+4. AI app for legal document in [Bank / and corporate site /insurance compay / give me complication, does and donths.
 
 check kubectl apply to modify the RS count using [apply and edit].
 
@@ -255,3 +256,13 @@ Get the PushGateway URL by running these commands in the same shell:
 For more information on running Prometheus, visit:
 https://prometheus.io/
 
+
+Day 5:-
+-------
+student : Docker 11 [Master : 3.138.141.240].
+Docker Node : 3.145.141.94
+User Name : ubuntu
+Password : CloudEnabled
+
+Slave1 Node : 18.189.7.104
+Slave2 Node : 3.17.109.177
