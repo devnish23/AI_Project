@@ -1,0 +1,106 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.26 23:40:05 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infraadm
+Pre-authentication banner message from server:
+| Authorized uses only. All activity may be monitored and reported.
+End of banner message from server
+infraadm@192.168.1.92's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last login: Sat May 24 17:31:08 2025 from 192.168.1.65
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ [K[infraadm@aifactory ~]$ du -sh *
+592M	aisandbox
+22G	CascadeProjects
+9.7M	CIS_Red_Hat_Enterprise_Linux_8_Benchmark_v3.0.0.pdf
+2.2M	CIS_VMWare_ESXi_8_Benchmark_v1.2.0.pdf
+5.9G	longchain-env
+20K	Python_Automation_Document.docx
+930M	RAG
+707M	rag-env
+4.0K	RAG.py
+1.5M	sqldiff
+642M	sqlite
+1.9M	sqlite3
+1.5M	sqlite3_analyzer
+1.5M	sqlite3_rsync
+3.3M	sqlite-tools-linux-x64-3490200.zip
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ du -sh *
+592M	aisandbox
+22G	CascadeProjects
+9.7M	CIS_Red_Hat_Enterprise_Linux_8_Benchmark_v3.0.0.pdf
+2.2M	CIS_VMWare_ESXi_8_Benchmark_v1.2.0.pdf
+5.9G	longchain-env
+20K	Python_Automation_Document.docx
+930M	RAG
+707M	rag-env
+4.0K	RAG.py
+1.5M	sqldiff
+642M	sqlite
+1.9M	sqlite3
+1.5M	sqlite3_analyzer
+1.5M	sqlite3_rsync
+3.3M	sqlite-tools-linux-x64-3490200.zip
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ cd CascadeProjects/
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ cd CascadeProjects/[11Pdu -sh *
+6.1G	agentic-rag-app
+24K	cis-compliance-checker
+5.7M	docs
+118M	document-ai-app
+5.9G	langgraph-qa
+30M	langgraph-qa-backup
+7.8M	langgraph-qa-backup-20250524.tar.gz
+45M	langgraph-qa-simple
+45M	langgraph-qa-simple-backup
+1.8G	rag_knowledge_system
+7.7G	rag_webapp
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ rm -rf rag_webapp/
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ du -sh *
+6.1G	agentic-rag-app
+24K	cis-compliance-checker
+5.7M	docs
+118M	document-ai-app
+5.9G	langgraph-qa
+30M	langgraph-qa-backup
+7.8M	langgraph-qa-backup-20250524.tar.gz
+45M	langgraph-qa-simple
+45M	langgraph-qa-simple-backup
+1.8G	rag_knowledge_system
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   43G  7.8G  85% /home
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ rm -rf langgraph-qa-backup agentic-rag-app
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ rm -rf langgraph-qa-backup agentic-rag-app[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h .[K
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   37G   14G  73% /home
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ df -h .rm -rf langgraph-qa-backup agentic-rag-app[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdf -h .[Ku -sh *
+24K	cis-compliance-checker
+5.7M	docs
+118M	document-ai-app
+5.9G	langgraph-qa
+7.8M	langgraph-qa-backup-20250524.tar.gz
+45M	langgraph-qa-simple
+45M	langgraph-qa-simple-backup
+1.8G	rag_knowledge_system
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ rm -rf langgraph-qa
+^[[A    ]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ sync
+d]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   31G   20G  61% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  4.1G  589M  88% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~/CascadeProjects[infraadm@aifactory CascadeProjects]$ exit
+logout

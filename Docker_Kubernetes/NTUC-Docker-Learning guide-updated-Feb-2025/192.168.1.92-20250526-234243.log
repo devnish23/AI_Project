@@ -1,0 +1,197 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.26 23:42:43 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infraadm
+Pre-authentication banner message from server:
+| Authorized uses only. All activity may be monitored and reported.
+End of banner message from server
+infraadm@192.168.1.92's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last login: Mon May 26 23:40:20 2025 from 192.168.1.65
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ [K[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   43G  7.1G  86% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  3.8G  941M  81% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   43G  7.3G  86% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  3.8G  889M  82% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   43G  7.5G  86% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  3.8G  889M  82% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   40G   11G  79% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  4.0G  725M  85% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   40G   11G  79% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  4.0G  725M  85% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   40G   11G  79% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  4.0G  713M  86% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G     0  7.7G   0% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  585M   70G   1% /
+/dev/mapper/rhel-usr             28G   18G   11G  64% /usr
+/dev/mapper/rhel-var             19G  777M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   40G   11G  79% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  4.0G  713M  86% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ vgs
+  WARNING: Running as a non-root user. Functionality may be unavailable.
+  /run/lock/lvm/P_global:aux: open failed: Permission denied
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ sudo vgs
+  VG   #PV #LV #SN Attr   VSize   VFree
+  rhel   1  10   0 wz--n- 230.30g 4.00m
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ sudo lsblk
+NAME                   MAJ:MIN RM   SIZE RO TYPE MOUNTPOINT
+sda                      8:0    0 232.9G  0 disk 
+├─sda1                   8:1    0     1G  0 part /boot
+├─sda2                   8:2    0   953M  0 part /boot/efi
+└─sda3                   8:3    0 230.3G  0 part 
+  ├─rhel-root          253:0    0    70G  0 lvm  /
+  ├─rhel-swap          253:1    0   7.9G  0 lvm  [SWAP]
+  ├─rhel-usr           253:2    0    28G  0 lvm  /usr
+  ├─rhel-opt           253:3    0  18.6G  0 lvm  /opt
+  ├─rhel-tmp           253:4    0   9.3G  0 lvm  /tmp
+  ├─rhel-var_tmp       253:5    0  18.6G  0 lvm  /var/tmp
+  ├─rhel-home          253:6    0    50G  0 lvm  /home
+  ├─rhel-var           253:7    0  18.6G  0 lvm  /var
+  ├─rhel-var_log_audit 253:8    0   4.7G  0 lvm  /var/log/audit
+  └─rhel-var_log       253:9    0   4.7G  0 lvm  /var/log
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   37G   14G  73% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ sync
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ sync
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ syncdf -h .sudo lsblk[3Pdf -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   33G   18G  65% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   33G   18G  65% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   33G   18G  65% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   31G   20G  62% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   31G   20G  62% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   35G   16G  69% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   35G   16G  69% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   35G   16G  69% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   35G   16G  69% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ sync
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ sync
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ syncdf -h .
+Filesystem             Size  Used Avail Use% Mounted on
+/dev/mapper/rhel-home   50G   35G   16G  69% /home
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ timed out waiting for input: auto-logout

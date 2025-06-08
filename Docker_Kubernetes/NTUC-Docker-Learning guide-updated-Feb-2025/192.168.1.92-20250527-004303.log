@@ -1,0 +1,36 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.27 00:43:03 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infraadm
+Pre-authentication banner message from server:
+| Authorized uses only. All activity may be monitored and reported.
+End of banner message from server
+infraadm@192.168.1.92's password: 
+Access denied
+infraadm@192.168.1.92's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last failed login: Tue May 27 00:43:19 +08 2025 from 192.168.1.65 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Mon May 26 23:42:57 2025 from 192.168.1.65
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df =h
+df: '=h': No such file or directory
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ df -h
+Filesystem                      Size  Used Avail Use% Mounted on
+devtmpfs                        7.7G     0  7.7G   0% /dev
+tmpfs                           7.7G  4.0K  7.7G   1% /dev/shm
+tmpfs                           7.7G  319M  7.4G   5% /run
+tmpfs                           7.7G     0  7.7G   0% /sys/fs/cgroup
+/dev/mapper/rhel-root            70G  5.5G   65G   8% /
+/dev/mapper/rhel-usr             28G   24G  4.3G  85% /usr
+/dev/mapper/rhel-var             19G  770M   18G   5% /var
+/dev/mapper/rhel-opt             19G  347M   19G   2% /opt
+/dev/mapper/rhel-tmp            9.4G  100M  9.3G   2% /tmp
+/dev/sda1                      1014M  322M  693M  32% /boot
+/dev/mapper/rhel-home            50G   36G   15G  72% /home
+/dev/sda2                       952M   20K  952M   1% /boot/efi
+/dev/mapper/rhel-var_log        4.7G  148M  4.6G   4% /var/log
+/dev/mapper/rhel-var_tmp         19G  166M   19G   1% /var/tmp
+/dev/mapper/rhel-var_log_audit  4.7G  4.3G  451M  91% /var/log/audit
+tmpfs                           1.6G     0  1.6G   0% /run/user/1001
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ timed out waiting for input: auto-logout

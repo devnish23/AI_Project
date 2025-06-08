@@ -1,0 +1,16 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  # Use Ubuntu 24.04 box
+  config.vm.box = "ubuntu/ubuntu-22.04"
+
+  (1..3).each do |i|
+    config.vm.define "ubuntu#{i}" do |node|
+      node.vm.hostname = "ubuntu#{i}"
+      node.vm.provider "virtualbox" do |vb|
+        vb.memory = 4096
+        vb.cpus = 2
+      end
+    end
+  end
+end

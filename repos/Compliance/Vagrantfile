@@ -1,0 +1,341 @@
+Vagrant.configure("2") do |config|
+  # Sync the kubeadm.sh script directory
+  config.vm.synced_folder "C:/Users/LENOVO/source/Docker_Kubernetes/NTUC-Docker-Learning guide-updated-Feb-2025/Docker-Kubernetes/", "/vagrant/kubeadm/"
+  # Master Node
+  config.vm.define "kmaster" do |master|
+    master.vm.box = "ubuntu/focal64"
+    master.vm.hostname = "kmaster"
+    master.vm.network "public_network", bridge: "Intel(R) Wireless-AC 9560 160MHz", ip: "192.168.56.10"
+    master.vm.network "private_network", ip: "192.168.56.11"
+    master.vm.network "forwarded_port", guest: 22, host: 2223, id: "ssh"
+    master.vm.network "forwarded_port", guest: 8080, host: 8081
+    master.vm.network "forwarded_port", guest: 6443, host: 6444
+    
+    # Configure SSH
+    master.vm.provider "virtualbox" do |vb|
+      vb.memory = 4096
+      vb.cpus = 2
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    end
+    
+    master.vm.provision "shell", inline: <<-SHELL
+      # Run kubeadm.sh script and initialize cluster
+      /vagrant/kubeadm/kubeadm.sh
+      kubeadm init --pod-network-cidr=10.244.0.0/16
+      
+      # Copy kubeconfig to vagrant user
+      mkdir -p /home/vagrant/.kube
+      cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config
+      chown vagrant:vagrant /home/vagrant/.kube/config
+      
+      # Install Flannel CNI
+      kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+      
+      # Enable dashboard
+      kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+      
+      # Create admin user for dashboard
+      kubectl create serviceaccount dashboard-admin-sa
+      kubectl create clusterrolebinding dashboard-admin-sa --clusterrole=cluster-admin --serviceaccount=default:dashboard-admin-sa
+      
+      # Get join command for worker nodes
+      KUBEADM_TOKEN=$(kubeadm token create)
+      KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH=$(openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //')
+      echo "KUBEADM_TOKEN=$KUBEADM_TOKEN" > /home/vagrant/kubeadm_join.sh
+      echo "KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH=$KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH" >> /home/vagrant/kubeadm_join.sh
+      echo "kubeadm join 192.168.56.10:6443 --token $KUBEADM_TOKEN --discovery-token-ca-cert-hash sha256:$KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH" >> /home/vagrant/kubeadm_join.sh
+      chmod +x /home/vagrant/kubeadm_join.sh
+      chown vagrant:vagrant /home/vagrant/kubeadm_join.sh
+      
+      # Wait for cluster to be ready
+      until kubectl get nodes &>/dev/null; do
+        echo "Waiting for cluster to be ready..."
+        sleep 5
+      done
+      
+      # Wait for Flannel to be ready
+      until kubectl get pods -n kube-system | grep -q "kube-flannel"; do
+        echo "Waiting for Flannel to be ready..."
+        sleep 5
+      done
+      
+      # Configure SSH
+      sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin yes/' /etc/ssh/sshd_config
+      sed -i 's/#PasswordAuthentication yes/PasswordAuthentication yes/' /etc/ssh/sshd_config
+      
+      # Restart SSH service
+      systemctl restart sshd
+      EOF
+      
+      # Load modules
+      modprobe overlay
+      modprobe br_netfilter
+      
+      # Configure sysctl params
+      cat > /etc/sysctl.d/kubernetes.conf <<EOF
+      net.bridge.bridge-nf-call-ip6tables = 1
+      net.bridge.bridge-nf-call-iptables = 1
+      net.ipv4.ip_forward = 1
+      EOF
+      
+      # Apply sysctl params
+      sysctl --system
+      
+      # Install containerd
+      apt-get update
+      apt-get install -y containerd
+      
+      # Configure containerd
+      containerd config default | tee /etc/containerd/config.toml
+      
+      # Enable and start containerd
+      systemctl enable containerd
+      systemctl start containerd
+    master.vm.provider "virtualbox" do |vb|
+      vb.memory = 4096
+      vb.cpus = 2
+      vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      vb.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
+    end
+    
+    master.vm.provision "shell", inline: <<-SHELL
+      # Update system and install dependencies
+      apt-get update && apt-get upgrade -y
+      apt-get install -y apt-transport-https curl
+      
+      # Configure containerd
+      cat > /etc/modules-load.d/containerd.conf <<EOF
+      overlay
+      br_netfilter
+      EOF
+      
+      # Load modules
+      modprobe overlay
+      modprobe br_netfilter
+      
+      # Configure sysctl params
+      cat > /etc/sysctl.d/kubernetes.conf <<EOF
+      net.bridge.bridge-nf-call-ip6tables = 1
+      net.bridge.bridge-nf-call-iptables = 1
+      net.ipv4.ip_forward = 1
+      EOF
+      
+      # Apply sysctl params
+      sysctl --system
+      
+      # Install containerd
+      apt-get update
+      apt-get install -y containerd
+      
+      # Configure containerd
+      containerd config default | tee /etc/containerd/config.toml
+      
+      # Enable and start containerd
+      systemctl enable containerd
+      systemctl start containerd
+      systemctl status containerd
+      
+      # Configure containerd for Kubernetes
+      sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+      systemctl restart containerd
+      systemctl status containerd
+      
+      # Install kubeadm, kubelet and kubectl
+      curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+      echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+      
+      # Install specific version of Kubernetes components
+      apt-get update
+      apt-get install -y kubelet=1.26.0-00 kubeadm=1.26.0-00 kubectl=1.26.0-00
+      
+      # Hold Kubernetes packages at current version
+      apt-mark hold kubelet kubeadm kubectl
+      
+      # Configure containerd for Kubernetes
+      sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+      systemctl restart containerd
+      systemctl status containerd
+      
+      # Verify installation
+      kubeadm version
+      kubelet --version
+      kubectl version --client
+      
+      # Initialize Kubernetes cluster
+      kubeadm init --pod-network-cidr=10.244.0.0/16
+      
+      # Copy kubeconfig to vagrant user
+      mkdir -p /home/vagrant/.kube
+      cp -i /etc/kubernetes/admin.conf /home/vagrant/.kube/config
+      chown vagrant:vagrant /home/vagrant/.kube/config
+      
+      # Install Flannel CNI
+      kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+      
+      # Enable dashboard
+      kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.7.0/aio/deploy/recommended.yaml
+      
+      # Create admin user for dashboard
+      kubectl create serviceaccount dashboard-admin-sa
+      kubectl create clusterrolebinding dashboard-admin-sa --clusterrole=cluster-admin --serviceaccount=default:dashboard-admin-sa
+      
+      # Get join command for worker nodes
+      KUBEADM_TOKEN=$(kubeadm token create)
+      KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH=$(openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //')
+      echo "KUBEADM_TOKEN=$KUBEADM_TOKEN" > /home/vagrant/kubeadm_join.sh
+      echo "KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH=$KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH" >> /home/vagrant/kubeadm_join.sh
+      echo "kubeadm join 192.168.56.10:6443 --token $KUBEADM_TOKEN --discovery-token-ca-cert-hash sha256:$KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH" >> /home/vagrant/kubeadm_join.sh
+      chmod +x /home/vagrant/kubeadm_join.sh
+      chown vagrant:vagrant /home/vagrant/kubeadm_join.sh
+      
+      # Wait for cluster to be ready
+      until kubectl get nodes &>/dev/null; do
+        echo "Waiting for cluster to be ready..."
+        sleep 5
+      done
+      
+      # Wait for Flannel to be ready
+      until kubectl get pods -n kube-system | grep -q "kube-flannel"; do
+        echo "Waiting for Flannel to be ready..."
+        sleep 5
+      done
+    SHELL
+  end
+
+  # Worker Node 1
+  config.vm.define "kworker1" do |worker1|
+    worker1.vm.box = "ubuntu/focal64"
+    worker1.vm.hostname = "kworker1"
+    worker1.vm.network "public_network", bridge: "Intel(R) Wireless-AC 9560 160MHz", ip: "192.168.56.11"
+    worker1.vm.network "private_network", ip: "192.168.56.12"
+    worker1.vm.provider "virtualbox" do |vb|
+      vb.memory = 4096
+      vb.cpus = 2
+    end
+
+    worker1.vm.provision "shell", inline: <<-SHELL
+      # Run kubeadm.sh script
+      /vagrant/kubeadm/kubeadm.sh
+    SHELL
+    worker1.vm.provision "shell", inline: <<-SHELL
+      # Run kubeadm.sh script and join cluster
+      /vagrant/kubeadm/kubeadm.sh
+      
+      # Join the cluster
+      KUBEADM_TOKEN=$(cat /vagrant/kubeadm_join.sh | grep KUBEADM_TOKEN | cut -d'=' -f2)
+      KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH=$(cat /vagrant/kubeadm_join.sh | grep KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH | cut -d'=' -f2)
+      kubeadm join 192.168.56.10:6443 --token $KUBEADM_TOKEN --discovery-token-ca-cert-hash sha256:$KUBEADM_DISCOVERY_TOKEN_CA_CERT_HASH
+      
+      # Wait for node to join
+      until kubectl get nodes &>/dev/null; do
+        echo "Waiting for node to join cluster..."
+        sleep 5
+      done
+    SHELL  
+      # Configure containerd
+      cat > /etc/modules-load.d/containerd.conf <<EOF
+      overlay
+      br_netfilter
+      EOF
+      
+      # Load modules
+      modprobe overlay
+      modprobe br_netfilter
+      
+      # Configure sysctl params
+      cat > /etc/sysctl.d/kubernetes.conf <<EOF
+      net.bridge.bridge-nf-call-ip6tables = 1
+      net.bridge.bridge-nf-call-iptables = 1
+      net.ipv4.ip_forward = 1
+      EOF
+      
+      # Apply sysctl params
+      sysctl --system
+      
+      # Install containerd
+      apt-get update
+      apt-get install -y containerd
+      
+      # Configure containerd
+      containerd config default | tee /etc/containerd/config.toml
+      
+      # Enable and start containerd
+      systemctl enable containerd
+      systemctl start containerd
+      systemctl status containerd
+      
+      # Configure containerd for Kubernetes
+      sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+      systemctl restart containerd
+      systemctl status containerd
+      
+      # Install kubeadm, kubelet and kubectl
+      curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+      echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+      apt-get update
+      apt-get install -y kubelet kubeadm kubectl
+    SHELL
+  end
+
+  # Worker Node 2
+  config.vm.define "kworker2" do |worker2|
+    worker2.vm.box = "ubuntu/focal64"
+    worker2.vm.hostname = "kworker2"
+    worker2.vm.network "public_network", bridge: "Intel(R) Wireless-AC 9560 160MHz", ip: "192.168.56.12"
+    worker2.vm.network "private_network", ip: "192.168.56.13"
+    worker2.vm.provider "virtualbox" do |vb|
+      vb.memory = 4096
+      vb.cpus = 2
+    end
+
+    worker2.vm.provision "shell", inline: <<-SHELL
+      # Update system and install dependencies
+      apt-get update && apt-get upgrade -y
+      apt-get install -y apt-transport-https curl
+      
+      # Configure containerd
+      cat > /etc/modules-load.d/containerd.conf <<EOF
+      overlay
+      br_netfilter
+      EOF
+      
+      # Load modules
+      modprobe overlay
+      modprobe br_netfilter
+      
+      # Configure sysctl params
+      cat > /etc/sysctl.d/kubernetes.conf <<EOF
+      net.bridge.bridge-nf-call-ip6tables = 1
+      net.bridge.bridge-nf-call-iptables = 1
+      net.ipv4.ip_forward = 1
+      EOF
+      
+      # Apply sysctl params
+      sysctl --system
+      
+      # Install containerd
+      apt-get update
+      apt-get install -y containerd
+      
+      # Configure containerd
+      containerd config default | tee /etc/containerd/config.toml
+      
+      # Enable and start containerd
+      systemctl enable containerd
+      systemctl start containerd
+      systemctl status containerd
+      
+      # Configure containerd for Kubernetes
+      sed -i 's/SystemdCgroup = false/SystemdCgroup = true/g' /etc/containerd/config.toml
+      systemctl restart containerd
+      systemctl status containerd
+      
+      # Install kubeadm, kubelet and kubectl
+      curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key add -
+      echo "deb https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
+      apt-get update
+      apt-get install -y kubelet kubeadm kubectl
+    SHELL
+  end
+end

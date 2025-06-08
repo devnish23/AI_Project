@@ -1,0 +1,18 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.24 12:11:44 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infraadm
+Pre-authentication banner message from server:
+| Authorized uses only. All activity may be monitored and reported.
+End of banner message from server
+infraadm@192.168.1.92's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last login: Sat May 24 10:10:28 2025 from 192.168.1.65
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ [K[infraadm@aifactory ~]$ sudo su 
+]0;root@aifactory:/home/infraadm[root@aifactory infraadm]# curl http://localhost:8000
+curl: (7) Failed to connect to localhost port 8000: Connection refused
+]0;root@aifactory:/home/infraadm[root@aifactory infraadm]# curl http://localhost:8000[K[K[K[K5173
+curl: (7) Failed to connect to localhost port 5173: Connection refused
+]0;root@aifactory:/home/infraadm[root@aifactory infraadm]# timed out waiting for input: auto-logout
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ timed out waiting for input: auto-logout

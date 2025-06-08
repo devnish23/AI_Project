@@ -1,0 +1,69 @@
+
+    <html>
+    <head>
+        <title>Compliance Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+            }
+            .summary {
+                font-size: 18px;
+                margin-bottom: 20px;
+            }
+            .compliant {
+                background-color: #d0f0fd; /* Light Blue */
+            }
+            .non-compliant {
+                background-color: #ffd6d6; /* Red */
+            }
+            .summary-compliant {
+                color: #007bff; /* Blue */
+            }
+            .summary-non-compliant {
+                color: #dc3545; /* Red */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Compliance Report for 192.168.1.92</h1>
+        <div class="summary">
+            <p><b>Compliant:</b> <span class="summary-compliant">3</span></p>
+            <p><b>Non-Compliant:</b> <span class="summary-non-compliant">528</span></p>
+        </div>
+        <div>
+            <input type="text" id="search" placeholder="Type 'non' or 'comp' to filter results">
+            <button onclick="filterResults()">Search</button>
+        </div>
+        <table border="1" cellpadding="5" cellspacing="0">
+            <tr>
+                <th>Setting</th>
+                <th>Expected</th>
+                <th>Current</th>
+                <th>Status</th>
+            </tr>
+    
+            <tr class="compliant">
+                <td>to set difok to 2 or more. Ensure setting conforms to local site policy</td>
+                <td></td>
+                <td></td>
+                <td>Compliant</td>
+            </tr>
+        
+            <tr class="compliant">
+                <td>to set maxrepeat to 3 or less and not 0. Ensure setting conforms to local site policy</td>
+                <td></td>
+                <td></td>
+                <td>Compliant</td>
+            </tr>
+        
+            <tr class="compliant">
+                <td>to set maxsequence to 3 or less and not 0. Ensure setting conforms to local site policy</td>
+                <td></td>
+                <td></td>
+                <td>Compliant</td>
+            </tr>
+        
+        </table>
+    </body>
+    </html>
+    

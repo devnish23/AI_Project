@@ -1,0 +1,16 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.24 10:10:10 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infraadm
+Pre-authentication banner message from server:
+| Authorized uses only. All activity may be monitored and reported.
+End of banner message from server
+infraadm@192.168.1.92's password: 
+Access denied
+infraadm@192.168.1.92's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last failed login: Sat May 24 10:10:23 +08 2025 from 192.168.1.65 on ssh:notty
+There was 1 failed login attempt since the last successful login.
+Last login: Wed May 21 22:11:37 2025 from 192.168.1.65
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ timed out waiting for input: auto-logout

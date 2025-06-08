@@ -1,0 +1,77 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>CIS Compliance Report - localhost</title>
+            <style>
+                body { font-family: Arial, sans-serif; margin: 20px; }
+                .header { text-align: center; margin-bottom: 30px; }
+                .summary { margin-bottom: 30px; padding: 20px; background: #f5f5f5; border-radius: 5px; }
+                .check-item { margin-bottom: 20px; padding: 15px; border: 1px solid #ddd; border-radius: 5px; }
+                .status-pass { color: green; font-weight: bold; }
+                .status-fail { color: red; font-weight: bold; }
+                .status-error { color: orange; font-weight: bold; }
+                .details { margin-top: 10px; white-space: pre-wrap; }
+                .progress-bar { 
+                    width: 100%; 
+                    height: 20px; 
+                    background-color: #f3f3f3;
+                    border-radius: 10px;
+                    overflow: hidden;
+                }
+                .progress {
+                    height: 100%;
+                    background-color: #4CAF50;
+                    width: 66%;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <h1>CIS Compliance Report</h1>
+                <h3>Host: localhost</h3>
+                <h4>Generated: 2025-05-24_10-22-18</h4>
+            </div>
+
+            <div class="summary">
+                <h2>Compliance Summary</h2>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <p>Total Checks: 3</p>
+                <p>Compliant: 2 (66%)</p>
+                <p>Non-compliant: 0</p>
+                <p>Errors: 1</p>
+            </div>
+
+            <div class="checks">
+                <h2>Detailed Results</h2>
+                
+                <div class="check-item">
+                    <h3>Firewall Configuration</h3>
+                    <p>Status: <span class="status-error">ERROR</span></p>
+                    <div class="details">
+                        <pre>"'nmap program was not found in path. PATH is : /home/infraadm/.windsurf-server/bin/8cb7f313303c8b35844a56b6fe0f76e508261569/bin/remote-cli:/home/infraadm/.local/bin:/home/infraadm/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin'"</pre>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <h3>SSH Configuration</h3>
+                    <p>Status: <span class="status-pass">PASS</span></p>
+                    <div class="details">
+                        <pre>"user infraadm\nhostname localhost\nport 22\naddkeystoagent false\naddressfamily any\nbatchmode no\ncanonicalizefallbacklocal yes\ncanonicalizehostname false\nchallengeresponseauthentication yes\ncheckhostip yes\ncompression no\ncontrolmaster false\nenablesshkeysign no\nclearallforwardings no\nexitonforwardfailure no\nfingerprinthash SHA256\nforwardagent no\nforwardx11 no\nforwardx11trusted yes\ngatewayports no\ngssapiauthentication yes\ngssapikeyexchange no\ngssapidelegatecredentials no\ngssapitrustdns no\ngssapirenewalforcesrekey no\ngssapikexalgorithms gss-curve25519-sha256-,gss-nistp256-sha256-,gss-group14-sha256-,gss-group16-sha512-,gss-gex-sha1-,gss-group14-sha1-\nhashknownhosts no\nhostbasedauthentication no\nidentitiesonly no\nkbdinteractiveauthentication yes\nnohostauthenticationforlocalhost no\npasswordauthentication yes\npermitlocalcommand no\nproxyusefdpass no\npubkeyauthentication yes\nrequesttty auto\nstreamlocalbindunlink no\nstricthostkeychecking ask\ntcpkeepalive yes\ntunnel false\nverifyhostkeydns false\nvisualhostkey no\nupdatehostkeys false\ncanonicalizemaxdots 1\nconnectionattempts 1\nforwardx11timeout 1200\nnumberofpasswordprompts 3\nserveralivecountmax 3\nserveraliveinterval 0\nciphers aes256-gcm@openssh.com,chacha20-poly1305@openssh.com,aes256-ctr,aes256-cbc,aes128-gcm@openssh.com,aes128-ctr,aes128-cbc\nhostkeyalgorithms ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-ed25519,rsa-sha2-512,rsa-sha2-256,ssh-rsa\nhostbasedkeytypes ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-ed25519,rsa-sha2-512,rsa-sha2-256,ssh-rsa\nkexalgorithms curve25519-sha256,curve25519-sha256@libssh.org,ecdh-sha2-nistp256,ecdh-sha2-nistp384,ecdh-sha2-nistp521,diffie-hellman-group-exchange-sha256,diffie-hellman-group14-sha256,diffie-hellman-group16-sha512,diffie-hellman-group18-sha512,diffie-hellman-group-exchange-sha1,diffie-hellman-group14-sha1\ncasignaturealgorithms ecdsa-sha2-nistp256,ecdsa-sha2-nistp384,ecdsa-sha2-nistp521,ssh-ed25519,rsa-sha2-256,rsa-sha2-512,ssh-rsa\nloglevel INFO\nmacs hmac-sha2-256-etm@openssh.com,hmac-sha1-etm@openssh.com,umac-128-etm@openssh.com,hmac-sha2-512-etm@openssh.com,hmac-sha2-256,hmac-sha1,umac-128@openssh.com,hmac-sha2-512\npubkeyacceptedkeytypes ecdsa-sha2-nistp256,ecdsa-sha2-nistp256-cert-v01@openssh.com,ecdsa-sha2-nistp384,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp521,ecdsa-sha2-nistp521-cert-v01@openssh.com,ssh-ed25519,ssh-ed25519-cert-v01@openssh.com,rsa-sha2-256,rsa-sha2-256-cert-v01@openssh.com,rsa-sha2-512,rsa-sha2-512-cert-v01@openssh.com,ssh-rsa,ssh-rsa-cert-v01@openssh.com\nxauthlocation /usr/bin/xauth\nidentityfile ~/.ssh/id_rsa\nidentityfile ~/.ssh/id_dsa\nidentityfile ~/.ssh/id_ecdsa\nidentityfile ~/.ssh/id_ed25519\nidentityfile ~/.ssh/id_xmss\ncanonicaldomains\nglobalknownhostsfile /etc/ssh/ssh_known_hosts /etc/ssh/ssh_known_hosts2\nuserknownhostsfile ~/.ssh/known_hosts ~/.ssh/known_hosts2\nsendenv LANG\nsendenv LC_CTYPE\nsendenv LC_NUMERIC\nsendenv LC_TIME\nsendenv LC_COLLATE\nsendenv LC_MONETARY\nsendenv LC_MESSAGES\nsendenv LC_PAPER\nsendenv LC_NAME\nsendenv LC_ADDRESS\nsendenv LC_TELEPHONE\nsendenv LC_MEASUREMENT\nsendenv LC_IDENTIFICATION\nsendenv LC_ALL\nsendenv LANGUAGE\nsendenv XMODIFIERS\nconnecttimeout none\ntunneldevice any:any\ncontrolpersist no\nescapechar ~\nipqos af21 cs1\nrekeylimit 0 0\nstreamlocalbindmask 0177\nsyslogfacility USER\n"</pre>
+                    </div>
+                </div>
+                
+                <div class="check-item">
+                    <h3>Password Policies</h3>
+                    <p>Status: <span class="status-pass">PASS</span></p>
+                    <div class="details">
+                        <pre>"Password policies meet CIS requirements"</pre>
+                    </div>
+                </div>
+                
+            </div>
+        </body>
+        </html>
+        

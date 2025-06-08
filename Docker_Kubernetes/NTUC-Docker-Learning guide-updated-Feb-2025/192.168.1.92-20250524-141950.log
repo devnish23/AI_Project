@@ -1,0 +1,36 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.05.24 14:19:50 =~=~=~=~=~=~=~=~=~=~=~=
+login as: infraadm
+Pre-authentication banner message from server:
+| Authorized uses only. All activity may be monitored and reported.
+End of banner message from server
+infraadm@192.168.1.92's password: 
+Activate the web console with: systemctl enable --now cockpit.socket
+
+Register this system with Red Hat Insights: insights-client --register
+Create an account or view all your systems at https://red.ht/insights-dashboard
+Last login: Sat May 24 12:12:00 2025 from 192.168.1.65
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ [K[infraadm@aifactory ~]$ ls -ltr
+total 2537060
+-rw-r-----.  1 infraadm infraadm   10150021 Apr 29 21:59  CIS_Red_Hat_Enterprise_Linux_8_Benchmark_v3.0.0.pdf
+-rw-r-----.  1 infraadm infraadm      17576 Apr 29 23:57  Python_Automation_Document.docx
+-rw-r-----.  1 infraadm infraadm    2259786 Apr 30 07:17  CIS_VMWare_ESXi_8_Benchmark_v1.2.0.pdf
+-rwxrwxr-x.  1 infraadm infraadm    1476288 May  7 19:09  [0m[01;32msqlite3_rsync[0m
+-rwxrwxr-x.  1 infraadm infraadm    1522016 May  7 19:09  [01;32msqlite3_analyzer[0m
+-rwxrwxr-x.  1 infraadm infraadm    1888840 May  7 19:09  [01;32msqlite3[0m
+-rwxrwxr-x.  1 infraadm infraadm    1517184 May  7 19:09  [01;32msqldiff[0m
+drwxr-x---.  7 infraadm infraadm        105 May 16 07:39  [01;34maisandbox[0m
+-rw-r-----.  1 infraadm infraadm    3372577 May 16 07:59  [01;31msqlite-tools-linux-x64-3490200.zip[0m
+drwxr-x---. 15 infraadm infraadm       4096 May 16 08:14  [01;34msqlite[0m
+drwxr-x---.  6 infraadm infraadm         87 May 19 20:34  [01;34mrag-env[0m
+drwxr-x---.  6 infraadm infraadm       4096 May 19 21:25  [01;34mlongchain-env[0m
+-rw-r-----.  1 infraadm infraadm       1315 May 19 21:32  RAG.py
+-rw-r-----.  1 infraadm infraadm 2575709910 May 21 22:11 [01;31m'ansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64 (1).tar.gz'[0m
+drwxr-xr-x.  4 root     root            138 May 21 22:16  [01;34mansible-automation-platform-containerized-setup-bundle-2.5-10.1-x86_64[0m
+drwxr-x---.  7 infraadm infraadm        171 May 24 14:16  [01;34mCascadeProjects[0m
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ curl -X POST "http://localhost:8001/upload" \
+>   -H "accept: application/json" \
+>   -H "Content-Type: multipart/form-data" \
+>   -F "files=@/home/youruser/documents/mydoc.txt"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kinfraadm/CIS_Red_Hat_Enterprise_Linux_8_Benchmark_v3.0.0.pdf"
+Internal Server Error]0;infraadm@aifactory:~[infraadm@aifactory ~]$ ls -l /home/ind[Kfraadm/Python_Automation_Document.docx
+-rw-r-----. 1 infraadm infraadm 17576 Apr 29 23:57 /home/infraadm/Python_Automation_Document.docx
+]0;infraadm@aifactory:~[infraadm@aifactory ~]$ timed out waiting for input: auto-logout

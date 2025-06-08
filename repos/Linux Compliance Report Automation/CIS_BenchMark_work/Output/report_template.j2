@@ -1,0 +1,30 @@
+
+    <html>
+    <head>
+        <title>Compliance Report</title>
+    </head>
+    <body>
+        <h1>Compliance Report</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Setting</th>
+                    <th>Expected</th>
+                    <th>Current</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for result in results %}
+                <tr>
+                    <td>{{ result.setting }}</td>
+                    <td>{{ result.expected }}</td>
+                    <td>{{ result.current }}</td>
+                    <td>{{ "Compliant" if result.compliant else "Non-Compliant" }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
