@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { applicationsAPI } from '../../services/api';
 import { PencilSquareIcon, TrashIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useLocation } from 'react-router-dom';
+import Upload from '../Upload/Upload';
 
 interface Application {
   _id: string;
@@ -33,10 +34,11 @@ const Applications: React.FC<ApplicationsProps> = () => {
   const [selectedProduct, setSelectedProduct] = useState<string>('');
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const [customVersion, setCustomVersion] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'applications' | 'patchmgmt'>('applications');
+  const [activeTab, setActiveTab] = useState<'applications' | 'patchmgmt' | 'bulkupload'>('applications');
   const [showPatchTab, setShowPatchTab] = useState(true);
   // Tab open/close logic
   const [showApplicationsTab, setShowApplicationsTab] = useState(true);
+  const [showBulkUploadTab, setShowBulkUploadTab] = useState(false);
 
   // Filter state
   const [filterVendor, setFilterVendor] = useState('');
@@ -121,6 +123,8 @@ const Applications: React.FC<ApplicationsProps> = () => {
         setActiveTab(tab);
         if (tab === 'applications') setShowApplicationsTab(true);
         if (tab === 'patchmgmt') setShowPatchTab(true);
+      } else if (tab === 'bulkupload') {
+        setShowBulkUploadTab(true);
       }
     }
   }, [location.state]);
@@ -263,6 +267,7 @@ const Applications: React.FC<ApplicationsProps> = () => {
 
       {/* Tabs */}
       <div className="flex space-x-2 mb-4">
+        {/* Applications Tab */}
         {showApplicationsTab && (
           <div className="flex items-center">
             <button
@@ -275,15 +280,17 @@ const Applications: React.FC<ApplicationsProps> = () => {
               className="ml-1 p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
               title="Close Applications Tab"
               onClick={() => {
-                if (!showPatchTab) return; // Don't close last tab
+                if (!showPatchTab && !showBulkUploadTab) return; // Don't close last tab
                 setShowApplicationsTab(false);
-                setActiveTab('patchmgmt');
+                if (showPatchTab) setActiveTab('patchmgmt');
+                else if (showBulkUploadTab) setActiveTab('bulkupload');
               }}
             >
               <XMarkIcon className="h-4 w-4 text-gray-500" />
             </button>
           </div>
         )}
+        {/* PatchMgmt Tab */}
         {showPatchTab && (
           <div className="flex items-center">
             <button
@@ -296,9 +303,33 @@ const Applications: React.FC<ApplicationsProps> = () => {
               className="ml-1 p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
               title="Close Patch Management Tab"
               onClick={() => {
-                if (!showApplicationsTab) return; // Don't close last tab
+                if (!showApplicationsTab && !showBulkUploadTab) return; // Don't close last tab
                 setShowPatchTab(false);
-                setActiveTab('applications');
+                if (showApplicationsTab) setActiveTab('applications');
+                else if (showBulkUploadTab) setActiveTab('bulkupload');
+              }}
+            >
+              <XMarkIcon className="h-4 w-4 text-gray-500" />
+            </button>
+          </div>
+        )}
+        {/* Bulk Upload Tab */}
+        {showBulkUploadTab && (
+          <div className="flex items-center">
+            <button
+              className={`px-4 py-2 rounded-t ${activeTab === 'bulkupload' ? 'bg-white dark:bg-gray-800 font-semibold' : 'bg-gray-200 dark:bg-gray-700'} border-b-2 ${activeTab === 'bulkupload' ? 'border-blue-600' : 'border-transparent'}`}
+              onClick={() => setActiveTab('bulkupload')}
+            >
+              Bulk Upload
+            </button>
+            <button
+              className="ml-1 p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
+              title="Close Bulk Upload Tab"
+              onClick={() => {
+                if (!showApplicationsTab && !showPatchTab) return; // Don't close last tab
+                setShowBulkUploadTab(false);
+                if (showApplicationsTab) setActiveTab('applications');
+                else if (showPatchTab) setActiveTab('patchmgmt');
               }}
             >
               <XMarkIcon className="h-4 w-4 text-gray-500" />
@@ -306,7 +337,6 @@ const Applications: React.FC<ApplicationsProps> = () => {
           </div>
         )}
       </div>
-
       {/* Tab Content */}
       {showApplicationsTab && activeTab === 'applications' && (
         <>
@@ -396,21 +426,21 @@ const Applications: React.FC<ApplicationsProps> = () => {
               placeholder="Filter by Vendor"
               value={filterVendor}
               onChange={e => setFilterVendor(e.target.value)}
-              className="border rounded px-2 py-1"
+              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
             <input
               type="text"
               placeholder="Filter by Name"
               value={filterName}
               onChange={e => setFilterName(e.target.value)}
-              className="border rounded px-2 py-1"
+              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
             <input
               type="text"
               placeholder="Filter by Version"
               value={filterVersion}
               onChange={e => setFilterVersion(e.target.value)}
-              className="border rounded px-2 py-1"
+              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
           </div>
           {/* Applications Table */}
@@ -439,14 +469,14 @@ const Applications: React.FC<ApplicationsProps> = () => {
                   <tbody>
                     {filteredApplications.map((app, idx) => (
                       <tr key={app._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                        <td className="px-4 py-2">{idx + 1}</td>
-                        <td className="px-4 py-2">{app.vendor}</td>
-                        <td className="px-4 py-2">{app.name}</td>
-                        <td className="px-4 py-2">{app.version}</td>
-                        <td className="px-4 py-2">{app.eolDate ? new Date(app.eolDate).toLocaleDateString() : '-'}</td>
-                        <td className="px-4 py-2">{app.eoslDate ? new Date(app.eoslDate).toLocaleDateString() : '-'}</td>
-                        <td className="px-4 py-2 capitalize">{app.status}</td>
-                        <td className="px-4 py-2">{new Date(app.createdAt).toLocaleDateString()}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{idx + 1}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.vendor}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.name}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.version}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.eolDate ? new Date(app.eolDate).toLocaleDateString() : '-'}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.eoslDate ? new Date(app.eoslDate).toLocaleDateString() : '-'}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100 capitalize">{app.status}</td>
+                        <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{new Date(app.createdAt).toLocaleDateString()}</td>
                         <td className="px-4 py-2 flex space-x-2">
                           <button
                             className="p-1 rounded hover:bg-yellow-100 dark:hover:bg-yellow-900"
@@ -480,21 +510,21 @@ const Applications: React.FC<ApplicationsProps> = () => {
               placeholder="Filter by Vendor"
               value={patchFilterVendor}
               onChange={e => setPatchFilterVendor(e.target.value)}
-              className="border rounded px-2 py-1"
+              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
             <input
               type="text"
               placeholder="Filter by Name"
               value={patchFilterName}
               onChange={e => setPatchFilterName(e.target.value)}
-              className="border rounded px-2 py-1"
+              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
             <input
               type="text"
               placeholder="Filter by Version"
               value={patchFilterVersion}
               onChange={e => setPatchFilterVersion(e.target.value)}
-              className="border rounded px-2 py-1"
+              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
             />
           </div>
           <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6 overflow-x-auto" style={{ maxHeight: '40vh', overflowY: 'auto' }}>
@@ -519,13 +549,13 @@ const Applications: React.FC<ApplicationsProps> = () => {
                 <tbody>
                   {filteredPatchApplications.map((app, idx) => (
                     <tr key={app._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                      <td className="px-4 py-2">{idx + 1}</td>
-                      <td className="px-4 py-2">{app.vendor}</td>
-                      <td className="px-4 py-2">{app.name}</td>
-                      <td className="px-4 py-2">{app.version}</td>
-                      <td className="px-4 py-2">{app.patchReleased || '-'}</td>
-                      <td className="px-4 py-2">{app.patchType || '-'}</td>
-                      <td className="px-4 py-2">{app.patchDetails || '-'}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{idx + 1}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.vendor}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.name}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.version}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.patchReleased || '-'}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.patchType || '-'}</td>
+                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.patchDetails || '-'}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -533,6 +563,9 @@ const Applications: React.FC<ApplicationsProps> = () => {
             )}
           </div>
         </>
+      )}
+      {showBulkUploadTab && activeTab === 'bulkupload' && (
+        <Upload />
       )}
     </div>
   );

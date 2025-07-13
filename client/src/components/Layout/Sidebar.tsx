@@ -25,7 +25,7 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
     { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
     { name: 'Applications', icon: CubeIcon, onClick: () => navigate('/applications', { state: { tab: 'applications' } }) },
     { name: 'PatchMgmt', icon: WrenchScrewdriverIcon, onClick: () => navigate('/applications', { state: { tab: 'patchmgmt' } }) },
-    { name: 'Upload', href: '/upload', icon: CloudArrowUpIcon },
+    { name: 'Bulk Upload', icon: CloudArrowUpIcon, onClick: () => navigate('/applications', { state: { tab: 'bulkupload' } }) },
     { name: 'Reports', href: '/reports', icon: DocumentChartBarIcon },
     { name: 'Settings', href: '/settings', icon: Cog6ToothIcon },
   ];
