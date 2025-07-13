@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import { 
   HomeIcon, 
@@ -8,15 +8,23 @@ import {
   DocumentChartBarIcon,
   Cog6ToothIcon,
   SunIcon,
-  MoonIcon
+  MoonIcon,
+  WrenchScrewdriverIcon
 } from '@heroicons/react/24/outline';
 
-const Sidebar: React.FC = () => {
+interface SidebarProps {
+  onApplicationsClick?: () => void;
+  onPatchMgmtClick?: () => void;
+}
+
+const Sidebar: React.FC<SidebarProps> = (props) => {
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
-    { name: 'Applications', href: '/applications', icon: CubeIcon },
+    { name: 'Applications', icon: CubeIcon, onClick: () => navigate('/applications', { state: { tab: 'applications' } }) },
+    { name: 'PatchMgmt', icon: WrenchScrewdriverIcon, onClick: () => navigate('/applications', { state: { tab: 'patchmgmt' } }) },
     { name: 'Upload', href: '/upload', icon: CloudArrowUpIcon },
     { name: 'Reports', href: '/reports', icon: DocumentChartBarIcon },
     { name: 'Settings', href: '/settings', icon: Cog6ToothIcon },
@@ -33,20 +41,31 @@ const Sidebar: React.FC = () => {
           </div>
           <nav className="mt-5 flex-1 px-2 space-y-1">
             {navigation.map((item) => (
-              <NavLink
-                key={item.name}
-                to={item.href}
-                className={({ isActive }) =>
-                  `group flex items-center px-2 py-2 text-sm font-medium rounded-md ${
-                    isActive
-                      ? 'bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100'
-                      : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
-                  }`
-                }
-              >
-                <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />
-                {item.name}
-              </NavLink>
+              item.onClick ? (
+                <button
+                  key={item.name}
+                  onClick={item.onClick}
+                  className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white`}
+                >
+                  <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />
+                  {item.name}
+                </button>
+              ) : (
+                <NavLink
+                  key={item.name}
+                  to={item.href || '#'}
+                  className={({ isActive }) =>
+                    `group flex items-center px-2 py-2 text-sm font-medium rounded-md ${
+                      isActive
+                        ? 'bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
+                    }`
+                  }
+                >
+                  <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />
+                  {item.name}
+                </NavLink>
+              )
             ))}
           </nav>
         </div>

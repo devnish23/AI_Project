@@ -18,6 +18,7 @@ import Upload from './pages/Upload/Upload';
 import Reports from './pages/Reports/Reports';
 import Settings from './pages/Settings/Settings';
 import VendorPortals from './pages/VendorPortals/VendorPortals';
+// Remove the PatchMgmt import and route
 
 // Styles
 import './styles/globals.css';
@@ -87,6 +88,7 @@ const App: React.FC = () => {
                       </PublicRoute>
                     }
                   />
+                  {/* Remove the PatchMgmt route */}
 
                   {/* Protected Routes */}
                   <Route
