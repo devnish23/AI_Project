@@ -55,6 +55,7 @@ app.use('/api/vendor-portals', require('./routes/vendorPortals'));
 app.use('/api/upload', require('./routes/upload'));
 app.use('/api/reports', require('./routes/reports'));
 app.use('/api/dashboard', require('./routes/dashboard'));
+app.use('/api/bulk-upload', require('./routes/bulkUpload'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

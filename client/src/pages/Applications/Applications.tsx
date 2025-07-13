@@ -3,6 +3,7 @@ import { applicationsAPI } from '../../services/api';
 import { PencilSquareIcon, TrashIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import { useLocation } from 'react-router-dom';
 import Upload from '../Upload/Upload';
+import BulkUploadTab from './BulkUploadTab';
 
 interface Application {
   _id: string;
@@ -565,7 +566,7 @@ const Applications: React.FC<ApplicationsProps> = () => {
         </>
       )}
       {showBulkUploadTab && activeTab === 'bulkupload' && (
-        <Upload />
+        <BulkUploadTab onUploadSuccess={fetchApplications} />
       )}
     </div>
   );

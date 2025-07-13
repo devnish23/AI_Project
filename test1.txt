@@ -1,0 +1,3 @@
+Application Name	Vendor	Product	Version	Status
+App1	ESX	ESXi	8.0	Active
+App2    RSA authendication Manager	RSA Authentication Manager	8.6	Active 
