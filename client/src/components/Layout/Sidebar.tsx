@@ -9,7 +9,8 @@ import {
   Cog6ToothIcon,
   SunIcon,
   MoonIcon,
-  WrenchScrewdriverIcon
+  WrenchScrewdriverIcon,
+  ClockIcon
 } from '@heroicons/react/24/outline';
 
 interface SidebarProps {
@@ -28,6 +29,7 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
     { name: 'Bulk Upload', icon: CloudArrowUpIcon, onClick: () => navigate('/applications', { state: { tab: 'bulkupload' } }) },
     { name: 'Reports', href: '/reports', icon: DocumentChartBarIcon },
     { name: 'Settings', href: '/settings', icon: Cog6ToothIcon },
+    { name: 'Schedule', icon: ClockIcon, onClick: () => navigate('/schedule') },
   ];
 
   return (

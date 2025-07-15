@@ -18,6 +18,7 @@ import Upload from './pages/Upload/Upload';
 import Reports from './pages/Reports/Reports';
 import Settings from './pages/Settings/Settings';
 import VendorPortals from './pages/VendorPortals/VendorPortals';
+import ScheduleTab from './pages/Schedule/ScheduleTab';
 // Remove the PatchMgmt import and route
 
 // Styles
@@ -107,6 +108,7 @@ const App: React.FC = () => {
                     <Route path="reports" element={<Reports />} />
                     <Route path="vendor-portals" element={<VendorPortals />} />
                     <Route path="settings" element={<Settings />} />
+                    <Route path="schedule" element={<ScheduleTab />} />
                   </Route>
 
                   {/* Catch all route */}
