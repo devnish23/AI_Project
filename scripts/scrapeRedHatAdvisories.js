@@ -3,12 +3,13 @@ const axios = require('axios');
 const cheerio = require('cheerio');
 const mongoose = require('mongoose');
 require('dotenv').config();
+const fs = require('fs');
 
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/infra-tracker';
 
 // MongoDB model
 const advisorySchema = new mongoose.Schema({ advisoryId: String }, { strict: false });
-const Advisory = mongoose.model('RedHatAdvisory', advisorySchema);
+const Advisory = mongoose.models.RedHatAdvisory || mongoose.model('RedHatAdvisory', advisorySchema);
 
 async function connectDB() {
   await mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
@@ -29,16 +30,16 @@ async function scrapeAdvisoriesPage(page = 1) {
     const advisoryLink = 'https://access.redhat.com' + $(tds[0]).find('a').attr('href');
     const synopsis = $(tds[1]).text().trim();
     const severity = $(tds[2]).text().trim();
-    const product = $(tds[3]).text().trim();
-    const issued = $(tds[4]).text().trim();
+    const products = $(tds[3]).text().trim();
+    const publishDate = $(tds[4]).text().trim();
 
     advisories.push({
       advisoryId,
       advisoryLink,
       synopsis,
       severity,
-      product,
-      issued
+      products,
+      publishDate
     });
   });
   return advisories;
@@ -54,34 +55,30 @@ async function saveAdvisories(advisories) {
 async function main() {
   await connectDB();
 
-  // Scrape first 3 pages (change as needed)
+  // Scrape only the first page for testing
   let allAdvisories = [];
-  for (let page = 1; page <= 3; page++) {
+  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
+  for (let page = 1; page <= 1; page++) {
     console.log(`Scraping page ${page}...`);
     const advisories = await scrapeAdvisoriesPage(page);
-    allAdvisories = allAdvisories.concat(advisories);
+    console.log('Advisories found:', advisories.length);
+    // Filter for Red Hat Enterprise Linux and published today
+    const filtered = advisories.filter(adv =>
+      adv.products && adv.products.includes('Red Hat Enterprise Linux') &&
+      adv.publishDate && adv.publishDate.includes(today)
+    );
+    allAdvisories = allAdvisories.concat(filtered);
   }
-  await saveAdvisories(allAdvisories);
+  // Output to text file
+  fs.writeFileSync('rhel_advisories_today.txt', JSON.stringify(allAdvisories, null, 2));
+  console.log(`Saved ${allAdvisories.length} advisories to rhel_advisories_today.txt`);
 
   mongoose.disconnect();
   console.log('Done!');
 }
 
-module.exports = async function scrapeRedHatAdvisories() {
-  await connectDB();
-
-  // Scrape first 3 pages (change as needed)
-  let allAdvisories = [];
-  for (let page = 1; page <= 3; page++) {
-    console.log(`Scraping page ${page}...`);
-    const advisories = await scrapeAdvisoriesPage(page);
-    allAdvisories = allAdvisories.concat(advisories);
-  }
-  await saveAdvisories(allAdvisories);
-
-  mongoose.disconnect();
-  console.log('Done!');
-};
+const scrapeRedHatAdvisories = main;
+module.exports = scrapeRedHatAdvisories;
 
 if (require.main === module) {
   scrapeRedHatAdvisories().then(() => process.exit(0));

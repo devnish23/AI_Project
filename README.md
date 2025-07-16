@@ -2,6 +2,34 @@
 
 A comprehensive MERN stack application for tracking and managing infrastructure applications, vendor data, and security vulnerabilities.
 
+## Table of Contents
+- [Features](#-features)
+- [Architecture](#-architecture)
+- [Technology Stack](#-technology-stack)
+- [Installation](#-installation)
+- [Database Schema](#-database-schema)
+- [API Endpoints](#-api-endpoints)
+- [UI/UX Design System](#-uiux-design-system)
+- [Security Features](#-security-features)
+- [Performance Optimizations](#-performance-optimizations)
+- [Testing](#-testing)
+- [Monitoring & Logging](#-monitoring--logging)
+- [Deployment](#-deployment)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Support](#-support)
+- [Documentation](#documentation)
+
+## Documentation
+- [Architecture](docs/Architecture.md)
+- [Frontend](docs/Frontend.md)
+- [Backend](docs/Backend.md)
+- [API Reference](docs/API.md)
+- [Data Model](docs/DataModel.md)
+- [Scripts](docs/Scripts.md)
+- [Deployment](docs/Deployment.md)
+- [Troubleshooting](docs/Troubleshooting.md)
+
 ## 🚀 Features
 
 ### Core Functionality
@@ -40,6 +68,49 @@ client/src/
 ├── store/           # Redux store & slices
 └── styles/          # Global styles
 ```
+
+### Main Components
+
+#### Frontend Pages
+- Applications: Applications.tsx, ApplicationDetail.tsx, BulkUploadTab.tsx
+- VendorPortals: VendorPortals.tsx
+- Settings: Settings.tsx
+- Reports: Reports.tsx
+- Upload: Upload.tsx
+- Auth: Login.tsx, Register.tsx
+- Dashboard: Dashboard.tsx
+- PatchMgmt: PatchMgmt.tsx
+- Schedule: ScheduleTab.tsx
+
+#### Layout Components
+- Header.tsx, Sidebar.tsx, Layout.tsx
+
+#### Contexts
+- AuthContext.tsx, ThemeContext.tsx
+
+#### State Management
+- applicationsSlice.ts, uiSlice.ts
+
+#### API Service
+- api.ts
+
+#### Backend Routes
+- applications.js, auth.js, bulkUpload.js, dashboard.js, patches.js, reports.js, schedule.js, upload.js, vendorPortals.js
+
+#### Models
+- Application.js, Schedule.js, User.js, VendorPortal.js
+
+#### Middleware
+- auth.js
+
+#### Services
+- vendorService.js
+
+#### Scheduler
+- scheduler.js
+
+#### Scripts
+- fetchRedHatData.js, scrapeRedHatAdvisories.js, scrapeRedHatRHEL.js
 
 ## 🛠️ Technology Stack
 

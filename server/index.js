@@ -58,6 +58,7 @@ app.use('/api/reports', require('./routes/reports'));
 app.use('/api/dashboard', require('./routes/dashboard'));
 app.use('/api/bulk-upload', require('./routes/bulkUpload'));
 app.use('/api/schedule', require('./routes/schedule'));
+app.use('/api/patches', require('./routes/patches'));
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
