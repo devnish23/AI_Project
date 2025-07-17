@@ -19,6 +19,74 @@ interface Advisory {
   synopsis: string;
 }
 
+// Advisory type definition
+interface Advisory {
+  advisory: string;
+  synopsis: string;
+  severity: string;
+  products: string;
+  publishDate: string;
+  cves: string[];
+  link: string;
+}
+
+const AdvisoriesTable: React.FC = () => {
+  const [advisories, setAdvisories] = useState<Advisory[]>([]);
+  const [severity, setSeverity] = useState('All');
+
+  useEffect(() => {
+    fetch('/rhel_security_advisories.json')
+      .then(res => res.json())
+      .then(data => setAdvisories(data.advisories));
+  }, []);
+
+  const severities = Array.from(new Set(advisories.map(a => a.severity))).filter(Boolean);
+  const filtered = severity === 'All' ? advisories : advisories.filter(a => a.severity === severity);
+
+  return (
+    <div style={{ margin: '2rem 0' }}>
+      <h2>RHEL Security Advisories</h2>
+      <div style={{ marginBottom: '1rem' }}>
+        <label>Filter by Severity: </label>
+        <select value={severity} onChange={e => setSeverity(e.target.value)}>
+          <option value="All">All</option>
+          {severities.map(s => (
+            <option key={s} value={s}>{s}</option>
+          ))}
+        </select>
+      </div>
+      <div style={{ overflowX: 'auto' }}>
+        <table style={{ borderCollapse: 'collapse', width: '100%' }}>
+          <thead>
+            <tr>
+              <th>Advisory</th>
+              <th>Synopsis</th>
+              <th>Severity</th>
+              <th>Products</th>
+              <th>Publish Date</th>
+              <th>CVEs</th>
+              <th>Link</th>
+            </tr>
+          </thead>
+          <tbody>
+            {filtered.map(adv => (
+              <tr key={adv.advisory}>
+                <td>{adv.advisory}</td>
+                <td>{adv.synopsis}</td>
+                <td>{adv.severity}</td>
+                <td>{adv.products}</td>
+                <td>{adv.publishDate}</td>
+                <td style={{ maxWidth: 200, wordBreak: 'break-all' }}>{adv.cves.join(', ')}</td>
+                <td><a href={adv.link} target="_blank" rel="noopener noreferrer">View</a></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
+};
+
 const PatchMgmt: React.FC = () => {
   const [applications, setApplications] = useState<Application[]>([]);
   const [loading, setLoading] = useState(true);
@@ -140,6 +208,7 @@ const PatchMgmt: React.FC = () => {
           </table>
         )}
       </div>
+      <AdvisoriesTable />
     </div>
   );
 };

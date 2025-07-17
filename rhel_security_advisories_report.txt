@@ -1,0 +1,266 @@
+Red Hat Enterprise Linux Security Advisories Report
+Generated: 7/17/2025, 10:15:11 AM
+Date Range: 2024-07-17 to 2025-07-17 (365 days)
+Architecture Filter: x86_64
+Total Advisories: 40
+================================================================================
+
+SEVERITY BREAKDOWN
+------------------------------
+Important: 25 advisories
+Moderate: 12 advisories
+Unknown: 2 advisories
+Critical: 1 advisories
+
+MONTHLY BREAKDOWN
+------------------------------
+2025-07: 40 advisories
+
+IMPORTANT ADVISORIES (25)
+--------------------------------------------------
+RHSA-2024:0006: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-6377, CVE-2023-6478
+  Link: https://access.redhat.com/errata/RHSA-2024:0006
+
+RHSA-2024:0009: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-6377, CVE-2023-6478
+  Link: https://access.redhat.com/errata/RHSA-2024:0009
+
+RHSA-2024:0013: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-44446
+  Link: https://access.redhat.com/errata/RHSA-2024:0013
+
+RHSA-2024:0113: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-4622, CVE-2023-5633, CVE-2023-42753, CVE-2023-2162, CVE-2023-20569, CVE-2022-36402
+  Link: https://access.redhat.com/errata/RHSA-2024:0113
+
+RHSA-2024:0265: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-20918, CVE-2024-20952, CVE-2024-20919, CVE-2024-20921, CVE-2024-20926, CVE-2024-20945
+  Link: https://access.redhat.com/errata/RHSA-2024:0265
+
+RHSA-2024:0412: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-2163, CVE-2023-3611, CVE-2023-4623, CVE-2023-3812, CVE-2023-4622, CVE-2023-5178, CVE-2023-31436, CVE-2023-42753, CVE-2023-45871, CVE-2022-3028, CVE-2022-3522, CVE-2023-33203, CVE-2023-35823, CVE-2023-35824, CVE-2022-3567, CVE-2022-0854, CVE-2022-1016, CVE-2022-1679, CVE-2022-3628, CVE-2022-4129, CVE-2022-47929, CVE-2023-0394, CVE-2023-3772, CVE-2023-4459, CVE-2022-20141, CVE-2022-30594, CVE-2022-40982, CVE-2022-41218, CVE-2022-41858, CVE-2022-43750, CVE-2023-1073, CVE-2023-1079, CVE-2023-1195, CVE-2023-1382, CVE-2023-1838, CVE-2023-1998, CVE-2023-2162, CVE-2023-2194, CVE-2023-2513, CVE-2023-3161, CVE-2023-3268, CVE-2023-3567, CVE-2023-4732, CVE-2023-23454, CVE-2023-26545, CVE-2023-38409, CVE-2024-0562, CVE-2023-1192, CVE-2023-1855, CVE-2023-53015
+  Link: https://access.redhat.com/errata/RHSA-2024:0412
+
+RHSA-2024:0562: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-2163, CVE-2023-3812, CVE-2023-4622, CVE-2023-4623, CVE-2023-4921, CVE-2023-42753, CVE-2023-45871, CVE-2022-40982, CVE-2023-2162, CVE-2023-38409, CVE-2023-1192
+  Link: https://access.redhat.com/errata/RHSA-2024:0562
+
+RHSA-2024:0614: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-6816, CVE-2024-0229, CVE-2024-21885, CVE-2024-21886
+  Link: https://access.redhat.com/errata/RHSA-2024:0614
+
+RHSA-2024:0724: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-4921, CVE-2023-6817, CVE-2024-0646, CVE-2021-3640, CVE-2021-4204, CVE-2021-30002, CVE-2021-34866, CVE-2022-0168, CVE-2022-0500, CVE-2022-0617, CVE-2022-1462, CVE-2022-2078, CVE-2022-2586, CVE-2022-2663, CVE-2022-3524, CVE-2022-3545, CVE-2022-3566, CVE-2022-3594, CVE-2022-3619, CVE-2022-3623, CVE-2022-3707, CVE-2022-21499, CVE-2022-23222, CVE-2022-25265, CVE-2022-28388, CVE-2022-28390, CVE-2022-24448, CVE-2022-28893, CVE-2022-36946, CVE-2022-39189, CVE-2022-45887, CVE-2023-23455, CVE-2023-1075, CVE-2023-1252, CVE-2023-28328, CVE-2023-28772, CVE-2023-1989, CVE-2023-2166, CVE-2023-2176, CVE-2023-0458, CVE-2023-20569, CVE-2023-3141, CVE-2023-35825, CVE-2023-4132, CVE-2023-40283, CVE-2023-45862, CVE-2023-46813, CVE-2023-5717, CVE-2023-6610, CVE-2023-6536, CVE-2023-6535, CVE-2023-6356, CVE-2023-6932, CVE-2022-49908
+  Link: https://access.redhat.com/errata/RHSA-2024:0724
+
+RHSA-2024:0757: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-21626
+  Link: https://access.redhat.com/errata/RHSA-2024:0757
+
+RHSA-2024:0764: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-21626
+  Link: https://access.redhat.com/errata/RHSA-2024:0764
+
+RHSA-2024:0897: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-4623, CVE-2023-4921, CVE-2023-6817, CVE-2023-45871, CVE-2024-0646, CVE-2022-3545, CVE-2022-41858, CVE-2023-1073, CVE-2023-1838, CVE-2023-2166, CVE-2023-2176, CVE-2023-5717, CVE-2023-6356, CVE-2023-6535, CVE-2023-6536, CVE-2023-6606, CVE-2023-6610, CVE-2023-40283, CVE-2023-46813
+  Link: https://access.redhat.com/errata/RHSA-2024:0897
+
+RHSA-2024:0930: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-6546, CVE-2021-33655, CVE-2022-2196, CVE-2022-3239, CVE-2022-3625, CVE-2022-20368, CVE-2022-23960, CVE-2022-29581, CVE-2022-36402, CVE-2022-38096, CVE-2022-38457, CVE-2022-40133, CVE-2023-1074, CVE-2023-6931, CVE-2023-30456, CVE-2023-31084, CVE-2023-51042, CVE-2024-1086
+  Link: https://access.redhat.com/errata/RHSA-2024:0930
+
+RHSA-2024:0974: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-0985
+  Link: https://access.redhat.com/errata/RHSA-2024:0974
+
+RHSA-2024:1249: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-26602, CVE-2022-42896, CVE-2023-4921, CVE-2023-45871, CVE-2023-38409, CVE-2024-1086
+  Link: https://access.redhat.com/errata/RHSA-2024:1249
+
+RHSA-2024:1332: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-26602, CVE-2022-42896, CVE-2023-4921, CVE-2023-45871, CVE-2023-38409, CVE-2024-1086
+  Link: https://access.redhat.com/errata/RHSA-2024:1332
+
+RHSA-2024:1404: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2021-43975, CVE-2022-28388, CVE-2022-41858, CVE-2022-3594, CVE-2022-4744, CVE-2022-3545, CVE-2023-1382, CVE-2023-28772, CVE-2023-2166, CVE-2023-2176, CVE-2023-40283, CVE-2023-4921, CVE-2023-6606, CVE-2024-0646, CVE-2023-6817, CVE-2023-7192, CVE-2022-36402, CVE-2022-38096, CVE-2022-40133, CVE-2022-38457, CVE-2022-45887, CVE-2022-45869, CVE-2023-30456, CVE-2023-31084, CVE-2023-33951, CVE-2023-33952, CVE-2023-45862, CVE-2023-5633, CVE-2023-6931, CVE-2023-6610, CVE-2023-6932, CVE-2024-0565, CVE-2023-51042, CVE-2023-51043, CVE-2024-1086
+  Link: https://access.redhat.com/errata/RHSA-2024:1404
+
+RHSA-2024:1510: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-22019, CVE-2023-46809, CVE-2024-21892
+  Link: https://access.redhat.com/errata/RHSA-2024:1510
+
+RHSA-2024:1614: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2022-38096, CVE-2023-6931, CVE-2023-6546, CVE-2024-0565, CVE-2023-51042, CVE-2021-33631, CVE-2024-1086
+  Link: https://access.redhat.com/errata/RHSA-2024:1614
+
+RHSA-2024:1644: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-1394
+  Link: https://access.redhat.com/errata/RHSA-2024:1644
+
+RHSA-2024:1647: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-50868, CVE-2023-50387, CVE-2023-6516, CVE-2023-5679, CVE-2023-5517, CVE-2023-4408
+  Link: https://access.redhat.com/errata/RHSA-2024:1647
+
+RHSA-2024:1677: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-4639, CVE-2023-48795, CVE-2023-1973, CVE-2024-1635, CVE-2023-3223, CVE-2024-1459
+  Link: https://access.redhat.com/errata/RHSA-2024:1677
+
+RHSA-2024:1786: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-27316
+  Link: https://access.redhat.com/errata/RHSA-2024:1786
+
+RHSA-2024:1802: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-1488
+  Link: https://access.redhat.com/errata/RHSA-2024:1802
+
+RHSA-2024:1916: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-23672
+  Link: https://access.redhat.com/errata/RHSA-2024:1916
+
+MODERATE ADVISORIES (12)
+--------------------------------------------------
+RHSA-2024:0116: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-43804, CVE-2023-45803
+  Link: https://access.redhat.com/errata/RHSA-2024:0116
+
+RHSA-2024:0464: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-43804, CVE-2023-45803
+  Link: https://access.redhat.com/errata/RHSA-2024:0464
+
+RHSA-2024:0580: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2022-2127, CVE-2023-34966, CVE-2023-34967, CVE-2023-34968
+  Link: https://access.redhat.com/errata/RHSA-2024:0580
+
+RHSA-2024:0594: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-48795, CVE-2023-51385
+  Link: https://access.redhat.com/errata/RHSA-2024:0594
+
+RHSA-2024:0606: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-48795, CVE-2023-51385
+  Link: https://access.redhat.com/errata/RHSA-2024:0606
+
+RHSA-2024:0647: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2021-35937, CVE-2021-35938, CVE-2021-35939
+  Link: https://access.redhat.com/errata/RHSA-2024:0647
+
+RHSA-2024:0811: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-28487, CVE-2023-28486, CVE-2023-42465
+  Link: https://access.redhat.com/errata/RHSA-2024:0811
+
+RHSA-2024:0894: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-21911, CVE-2023-21919, CVE-2023-21929, CVE-2023-21933, CVE-2023-21920, CVE-2023-21935, CVE-2023-21945, CVE-2023-21946, CVE-2023-21976, CVE-2023-21977, CVE-2023-21982, CVE-2023-21940, CVE-2023-21947, CVE-2023-21962, CVE-2023-21953, CVE-2023-21955, CVE-2023-21966, CVE-2023-21972, CVE-2023-21980, CVE-2023-22005, CVE-2023-22007, CVE-2023-22057, CVE-2023-22008, CVE-2023-22032, CVE-2023-22059, CVE-2023-22064, CVE-2023-22065, CVE-2023-22070, CVE-2023-22078, CVE-2023-22079, CVE-2023-22092, CVE-2023-22103, CVE-2023-22110, CVE-2023-22112, CVE-2023-22033, CVE-2023-22046, CVE-2023-22054, CVE-2023-22056, CVE-2023-22053, CVE-2023-22058, CVE-2023-22066, CVE-2023-22068, CVE-2023-22084, CVE-2023-22097, CVE-2023-22104, CVE-2023-22114, CVE-2023-22111, CVE-2023-22115, CVE-2024-20960, CVE-2024-20963, CVE-2024-20964, CVE-2024-20967, CVE-2024-20968, CVE-2024-20969, CVE-2024-20961, CVE-2024-20962, CVE-2024-20965, CVE-2024-20966, CVE-2024-20970, CVE-2024-20971, CVE-2024-20972, CVE-2024-20973, CVE-2024-20974, CVE-2024-20976, CVE-2024-20977, CVE-2024-20978, CVE-2024-20982, CVE-2024-20981, CVE-2024-20983, CVE-2024-20984, CVE-2024-20985, CVE-2022-4899, CVE-2023-22038, CVE-2023-22048, CVE-2023-22113, CVE-2024-20993, CVE-2024-21049, CVE-2024-21050, CVE-2024-21051, CVE-2024-21052, CVE-2024-21053, CVE-2024-21055, CVE-2024-21056, CVE-2024-21057, CVE-2024-21061, CVE-2024-21137, CVE-2024-21200
+  Link: https://access.redhat.com/errata/RHSA-2024:0894
+
+RHSA-2024:1130: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-48795, CVE-2023-51385
+  Link: https://access.redhat.com/errata/RHSA-2024:1130
+
+RHSA-2024:1878: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-36053, CVE-2023-37276, CVE-2023-41164, CVE-2023-43665, CVE-2023-47627, CVE-2023-49081, CVE-2023-49083, CVE-2024-22195, CVE-2024-23334, CVE-2024-23342, CVE-2024-23829, CVE-2024-24680, CVE-2024-27351, CVE-2023-49082
+  Link: https://access.redhat.com/errata/RHSA-2024:1878
+
+RHSA-2024:1881: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-6240, CVE-2024-26582, CVE-2024-26584, CVE-2024-26586, CVE-2024-35890
+  Link: https://access.redhat.com/errata/RHSA-2024:1881
+
+RHSA-2024:1919: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-3758
+  Link: https://access.redhat.com/errata/RHSA-2024:1919
+
+UNKNOWN ADVISORIES (2)
+--------------------------------------------------
+RHSA-2024:0853: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-26159, CVE-2021-35937, CVE-2021-35938, CVE-2021-35939, CVE-2021-43618, CVE-2023-7104, CVE-2023-29491, CVE-2023-29499, CVE-2023-32611, CVE-2023-32665, CVE-2023-36054, CVE-2023-38545, CVE-2023-38546, CVE-2023-39615, CVE-2023-39975, CVE-2023-44487
+  Link: https://access.redhat.com/errata/RHSA-2024:0853
+
+RHSA-2024:1785: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2024-31080, CVE-2024-31081, CVE-2024-31083
+  Link: https://access.redhat.com/errata/RHSA-2024:1785
+
+CRITICAL ADVISORIES (1)
+--------------------------------------------------
+RHSA-2024:1488: Security Advisory
+  Date: 2025-07-17
+  Products: Red Hat Enterprise Linux
+  CVEs: CVE-2023-5388, CVE-2024-0743, CVE-2024-2607, CVE-2024-2608, CVE-2024-2616, CVE-2024-2610, CVE-2024-2611, CVE-2024-2612, CVE-2024-2614, CVE-2024-29944
+  Link: https://access.redhat.com/errata/RHSA-2024:1488
+

@@ -1,0 +1,31 @@
+Red Hat Enterprise Linux Security Advisories Report
+Generated: 2025-07-16T10:26:27.734Z
+Filter Period: Last 180 days
+Architecture: x86_64
+Total Advisories Found: 5
+============================================================
+
+Important Severity (4 advisories):
+----------------------------------------
+• RHSA-2025:10761 - Important: kernel security update
+  Published: 2025-07-10
+  Products: Red Hat Enterprise Linux Server - AUS 8.2 (x86_64)
+
+• RHSA-2025:10110 - Important: sudo security update
+  Published: 2025-07-01
+  Products: Red Hat Enterprise Linux 8 (x86_64, s390x, ppc64le, aarch64)
+
+• RHSA-2025:10836 - Important: sudo security update
+  Published: 2025-07-01
+  Products: Red Hat Enterprise Linux Server - TUS 8.8 (x86_64)
+
+• RHSA-2025:8627 - Important: mod_security security update
+  Published: 2025-06-09
+  Products: Red Hat Enterprise Linux 8.4 Advanced Mission Critical Update Support
+
+Moderate Severity (1 advisories):
+----------------------------------------
+• RHSA-2025:10179 - Moderate: kernel security update
+  Published: 2025-07-02
+  Products: Red Hat Enterprise Linux Server - AUS 8.2 (x86_64)
+

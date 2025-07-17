@@ -1,85 +1,118 @@
 // scripts/scrapeRedHatAdvisories.js
-const axios = require('axios');
-const cheerio = require('cheerio');
-const mongoose = require('mongoose');
-require('dotenv').config();
+const puppeteer = require('puppeteer');
 const fs = require('fs');
 
-const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/infra-tracker';
+// Static EOL/EOSL mapping
+const rhelLifecycle = {
+  '7': { eol: '2024-06-30', eosl: '2026-06-30' },
+  '8': { eol: '2029-05-31', eosl: '2031-05-31' },
+  '9': { eol: '2032-05-31', eosl: '2034-05-31' }
+};
 
-// MongoDB model
-const advisorySchema = new mongoose.Schema({ advisoryId: String }, { strict: false });
-const Advisory = mongoose.models.RedHatAdvisory || mongoose.model('RedHatAdvisory', advisorySchema);
-
-async function connectDB() {
-  await mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
-  console.log('Connected to MongoDB');
+function parseRhelVersion(products) {
+  const match = products.match(/Red Hat Enterprise Linux (\d+)/);
+  return match ? match[1] : null;
 }
 
-async function scrapeAdvisoriesPage(page = 1) {
-  const url = `https://access.redhat.com/security/security-updates/security-advisories?page=${page}`;
-  const { data } = await axios.get(url, {
-    headers: { 'User-Agent': 'Mozilla/5.0 (InfraTrackerBot)' }
-  });
-  const $ = cheerio.load(data);
+async function extractCvesFromDetail(page, advisoryLink) {
+  try {
+    await page.goto(advisoryLink, { waitUntil: 'networkidle2' });
+    await page.waitForTimeout(2000);
+    const cves = await page.evaluate(() => {
+      const cveLinks = Array.from(document.querySelectorAll('a'))
+        .map(a => a.textContent)
+        .filter(t => t && t.startsWith('CVE-'));
+      return Array.from(new Set(cveLinks));
+    });
+    return cves;
+  } catch (err) {
+    return [];
+  }
+}
 
-  const advisories = [];
-  $('table tbody tr').each((_, el) => {
-    const tds = $(el).find('td');
-    const advisoryId = $(tds[0]).text().trim();
-    const advisoryLink = 'https://access.redhat.com' + $(tds[0]).find('a').attr('href');
-    const synopsis = $(tds[1]).text().trim();
-    const severity = $(tds[2]).text().trim();
-    const products = $(tds[3]).text().trim();
-    const publishDate = $(tds[4]).text().trim();
+async function dismissCookieConsent(page) {
+  // Try common selectors for cookie banners/buttons
+  const selectors = [
+    'button#truste-consent-button', // TrustArc
+    'button[aria-label="Accept cookies"]',
+    'button:contains("Accept")',
+    'button:contains("I Agree")',
+    'button:contains("Agree")',
+    '.truste_button',
+    '.cookie-accept',
+    '.cc-btn.cc-accept-all',
+    '.osano-cm-accept-all',
+    '.cookie-consent-accept',
+    'button[title="Accept"]',
+    'button[title="OK"]',
+    'button[title="Got it"]',
+    'button[title="Allow all cookies"]',
+  ];
+  for (const selector of selectors) {
+    try {
+      await page.waitForSelector(selector, { timeout: 2000 });
+      await page.click(selector);
+      console.log(`Clicked cookie consent button: ${selector}`);
+      await page.waitForTimeout(1000);
+      break;
+    } catch (e) {
+      // Ignore if not found
+    }
+  }
+}
 
-    advisories.push({
-      advisoryId,
-      advisoryLink,
-      synopsis,
-      severity,
-      products,
-      publishDate
+async function scrapeAdvisoriesPage(page, pageNum, detailPage) {
+  await page.goto(`https://access.redhat.com/security/security-updates/security-advisories?page=${pageNum}`, { waitUntil: 'networkidle2' });
+  await dismissCookieConsent(page);
+  await page.waitForSelector('table tbody tr', { timeout: 15000 });
+  return await page.evaluate(() => {
+    const rows = Array.from(document.querySelectorAll('table tbody tr'));
+    return rows.map(row => {
+      const tds = row.querySelectorAll('td');
+      const advisoryId = tds[0]?.innerText.trim();
+      const advisoryLink = tds[0]?.querySelector('a')?.href || '';
+      const synopsis = tds[1]?.innerText.trim();
+      const severity = tds[2]?.innerText.trim();
+      const products = tds[3]?.innerText.trim();
+      const publishDate = tds[4]?.innerText.trim();
+      return { advisoryId, advisoryLink, synopsis, severity, products, publishDate };
     });
   });
-  return advisories;
-}
-
-async function saveAdvisories(advisories) {
-  for (const adv of advisories) {
-    await Advisory.updateOne({ advisoryId: adv.advisoryId }, adv, { upsert: true });
-  }
-  console.log(`Saved/updated ${advisories.length} advisories`);
 }
 
 async function main() {
-  await connectDB();
-
-  // Scrape only the first page for testing
+  const browser = await puppeteer.launch({ headless: true });
+  const page = await browser.newPage();
+  const detailPage = await browser.newPage();
   let allAdvisories = [];
-  const today = new Date().toISOString().slice(0, 10); // YYYY-MM-DD
-  for (let page = 1; page <= 1; page++) {
-    console.log(`Scraping page ${page}...`);
-    const advisories = await scrapeAdvisoriesPage(page);
-    console.log('Advisories found:', advisories.length);
-    // Filter for Red Hat Enterprise Linux and published today
-    const filtered = advisories.filter(adv =>
-      adv.products && adv.products.includes('Red Hat Enterprise Linux') &&
-      adv.publishDate && adv.publishDate.includes(today)
-    );
-    allAdvisories = allAdvisories.concat(filtered);
+  const maxPages = 2;
+  const fetchedAt = new Date().toISOString();
+  for (let i = 1; i <= maxPages; i++) {
+    console.log(`Scraping page ${i}...`);
+    try {
+      const advisories = await scrapeAdvisoriesPage(page, i, detailPage);
+      for (const adv of advisories) {
+        adv.rhel_version = parseRhelVersion(adv.products);
+        if (adv.rhel_version && rhelLifecycle[adv.rhel_version]) {
+          adv.eol = rhelLifecycle[adv.rhel_version].eol;
+          adv.eosl = rhelLifecycle[adv.rhel_version].eosl;
+        } else {
+          adv.eol = null;
+          adv.eosl = null;
+        }
+        adv.fetched_at = fetchedAt;
+        adv.cves = adv.advisoryLink ? await extractCvesFromDetail(detailPage, adv.advisoryLink) : [];
+      }
+      allAdvisories = allAdvisories.concat(advisories);
+    } catch (err) {
+      console.error(`Error scraping page ${i}:`, err.message);
+    }
   }
-  // Output to text file
-  fs.writeFileSync('rhel_advisories_today.txt', JSON.stringify(allAdvisories, null, 2));
-  console.log(`Saved ${allAdvisories.length} advisories to rhel_advisories_today.txt`);
-
-  mongoose.disconnect();
-  console.log('Done!');
+  await browser.close();
+  fs.writeFileSync('rhel_advisories_detailed.json', JSON.stringify(allAdvisories, null, 2));
+  console.log(`Saved ${allAdvisories.length} advisories to rhel_advisories_detailed.json`);
 }
 
-const scrapeRedHatAdvisories = main;
-module.exports = scrapeRedHatAdvisories;
-
 if (require.main === module) {
-  scrapeRedHatAdvisories().then(() => process.exit(0));
+  main().then(() => process.exit(0));
 }
