@@ -76,7 +76,7 @@ async function scrapeAdvisoriesPage(page, pageNum, detailPage) {
       const products = tds[3]?.innerText.trim();
       const publishDate = tds[4]?.innerText.trim();
       return { advisoryId, advisoryLink, synopsis, severity, products, publishDate };
-    });
+  });
   });
 }
 

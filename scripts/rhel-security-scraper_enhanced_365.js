@@ -43,6 +43,13 @@ const CONFIG = {
     }
 };
 
+// Static EOL/EOSL mapping
+const rhelLifecycle = {
+  '7': { eol: '2024-06-30', eosl: '2026-06-30' },
+  '8': { eol: '2029-05-31', eosl: '2031-05-31' },
+  '9': { eol: '2032-05-31', eosl: '2034-05-31' }
+};
+
 class HistoricalRHELScraper {
     constructor() {
         this.advisories = [];
@@ -185,73 +192,106 @@ class HistoricalRHELScraper {
         return ranges[year] || [{ start: 1, end: 8000, step: 1 }];
     }
 
+    async fetchCveDetails(cveId, cveCache) {
+        if (cveCache[cveId]) return cveCache[cveId];
+        try {
+            const url = `https://services.nvd.nist.gov/rest/json/cve/1.0/${cveId}`;
+            const res = await axios.get(url, { timeout: 10000 });
+            const cveItem = res.data.result?.CVE_Items?.[0];
+            if (!cveItem) return null;
+            const description = cveItem.cve?.description?.description_data?.[0]?.value || '';
+            const cvssScore = cveItem.impact?.baseMetricV3?.cvssV3?.baseScore || cveItem.impact?.baseMetricV2?.cvssV2?.baseScore || null;
+            const link = `https://nvd.nist.gov/vuln/detail/${cveId}`;
+            const details = { cveId, description, cvssScore, link };
+            cveCache[cveId] = details;
+            // Rate limit: wait 1s between requests
+            await new Promise(res => setTimeout(res, 1000));
+            return details;
+        } catch (err) {
+            return null;
+        }
+    }
+
+    async fetchAllCveDetails(cves, cveCache) {
+        const details = [];
+        for (const cveId of cves) {
+            const info = await this.fetchCveDetails(cveId, cveCache);
+            if (info) details.push(info);
+        }
+        return details;
+    }
+
     async fetchAdvisoryDetails() {
         console.log(`📝 Fetching details for ${this.processedIds.size} advisories...`);
-        
         const advisoryIds = Array.from(this.processedIds);
         const chunks = this.chunkArray(advisoryIds, CONFIG.maxConcurrent);
         let processed = 0;
         let successful = 0;
-        
+        const cveCache = {};
         for (const chunk of chunks) {
-            const promises = chunk.map(id => this.fetchSingleAdvisory(id));
+            const promises = chunk.map(id => this.fetchSingleAdvisory(id, cveCache));
             const results = await Promise.allSettled(promises);
-            
             results.forEach((result, index) => {
                 processed++;
                 if (result.status === 'fulfilled' && result.value) {
                     successful++;
                     this.advisories.push(result.value);
                 }
-                
-                // Progress indicator
                 if (processed % 50 === 0) {
                     console.log(`📊 Progress: ${processed}/${advisoryIds.length} (${successful} successful)`);
                 }
             });
-            
-            // Rate limiting
             await this.sleep(1000);
         }
-        
         console.log(`✅ Successfully fetched ${successful} advisory details`);
     }
 
-    async fetchSingleAdvisory(rhsaId) {
+    async fetchSingleAdvisory(rhsaId, cveCache) {
         const url = `${CONFIG.urls.base}/errata/${rhsaId}`;
-        
         try {
             const response = await this.httpClient.get(url);
             if (response.status === 200) {
-                return this.parseAdvisoryPage(response.data, rhsaId, url);
+                return await this.parseAdvisoryPage(response.data, rhsaId, url, cveCache);
             }
         } catch (error) {
-            // Advisory might not exist or be inaccessible
             if (error.response?.status !== 404) {
                 console.log(`⚠️  Error fetching ${rhsaId}: ${error.message}`);
             }
         }
-        
         return null;
     }
 
-    parseAdvisoryPage(html, rhsaId, url) {
+    async parseAdvisoryPage(html, rhsaId, url, cveCache) {
         try {
             const $ = cheerio.load(html);
-            
-            // Extract advisory information from the page
             const synopsis = this.extractSynopsis($);
-            const severity = this.extractSeverity($);
+            let severity = this.extractSeverity($);
+            severity = this.normalizeSeverity(severity);
             const publishDate = this.extractPublishDate($);
             const products = this.extractProducts($);
             const cves = this.extractCVEs($);
-            
-            // Check if this is a RHEL advisory and within date range
+            const rhelVersion = this.extractRhelVersion(products);
+            const productFamily = this.classifyProductFamily(products);
+            const cveDetails = await this.fetchAllCveDetails(cves, cveCache);
+            let eolDate = null, eoslDate = null;
+            if (rhelVersion && rhelLifecycle[rhelVersion]) {
+                eolDate = rhelLifecycle[rhelVersion].eol;
+                eoslDate = rhelLifecycle[rhelVersion].eosl;
+            }
+            const patchPackageList = this.extractPatchPackageList($);
+            const vendorLinks = {
+                errata: url,
+                nvdCves: cves.map(cve => `https://nvd.nist.gov/vuln/detail/${cve}`),
+                redhatCves: cves.map(cve => `https://access.redhat.com/security/cve/${cve}`)
+            };
+            const now = new Date().toISOString();
+            const tags = this.generateTags(synopsis, products, patchPackageList);
+            // Extract impact/exploitability info
+            const impactInfo = this.extractImpactInfo($);
             if (!this.isRHELAdvisory(synopsis + ' ' + products) || 
                 !this.isInDateRange(publishDate)) {
                 return null;
             }
-            
             return {
                 advisory: rhsaId,
                 synopsis: synopsis || `Security update for ${rhsaId}`,
@@ -259,13 +299,103 @@ class HistoricalRHELScraper {
                 products: products || 'Red Hat Enterprise Linux',
                 publishDate: this.formatDate(publishDate),
                 cves: cves,
-                link: url
+                cveDetails: cveDetails,
+                link: url,
+                rhelVersion: rhelVersion || null,
+                productFamily: productFamily || null,
+                eolDate: eolDate,
+                eoslDate: eoslDate,
+                patchPackageList: patchPackageList,
+                vendorLinks: vendorLinks,
+                firstSeen: now,
+                lastUpdated: now,
+                tags: tags,
+                impactInfo: impactInfo
             };
-            
         } catch (error) {
             console.log(`⚠️  Error parsing ${rhsaId}: ${error.message}`);
             return null;
         }
+    }
+
+    generateTags(synopsis, products, patchPackageList) {
+        const keywords = [
+            'kernel', 'openssl', 'glibc', 'bind', 'httpd', 'nginx', 'php', 'python', 'java', 'tomcat',
+            'postgresql', 'mariadb', 'mysql', 'samba', 'systemd', 'firewalld', 'selinux', 'dns', 'ldap',
+            'libxml', 'libssh', 'libcurl', 'libreoffice', 'xorg', 'gnome', 'kde', 'cups', 'perl', 'ruby',
+            'audit', 'chrony', 'ntp', 'yum', 'dnf', 'rpm', 'docker', 'podman', 'cri-o', 'container', 'cloud',
+            'storage', 'network', 'security', 'crypto', 'tls', 'ssl', 'ssh', 'ftp', 'mail', 'imap', 'smtp',
+            'squid', 'haproxy', 'redis', 'mongodb', 'rabbitmq', 'zabbix', 'grafana', 'prometheus', 'etcd',
+            'haproxy', 'keepalived', 'pacemaker', 'corosync', 'drbd', 'ceph', 'gluster', 'iscsi', 'nfs',
+            'cifs', 'samba', 'iscsi', 'iscsi-initiator-utils', 'iscsi-target-utils', 'iscsiuio', 'iscsiadm'
+        ];
+        const text = [synopsis, products, ...(patchPackageList || [])].join(' ').toLowerCase();
+        const tags = [];
+        for (const kw of keywords) {
+            if (text.includes(kw) && !tags.includes(kw)) tags.push(kw);
+        }
+        return tags;
+    }
+
+    extractPatchPackageList($) {
+        // Try to find package lists in common selectors
+        // Red Hat errata often lists packages in <ul> or <table> with 'Packages' or 'Affected Packages' headings
+        let packages = [];
+        // Look for tables with 'Package' in the header
+        $('table').each((i, table) => {
+            const header = $(table).find('th').first().text().toLowerCase();
+            if (header.includes('package')) {
+                $(table).find('tr').each((j, row) => {
+                    const pkg = $(row).find('td').first().text().trim();
+                    if (pkg && !packages.includes(pkg)) packages.push(pkg);
+                });
+            }
+        });
+        // Look for <ul> lists under headings with 'Packages'
+        $('h2, h3, h4').each((i, el) => {
+            const heading = $(el).text().toLowerCase();
+            if (heading.includes('package')) {
+                $(el).next('ul').find('li').each((j, li) => {
+                    const pkg = $(li).text().trim();
+                    if (pkg && !packages.includes(pkg)) packages.push(pkg);
+                });
+            }
+        });
+        // Fallback: look for any <li> with rpm or .el7/.el8 etc.
+        if (packages.length === 0) {
+            $('li').each((i, li) => {
+                const txt = $(li).text().trim();
+                if (/\.el\d|\.rpm/i.test(txt) && !packages.includes(txt)) packages.push(txt);
+            });
+        }
+        return packages;
+    }
+
+    normalizeSeverity(severity) {
+        if (!severity) return 'Unknown';
+        const s = severity.toLowerCase();
+        if (s.startsWith('crit')) return 'Critical';
+        if (s.startsWith('imp')) return 'Important';
+        if (s.startsWith('mod')) return 'Moderate';
+        if (s.startsWith('low')) return 'Low';
+        return 'Unknown';
+    }
+
+    classifyProductFamily(products) {
+        const p = products.toLowerCase();
+        if (p.includes('enterprise linux') || p.includes('rhel')) return 'RHEL';
+        if (p.includes('satellite')) return 'Satellite';
+        if (p.includes('jboss')) return 'JBoss';
+        if (p.includes('openshift')) return 'OpenShift';
+        if (p.includes('ansible')) return 'Ansible';
+        if (p.includes('storage')) return 'Storage';
+        if (p.includes('cloudforms')) return 'CloudForms';
+        if (p.includes('directory server')) return 'Directory Server';
+        if (p.includes('virtualization')) return 'Virtualization';
+        if (p.includes('gluster')) return 'Gluster';
+        if (p.includes('ceph')) return 'Ceph';
+        if (p.includes('middleware')) return 'Middleware';
+        return 'Other';
     }
 
     extractSynopsis($) {
@@ -361,6 +491,15 @@ class HistoricalRHELScraper {
         const cvePattern = /CVE-\d{4}-\d+/g;
         const cves = pageText.match(cvePattern) || [];
         return [...new Set(cves)]; // Remove duplicates
+    }
+
+    extractRhelVersion(products) {
+        // Match 'Linux 8', 'Linux-8.6', 'Linux 7.9', 'RHEL 8', 'RHEL-8.6', etc.
+        let match = products.match(/Linux[\s\-]*(\d+(?:\.\d+)?)/i);
+        if (match) return match[1];
+        match = products.match(/RHEL[\s\-]*(\d+(?:\.\d+)?)/i);
+        if (match) return match[1];
+        return null;
     }
 
     isRHELAdvisory(text) {
@@ -611,6 +750,17 @@ class HistoricalRHELScraper {
 
     sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    extractImpactInfo($) {
+        // Look for text containing 'exploit', 'impact', 'public exploit', etc.
+        const bodyText = $('body').text().toLowerCase();
+        const impactMatches = bodyText.match(/impact:.*?(\.|$)/i);
+        const exploitMatches = bodyText.match(/exploit (exists|available|public|code|in the wild|reported|disclosed)/i);
+        let info = null;
+        if (impactMatches) info = impactMatches[0].trim();
+        if (exploitMatches) info = (info ? info + ' | ' : '') + exploitMatches[0].trim();
+        return info;
     }
 }
 

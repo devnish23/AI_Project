@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { useTheme } from '../../contexts/ThemeContext';
 import { 
@@ -21,12 +21,32 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = (props) => {
   const { theme, toggleTheme } = useTheme();
   const navigate = useNavigate();
+  const [patchMgmtOpen, setPatchMgmtOpen] = useState(false);
 
   const navigation = [
     { name: 'Dashboard', href: '/dashboard', icon: HomeIcon },
     { name: 'Applications', icon: CubeIcon, onClick: () => navigate('/applications', { state: { tab: 'applications' } }) },
-    { name: 'PatchMgmt', icon: WrenchScrewdriverIcon, onClick: () => navigate('/applications', { state: { tab: 'patchmgmt' } }) },
+    // Patch Management dropdown
+    {
+      name: 'Patch Management',
+      icon: WrenchScrewdriverIcon,
+      isDropdown: true,
+      open: patchMgmtOpen,
+      onClick: () => setPatchMgmtOpen(open => !open),
+      children: [
+        { name: 'Red Hat', href: '/patchmgmt/redhat' },
+        { name: 'Windows', href: '/patchmgmt/windows' },
+        { name: 'ESXi', href: '/patchmgmt/esxi' },
+        { name: 'vCenter', href: '/patchmgmt/vcenter' },
+        { name: 'CyberArk', href: '/patchmgmt/cyberark' },
+        { name: 'RSA', href: '/patchmgmt/rsa' },
+        { name: 'SolarWinds', href: '/patchmgmt/solarwinds' },
+        { name: 'McAfee', href: '/patchmgmt/mcafee' },
+        { name: 'Nessus', href: '/patchmgmt/nessus' },
+      ]
+    },
     { name: 'Bulk Upload', icon: CloudArrowUpIcon, onClick: () => navigate('/applications', { state: { tab: 'bulkupload' } }) },
+    { name: 'Advisory Dashboard', href: '/advisory-dashboard', icon: HomeIcon },
     { name: 'Reports', href: '/reports', icon: DocumentChartBarIcon },
     { name: 'Settings', href: '/settings', icon: Cog6ToothIcon },
     { name: 'Schedule', icon: ClockIcon, onClick: () => navigate('/schedule') },
@@ -43,15 +63,36 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
           </div>
           <nav className="mt-5 flex-1 px-2 space-y-1">
             {navigation.map((item) => (
-              item.onClick ? (
-                <button
-                  key={item.name}
-                  onClick={item.onClick}
-                  className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white`}
-                >
-                  <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />
-                  {item.name}
-                </button>
+              item.isDropdown ? (
+                <div key={item.name} className="group">
+                  <button
+                    onClick={item.onClick}
+                    className={`group flex items-center px-2 py-2 text-sm font-medium rounded-md text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white`}
+                  >
+                    {item.icon && <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />}
+                    {item.name}
+                    <span className="ml-auto">{item.open ? '▲' : '▼'}</span>
+                  </button>
+                  {item.open && (
+                    <div className="ml-8 mt-1 space-y-1">
+                      {item.children.map((child: { name: string; href: string }) => (
+                        <NavLink
+                          key={child.name}
+                          to={child.href || '#'}
+                          className={({ isActive }) =>
+                            `block px-2 py-1 text-sm rounded-md ${
+                              isActive
+                                ? 'bg-blue-100 text-blue-900 dark:bg-blue-900 dark:text-blue-100'
+                                : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
+                            }`
+                          }
+                        >
+                          {child.name}
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ) : (
                 <NavLink
                   key={item.name}
@@ -63,8 +104,9 @@ const Sidebar: React.FC<SidebarProps> = (props) => {
                         : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-white'
                     }`
                   }
+                  onClick={item.onClick}
                 >
-                  <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />
+                  {item.icon && <item.icon className="mr-3 flex-shrink-0 h-6 w-6" />}
                   {item.name}
                 </NavLink>
               )

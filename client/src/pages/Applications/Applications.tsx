@@ -35,11 +35,10 @@ const Applications: React.FC<ApplicationsProps> = () => {
   const [selectedProduct, setSelectedProduct] = useState<string>('');
   const [selectedVersion, setSelectedVersion] = useState<string>('');
   const [customVersion, setCustomVersion] = useState<string>('');
-  const [activeTab, setActiveTab] = useState<'applications' | 'patchmgmt' | 'bulkupload'>('applications');
-  const [showPatchTab, setShowPatchTab] = useState(true);
+  const [activeTab, setActiveTab] = useState<'applications' | 'bulkupload'>('applications');
+  const [showBulkUploadTab, setShowBulkUploadTab] = useState(false);
   // Tab open/close logic
   const [showApplicationsTab, setShowApplicationsTab] = useState(true);
-  const [showBulkUploadTab, setShowBulkUploadTab] = useState(false);
 
   // Filter state
   const [filterVendor, setFilterVendor] = useState('');
@@ -51,17 +50,6 @@ const Applications: React.FC<ApplicationsProps> = () => {
     (!filterVendor || app.vendor.toLowerCase().includes(filterVendor.toLowerCase())) &&
     (!filterName || app.name.toLowerCase().includes(filterName.toLowerCase())) &&
     (!filterVersion || app.version.toLowerCase().includes(filterVersion.toLowerCase()))
-  );
-
-  // Filter state for Patch Management
-  const [patchFilterVendor, setPatchFilterVendor] = useState('');
-  const [patchFilterName, setPatchFilterName] = useState('');
-  const [patchFilterVersion, setPatchFilterVersion] = useState('');
-
-  const filteredPatchApplications = applications.filter(app =>
-    (!patchFilterVendor || app.vendor.toLowerCase().includes(patchFilterVendor.toLowerCase())) &&
-    (!patchFilterName || app.name.toLowerCase().includes(patchFilterName.toLowerCase())) &&
-    (!patchFilterVersion || app.version.toLowerCase().includes(patchFilterVersion.toLowerCase()))
   );
 
   // Vendor/Product/Version data
@@ -120,10 +108,9 @@ const Applications: React.FC<ApplicationsProps> = () => {
   useEffect(() => {
     if (location.state && (location.state as any).tab) {
       const tab = (location.state as any).tab;
-      if (tab === 'applications' || tab === 'patchmgmt') {
+      if (tab === 'applications') {
         setActiveTab(tab);
-        if (tab === 'applications') setShowApplicationsTab(true);
-        if (tab === 'patchmgmt') setShowPatchTab(true);
+        setShowApplicationsTab(true);
       } else if (tab === 'bulkupload') {
         setShowBulkUploadTab(true);
       }
@@ -238,10 +225,6 @@ const Applications: React.FC<ApplicationsProps> = () => {
     setShowApplicationsTab(true);
     setActiveTab('applications');
   };
-  const handleSidebarPatchMgmtClick = () => {
-    setShowPatchTab(true);
-    setActiveTab('patchmgmt');
-  };
 
   return (
     <div className="space-y-6">
@@ -281,33 +264,9 @@ const Applications: React.FC<ApplicationsProps> = () => {
               className="ml-1 p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
               title="Close Applications Tab"
               onClick={() => {
-                if (!showPatchTab && !showBulkUploadTab) return; // Don't close last tab
+                if (!showBulkUploadTab) return; // Don't close last tab
                 setShowApplicationsTab(false);
-                if (showPatchTab) setActiveTab('patchmgmt');
-                else if (showBulkUploadTab) setActiveTab('bulkupload');
-              }}
-            >
-              <XMarkIcon className="h-4 w-4 text-gray-500" />
-            </button>
-          </div>
-        )}
-        {/* PatchMgmt Tab */}
-        {showPatchTab && (
-          <div className="flex items-center">
-            <button
-              className={`px-4 py-2 rounded-t ${activeTab === 'patchmgmt' ? 'bg-white dark:bg-gray-800 font-semibold' : 'bg-gray-200 dark:bg-gray-700'} border-b-2 ${activeTab === 'patchmgmt' ? 'border-blue-600' : 'border-transparent'}`}
-              onClick={() => setActiveTab('patchmgmt')}
-            >
-              Patch Management
-            </button>
-            <button
-              className="ml-1 p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
-              title="Close Patch Management Tab"
-              onClick={() => {
-                if (!showApplicationsTab && !showBulkUploadTab) return; // Don't close last tab
-                setShowPatchTab(false);
-                if (showApplicationsTab) setActiveTab('applications');
-                else if (showBulkUploadTab) setActiveTab('bulkupload');
+                if (showBulkUploadTab) setActiveTab('bulkupload');
               }}
             >
               <XMarkIcon className="h-4 w-4 text-gray-500" />
@@ -327,10 +286,9 @@ const Applications: React.FC<ApplicationsProps> = () => {
               className="ml-1 p-1 rounded hover:bg-gray-300 dark:hover:bg-gray-600"
               title="Close Bulk Upload Tab"
               onClick={() => {
-                if (!showApplicationsTab && !showPatchTab) return; // Don't close last tab
+                if (!showApplicationsTab) return; // Don't close last tab
                 setShowBulkUploadTab(false);
                 if (showApplicationsTab) setActiveTab('applications');
-                else if (showPatchTab) setActiveTab('patchmgmt');
               }}
             >
               <XMarkIcon className="h-4 w-4 text-gray-500" />
@@ -498,69 +456,6 @@ const Applications: React.FC<ApplicationsProps> = () => {
                     ))}
                   </tbody>
                 </table>
-            )}
-          </div>
-        </>
-      )}
-      {showPatchTab && activeTab === 'patchmgmt' && (
-        <>
-          {/* Filter bar for Patch Management */}
-          <div className="flex space-x-4 mb-2">
-            <input
-              type="text"
-              placeholder="Filter by Vendor"
-              value={patchFilterVendor}
-              onChange={e => setPatchFilterVendor(e.target.value)}
-              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            />
-            <input
-              type="text"
-              placeholder="Filter by Name"
-              value={patchFilterName}
-              onChange={e => setPatchFilterName(e.target.value)}
-              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            />
-            <input
-              type="text"
-              placeholder="Filter by Version"
-              value={patchFilterVersion}
-              onChange={e => setPatchFilterVersion(e.target.value)}
-              className="border rounded px-2 py-1 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100"
-            />
-          </div>
-          <div className="bg-white dark:bg-gray-800 shadow rounded-lg p-6 overflow-x-auto" style={{ maxHeight: '40vh', overflowY: 'auto' }}>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Patch Management</h2>
-            {filteredPatchApplications.length === 0 ? (
-              <div className="text-center text-gray-500 dark:text-gray-400 py-8">
-                No applications found
-              </div>
-            ) : (
-              <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
-                <thead>
-                  <tr>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">S.No</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Vendor</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Name</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Version</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Patch Released</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Patch Type</th>
-                    <th className="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase">Patch Details</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {filteredPatchApplications.map((app, idx) => (
-                    <tr key={app._id} className="hover:bg-gray-50 dark:hover:bg-gray-700">
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{idx + 1}</td>
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.vendor}</td>
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.name}</td>
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.version}</td>
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.patchReleased || '-'}</td>
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.patchType || '-'}</td>
-                      <td className="px-4 py-2 text-gray-900 dark:text-gray-100">{app.patchDetails || '-'}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             )}
           </div>
         </>

@@ -19,6 +19,8 @@ import Reports from './pages/Reports/Reports';
 import Settings from './pages/Settings/Settings';
 import VendorPortals from './pages/VendorPortals/VendorPortals';
 import ScheduleTab from './pages/Schedule/ScheduleTab';
+import PatchMgmt from './pages/PatchMgmt';
+import AdvisoryDashboard from './pages/AdvisoryDashboard';
 // Remove the PatchMgmt import and route
 
 // Styles
@@ -90,6 +92,8 @@ const App: React.FC = () => {
                     }
                   />
                   {/* Remove the PatchMgmt route */}
+                  <Route path="patchmgmt/:vendor" element={<PatchMgmt />} />
+                  <Route path="advisory-dashboard" element={<AdvisoryDashboard />} />
 
                   {/* Protected Routes */}
                   <Route
